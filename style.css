@@ -15,6 +15,14 @@ input:focus {
   --main-font: 'Comfortaa';
 }
 
+#the-canvas {
+  position: absolute;
+  display:none;
+  top: 0px;
+  width: 1200px;
+  height: 600px;
+}
+
 .bubble-app {
 	font-family: 'Kosugi Maru';
 	position: relative;
@@ -100,6 +108,7 @@ input:focus {
   border: 1px solid #6cc088;
   background: white;
   border-radius: 6px;
+  z-index: 50;
 }
 
 .start-btn {

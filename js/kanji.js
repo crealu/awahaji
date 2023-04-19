@@ -14,7 +14,6 @@ class Kanji {
   }
 
   update() {
-    // (!this.pop)? this.draw(): null;
     if (!this.pop) {
       this.draw();
     }

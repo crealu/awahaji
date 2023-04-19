@@ -1,11 +1,13 @@
 let docBod = document.querySelector('body');
 let startBtn = document.querySelector('.start-btn');
 let yomiInput = document.getElementsByClassName('the-input')[0];
-const canvasHere = document.querySelector('#canvas-here');
+const canvasHere = document.getElementById('the-canvas');
 const canvas = canvasHere.getContext('2d');
 
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+canvasHere.style.width = window.innerWidth + 'px';
+canvasHere.style.height = window.innerHeight + 'px';
+canvasHere.width = window.innerWidth;
+canvasHere.height = window.innerHeight;
 
 const mouse = { 
   x: window.innerWidth / 2, 
@@ -27,24 +29,18 @@ const colors = [
 ];
 
 function makeSparkle(spx, spy) {
-  // var sparkX = spx;
-  // var sparkY = spy;
-  // var tol = 30;
   for (var s = 0; s <= 10; s++) {
     let sparkle = new Sparkle(spx, spy);
     sparkle.setup();
     let i = 0;
     let delay = Math.random();
+    let id = setInterval(frame, 100);
     function frame() {
       i++;
-      console.log(i);
-      if (i >= delay*3) {
-        spark.update();
-        console.log('drew it');
-        clearInterval(id);
+      if (i >= delay * 3) {
+        sparkle.update();
       }
     }
-    let id = setInterval(frame, 100);
   }
 }
 
@@ -56,8 +52,8 @@ function init() {
   canvas.font = '40px serif';
 
   for (let b = 0; b < 5; b++) {
-    const bubbleX = randomIntFromRange(tolerance, canvas.width - tolerance);
-    const bubbleY = randomIntFromRange(tolerance, canvas.height - tolerance);
+    const bubbleX = randomIntFromRange(tolerance, canvasHere.width - tolerance);
+    const bubbleY = randomIntFromRange(tolerance, canvasHere.height - tolerance);
 
     let randomNumber = randomInt(80);
     let kanjiText = arrN5[randomNumber].kanji;
@@ -81,16 +77,12 @@ function init() {
 
 function getInput() {
   for (let i = 0; i < kanjis.length; i++) {
-    if (yomiInpupt.value == kanjis[i].yomi) {
+    if (yomiInput.value == kanjis[i].yomi) {
       kanjis[i].pop = true;
-      console.log(particles[i]);
-      particles[i].forEach( pg => {
-        pg.pop = true;
-      });
+      particles[i].forEach(pg => { pg.pop = true; });
       makeSparkle(kanjis[i].x, kanjis[i].y);
       kanjis.splice(i, 1);
       particles.splice(i, 1);
-      //bubblePop(inp.value);
       yomiInput.value = '';
     }
   }
@@ -101,35 +93,41 @@ init();
 let finish;
 function animate() {
   finish = requestAnimationFrame(animate);
+  // draw background
   canvas.fillStyle = 'rgba(0, 0, 0, 0.05)';
-  canvas.fillRect(0, 0, canvas.width, canvas.height);
-  //c.clearRect(0, 0, canvas.width, canvas.height);
+  canvas.fillRect(0, 0, canvasHere.width, canvasHere.height);
+
+  // draw circulating patricles
   particles.forEach(pg => {
     pg.forEach(particle => {
       particle.update();
     });
   });
 
+  // draw kanji
   kanjis.forEach(kanji => { kanji.update(); });
 }
 
 
 startBtn.addEventListener('click', (event) => {
   yomiInput.style.display = 'block';
-  docBod.removeChild(document.querySelector('.start-btn'));
+  document.querySelector('.start-btn').style.display = 'none';
+  document.querySelector('#the-canvas').style.display = 'block';
   animate();
   //startGame();
 });
 
 window.addEventListener('keydown', (event) => {
-  event.key == '6' ? makeSparkle(): null;
-  event.key == '8' ? window.cancelAnimationFrame(finish): null;
+  if (event.key == '6') {
+    makeSparkle();
+  }
+
+  if (event.key == '8') {
+    window.cancalAnimationFrame(finish);
+  }
 });
 
 window.addEventListener('mousemove', (event) => {
   mouse.x = event.clientX;
   mouse.y = event.clientY;
 });
-
-
-//animate();

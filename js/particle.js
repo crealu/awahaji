@@ -20,7 +20,7 @@ class Particle {
     this.pop = false;
   }
 
-  draw(lastPoint, c) {
+  draw(lastPoint, canvas) {
     canvas.beginPath();
     canvas.strokeStyle = this.color;
     canvas.lineWidth = this.radius;
@@ -37,11 +37,10 @@ class Particle {
     }
 
     this.radians += this.velocity;
-
     this.x = this.sx + Math.cos(this.radians) * this.dfc;
     this.y = this.sy + Math.sin(this.radians) * this.dfc;
     
-    if (this.pop) {
+    if (!this.pop) {
       this.draw(lastPoint, canvas);
     }
     // (!this.pop)? this.draw(lastPoint, c): null;
