@@ -43,6 +43,5 @@ class Particle {
     if (!this.pop) {
       this.draw(lastPoint, context);
     }
-    // (!this.pop)? this.draw(lastPoint, c): null;
   }
 }

@@ -2,6 +2,8 @@
 
 body {
   margin: 0px;
+  padding: 0px;
+  overflow: hidden;
 }
 
 input:focus {
@@ -17,7 +19,7 @@ input:focus {
 
 #the-canvas {
   position: absolute;
-  display:none;
+  display: none;
   top: 0px;
   width: 1200px;
   height: 600px;
@@ -95,6 +97,30 @@ input:focus {
   color: white;
 }
 
+.start-btn {
+	position: absolute;
+  display: block;
+  margin: 0 auto;
+  left: 0%;
+  right: 0%;
+  top: 60vh;
+  width: 200px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: rgb(144, 144, 144) 0px 0px 16px 4px inset;
+  background: black;
+  color: white;
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 100;
+  transition: 0.5s ease;
+}
+
+.start-btn:hover {
+  box-shadow: rgb(0, 0, 0) 0px 0px 16px 4px inset;
+}
+
 .the-input {
   position: absolute;
   display: none;
@@ -102,31 +128,14 @@ input:focus {
   left: 0%;
   right: 0%;
   bottom: 15%;
-	width: 200px;
-  font-size: 24px;
+  width: 200px;
   padding: 8px;
   border: 1px solid #6cc088;
-  background: white;
   border-radius: 6px;
-  z-index: 50;
-}
-
-.start-btn {
-	position: absolute;
-  display: block;
-  margin: 0 auto;
-  background: black;
+  background: none;
   color: white;
-  font-family: var(--main-font);
   font-size: 24px;
-  font-weight: 100;
-  padding: 12px 16px;
-  border-radius: 8px;
-  box-shadow: rgb(144, 144, 144) 0px 0px 16px 4px inset;
-  cursor: pointer;
-  left: 0%;
-  right: 0%;
-  top: 45vh
+  z-index: 50;
 }
 
 .bubbles-popped {

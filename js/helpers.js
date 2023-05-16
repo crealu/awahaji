@@ -26,18 +26,10 @@ function clear(element) {
 }
 
 function filterYomi(yomi) {
-  let cleanYomi;
-  if (yomi.includes(',')) {
-    let splitYomi = yomi.split(',');
-    cleanYomi = splitYomi[0];
-  } else {
-    cleanYomi = yomi;
-  }
-  return cleanYomi;
+  return yomi.includes(',') ? yomi.split(',')[0] : yomi;
 }
 
-const doc = { 
-  gsv: (e, s) => { 
-    return getComputedStyle(e).getPropertyValue(s) 
-  }
-};
+function getStyle(element, property) {
+  return getComputedStyle(e).getPropertyValue(s) 
+}
+

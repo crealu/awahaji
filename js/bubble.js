@@ -1,13 +1,17 @@
-let body = document.querySelector('body');
+// let body = document.querySelector('body');
 let startBtn = document.querySelector('.start-btn');
-let yomiInput = document.getElementsByClassName('the-input')[0];
-const canvas = document.getElementById('the-canvas');
+let yomiInput = document.querySelector('.the-input');
+const canvas = document.querySelector('.the-canvas');
 const context = canvas.getContext('2d');
 
-canvas.style.width = window.innerWidth + 'px';
-canvas.style.height = window.innerHeight + 'px';
-canvas.width = window.innerWidth;
-canvas.height = window.innerHeight;
+const tolerance = 50;
+const bubbleY = 150;
+const radius = 4;
+// randomIntFromRange(tolerance, canvas.width - tolerance);
+
+let kanjis = [];
+let particles = [];
+let frame;
 
 const colors = [
   '#fbab56',  // orange
@@ -33,38 +37,69 @@ function makeSparkle(spx, spy) {
   }
 }
 
-let particles, kanjis;
-function init() {
-  particles = [];
-  kanjis = [];
-  const tolerance = 50;
-  context.font = '40px serif';
-
-  for (let b = 0; b < 5; b++) {
-    const bubbleX = randomIntFromRange(tolerance, canvas.width - tolerance);
-    const bubbleY = randomIntFromRange(tolerance, canvas.height - tolerance);
-
-    let randomNumber = randomInt(80);
-    let kanjiText = arrN5[randomNumber].kanji;
-    let kanjiYomi = arrN5[randomNumber].on;
-    let oneYomi = filterYomi(kanjiYomi);
-
-    let theColor = randomColor(colors);
-
-    kanjis.push(new Kanji(kanjiText, bubbleX, bubbleY, theColor));
-    kanjis[b].yomi = oneYomi;
-    let particleGroup = [];
-    for (let i = 0; i < 4; i++) {
-      //const radius = (Math.random() * 6) * 1;
-      const radius = 4;
-      particleGroup.push(new Particle(bubbleX, bubbleY, radius, theColor));
-    }
-    particles.push(particleGroup);
-  }
-  console.log(kanjis);
+function addKanji(x, y, color) {
+  let randomNumber = randomInt(80);
+  let kanjiText = arrN5[randomNumber].kanji;
+  let onYomi = arrN5[randomNumber].on;
+  let theYomi = filterYomi(onYomi);
+  kanjis.push(new Kanji(x, y, kanjiText, theYomi, color));
 }
 
-function getInput() {
+function addParticles(x, y, color) {
+  let particleGroup = [];
+  for (let i = 0; i < 4; i++) {
+    particleGroup.push(new Particle(x, y, radius, color));
+  }
+  particles.push(particleGroup);
+}
+
+function initObjects() {
+  for (let b = 0; b < 5; b++) {
+    const bubbleX = b * 150 + 50; 
+    const color = randomColor(colors);
+    addKanji(bubbleX, bubbleY, color);
+    addParticles(bubbleX, bubbleY, color);
+  }
+}
+
+function styleCanvas() {
+  canvas.style.width = window.innerWidth + 'px';
+  canvas.style.height = window.innerHeight + 'px';
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  context.font = '40px serif';
+}
+
+function drawGame() {
+  context.fillStyle = 'rgba(0, 0, 0, 0.05)';
+  context.fillRect(0, 0, canvas.width, canvas.height);
+
+  for (let p = 0; p < particles.length; p++) {
+    for (let a = 0; a < particles[p].length; a++) {
+      particles[p][a].update();
+    }
+  }
+
+  for (let i = 0; i < kanjis.length; i++) {
+    kanjis[i].update();
+  }
+}
+
+function animate() {
+  drawGame();
+  frame = requestAnimationFrame(animate);
+}
+
+function startGame() {
+  yomiInput.style.display = 'block';
+  startBtn.style.display = 'none';
+  canvas.style.display = 'block';
+  canvas.style.top = '0px';
+  canvas.style.position = 'absolute';
+  animate();
+}
+
+function readInput() {
   for (let i = 0; i < kanjis.length; i++) {
     if (yomiInput.value == kanjis[i].yomi) {
       kanjis[i].pop = true;
@@ -77,40 +112,18 @@ function getInput() {
   }
 }
 
-init();
-
-let frame;
-function animate() {
-  frame = requestAnimationFrame(animate);
-  // draw background
-  context.fillStyle = 'rgba(0, 0, 0, 0.05)';
-  context.fillRect(0, 0, canvas.width, canvas.height);
-
-  particles.forEach(pg => {
-    pg.forEach(particle => {
-      particle.update();
-    });
-  });
-
-  kanjis.forEach(kanji => { kanji.update(); });
-}
-
-
-startBtn.addEventListener('click', (event) => {
-  yomiInput.style.display = 'block';
-  startBtn.style.display = 'none';
-  canvas.style.display = 'block';
-  animate();
-  //startGame();
-});
-
-window.addEventListener('keydown', (event) => {
-  if (event.key == '6') {
-    makeSparkle();
-  }
-
-  if (event.key == '8') {
+function quitGame(event) {
+  if (event.key == 'q') {
     window.cancelAnimationFrame(frame);
   }
-});
+}
 
+function loadGame() {
+  initObjects();
+  styleCanvas();
+}
+
+startBtn.addEventListener('click', startGame);
+yomiInput.addEventListener('input', readInput);
+window.addEventListener('keydown', quitGame);
+window.addEventListener('load', loadGame);

@@ -12,7 +12,7 @@ class Sparkle {
     const x0 = this.x + this.tolerance;
     const x1 = this.x - this.tolerance;
     const y0 = this.y + this.tolerance;
-    const y2 = this.y - this.tolerance;
+    const y1 = this.y - this.tolerance;
     this.x = randomInt(x0, x1);
     this.y = randomInt(y0, y1);
   }

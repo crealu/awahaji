@@ -1,10 +1,10 @@
 class Kanji {
-  constructor(kanji, x, y, color) {
-    this.self = kanji;
+  constructor(x, y, kanji, yomi, color) {
     this.x = x - 23;
     this.y = y + 16;
+    this.self = kanji;
+    this.yomi = yomi;
     this.color = color;
-    this.yomi = '';
     this.pop = false;
   }
 
