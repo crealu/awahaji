@@ -9,8 +9,8 @@ class Kanji {
   }
 
   draw() {
-    canvas.fillStyle = this.color;
-    canvas.fillText(this.self, this.x, this.y);
+    context.fillStyle = this.color;
+    context.fillText(this.self, this.x, this.y);
   }
 
   update() {

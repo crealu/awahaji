@@ -18,7 +18,7 @@ class Sparkle {
   }
 
   draw() {
-    canvas.drawImage(this.star, this.x, this.y, this.size, this.size);
+    context.drawImage(this.star, this.x, this.y, this.size, this.size);
   }
 
   update() {

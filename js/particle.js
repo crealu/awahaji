@@ -20,14 +20,14 @@ class Particle {
     this.pop = false;
   }
 
-  draw(lastPoint, canvas) {
-    canvas.beginPath();
-    canvas.strokeStyle = this.color;
-    canvas.lineWidth = this.radius;
-    canvas.moveTo(lastPoint.x, lastPoint.y);
-    canvas.lineTo(this.x, this.y);
-    canvas.stroke()
-    canvas.closePath();
+  draw(lastPoint, context) {
+    context.beginPath();
+    context.strokeStyle = this.color;
+    context.lineWidth = this.radius;
+    context.moveTo(lastPoint.x, lastPoint.y);
+    context.lineTo(this.x, this.y);
+    context.stroke()
+    context.closePath();
   }
 
   update() {
@@ -41,7 +41,7 @@ class Particle {
     this.y = this.sy + Math.sin(this.radians) * this.dfc;
     
     if (!this.pop) {
-      this.draw(lastPoint, canvas);
+      this.draw(lastPoint, context);
     }
     // (!this.pop)? this.draw(lastPoint, c): null;
   }
