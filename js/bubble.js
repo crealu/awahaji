@@ -5,7 +5,7 @@ const canvas = document.querySelector('.the-canvas');
 const context = canvas.getContext('2d');
 
 const tolerance = 50;
-const bubbleY = 150;
+const bubbleY = 300;
 const radius = 4;
 // randomIntFromRange(tolerance, canvas.width - tolerance);
 
@@ -54,8 +54,9 @@ function addParticles(x, y, color) {
 }
 
 function initObjects() {
-  for (let b = 0; b < 5; b++) {
-    const bubbleX = b * 150 + 50; 
+  let start = window.innerWidth / 2 - (2 * 150) + 50;
+  let end = start + 500;
+  for (let bubbleX = start; bubbleX <= end; bubbleX += 100) {
     const color = randomColor(colors);
     addKanji(bubbleX, bubbleY, color);
     addParticles(bubbleX, bubbleY, color);
