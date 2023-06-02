@@ -17,11 +17,11 @@ class Sparkle {
     this.y = randomInt(y0, y1);
   }
 
-  draw() {
+  draw(context) {
     context.drawImage(this.star, this.x, this.y, this.size, this.size);
   }
 
-  update() {
-    this.draw();
+  update(context) {
+    this.draw(context);
   }
 }

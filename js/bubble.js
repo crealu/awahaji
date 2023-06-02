@@ -27,7 +27,7 @@ const colors = [
 function makeSparkle(spx, spy) {
   for (var s = 0; s <= 10; s++) {
     let sparkle = new Sparkle(spx, spy);
-    sparkle.setup();
+    // sparkle.setup();
     let i = 0;
     let delay = Math.random();
     let id = setInterval(frame, 100);
@@ -93,12 +93,12 @@ function drawGame() {
 
   for (let p = 0; p < particles.length; p++) {
     for (let a = 0; a < particles[p].length; a++) {
-      particles[p][a].update();
+      particles[p][a].update(context);
     }
   }
 
   for (let i = 0; i < kanjis.length; i++) {
-    kanjis[i].update();
+    kanjis[i].update(context);
   }
 }
 

@@ -30,7 +30,7 @@ class Particle {
     context.closePath();
   }
 
-  update() {
+  update(context) {
     const lastPoint = {
       x: this.x,
       y: this.y

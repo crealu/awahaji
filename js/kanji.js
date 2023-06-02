@@ -8,14 +8,14 @@ class Kanji {
     this.pop = false;
   }
 
-  draw() {
+  draw(context) {
     context.fillStyle = this.color;
     context.fillText(this.self, this.x, this.y);
   }
 
-  update() {
+  update(context) {
     if (!this.pop) {
-      this.draw();
+      this.draw(context);
     }
   }
 }
