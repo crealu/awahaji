@@ -1,6 +1,9 @@
 // let body = document.querySelector('body');
 let startBtn = document.querySelector('.start-btn');
+let beginBtn = document.querySelector('.begin-btn');
 let yomiInput = document.querySelector('.the-input');
+let modal = document.querySelector('.the-modal');
+let modalInner = document.querySelector('.modal-inner');
 const canvas = document.querySelector('.the-canvas');
 const context = canvas.getContext('2d');
 
@@ -71,6 +74,19 @@ function styleCanvas() {
   context.font = '40px serif';
 }
 
+function readInput() {
+  for (let i = 0; i < kanjis.length; i++) {
+    if (yomiInput.value == kanjis[i].yomi) {
+      kanjis[i].pop = true;
+      particles[i].forEach(pg => { pg.pop = true; });
+      makeSparkle(kanjis[i].x, kanjis[i].y);
+      kanjis.splice(i, 1);
+      particles.splice(i, 1);
+      yomiInput.value = '';
+    }
+  }
+}
+
 function drawGame() {
   context.fillStyle = 'rgba(0, 0, 0, 0.05)';
   context.fillRect(0, 0, canvas.width, canvas.height);
@@ -91,26 +107,37 @@ function animate() {
   frame = requestAnimationFrame(animate);
 }
 
+function displayKanji() {
+  for (let i = 0; i < kanjis.length; i++) {
+    let kanjiP = document.createElement('p');
+    let readingP = document.createElement('p');
+    kanjiP.innerHTML = kanjis[i].self;
+    readingP.innerHTML = kanjis[i].yomi;
+    modalInner.appendChild(kanjiP);
+    modalInner.appendChild(readingP);
+  }
+  modal.style.display = 'block';
+}
+
 function startGame() {
   yomiInput.style.display = 'block';
   startBtn.style.display = 'none';
+  modal.style.display = 'block';
+  modal.style.opacity = '1';
+  displayKanji();
+}
+
+function beginGame() {
+  modal.style.opacity = '0';
   canvas.style.display = 'block';
   canvas.style.top = '0px';
   canvas.style.position = 'absolute';
   animate();
 }
 
-function readInput() {
-  for (let i = 0; i < kanjis.length; i++) {
-    if (yomiInput.value == kanjis[i].yomi) {
-      kanjis[i].pop = true;
-      particles[i].forEach(pg => { pg.pop = true; });
-      makeSparkle(kanjis[i].x, kanjis[i].y);
-      kanjis.splice(i, 1);
-      particles.splice(i, 1);
-      yomiInput.value = '';
-    }
-  }
+function loadGame() {
+  initObjects();
+  styleCanvas();
 }
 
 function quitGame(event) {
@@ -119,11 +146,7 @@ function quitGame(event) {
   }
 }
 
-function loadGame() {
-  initObjects();
-  styleCanvas();
-}
-
+beginBtn.addEventListener('click', beginGame)
 startBtn.addEventListener('click', startGame);
 yomiInput.addEventListener('input', readInput);
 window.addEventListener('keydown', quitGame);
