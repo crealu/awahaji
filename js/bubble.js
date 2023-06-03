@@ -34,7 +34,7 @@ function makeSparkle(spx, spy) {
     function frame() {
       i++;
       if (i >= delay * 3) {
-        sparkle.update();
+        sparkle.update(context);
       }
     }
   }

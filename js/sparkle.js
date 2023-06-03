@@ -1,6 +1,6 @@
 class Sparkle {
   constructor(x, y) {
-    this.star = document.getElementById('star');
+    this.star = document.querySelector('.star');
     this.size = randomInt(20);
     this.tolerance = 30;
     this.x = x;
