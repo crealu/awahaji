@@ -1,6 +1,7 @@
 // let body = document.querySelector('body');
 let startBtn = document.querySelector('.start-btn');
 let beginBtn = document.querySelector('.begin-btn');
+let regenerateBtn = document.querySelector('.regenerate-btn');
 let yomiInput = document.querySelector('.the-input');
 let modal = document.querySelector('.the-modal');
 let modalInner = document.querySelector('.modal-inner');
@@ -108,6 +109,7 @@ function animate() {
 }
 
 function displayKanji() {
+  clear(modalInner);
   for (let i = 0; i < kanjis.length; i++) {
     let kanjiP = document.createElement('p');
     let readingP = document.createElement('p');
@@ -135,6 +137,14 @@ function beginGame() {
   animate();
 }
 
+function regenerate() {
+  kanjis = [];
+  particles = [];
+  initObjects();
+  displayKanji();
+  console.log(kanjis);
+}
+
 function loadGame() {
   initObjects();
   styleCanvas();
@@ -148,6 +158,7 @@ function quitGame(event) {
 
 beginBtn.addEventListener('click', beginGame)
 startBtn.addEventListener('click', startGame);
+regenerateBtn.addEventListener('click', regenerate);
 yomiInput.addEventListener('input', readInput);
 window.addEventListener('keydown', quitGame);
 window.addEventListener('load', loadGame);
