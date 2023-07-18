@@ -28,7 +28,6 @@ const colors = [
 function makeSparkle(spx, spy) {
   for (var s = 0; s <= 10; s++) {
     let sparkle = new Sparkle(spx, spy);
-    sparkle.setup();
     let i = 0;
     let delay = Math.random();
     let id = setInterval(frame, 100);
@@ -82,6 +81,7 @@ function readInput() {
       particles[i].forEach(pg => { pg.pop = true; });
       makeSparkle(kanjis[i].x, kanjis[i].y);
       kanjis.splice(i, 1);
+      console.log(kanjis);
       particles.splice(i, 1);
       yomiInput.value = '';
     }
@@ -104,6 +104,11 @@ function drawGame() {
 }
 
 function animate() {
+  if (kanjis.length == 0) {
+    window.cancelAnimationFrame(animate);
+    console.log('finished');
+    return;
+  }
   drawGame();
   frame = requestAnimationFrame(animate);
 }
