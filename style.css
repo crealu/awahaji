@@ -43,7 +43,7 @@ input:focus {
 }
 
 .game-btn {
-	position: absolute;
+	position: relative;
   display: block;
   margin: 0 auto;
   left: 0%;
@@ -64,6 +64,10 @@ input:focus {
 
 .game-btn:hover {
   box-shadow: rgb(0, 0, 0) 0px 0px 16px 4px inset;
+}
+
+.regenerate-btn {
+  top: 20px;
 }
 
 .start-btn {
@@ -122,4 +126,14 @@ input:focus {
   width: 50%;
   margin: 0 auto;
   position: relative;
+}
+
+.modal-inner p {
+  font-size: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.star {
+  display: none;
 }

@@ -27,7 +27,7 @@ const colors = [
 function makeSparkle(spx, spy) {
   for (var s = 0; s <= 10; s++) {
     let sparkle = new Sparkle(spx, spy);
-    // sparkle.setup();
+    sparkle.setup();
     let i = 0;
     let delay = Math.random();
     let id = setInterval(frame, 100);
@@ -120,7 +120,6 @@ function displayKanji() {
 }
 
 function startGame() {
-  yomiInput.style.display = 'block';
   startBtn.style.display = 'none';
   modal.style.display = 'block';
   modal.style.opacity = '1';
@@ -129,6 +128,7 @@ function startGame() {
 
 function beginGame() {
   modal.style.opacity = '0';
+  yomiInput.style.display = 'block';
   canvas.style.display = 'block';
   canvas.style.top = '0px';
   canvas.style.position = 'absolute';
