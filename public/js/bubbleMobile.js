@@ -18,13 +18,15 @@ let particles = [];
 let readings = [];
 let answered = [];
 let frame;
+let finished = false;
 
 const colors = [
   '#fbab56',  // orange
   '#45f5a5',  // green
   '#7bcdff',  // blue
   '#d277ff',  // purple
-  '#f5ff77'   // yellow
+  '#f5ff77',  // yellow
+  '#ff7777'   // red
 ];
 
 function makeSparkle(spx, spy) {
@@ -53,7 +55,7 @@ function addKanji(x, y, color) {
     onYomi = arrN5[randomNumber].on;
     theYomi = filterYomi(onYomi);
   }
-  readings.push(theYomi);
+  readings.push([readings.length, theYomi]);
   kanjis.push(new Kanji(x, y, kanjiText, theYomi, color));
 }
 
@@ -70,11 +72,11 @@ function initObjects() {
   let end = start + 500;
   for (let bubbleX = start; bubbleX <= end; bubbleX += 100) {
     const color = randomColor(colors);
+    colors.splice(colors.indexOf(color), 1);
     addKanji(bubbleX, bubbleY, color);
     addParticles(bubbleX, bubbleY, color);
   }
-
-
+  displayStats();
 }
 
 function displayStats() {
@@ -83,13 +85,12 @@ function displayStats() {
   console.log('readings: ', readings)
 }
 
-
-
 function readInput() {
   for (let i = 0; i < readings.length; i++) {
-    if (yomiInput.value == readings[i]) {
-      kanjis[i].pop = true;
-      answered.push(i);
+    if (yomiInput.value == readings[i][1]) {
+      kanjis[readings[i][0]].pop = true;
+      answered.push(readings[i][0]);
+      console.log('splicing ' + readings[i][0]);
       readings.splice(i, 1);
       yomiInput.value = '';
       // particles.splice(i, 1);
@@ -98,12 +99,10 @@ function readInput() {
       //   particle.disperse(context);
       // });
       setTimeout(() => {
-        console.log('spliced ' + i);
-        console.log(answered);
-        console.log(readings);
+        displayStats()
         // kanjis.splice(i, 1);
         // particles.splice(i, 1);
-        yomiInput.value = '';
+        // yomiInput.value = '';
       }, 100)
     }
   }
@@ -130,13 +129,20 @@ function drawGame() {
 }
 
 function animate() {
-  if (answered.length == 5) {
-    window.cancelAnimationFrame(animate);
-    console.log('finished');
-    return;
+  if (answered.length == 6) {
+    setTimeout(() => {
+      window.cancelAnimationFrame(animate);
+      console.log('finished');
+      finished = true;
+    }, 1000);
+    if (finished) {
+      return;
+    }
   }
-  drawGame();
-  frame = requestAnimationFrame(animate);
+  if (!finished) {
+    drawGame();
+    frame = requestAnimationFrame(animate);
+  }
 }
 
 function displayKanji() {
@@ -145,7 +151,6 @@ function displayKanji() {
     let kanjiP = document.createElement('p');
     let readingP = document.createElement('p');
     readingP.classList.add('modal-reading');
-    readings.push(kanjis[i].yomi);
     kanjiP.innerHTML = kanjis[i].self;
     readingP.innerHTML = kanjis[i].yomi;
     modalInner.appendChild(kanjiP);
