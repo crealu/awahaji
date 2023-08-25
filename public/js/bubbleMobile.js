@@ -44,6 +44,8 @@ function makeSparkle(spx, spy) {
   }
 }
 
+
+// setup
 function addKanji(x, y, color) {
   let randomNumber = randomInt(80);
   let kanjiText = arrN5[randomNumber].kanji;
@@ -77,7 +79,139 @@ function initObjects() {
     addParticles(bubbleX, bubbleY, color);
   }
   displayStats();
+  createBubble();
 }
+
+let movedBubble;
+let isDragging = false;
+let offsetX = 0;
+let offsetY = 0;
+
+
+
+function dragstartHandler(event) {
+  movedBubble = event.target;
+  event.dataTransfer.dropEffect = 'move';
+  console.log('drag started')
+}
+
+function dragoverHandler(event) {
+  event.preventDefault();
+  event.target.background = 'red';
+}
+
+function dropHandler(event) {
+  event.preventDefault();
+  console.log('drop happened');
+  if (event.target.className == 'the-sling') {
+    movedBubble.classList.add('in-sling');
+    movedBubble.classList.remove('out-of-sling');
+    console.log(movedBubble.textContent);
+    event.target.appendChild(movedBubble);
+  }
+  // let targetNum = event.target.dataset.stepnum;
+  // if (oneBeingMoved.dataset.stepnum < targetNum) {
+  //   event.target.insertAdjacentElement('afterend', oneBeingMoved);
+  // } else {
+  //   topbar.insertBefore(oneBeingMoved, event.target);
+  // }
+  // resetStepNumbers();
+}
+
+function touchstartHandler(event) {
+  event.preventDefault();
+  movedBubble = event.target;
+  // dragstartHandler(event.target);
+  event.target.style.background = 'blue';
+  isDragging = true;
+  let sling = document.getElementsByClassName('the-sling')[0];
+
+  let sd = { 
+    type: 'start',
+    slingX: sling.getBoundingClientRect().left,
+    slingY: sling.getBoundingClientRect().top
+  }
+
+  movedBubble.style.left = touchLocation.pageX + `px`;
+  movedBubble.style.top = touchLocation.pageY + `px`;
+
+  // fetch('/testdrop', {
+  //   method: 'post',
+  //   headers: {'Content-Type': 'application/json'},
+  //   body: JSON.stringify(sd),
+  // })
+  // .then(res => { return res.json() })
+  // .then(data => { console.log(data); })
+  // .catch(err => { return console.log(err) });
+  // event.dataTransfer.dropEffect = 'move';
+  console.log('drag started')
+}
+
+function touchmoveHandler(event) {
+  if (!isDragging) return;
+  event.preventDefault();
+  let touchLocation = event.touches[0];
+  movedBubble.style.left = 0 + touchLocation.pageX + `px`;
+  movedBubble.style.top = 0 + touchLocation.pageY + `px`;
+}
+
+function touchendHandler(event) {
+  event.preventDefault();
+  isDragging = false;
+  let x = parseInt(movedBubble.style.left);
+  let y = parseInt(movedBubble.style.top);
+
+  if (x > 156) {
+    movedBubble.style.background = 'red';
+  } else if (x < 50) {
+    movedBubble.style.background = 'yellow';
+  }
+
+  let touchLocation = event.targetTouches[0];
+
+  let sd = { 
+    type: 'end',
+    touchX: touchLocation.x,
+    touchY: touchLocation.y,
+    elx: x,
+    ely: y
+  };
+
+  fetch('/testdrop', {
+    method: 'post',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(sd),
+  })
+  .then(res => { return res.json() })
+  .then(data => { console.log(data); })
+  .catch(err => { return console.log(err) });
+}
+
+document.addEventListener('touchend', touchendHandler);
+
+function createBubble() {
+  let bubble = document.createElement('div');
+  bubble.classList.add('the-bubble');
+  bubble.classList.add('out-of-sling');
+  bubble.setAttribute('draggable', 'true');
+  bubble.innerHTML = 'あ';
+  bubble.addEventListener('dragstart', dragstartHandler);
+  bubble.addEventListener('touchstart', touchstartHandler);
+  bubble.addEventListener('touchmove', touchmoveHandler);
+  bubble.addEventListener('touchend', touchendHandler);
+
+  let sling = document.createElement('div');
+  sling.classList.add('the-sling');
+  sling.setAttribute('droppable', 'true');
+  sling.addEventListener('dragover', dragoverHandler);
+  sling.addEventListener('drop', dropHandler);
+  // sling.addEventListener('touchend', dropHandler);
+
+  document.body.appendChild(bubble);
+  document.body.appendChild(sling);
+}
+
+
 
 function displayStats() {
   console.log('kanjis: ', kanjis)
@@ -85,6 +219,65 @@ function displayStats() {
   console.log('readings: ', readings)
 }
 
+function displayKanji() {
+  clear(modalInner);
+  for (let i = 0; i < kanjis.length; i++) {
+    let kanjiP = document.createElement('p');
+    let readingP = document.createElement('p');
+    readingP.classList.add('modal-reading');
+    kanjiP.innerHTML = kanjis[i].self;
+    readingP.innerHTML = kanjis[i].yomi;
+    modalInner.appendChild(kanjiP);
+    modalInner.appendChild(readingP);
+  }
+  modal.style.display = 'block';
+}
+
+function startGame() {
+  startBtn.style.display = 'none';
+  modal.style.display = 'block';
+  modal.style.opacity = '1';
+  displayKanji();
+}
+
+function beginGame() {
+  modal.style.opacity = '0';
+  yomiInput.style.display = 'block';
+  canvas.style.display = 'block';
+  canvas.style.top = '0px';
+  canvas.style.position = 'absolute';
+  animate();
+}
+
+function regenerate() {
+  kanjis = [];
+  particles = [];
+  readings = []
+  initObjects();
+  displayKanji();
+}
+
+function styleCanvas() {
+  canvas.style.width = window.innerWidth + 'px';
+  canvas.style.height = window.innerHeight + 'px';
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  context.font = '40px serif';
+}
+
+function loadGame() {
+  initObjects();
+  styleCanvas();
+}
+
+function quitGame(event) {
+  if (event.key == 'q') {
+    window.cancelAnimationFrame(frame);
+  }
+}
+
+
+// gameplay
 function readInput() {
   for (let i = 0; i < readings.length; i++) {
     if (yomiInput.value == readings[i][1]) {
@@ -145,62 +338,7 @@ function animate() {
   }
 }
 
-function displayKanji() {
-  clear(modalInner);
-  for (let i = 0; i < kanjis.length; i++) {
-    let kanjiP = document.createElement('p');
-    let readingP = document.createElement('p');
-    readingP.classList.add('modal-reading');
-    kanjiP.innerHTML = kanjis[i].self;
-    readingP.innerHTML = kanjis[i].yomi;
-    modalInner.appendChild(kanjiP);
-    modalInner.appendChild(readingP);
-  }
-  modal.style.display = 'block';
-}
 
-function startGame() {
-  startBtn.style.display = 'none';
-  modal.style.display = 'block';
-  modal.style.opacity = '1';
-  displayKanji();
-}
-
-function beginGame() {
-  modal.style.opacity = '0';
-  yomiInput.style.display = 'block';
-  canvas.style.display = 'block';
-  canvas.style.top = '0px';
-  canvas.style.position = 'absolute';
-  animate();
-}
-
-function regenerate() {
-  kanjis = [];
-  particles = [];
-  readings = []
-  initObjects();
-  displayKanji();
-}
-
-function styleCanvas() {
-  canvas.style.width = window.innerWidth + 'px';
-  canvas.style.height = window.innerHeight + 'px';
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  context.font = '40px serif';
-}
-
-function loadGame() {
-  initObjects();
-  styleCanvas();
-}
-
-function quitGame(event) {
-  if (event.key == 'q') {
-    window.cancelAnimationFrame(frame);
-  }
-}
 
 beginBtn.addEventListener('click', beginGame)
 startBtn.addEventListener('click', startGame);

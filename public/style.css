@@ -138,6 +138,44 @@ input:focus {
   display: none;
 }
 
+.the-sling {
+  border: 1px solid white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 150px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 100;
+}
+
+.the-bubble {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  text-align: center;
+  z-index: 100;
+}
+
+.out-of-sling {
+  top: 80vh;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.in-sling {
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+
 @media (max-width: 800px) and (min-width: 200px) {
   .bubble-title {
     top: 5vh;
@@ -149,5 +187,9 @@ input:focus {
 
   .modal-inner p {
 
+  }
+
+  .start-btn {
+    top: 40vh;
   }
 }
