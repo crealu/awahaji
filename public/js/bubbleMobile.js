@@ -73,9 +73,14 @@ function initObjects() {
     addKanji(bubbleX, bubbleY, color);
     addParticles(bubbleX, bubbleY, color);
   }
-  console.log(`answered: ${answered}`)
-  console.log(`readings: ${readings}`)
-  console.log(`kanjis: ${kanjis}`)
+
+
+}
+
+function displayStats() {
+  console.log('kanjis: ', kanjis)
+  console.log('answered: ', answered)
+  console.log('readings: ', readings)
 }
 
 
