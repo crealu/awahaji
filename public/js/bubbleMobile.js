@@ -15,6 +15,8 @@ const radius = 4;
 
 let kanjis = [];
 let particles = [];
+let readings = [];
+let answered = [];
 let frame;
 
 const colors = [
@@ -25,26 +27,33 @@ const colors = [
   '#f5ff77'   // yellow
 ];
 
-// function makeSparkle(spx, spy) {
-//   for (var s = 0; s <= 10; s++) {
-//     let sparkle = new Sparkle(spx, spy);
-//     let i = 0;
-//     let delay = Math.random();
-//     let id = setInterval(frame, 100);
-//     function frame() {
-//       i++;
-//       if (i >= delay * 3) {
-//         sparkle.update(context);
-//       }
-//     }
-//   }
-// }
+function makeSparkle(spx, spy) {
+  for (var s = 0; s <= 10; s++) {
+    let sparkle = new Sparkle(spx, spy);
+    let i = 0;
+    let delay = Math.random();
+    let id = setInterval(frame, 100);
+    function frame() {
+      i++;
+      if (i >= delay * 3) {
+        sparkle.update(context);
+      }
+    }
+  }
+}
 
 function addKanji(x, y, color) {
   let randomNumber = randomInt(80);
   let kanjiText = arrN5[randomNumber].kanji;
   let onYomi = arrN5[randomNumber].on;
   let theYomi = filterYomi(onYomi);
+  while (readings.includes(theYomi)) {
+    randomNumber = randomInt(80);
+    kanjiText = arrN5[randomNumber].kanji;
+    onYomi = arrN5[randomNumber].on;
+    theYomi = filterYomi(onYomi);
+  }
+  readings.push(theYomi);
   kanjis.push(new Kanji(x, y, kanjiText, theYomi, color));
 }
 
@@ -64,27 +73,33 @@ function initObjects() {
     addKanji(bubbleX, bubbleY, color);
     addParticles(bubbleX, bubbleY, color);
   }
+  console.log(`answered: ${answered}`)
+  console.log(`readings: ${readings}`)
+  console.log(`kanjis: ${kanjis}`)
 }
 
-function styleCanvas() {
-  canvas.style.width = window.innerWidth + 'px';
-  canvas.style.height = window.innerHeight + 'px';
-  canvas.width = window.innerWidth;
-  canvas.height = window.innerHeight;
-  context.font = '40px serif';
-}
+
 
 function readInput() {
-  for (let i = 0; i < kanjis.length; i++) {
-    if (yomiInput.value == kanjis[i].yomi) {
+  for (let i = 0; i < readings.length; i++) {
+    if (yomiInput.value == readings[i]) {
       kanjis[i].pop = true;
-      particles[i].forEach(particle => {
-        particle.disperse(context);
-      });
-      // particles[i].forEach(pg => { pg.pop = true; });
-      kanjis.splice(i, 1);
-      particles.splice(i, 1);
+      answered.push(i);
+      readings.splice(i, 1);
       yomiInput.value = '';
+      // particles.splice(i, 1);
+      // particles[i].forEach(pg => { pg.pop = true; });
+      // particles[i].forEach(particle => {
+      //   particle.disperse(context);
+      // });
+      setTimeout(() => {
+        console.log('spliced ' + i);
+        console.log(answered);
+        console.log(readings);
+        // kanjis.splice(i, 1);
+        // particles.splice(i, 1);
+        yomiInput.value = '';
+      }, 100)
     }
   }
 }
@@ -95,7 +110,12 @@ function drawGame() {
 
   for (let p = 0; p < particles.length; p++) {
     for (let a = 0; a < particles[p].length; a++) {
-      particles[p][a].update(context);
+      if (answered.includes(p)) {
+        particles[p][a].disperse(context);
+        particles[p][a].pop = true;
+      } else {
+        particles[p][a].update(context);
+      }
     }
   }
 
@@ -105,7 +125,7 @@ function drawGame() {
 }
 
 function animate() {
-  if (kanjis.length == 0) {
+  if (answered.length == 5) {
     window.cancelAnimationFrame(animate);
     console.log('finished');
     return;
@@ -119,6 +139,8 @@ function displayKanji() {
   for (let i = 0; i < kanjis.length; i++) {
     let kanjiP = document.createElement('p');
     let readingP = document.createElement('p');
+    readingP.classList.add('modal-reading');
+    readings.push(kanjis[i].yomi);
     kanjiP.innerHTML = kanjis[i].self;
     readingP.innerHTML = kanjis[i].yomi;
     modalInner.appendChild(kanjiP);
@@ -146,9 +168,17 @@ function beginGame() {
 function regenerate() {
   kanjis = [];
   particles = [];
+  readings = []
   initObjects();
   displayKanji();
-  console.log(kanjis);
+}
+
+function styleCanvas() {
+  canvas.style.width = window.innerWidth + 'px';
+  canvas.style.height = window.innerHeight + 'px';
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  context.font = '40px serif';
 }
 
 function loadGame() {

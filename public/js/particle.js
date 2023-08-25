@@ -30,6 +30,27 @@ class Particle {
     context.closePath();
   }
 
+  disperse(context) {
+    const lastPoint = {
+      x: this.x,
+      y: this.y
+    }
+
+    const perpendicularVector = {
+      x: -Math.sin(this.radians),
+      y: Math.cos(this.radians)
+    }
+
+    // this.radians += this.velocity;
+    // this.x += this.sx + Math.cos(this.radians) * this.dfc;
+    // this.y += this.sy + Math.sin(this.radians) * this.dfc;  
+
+    this.x += perpendicularVector.x * this.dfc;
+    this.y += perpendicularVector.y * this.dfc;
+
+    this.draw(lastPoint, context);
+  }
+
   update(context) {
     const lastPoint = {
       x: this.x,

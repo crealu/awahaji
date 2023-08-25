@@ -137,3 +137,17 @@ input:focus {
 .star {
   display: none;
 }
+
+@media (max-width: 800px) and (min-width: 200px) {
+  .bubble-title {
+    top: 5vh;
+  }
+
+  .modal-inner {
+    width: 100%;
+  }
+
+  .modal-inner p {
+
+  }
+}
