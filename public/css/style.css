@@ -10,9 +10,10 @@
 body {
   margin: 0px;
   padding: 0px;
-  overflow: hidden;
+/*  overflow: hidden;*/
   background: black;
   font-family: var(--main-font);
+  color: white;
 }
 
 input:focus {
@@ -30,6 +31,7 @@ input:focus {
   text-align: center;
   animation: 10s rotainbow 0s forwards; 
   z-index: 100;
+  display:none;
 }
 
 @keyframes rotainbow {
@@ -72,6 +74,7 @@ input:focus {
 
 .start-btn {
   top: 60vh;
+  display: none;
 }
 
 .begin-btn { 
@@ -149,6 +152,7 @@ input:focus {
   left: 0;
   right: 0;
   z-index: 100;
+  display: none;
 }
 
 .the-bubble {

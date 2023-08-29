@@ -1,0 +1,103 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background: black;
+  font-family: Helvetica;
+  color: white;
+  overflow: hidden;
+}
+
+.all-targets {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  position: absolute;
+  height: 150px;
+}
+
+.bubble-target {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+/*  margin: 0px 20px;*/
+  font-size: 24px;
+  transition: 0.25s ease;
+}
+
+.the-sling {
+  position: absolute;
+  display: flex;
+  width: 60px;
+  height: 60px;
+  margin: 0 auto;
+  border: 1px solid white;
+  border-radius: 50%;
+  bottom: calc(10vh + 70px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+  align-items: center;
+  transition: 0.25s ease;
+}
+
+.scope {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  position: absolute;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  transition: 0.25s ease;
+}
+
+.active-scope {
+  width: 20px;
+  height: 20px;
+}
+
+.the-bubble {
+  position: absolute;
+  display: flex;
+  top: 75vh;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+  border-radius: 50%;
+  border: 1px solid white;
+  text-align: center;
+  z-index: 101;
+  transform: translate(-50%, 0); 
+  align-items: center;
+  justify-content: center;
+/*  transition: 0.25s ease;*/
+}
+
+.in-sling {
+  background: green;
+  transition: 0.25s ease;
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: translate(0, 0);
+}
+
+.in-sling-1 {
+  position: absolute;
+  margin: 0 auto;
+  background: green;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: calc(50vh - 50px);
+/*  transition: 0.25s ease;*/
+}

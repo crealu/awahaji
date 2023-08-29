@@ -44,7 +44,6 @@ function makeSparkle(spx, spy) {
   }
 }
 
-
 // setup
 function addKanji(x, y, color) {
   let randomNumber = randomInt(80);
@@ -87,8 +86,6 @@ let isDragging = false;
 let offsetX = 0;
 let offsetY = 0;
 
-
-
 function dragstartHandler(event) {
   movedBubble = event.target;
   event.dataTransfer.dropEffect = 'move';
@@ -109,55 +106,61 @@ function dropHandler(event) {
     console.log(movedBubble.textContent);
     event.target.appendChild(movedBubble);
   }
-  // let targetNum = event.target.dataset.stepnum;
-  // if (oneBeingMoved.dataset.stepnum < targetNum) {
-  //   event.target.insertAdjacentElement('afterend', oneBeingMoved);
-  // } else {
-  //   topbar.insertBefore(oneBeingMoved, event.target);
-  // }
-  // resetStepNumbers();
 }
 
 function touchstartHandler(event) {
   event.preventDefault();
-  movedBubble = event.target;
-  // dragstartHandler(event.target);
   event.target.style.background = 'blue';
-  isDragging = true;
-  let sling = document.getElementsByClassName('the-sling')[0];
+  // let touchLocation = event.touches[0];
+  document.body.innerHTML += touchLocation.pageX;
 
   let sd = { 
     type: 'start',
-    slingX: sling.getBoundingClientRect().left,
-    slingY: sling.getBoundingClientRect().top
+    x: touchLocation.pageX
   }
+  fetch('/testdrop', {
+    method: 'post',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify(sd),
+  })
+  .then(res => { return res.json() })
+  .then(data => { 
 
-  movedBubble.style.left = touchLocation.pageX + `px`;
-  movedBubble.style.top = touchLocation.pageY + `px`;
+    console.log(data); 
+    event.target.textContent = data;
+  })
+  .catch(err => { return console.log(err) });
 
-  // fetch('/testdrop', {
-  //   method: 'post',
-  //   headers: {'Content-Type': 'application/json'},
-  //   body: JSON.stringify(sd),
-  // })
-  // .then(res => { return res.json() })
-  // .then(data => { console.log(data); })
-  // .catch(err => { return console.log(err) });
+  movedBubble = event.target;
+  // isDragging = true;
+  // let sling = document.getElementsByClassName('the-sling')[0];
+    // slingX: sling.getBoundingClientRect().left,
+    // slingY: sling.getBoundingClientRect().top
+
+
+  // let touchLocation = event.touches[0];
+
+  movedBubble.style.left = touchLocation.pageX + 'px';
+  movedBubble.style.top = touchLocation.pageY + 'px';
+
+  document.body.innerHTML += movedBubble.style.left;
+
+
   // event.dataTransfer.dropEffect = 'move';
   console.log('drag started')
 }
 
 function touchmoveHandler(event) {
-  if (!isDragging) return;
+  // if (!isDragging) return;
   event.preventDefault();
   let touchLocation = event.touches[0];
-  movedBubble.style.left = 0 + touchLocation.pageX + `px`;
-  movedBubble.style.top = 0 + touchLocation.pageY + `px`;
+  movedBubble.style.left = touchLocation.pageX + `px`;
+  movedBubble.style.top = touchLocation.pageY + `px`;
 }
 
 function touchendHandler(event) {
   event.preventDefault();
-  isDragging = false;
+  // isDragging = false;
   let x = parseInt(movedBubble.style.left);
   let y = parseInt(movedBubble.style.top);
 
@@ -177,17 +180,20 @@ function touchendHandler(event) {
     ely: y
   };
 
-  fetch('/testdrop', {
-    method: 'post',
-    headers: {'Content-Type': 'application/json'},
-    body: JSON.stringify(sd),
-  })
-  .then(res => { return res.json() })
-  .then(data => { console.log(data); })
-  .catch(err => { return console.log(err) });
+  document.body.innerHTML += movedBubble.style.left;
+
+
+  // fetch('/testdrop', {
+  //   method: 'post',
+  //   headers: {'Content-Type': 'application/json'},
+  //   body: JSON.stringify(sd),
+  // })
+  // .then(res => { return res.json() })
+  // .then(data => { console.log(data); })
+  // .catch(err => { return console.log(err) });
 }
 
-document.addEventListener('touchend', touchendHandler);
+// document.addEventListener('touchend', touchendHandler);
 
 function createBubble() {
   let bubble = document.createElement('div');
@@ -211,8 +217,6 @@ function createBubble() {
   document.body.appendChild(sling);
 }
 
-
-
 function displayStats() {
   console.log('kanjis: ', kanjis)
   console.log('answered: ', answered)
@@ -235,18 +239,18 @@ function displayKanji() {
 
 function startGame() {
   startBtn.style.display = 'none';
-  modal.style.display = 'block';
+  // modal.style.display = 'block';
   modal.style.opacity = '1';
   displayKanji();
 }
 
 function beginGame() {
-  modal.style.opacity = '0';
-  yomiInput.style.display = 'block';
-  canvas.style.display = 'block';
-  canvas.style.top = '0px';
-  canvas.style.position = 'absolute';
-  animate();
+  // modal.style.opacity = '0';
+  // yomiInput.style.display = 'block';
+  // canvas.style.display = 'block';
+  // canvas.style.top = '0px';
+  // canvas.style.position = 'absolute';
+  // animate();
 }
 
 function regenerate() {

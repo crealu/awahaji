@@ -7,11 +7,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 app.get('/', (req, res) => {
-	res.sendFile('index.html', {root: './'});
+	res.sendFile('touch.html', {root: './'});
 })
 
 app.post('/testdrop', (req, res) => {
 	console.log(req.body);
+	res.send('got it');
 })
 
 app.listen(port, () => { console.log(`Listening on ${port}`) });
