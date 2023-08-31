@@ -1,8 +1,12 @@
 let sling = document.getElementsByClassName('the-sling')[0];
 let activeScope = 0;
 
-(function() {
-  console.log('hey');
+let allKanji;
+(async function() {
+  await fetch('https://kanji-data.herokuapp.com/n5Kanji')
+    .then(res => res.json())
+    .then(data => { console.log(data) })
+    .catch(err => { throw err })
 })()
 
 let kanjis = ['雨', '九', '元'];

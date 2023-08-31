@@ -11,7 +11,21 @@ const context = canvas.getContext('2d');
 const tolerance = 50;
 const bubbleY = 300;
 const radius = 4;
+let allKanji = [];
 // randomIntFromRange(tolerance, canvas.width - tolerance);
+(async function() {
+  await fetch('https://kanji-data.herokuapp.com/n5Kanji')
+    .then(res => res.json())
+    .then(data => { 
+      allKanji = data.kanji.n5;
+    })
+    .catch(err => { throw err })
+
+  console.log(allKanji);
+})();
+
+// console.log(allKanji);
+
 
 let kanjis = [];
 let particles = [];

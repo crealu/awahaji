@@ -10,6 +10,10 @@ app.get('/', (req, res) => {
 	res.sendFile('touch.html', {root: './'});
 })
 
+app.get('/desktop', (req, res) => {
+	res.sendFile('index.html', {root: './'});
+});
+
 app.post('/testdrop', (req, res) => {
 	console.log(req.body);
 	res.send('got it');
