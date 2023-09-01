@@ -23,8 +23,7 @@ class Awahaji {
 
   touchstartHandler(event) {
     event.preventDefault();
-    this.activeBubble = event.target.dataset['bubble-number'];
-    event.target.style.background = this.colors[this.activeScope];
+    this.activeBubble = parseInt(event.target.dataset['bubble-number']);
     let touchLocation = event.touches[0];
     this.movedBubble = event.target;
     this.movedBubble.style.left = touchLocation.pageX + 'px';
@@ -60,8 +59,18 @@ class Awahaji {
       this.movedBubble.style.bottom = 'calc(0vh - 50)';
       this.movedBubble.style.transform = 'translate(5px, 5px)';
       this.movedBubble.style.transition = '0.5s ease';
+      this.movedBubble.style.background = this.colors[this.activeScope];
+
       this.launch();
-    } 
+    } else {
+      this.movedBubble.style.transition = '0.25s ease';
+      this.movedBubble.style.left = this.leftStylings[this.activeBubble] + 'px';
+      this.movedBubble.style.top = '75vh';
+      this.movedBubble.style.background = 'none';
+      setTimeout(() => {
+        this.movedBubble.style.transition = '0s ease';
+      }, 250)
+    }
   }
 
   createBubbles() {
@@ -113,22 +122,34 @@ class Awahaji {
       sling.appendChild(scope);
     }
     sling.style.transform = 'rotate(-90deg)';
-
+    sling.style.border = '2px solid ' + this.colors[this.activeScope];
     document.getElementsByClassName('scope')[this.activeScope].classList.add('active-scope');
   }
 
 
   updateActiveScope(event) {
     let scopes = document.getElementsByClassName('scope');
-    let sling = document.getElementsByClassName('the-sling')[0];
-
     for (let i = 0; i < scopes.length; i++) {
       scopes[i].classList.remove('active-scope');
     }
     event.target.classList.add('active-scope');
     // console.dir(event.target.attributes['data-scope-number'].value);
     let scopeNumber = parseInt(event.target.attributes['data-scope-number'].value);
+    this.rotateScopes(scopeNumber);
     console.log(this);
+    // sling.style.border = '2px solid ' + this.colors[scopeNumber];
+    // if (scopeNumber == 0) {
+    //   sling.style.transform = 'rotate(-' + 90 + 'deg)';
+    // } else if (scopeNumber == 1) {
+    //   sling.style.transform = 'rotate(-' + 210 + 'deg)';
+    // } else if (scopeNumber == 2) {
+    //   sling.style.transform = 'rotate(' + 30 + 'deg)';
+    // }
+    // this.activeScope = scopeNumber;
+  }
+
+  rotateScopes(scopeNumber) {
+    let sling = document.getElementsByClassName('the-sling')[0];
     sling.style.border = '2px solid ' + this.colors[scopeNumber];
     if (scopeNumber == 0) {
       sling.style.transform = 'rotate(-' + 90 + 'deg)';
@@ -138,6 +159,14 @@ class Awahaji {
       sling.style.transform = 'rotate(' + 30 + 'deg)';
     }
     this.activeScope = scopeNumber;
+  }
+
+  setNextScope(scopeNumber) {
+    if (scopeNumber == 2) {
+      this.rotateScopes(0);
+    } else {
+      this.rotateScopes(scopeNumber++);
+    }
   }
 
   launch() {
@@ -152,15 +181,35 @@ class Awahaji {
         activeTarget.style.opacity = '0';
         activeTarget.style.transform = 'scale(1.5)';
         this.movedBubble.style.opacity = '0';      
-        this.movedBubble.style.transform = 'translate(5px, 5px) scale(1.5)';      
+        this.movedBubble.style.transform = 'translate(5px, 5px) scale(1.5)';
+        this.setNextScope(this.activeScope); 
       } else {
         this.movedBubble.style.background = 'gray';
-        this.movedBubble.style.opacity = '0';
-        this.movedBubble.style.left = this.x0 + 'px';
-        this.movedBubble.style.top = '75vh';
-        this.movedBubble.style.animation = '1s ease 0.5s 1 forwards back';
-        // let id = setInterval(frame, 250);
+        // this.movedBubble.style.opacity = '0';
+        // this.movedBubble.style.left = this.leftStylings[this.activeBubble] + 'px';
+        // this.movedBubble.style.top = '75vh';
+        // this.movedBubble.style.animation = '1s ease 0.5s 1 forwards back';
+        // this.movedBubble.style.transition = '0s';
+        let i = 0;
 
+        setInterval(() => {
+          i++;
+          if (i >= 1 && i < 2) {
+            this.movedBubble.style.opacity = '0';
+            this.movedBubble.style.transition = '0s'; 
+          } else if (i >= 2 && i < 3) {
+            this.movedBubble.style.background = 'none';
+            this.movedBubble.style.left = this.x0 + 'px';
+            this.movedBubble.style.top = '75vh';
+            this.movedBubble.style.transform = 'translate(5px, 0)';
+            this.movedBubble.style.transition = '0.25s ease'; 
+          } else if (i >= 3 && i < 4) {
+            this.movedBubble.style.opacity = '1';
+          } else {
+            this.movedBubble.style.transition = '0s'; 
+            clearInterval(id);
+          }
+        }, 250)
         // let i = 0;
         // function frame() {
         //   i++;
