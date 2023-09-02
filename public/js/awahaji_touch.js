@@ -182,7 +182,6 @@ class Awahaji {
         activeTarget.style.transform = 'scale(1.5)';
         this.movedBubble.style.opacity = '0';      
         this.movedBubble.style.transform = 'translate(5px, 5px) scale(1.5)';
-        this.setNextScope(this.activeScope);
         this.drawLines();
       } else {
         this.movedBubble.style.background = 'gray';
@@ -250,6 +249,8 @@ class Awahaji {
       for (let i = 0; i < yesLines.length; i++) {
         yesLines[i].remove();
       }
+              this.setNextScope(this.activeScope);
+
     }, 500)
   }
 }
