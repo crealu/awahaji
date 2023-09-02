@@ -182,7 +182,8 @@ class Awahaji {
         activeTarget.style.transform = 'scale(1.5)';
         this.movedBubble.style.opacity = '0';      
         this.movedBubble.style.transform = 'translate(5px, 5px) scale(1.5)';
-        this.setNextScope(this.activeScope); 
+        this.setNextScope(this.activeScope);
+        this.drawLines();
       } else {
         this.movedBubble.style.background = 'gray';
         // this.movedBubble.style.opacity = '0';
@@ -234,7 +235,26 @@ class Awahaji {
       }
     }, 500)
   }
+
+  drawLines() {
+    for (let i = 0; i < 6; i++) {
+      let line = document.createElement('div');
+      line.classList.add('yes-line');
+      line.style.background = this.colors[this.activeScope];
+      line.style.top = 100 + (i * 15) + 'px';
+      line.style.animation = `1s ease ${i/12}s 1 forwards stretch`;
+      document.body.appendChild(line);
+    }
+    setTimeout(() => {
+      let yesLines = document.getElementsByClassName('yes-line');
+      for (let i = 0; i < yesLines.length; i++) {
+        yesLines[i].remove();
+      }
+    }, 500)
+  }
 }
+
+
 
 
 // let allKanji;

@@ -123,3 +123,26 @@ body {
     animation: null;
   }
 }
+
+.yes-line {
+  position: absolute;
+  left: 0px;
+  height: 10px;
+  transform-origin left;
+  transition: 0.5s ease transform;
+  width: 100%;
+}
+
+@keyframes stretch {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+
+  100% {
+    transform: translateX(200%);
+  }
+}
