@@ -30,6 +30,6 @@ function filterYomi(yomi) {
 }
 
 function getStyle(element, property) {
-  return getComputedStyle(e).getPropertyValue(s) 
+  return getComputedStyle(element).getPropertyValue(property) 
 }
 
