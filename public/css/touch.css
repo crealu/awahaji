@@ -1,3 +1,9 @@
+:root {
+  --color-1: '#fbab56';
+  --color-2: '#45f5a5';
+  --color-3: '#d277ff';
+}
+
 body {
   margin: 0px;
   padding: 0px;
@@ -37,7 +43,7 @@ body {
   margin: 0 auto;
   border: 1px solid white;
   border-radius: 50%;
-  bottom: calc(10vh + 70px);
+  bottom: calc(5vh + 70px);
   left: 0;
   right: 0;
   z-index: 100;
@@ -129,10 +135,9 @@ body {
   left: 0px;
   height: 10px;
   transform-origin left;
-  transition: 0.5s ease transform;
   width: 100%;
   transform: translateX(-100%);
-
+  float: left;
 }
 
 @keyframes stretch {
@@ -142,5 +147,101 @@ body {
 
   100% {
     transform: translateX(100%);
+  }
+}
+
+.yes-circle {
+  position: absolute;
+  display: flex;
+  top: 100px;
+  left: 0%;
+  right: 0%;
+  margin: 0 auto;
+  background: black;
+  border-radius: 50%;
+  transform: scale(0);
+  opacity: 0;
+  transition: 0.5 ease-in-out opacity;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.popped-kanji {
+  position: absolute;
+  top: 35vh;
+  left: 0%;
+  right: 0%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 40px;
+  opacity: 0;
+  transition: 0.5 ease-in-out opacity;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  z-index: 200;
+}
+
+@keyframes showKanji {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }  
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+    transition: 0.5s ease;
+  }  
+}
+
+.color-1 {
+  animation: 0s color-1-glow 0.5s ease infinite;
+}
+
+@keyframes color-1-glow {
+  0% {
+    box-shadow: 0px 0px 10px inset var(--color-1);
+  }
+
+  100% {
+    box-shadow: 0px 0px 10px inset var(--color-1);
+  }
+}
+
+.color-2 {
+  animation: 0s color-2-glow 0.5s ease infinite;
+}
+
+@keyframes color-2-glow {
+  0% {
+    box-shadow: 0px 0px 10px inset var(--color-2);
+  }
+
+  100% {
+    box-shadow: 0px 0px 10px inset var(--color-2);
+  }
+}
+
+.color-3 {
+  animation: 0s color-3-glow 0.5s ease infinite;
+}
+
+@keyframes color-3-glow {
+  0% {
+    box-shadow: 0px 0px 10px inset var(--color-3);
+  }
+
+  100% {
+    box-shadow: 0px 0px 10px inset var(--color-3);
   }
 }

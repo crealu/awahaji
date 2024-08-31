@@ -13,6 +13,8 @@ class Awahaji {
     this.colors = ['#fbab56',  '#45f5a5', '#d277ff'];
     this.x0;
     this.y0;
+    this.ySpeed = 0;
+    this.yStart = 0;
     this.movedBubble;
 
     this.touchstartHandler = this.touchstartHandler.bind(this);
@@ -30,6 +32,7 @@ class Awahaji {
     this.movedBubble.style.top = touchLocation.pageY + 'px';
     this.x0 = this.movedBubble.getBoundingClientRect().left;
     this.y0 = this.movedBubble.getBoundingClientRect().top;
+    this.startY = event.touches[0].clientY;
   }
 
   touchmoveHandler(event) {
@@ -37,6 +40,7 @@ class Awahaji {
     let touchLocation = event.touches[0];
     this.movedBubble.style.left = touchLocation.pageX + `px`;
     this.movedBubble.style.top = touchLocation.pageY + `px`;
+    this.ySpeed = event.touches[0].clientY - startY;
   }
 
   touchendHandler(event) {
@@ -53,8 +57,19 @@ class Awahaji {
 
     let inSling = x > slingLeft && x < slingRight && y > slingTop && y < slingBottom;
     // movedBubble.style.transform = 'translate(0, 0)';
+    const deceleration = 0.98; // Adjust this value for desired deceleration rate
 
-    if (inSling) {
+    // function decelerate() {
+    //   if (Math.abs(this.ySpeed) > 0.1) {
+    //     this.ySpeed *= deceleration;
+    //     this.movedBubble.style.transform = `translateY(${this.ySpeed}px)`;
+    //     requestAnimationFrame(decelerate);
+    //   }
+    // }
+
+    // decelerate();
+    let justUp = y < slingBottom;
+    if (justUp) {
       // movedBubble.style.background = 'green';
       this.movedBubble.style.bottom = 'calc(0vh - 50)';
       this.movedBubble.style.transform = 'translate(5px, 5px)';
@@ -182,7 +197,7 @@ class Awahaji {
         activeTarget.style.transform = 'scale(1.5)';
         this.movedBubble.style.opacity = '0';      
         this.movedBubble.style.transform = 'translate(5px, 5px) scale(1.5)';
-        this.drawLines();
+        this.drawCircles();
       } else {
         this.movedBubble.style.background = 'gray';
         // this.movedBubble.style.opacity = '0';
@@ -249,9 +264,57 @@ class Awahaji {
       for (let i = 0; i < yesLines.length; i++) {
         yesLines[i].remove();
       }
-              this.setNextScope(this.activeScope);
 
-    }, 500)
+    }, 1000)
+  }
+
+  drawCircles() {
+    let poppedKanji = document.createElement('p');
+    poppedKanji.classList.add('popped-kanji');
+    document.body.appendChild(poppedKanji);
+    poppedKanji.innerHTML = this.kanjis[this.activeScope];
+    poppedKanji.style.color = this.colors[this.activeScope];
+    poppedKanji.style.animation = `1s cubic-bezier(.21,.38,.35,.99) 0.5s 1 forwards showKanji`;
+
+    poppedKanji.addEventListener('click', (event) => {
+      let yesLines = document.getElementsByClassName('yes-circle');
+      for (let i = 0; i < yesLines.length; i++) {
+        // yesLines[i].style.opacity = '0';
+        yesLines[i].style.animation = `1s cubic-bezier(.11,.46,.39,1.18) ${i/12}s 1 reverse pulse`;
+
+      }
+      // event.target.style.opacity = '0';
+      poppedKanji.style.animation = `1s cubic-bezier(.21,.38,.35,.99) 0.5s 1 reverse showKanji`;
+
+      // setTimeout(() => {
+      //   event.target.remove();
+      //   for (let i = 0; i < yesLines.length; i++) {
+      //     while (yesLines[i]) {
+      //       yesLines[i].remove();
+      //     }
+      //   }
+      // }, 1000)
+    })
+
+    for (let i = 0; i < 6; i++) {
+      let line = document.createElement('div');
+      line.classList.add('yes-circle');
+      line.style.border = '2px solid ' + this.colors[this.activeScope];
+      line.style.zIndex = 106 - i;
+      let size = 100 + (i * 50);
+      line.style.width = size + 'px';
+      line.style.height = size + 'px';
+      line.style.top = 'calc(40vh - ' + size/2 + 'px)';
+      line.style.animation = `1s cubic-bezier(.11,.46,.39,1.18) ${i/12}s 1 forwards pulse`;
+      document.body.appendChild(line);
+    }
+    // setTimeout(() => {
+    //   let yesLines = document.getElementsByClassName('yes-circle');
+    //   for (let i = 0; i < yesLines.length; i++) {
+    //     yesLines[i].remove();
+    //   }
+
+    // }, 5000)
   }
 }
 
