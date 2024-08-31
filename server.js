@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const port = 4567 || process.env.PORT;
+const port = process.env.PORT || 4567;
 
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({ extended: false }));
