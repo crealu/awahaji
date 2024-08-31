@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Kosugi+Maru|Noto+Sans+JP|Noto+Serif+JP|Sawarabi+Mincho&display=swap');
+
+:root {
+  --main-green: #6CC088;
+  --main-green-dark: #407150;
+  --main-font-color: white;
+  --main-font: 'Comfortaa';
+  --color-1: #fbab56;
+  --color-2: #45f5a5;
+  --color-3: #d277ff;
+}
+
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: var(--main-font);
+  color: white;
+  background: black;
+  overflow: hidden;
+}
