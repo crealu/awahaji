@@ -47,7 +47,7 @@ input:focus {
 
 .start-btn {
   top: 60vh;
-  display: none;
+  display: block;
 }
 
 .begin-btn { 
