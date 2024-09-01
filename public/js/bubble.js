@@ -2,6 +2,7 @@
 let startBtn = document.querySelector('.start-btn');
 let beginBtn = document.querySelector('.begin-btn');
 let regenerateBtn = document.querySelector('.regenerate-btn');
+let practiceBtn = document.querySelector('.practice-btn');
 let yomiInput = document.querySelector('.the-input');
 let practiceInput = document.querySelector('.practice-input');
 let modal = document.querySelector('.the-modal');
