@@ -3,6 +3,7 @@ let startBtn = document.querySelector('.start-btn');
 let beginBtn = document.querySelector('.begin-btn');
 let regenerateBtn = document.querySelector('.regenerate-btn');
 let yomiInput = document.querySelector('.the-input');
+let practiceInput = document.querySelector('.practice-input');
 let modal = document.querySelector('.the-modal');
 let modalInner = document.querySelector('.modal-inner');
 const canvas = document.querySelector('.the-canvas');
@@ -12,27 +13,15 @@ const tolerance = 50;
 const bubbleY = 300;
 const radius = 4;
 let allKanji = [];
-// randomIntFromRange(tolerance, canvas.width - tolerance);
-(async function() {
-  await fetch('https://kanji-data.herokuapp.com/n5Kanji')
-    .then(res => res.json())
-    .then(data => { 
-      allKanji = data.kanji.n5;
-    })
-    .catch(err => { throw err })
-
-  console.log(allKanji);
-})();
-
-// console.log(allKanji);
-
-
 let kanjis = [];
 let particles = [];
 let readings = [];
 let answered = [];
 let frame;
 let finished = false;
+
+let activeReading;
+let active;
 
 const colors = [
   '#fbab56',  // orange
@@ -42,6 +31,16 @@ const colors = [
   '#f5ff77',  // yellow
   '#ff7777'   // red
 ];
+
+// randomIntFromRange(tolerance, canvas.width - tolerance);
+// (async function() {
+//   await fetch('https://kanji-data.herokuapp.com/n5Kanji')
+//     .then(res => res.json())
+//     .then(data => { allKanji = data.kanji.n5 })
+//     .catch(err => { throw err })
+
+//   console.log(allKanji);
+// })();
 
 function makeSparkle(spx, spy) {
   for (var s = 0; s <= 10; s++) {
@@ -119,6 +118,28 @@ function readInput() {
         // yomiInput.value = '';
       }, 100)
     }
+  }
+}
+
+function restyleReadings() {
+  let allReadings = document.getElementsByClassName('modal-reading');
+  for (r of allReadings) {
+    r.classList.remove('active-reading');
+  }
+}
+
+function practice(n) {
+  active = 0;
+  activeReading = document.getElementsByClassName('modal-reading')[active];
+  activeReading.classList.add('active-reading');
+}
+
+function handleInput(event) {
+  if (event.target.value == activeReading.texContent) {
+    restyleReadings();
+    active++;
+    activeReading = document.getElementsByClassName('modal-reading')[active];
+    activeReading.classList.add('active-reading');
   }
 }
 
@@ -219,6 +240,8 @@ function quitGame(event) {
 beginBtn.addEventListener('click', beginGame)
 startBtn.addEventListener('click', startGame);
 regenerateBtn.addEventListener('click', regenerate);
+practiceBtn.addEventListener('click', practice);
 yomiInput.addEventListener('input', readInput);
+practiceInput.addEventListener('input', handleInput);
 window.addEventListener('keydown', quitGame);
 window.addEventListener('load', loadGame);
