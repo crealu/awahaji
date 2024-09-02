@@ -90,7 +90,7 @@ function initObjects() {
     addKanji(bubbleX, bubbleY, color);
     addParticles(bubbleX, bubbleY, color);
   }
-  displayStats();
+  // displayStats();
 }
 
 function displayStats() {
@@ -129,7 +129,35 @@ function restyleReadings() {
   }
 }
 
+function matchRomaji(yomi) {
+  for (k of kana) {
+    if (yomi == k[1]) {
+      return k[0];
+    }
+  }
+}
+
+
+function parseReadings() {
+  for (ra of readings) {
+    let full = ra[1];
+    let rom = '';
+    for (r of ra[1]) {
+      rom += matchRomaji(r);
+    }
+    console.log(ra[1], rom)
+  }
+}
+
+    // for (ka of kana) {
+      // if (ra[1] == ka[1]) {
+        // console.log(ka[0])
+        // ra.push(ka[0])
+      // }
+    // }
+
 function practice(n) {
+  parseReadings();
   active = 0;
   activeReading = document.getElementsByClassName('modal-reading')[active];
   activeReading.classList.add('active-reading');
