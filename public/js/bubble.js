@@ -155,22 +155,21 @@ function containsSmall(yomi) {
 
 
 function parseReadings() {
-  for (ra of readings) {
-    let full = ra[1];
+  for (reading of readings) {
+    let full = reading[1];
     let rom = '';
     let subRom = ''
     if (containsSmall(full)) {
       subRom = full.slice(0, 2);
-      // console.log(subRom);
       rom += matchCombination(subRom);
       rom += matchOneKana(full[2]);
     } else {
-      for (r of ra[1]) {
+      for (r of reading[1]) {
         rom += matchOneKana(r);
       }
     }
 
-    console.log(ra[1], rom) 
+    reading.push(rom);
   }
 }
 
@@ -183,7 +182,7 @@ function practice(n) {
 
 function handleInput(event) {
   const inp = event.target.value;
-  const red = activeReading.textContent;
+  const red = readings[active][2];
   console.log(inp, red);
   if (inp == red) {
     restyleReadings();
