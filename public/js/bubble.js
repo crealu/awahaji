@@ -129,7 +129,9 @@ function restyleReadings() {
   }
 }
 
-function matchRomaji(yomi) {
+console.log(kana[71]);
+
+function matchOneKana(yomi) {
   for (k of kana) {
     if (yomi == k[1]) {
       return k[0];
@@ -137,24 +139,40 @@ function matchRomaji(yomi) {
   }
 }
 
+function matchCombination(yomi) {
+  for (let i = 71; i < kana.length; i++) {
+    if (yomi == kana[i][1]) {
+      return kana[i][0];
+    }
+  }
+}
+
+function containsSmall(yomi) {
+  return yomi.includes('ゃ') ||
+         yomi.includes('ゅ') ||
+         yomi.includes('ょ')
+}
+
 
 function parseReadings() {
   for (ra of readings) {
     let full = ra[1];
     let rom = '';
-    for (r of ra[1]) {
-      rom += matchRomaji(r);
+    let subRom = ''
+    if (containsSmall(full)) {
+      subRom = full.slice(0, 2);
+      // console.log(subRom);
+      rom += matchCombination(subRom);
+      rom += matchOneKana(full[2]);
+    } else {
+      for (r of ra[1]) {
+        rom += matchOneKana(r);
+      }
     }
-    console.log(ra[1], rom)
+
+    console.log(ra[1], rom) 
   }
 }
-
-    // for (ka of kana) {
-      // if (ra[1] == ka[1]) {
-        // console.log(ka[0])
-        // ra.push(ka[0])
-      // }
-    // }
 
 function practice(n) {
   parseReadings();
