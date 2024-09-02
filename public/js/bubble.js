@@ -123,6 +123,7 @@ function readInput() {
 }
 
 function restyleReadings() {
+  practiceInput.value = '';
   let allReadings = document.getElementsByClassName('modal-reading');
   for (r of allReadings) {
     r.classList.remove('active-reading');
@@ -186,9 +187,11 @@ function handleInput(event) {
   console.log(inp, red);
   if (inp == red) {
     restyleReadings();
-    active++;
-    activeReading = document.getElementsByClassName('modal-reading')[active];
-    activeReading.classList.add('active-reading');
+    if (active != readings.length - 1) {
+      active++;
+      activeReading = document.getElementsByClassName('modal-reading')[active];
+      activeReading.classList.add('active-reading');
+    }
   }
 }
 
