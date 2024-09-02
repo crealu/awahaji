@@ -136,7 +136,10 @@ function practice(n) {
 }
 
 function handleInput(event) {
-  if (event.target.value == activeReading.texContent) {
+  const inp = event.target.value;
+  const red = activeReading.textContent;
+  console.log(inp, red);
+  if (inp == red) {
     restyleReadings();
     active++;
     activeReading = document.getElementsByClassName('modal-reading')[active];
