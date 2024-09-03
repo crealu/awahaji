@@ -163,7 +163,9 @@ function parseReadings() {
     if (containsSmall(full)) {
       subRom = full.slice(0, 2);
       rom += matchCombination(subRom);
-      rom += matchOneKana(full[2]);
+      if (full[2]) {
+        rom += matchOneKana(full[2]);
+      }
     } else {
       for (r of reading[1]) {
         rom += matchOneKana(r);
