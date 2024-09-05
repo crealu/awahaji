@@ -97,10 +97,11 @@ input:focus {
 
 .regenerate-btn {
   top: 20px;
+  display: none;
 }
 
 .begin-btn { 
-
+  display: none;
 }
 
 #the-canvas {
