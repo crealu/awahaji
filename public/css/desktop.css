@@ -54,8 +54,13 @@
   margin-top: 5px;
 }
 
+.modal-reading {
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: 0.3s ease-in;
+}
+
 .active-reading {
-  border: 1px solid white;
+  border: 1px solid rgba(255, 255, 255, 1);
 }
 
 .modal-romaji {
@@ -77,6 +82,8 @@
   background: none;
   font-size: 20px;
   color: white;
+  opacity: 0;
+  transition: 0.3s ease-in;
 }
 
 .input-wrapper {

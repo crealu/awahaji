@@ -130,8 +130,6 @@ function restyleReadings() {
   }
 }
 
-console.log(kana[71]);
-
 function matchOneKana(yomi) {
   for (k of kana) {
     if (yomi == k[1]) {
@@ -180,6 +178,8 @@ function parseReadings() {
 }
 
 function practice(n) {
+  practiceInput.style.opacity = '1';
+  practiceInput.focus();
   parseReadings();
   active = 0;
   activeReading = document.getElementsByClassName('modal-reading')[active];
