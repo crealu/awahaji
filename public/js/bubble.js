@@ -154,8 +154,8 @@ function containsSmall(yomi) {
          yomi.includes('ょ')
 }
 
-
 function parseReadings() {
+  let i = 0;
   for (reading of readings) {
     let full = reading[1];
     let rom = '';
@@ -173,6 +173,9 @@ function parseReadings() {
     }
 
     reading.push(rom);
+    let romajiP = document.getElementsByClassName('modal-romaji')[i];
+    romajiP.textContent = rom;
+    i++;
   }
 }
 
@@ -186,7 +189,6 @@ function practice(n) {
 function handleInput(event) {
   const inp = event.target.value;
   const red = readings[active][2];
-  console.log(inp, red);
   if (inp == red) {
     restyleReadings();
     if (active != readings.length - 1) {
@@ -239,11 +241,14 @@ function displayKanji() {
   for (let i = 0; i < kanjis.length; i++) {
     let kanjiP = document.createElement('p');
     let readingP = document.createElement('p');
+    let romajiP = document.createElement('p');
     readingP.classList.add('modal-reading');
+    romajiP.classList.add('modal-romaji');
     kanjiP.innerHTML = kanjis[i].self;
     readingP.innerHTML = kanjis[i].yomi;
     modalInner.appendChild(kanjiP);
     modalInner.appendChild(readingP);
+    modalInner.appendChild(romajiP);
   }
   modal.style.display = 'block';
 }
@@ -254,6 +259,8 @@ function startGame() {
   modal.style.opacity = '1';
   displayKanji();
 }
+
+
 
 function beginGame() {
   modal.style.opacity = '0';
