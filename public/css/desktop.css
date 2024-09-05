@@ -68,6 +68,17 @@
   cursor: default;
 }
 
+.practice-input {
+  padding-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: none;
+  font-size: 20px;
+  color: white;
+}
+
 .input-wrapper {
   height: 100px;
 }
