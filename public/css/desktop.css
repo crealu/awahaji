@@ -1,20 +1,27 @@
 .start-btn {
   top: calc(50vh - 55px);
-  display: block;
 }
 
-.modal-inner {
+.game-btn {
   position: relative;
+  display: block;
   margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  width: 80%;
+  width: 200px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  box-shadow: rgb(144, 144, 144) 0px 10px 12px 0px inset;
+  background: black;
+  color: white;
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 100;
+  transition: 0.25s ease;
+  cursor: pointer;
 }
 
-.modal-inner p {
-  font-size: 30px;
-  margin-bottom: 5px;
-  margin-top: 5px;
+.game-btn:hover {
+  border: 2px solid rgba(255, 255, 255, 1);
 }
 
 .the-modal {
@@ -33,8 +40,40 @@
   text-align: center;
 }
 
+.modal-inner {
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  width: 80%;
+}
+
+.modal-inner p {
+  font-size: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.active-reading {
+  border: 1px solid white;
+}
+
+.modal-romaji {
+  transition: 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.modal-reading:hover + .modal-romaji {
+  opacity: 1;
+  cursor: default;
+}
+
 .input-wrapper {
   height: 100px;
+}
+
+input:focus {
+  outline: none;
 }
 
 .buttons-wrapper {
@@ -42,50 +81,18 @@
   width: 100%;
 }
 
-.active-reading {
-  border: 1px solid white;
-}
-
-input:focus {
-  outline: none;
-}
-
 .bubble-title {
   position: absolute;
+  display:none;
   left: 0px;
   right: 0px;
-  top: 10vh;
+  top: 20vh;
   text-shadow: 0px 0px 10px white;
   font-size: 50px;
   color: black;
   text-align: center;
-  animation: 10s rotainbow 0s forwards; 
+/*  animation: 10s rotainbow 0s forwards; */
   z-index: 100;
-  display:none;
-}
-
-.game-btn {
-	position: relative;
-  display: block;
-  margin: 0 auto;
-  left: 0%;
-  right: 0%;
-  width: 200px;
-  padding: 12px 16px;
-  border-radius: 8px;
-  border: 2px solid rgba(255, 255, 255, 0);
-  box-shadow: rgb(144, 144, 144) 0px 10px 12px 0px inset;
-  background: black;
-  color: white;
-  font-family: var(--main-font);
-  font-size: 24px;
-  font-weight: 100;
-  transition: 0.25s ease;
-  cursor: pointer;
-}
-
-.game-btn:hover {
-  border: 2px solid rgba(255, 255, 255, 1);
 }
 
 .regenerate-btn {
@@ -121,10 +128,6 @@ input:focus {
   z-index: 50;
   transition: 0.5s ease;
 }
-
-
-
-
 
 .star {
   display: none;
