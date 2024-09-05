@@ -1,7 +1,42 @@
+.start-btn {
+  top: calc(50vh - 55px);
+  display: block;
+}
+
+.modal-inner {
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  width: 80%;
+}
+
+.modal-inner p {
+  font-size: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.the-modal {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  top: 25vh;
+  left: 0%;
+  right: 0%;
+  width: 75vw;
+  padding: 10px;
+  color: white;
+  opacity: 0;
+  transition: 0.5s ease;
+  background: black;
+  text-align: center;
+}
 
 .input-wrapper {
   height: 100px;
 }
+
 .buttons-wrapper {
   display: flex;
   width: 100%;
@@ -57,11 +92,6 @@ input:focus {
   top: 20px;
 }
 
-.start-btn {
-  top: 60vh;
-  display: block;
-}
-
 .begin-btn { 
 
 }
@@ -92,35 +122,9 @@ input:focus {
   transition: 0.5s ease;
 }
 
-.the-modal {
-  position: absolute;
-  display: block;
-  margin: 0 auto;
-  top: 25vh;
-  left: 0%;
-  right: 0%;
-  width: 75vw;
-  padding: 10px;
-  color: white;
-  opacity: 0;
-  transition: 0.5s ease;
-  background: black;
-  text-align: center;
-}
 
-.modal-inner {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
-  width: 50%;
-  margin: 0 auto;
-  position: relative;
-}
 
-.modal-inner p {
-  font-size: 30px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-}
+
 
 .star {
   display: none;
