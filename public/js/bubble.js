@@ -191,6 +191,8 @@ function handleInput(event) {
   const red = readings[active][2];
   if (inp == red) {
     restyleReadings();
+    let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
+    activeRomaji.style.opacity = '1';
     if (active != readings.length - 1) {
       active++;
       activeReading = document.getElementsByClassName('modal-reading')[active];
@@ -246,9 +248,9 @@ function displayKanji() {
     romajiP.classList.add('modal-romaji');
     kanjiP.innerHTML = kanjis[i].self;
     readingP.innerHTML = kanjis[i].yomi;
-    modalInner.appendChild(kanjiP);
     modalInner.appendChild(readingP);
     modalInner.appendChild(romajiP);
+    modalInner.appendChild(kanjiP);
   }
   modal.style.display = 'block';
 }
@@ -259,8 +261,6 @@ function startGame() {
   modal.style.opacity = '1';
   displayKanji();
 }
-
-
 
 function beginGame() {
   modal.style.opacity = '0';
