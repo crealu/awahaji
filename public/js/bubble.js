@@ -195,14 +195,29 @@ function practice(n) {
   activeReading.classList.add('active-reading');
 }
 
+function handleMouseOver(event) {
+  let el = event.target.previousSibling;
+  el.style.opacity = '1';
+}
+
+function handleMouseLeave(event) {
+  let el = event.target.previousSibling;
+  el.style.opacity = '0';
+}
+
 function resetSequence() {
   active = 0;
   currentClass = 'modal-kanji';
   activeItem = document.getElementsByClassName(currentClass)[active];
   activeItem.classList.add('active-reading');
+  let modalReading = document.getElementsByClassName('modal-reading');
   let modalRomaji = document.getElementsByClassName('modal-romaji');
+  let modalKanji = document.getElementsByClassName('modal-kanji');
   for (let m = 0; m < modalRomaji.length; m++) {
     modalRomaji[m].style.opacity = '0';
+    modalReading[m].style.opacity = '0';
+    modalKanji[m].addEventListener('mouseover', handleMouseOver)
+    modalKanji[m].addEventListener('mouseleave', handleMouseLeave)
   }
 }
 
@@ -216,8 +231,10 @@ function handleInput(event) {
     } else {
       restyleReadings();
     }
+    let activeKanji = document.getElementsByClassName('modal-kanji')[active]
     let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
     activeRomaji.style.opacity = '1';
+    activeKanji.style.opacity = '1';
     if (active != readings.length - 1) {
       active++;
       activeReading = document.getElementsByClassName(currentClass)[active];
@@ -225,7 +242,6 @@ function handleInput(event) {
     } else {
       if (currentClass == 'modal-reading') {
         resetSequence();
-
       } else {
         beginBtn.style.display = 'block';
         practiceBtn.style.display = 'none';
@@ -283,8 +299,8 @@ function displayKanji() {
     kanjiP.innerHTML = kanjis[i].self;
     readingP.innerHTML = kanjis[i].yomi;
     modalInner.appendChild(readingP);
-    modalInner.appendChild(romajiP);
     modalInner.appendChild(kanjiP);
+    modalInner.appendChild(romajiP);
   }
   modal.style.display = 'block';
 }
