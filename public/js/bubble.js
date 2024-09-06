@@ -102,7 +102,7 @@ function displayStats() {
 
 function readInput() {
   for (let i = 0; i < readings.length; i++) {
-    if (yomiInput.value == readings[i][1]) {
+    if (yomiInput.value == readings[i][2]) {
       kanjis[readings[i][0]].pop = true;
       answered.push(readings[i][0]);
       console.log('splicing ' + readings[i][0]);
@@ -200,7 +200,12 @@ function resetSequence() {
   currentClass = 'modal-kanji';
   activeItem = document.getElementsByClassName(currentClass)[active];
   activeItem.classList.add('active-reading');
+  let modalRomaji = document.getElementsByClassName('modal-romaji');
+  for (let m = 0; m < modalRomaji.length; m++) {
+    modalRomaji[m].style.opacity = '0';
+  }
 }
+
 
 function handleInput(event) {
   const inp = event.target.value;
@@ -220,6 +225,7 @@ function handleInput(event) {
     } else {
       if (currentClass == 'modal-reading') {
         resetSequence();
+
       } else {
         beginBtn.style.display = 'block';
         practiceBtn.style.display = 'none';
