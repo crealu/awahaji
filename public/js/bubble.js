@@ -196,12 +196,12 @@ function practice(n) {
 }
 
 function handleMouseOver(event) {
-  let el = event.target.previousSibling;
+  let el = event.target.nextSibling;
   el.style.opacity = '1';
 }
 
 function handleMouseLeave(event) {
-  let el = event.target.previousSibling;
+  let el = event.target.nextSibling;
   el.style.opacity = '0';
 }
 
@@ -298,8 +298,8 @@ function displayKanji() {
     kanjiP.classList.add('modal-kanji');
     kanjiP.innerHTML = kanjis[i].self;
     readingP.innerHTML = kanjis[i].yomi;
-    modalInner.appendChild(readingP);
     modalInner.appendChild(kanjiP);
+    modalInner.appendChild(readingP);
     modalInner.appendChild(romajiP);
   }
   modal.style.display = 'block';
