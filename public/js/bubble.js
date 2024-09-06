@@ -218,7 +218,12 @@ function handleInput(event) {
       activeReading = document.getElementsByClassName(currentClass)[active];
       activeReading.classList.add('active-reading');
     } else {
-      resetSequence();
+      if (currentClass == 'modal-reading') {
+        resetSequence();
+      } else {
+        beginBtn.style.display = 'block';
+        practiceBtn.style.display = 'none';
+      }
     }
   }
 }
