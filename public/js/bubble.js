@@ -23,6 +23,7 @@ let finished = false;
 
 let activeReading;
 let active;
+let currentClass = 'modal-reading';
 
 const colors = [
   '#fbab56',  // orange
@@ -182,8 +183,15 @@ function practice(n) {
   practiceInput.focus();
   parseReadings();
   active = 0;
-  activeReading = document.getElementsByClassName('modal-reading')[active];
+  activeReading = document.getElementsByClassName(currentClass)[active];
   activeReading.classList.add('active-reading');
+}
+
+function resetSequence() {
+  active = 0;
+  currentClass = 'modal-kanji';
+  activeItem = document.getElementsByClassName(currentClass)[active];
+  activeItem.classList.add('active-reading');
 }
 
 function handleInput(event) {
@@ -195,8 +203,10 @@ function handleInput(event) {
     activeRomaji.style.opacity = '1';
     if (active != readings.length - 1) {
       active++;
-      activeReading = document.getElementsByClassName('modal-reading')[active];
+      activeReading = document.getElementsByClassName(currentClass)[active];
       activeReading.classList.add('active-reading');
+    } else {
+      resetSequence();
     }
   }
 }
@@ -246,6 +256,7 @@ function displayKanji() {
     let romajiP = document.createElement('p');
     readingP.classList.add('modal-reading');
     romajiP.classList.add('modal-romaji');
+    kanjiP.classList.add('modal-kanji');
     kanjiP.innerHTML = kanjis[i].self;
     readingP.innerHTML = kanjis[i].yomi;
     modalInner.appendChild(readingP);
