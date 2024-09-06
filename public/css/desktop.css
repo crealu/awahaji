@@ -59,6 +59,11 @@
   transition: 0.3s ease-in;
 }
 
+.modal-kanji {
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: 0.3s ease-in;
+}
+
 .active-reading {
   border: 1px solid rgba(255, 255, 255, 1);
 }

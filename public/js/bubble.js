@@ -131,6 +131,14 @@ function restyleReadings() {
   }
 }
 
+function restyleKanji() {
+  practiceInput.value = '';
+  let allKanji = document.getElementsByClassName('modal-kanji');
+  for (k of allKanji) {
+    k.classList.remove('active-reading');
+  }
+}
+
 function matchOneKana(yomi) {
   for (k of kana) {
     if (yomi == k[1]) {
@@ -198,7 +206,11 @@ function handleInput(event) {
   const inp = event.target.value;
   const red = readings[active][2];
   if (inp == red) {
-    restyleReadings();
+    if (currentClass == 'modal-kanji') {
+      restyleKanji();
+    } else {
+      restyleReadings();
+    }
     let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
     activeRomaji.style.opacity = '1';
     if (active != readings.length - 1) {
