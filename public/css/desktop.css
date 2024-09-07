@@ -26,7 +26,7 @@
 
 .the-modal {
   position: absolute;
-  display: block;
+  display: none;
   margin: 0 auto;
   top: 25vh;
   left: 0%;
@@ -38,6 +38,7 @@
   transition: 0.5s ease;
   background: black;
   text-align: center;
+  overflow: hidden;
 }
 
 .modal-inner {
@@ -46,6 +47,8 @@
   display: grid;
   grid-template-columns: repeat(3, 33%);
   width: 80%;
+  height: 400px;
+  overflow: hidden;
 }
 
 .modal-inner p {

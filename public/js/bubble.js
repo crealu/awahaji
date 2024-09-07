@@ -74,6 +74,16 @@ function addKanji(x, y, color) {
   kanjis.push(new Kanji(x, y, kanjiText, theYomi, color));
 }
 
+function addAllKanji(x, y) {
+  for (let i = 0; i < arrN5.length; i++) {
+    let kanjiText = arrN5[i].kanji;
+    let yomi = arrN5[i].on;
+    let oneYomi = filterYomi(yomi);
+    readings.push([readings.length, oneYomi]);
+    kanjis.push(new Kanji(x, y, kanjiText, oneYomi, '#ff7777'));
+  }
+}
+
 function addParticles(x, y, color) {
   let particleGroup = [];
   for (let i = 0; i < 4; i++) {
@@ -88,6 +98,7 @@ function initObjects() {
   for (let bubbleX = start; bubbleX <= end; bubbleX += 100) {
     const color = randomColor(colors);
     colors.splice(colors.indexOf(color), 1);
+    addAllKanji(bubbleX, bubbleY);
     addKanji(bubbleX, bubbleY, color);
     addParticles(bubbleX, bubbleY, color);
   }
@@ -225,7 +236,15 @@ function resetSequence() {
 function handleInput(event) {
   const inp = event.target.value;
   const red = readings[active][2];
+
   if (inp == red) {
+    if (active % 6 == 0 && active != 0) {
+      resetSequence()
+      // modalInner.scroll({
+      //   top: (active * 57),
+      //   behavior: 'smooth'
+      // })
+    }
     if (currentClass == 'modal-kanji') {
       restyleKanji();
     } else {
