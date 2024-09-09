@@ -42,27 +42,30 @@ function containsSmall(yomi) {
   return yomi.includes('ゃ') || yomi.includes('ゅ') || yomi.includes('ょ')
 }
 
+function buildRomaji(reading) {
+  let romaji = '';
+  let subRom = ''
+  if (containsSmall(reading)) {
+    subRom = full.slice(0, 2);
+    romaji += matchCombination(subRom);
+    if (full[2]) {
+      romaji += matchOneKana(reading[2]);
+    }
+  } else {
+    for (r of reading[1]) {
+      romaji += matchOneKana(r);
+    }
+  }
+  return rom;
+}
+
 function parseReadings() {
   let i = 0;
   for (reading of readings) {
-    let full = reading[1];
-    let rom = '';
-    let subRom = ''
-    if (containsSmall(full)) {
-      subRom = full.slice(0, 2);
-      rom += matchCombination(subRom);
-      if (full[2]) {
-        rom += matchOneKana(full[2]);
-      }
-    } else {
-      for (r of reading[1]) {
-        rom += matchOneKana(r);
-      }
-    }
-
-    reading.push(rom);
+    let romaji = buildRomaji(reading[1])
+    reading.push(romaji);
     let romajiP = document.getElementsByClassName('modal-romaji')[i];
-    romajiP.textContent = rom;
+    romajiP.textContent = romaji;
     i++;
   }
 }
