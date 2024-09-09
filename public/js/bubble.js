@@ -24,6 +24,8 @@ let finished = false;
 let activeReading;
 let active;
 let currentClass = 'modal-reading';
+let limit = 6;
+let count = 0;
 
 const colors = [
   '#fbab56',  // orange
@@ -134,18 +136,6 @@ function readInput() {
   }
 }
 
-function resetActive(className) {
-  practiceInput.value = '';
-  let all = document.getElementsByClassName(className);
-  for (a of all) {
-    a.classList.remove('active-reading');
-  }
-
-  let activeKanji = document.getElementsByClassName('modal-kanji')[active]
-  let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
-  activeRomaji.style.opacity = '1';
-  activeKanji.style.opacity = '1';
-}
 
 function matchOneKana(yomi) {
   for (k of kana) {
@@ -213,19 +203,48 @@ function handleMouseLeave(event) {
   el.style.opacity = '0';
 }
 
-function resetSequence() {
-  active = 0;
-  currentClass = 'modal-kanji';
-  activeItem = document.getElementsByClassName(currentClass)[active];
-  activeItem.classList.add('active-reading');
+function resetActive(className) {
+  practiceInput.value = '';
+
+  let all = document.getElementsByClassName(className);
+  let ar = document.getElementsByClassName('active-reading')[0];
+  ar.classList.remove('active-reading');
+
+  let activeKanji = document.getElementsByClassName('modal-kanji')[active]
+  let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
+  activeRomaji.style.opacity = '1';
+  activeKanji.style.opacity = '1';
+}
+
+function reselectColumn(newCurrent, newActive) {
+  currentClass = newCurrent;
+  activeReading = document.getElementsByClassName(currentClass)[newActive];
+  activeReading.classList.add('active-reading');
+}
+
+function hideReadingAndRomaji() {
   let modalReading = document.getElementsByClassName('modal-reading');
   let modalRomaji = document.getElementsByClassName('modal-romaji');
   let modalKanji = document.getElementsByClassName('modal-kanji');
+
   for (let m = 0; m < modalRomaji.length; m++) {
     modalRomaji[m].style.opacity = '0';
     modalReading[m].style.opacity = '0';
     modalKanji[m].addEventListener('mouseover', handleMouseOver)
     modalKanji[m].addEventListener('mouseleave', handleMouseLeave)
+  }
+}
+
+function showModalReading() {
+  let modalReading = document.getElementsByClassName('modal-reading');
+  let modalRomaji = document.getElementsByClassName('modal-romaji');
+  let modalKanji = document.getElementsByClassName('modal-kanji');
+
+  for (let m = 0; m < modalRomaji.length; m++) {
+    modalRomaji[m].style.opacity = '0';
+    modalReading[m].style.opacity = '1';
+    modalKanji[m].removeEventListener('mouseover', handleMouseOver)
+    modalKanji[m].removeEventListener('mouseleave', handleMouseLeave)
   }
 }
 
@@ -235,30 +254,27 @@ function handleInput(event) {
 
   if (inp == red) {
     resetActive(currentClass);
-
-    // if (active % 6 == 0 && active != 0 && currentClass == 'modal-reading') {
-    //   resetSequence()
-    //   // if (currentClass == 'modal-reading') {
-    //   //   modalInner.scroll({
-    //   //     top: (active * 57),
-    //   //     behavior: 'smooth'
-    //   //   });
-    //   // }
-    //   // return;
-    // }
-
-    if (active != readings.length - 1) {
+    if (active % limit != 0 || active == limit - 6) {
       active++;
       activeReading = document.getElementsByClassName(currentClass)[active];
       activeReading.classList.add('active-reading');
     } else {
       if (currentClass == 'modal-reading') {
-        resetSequence();
+        reselectColumn('modal-kanji', active - 6);
+        hideReadingAndRomaji();
+        active -= 6;
       } else {
-        beginBtn.style.display = 'block';
-        practiceBtn.style.display = 'none';
+        modalInner.scroll({ top: ((active + 1) * 57), behavior: 'smooth' });
+        reselectColumn('modal-reading', active + 1);
+        showModalReading();
+        limit += 7;
+        active++;
+        // activeReading = document.getElementsByClassName(currentClass)[active];
+        // activeReading.classList.add('active-reading');
       }
     }
+
+    console.log(active);
   }
 }
 
