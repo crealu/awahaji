@@ -134,20 +134,17 @@ function readInput() {
   }
 }
 
-function restyleReadings() {
+function resetActive(className) {
   practiceInput.value = '';
-  let allReadings = document.getElementsByClassName('modal-reading');
-  for (r of allReadings) {
-    r.classList.remove('active-reading');
+  let all = document.getElementsByClassName(className);
+  for (a of all) {
+    a.classList.remove('active-reading');
   }
-}
 
-function restyleKanji() {
-  practiceInput.value = '';
-  let allKanji = document.getElementsByClassName('modal-kanji');
-  for (k of allKanji) {
-    k.classList.remove('active-reading');
-  }
+  let activeKanji = document.getElementsByClassName('modal-kanji')[active]
+  let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
+  activeRomaji.style.opacity = '1';
+  activeKanji.style.opacity = '1';
 }
 
 function matchOneKana(yomi) {
@@ -232,28 +229,24 @@ function resetSequence() {
   }
 }
 
-
 function handleInput(event) {
   const inp = event.target.value;
   const red = readings[active][2];
 
   if (inp == red) {
-    if (active % 6 == 0 && active != 0) {
-      resetSequence()
-      // modalInner.scroll({
-      //   top: (active * 57),
-      //   behavior: 'smooth'
-      // })
-    }
-    if (currentClass == 'modal-kanji') {
-      restyleKanji();
-    } else {
-      restyleReadings();
-    }
-    let activeKanji = document.getElementsByClassName('modal-kanji')[active]
-    let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
-    activeRomaji.style.opacity = '1';
-    activeKanji.style.opacity = '1';
+    resetActive(currentClass);
+
+    // if (active % 6 == 0 && active != 0 && currentClass == 'modal-reading') {
+    //   resetSequence()
+    //   // if (currentClass == 'modal-reading') {
+    //   //   modalInner.scroll({
+    //   //     top: (active * 57),
+    //   //     behavior: 'smooth'
+    //   //   });
+    //   // }
+    //   // return;
+    // }
+
     if (active != readings.length - 1) {
       active++;
       activeReading = document.getElementsByClassName(currentClass)[active];
