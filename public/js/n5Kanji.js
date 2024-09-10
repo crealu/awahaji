@@ -59,7 +59,7 @@ let n5ex5 = [
   ['木曜日', 'もくようび', 'Thursday'],
   ['木陰', 'こかげ', 'shade of a tree']
 ];
-let n5k5 = new KanjiBox('木', 'き, こ', 'ぼく, もく', 'tree', n5ex5);
+let n5k5 = new KanjiBox('木', 'き, こ', 'もく, ぼく', 'tree', n5ex5);
 
 let n5ex6 = [
   ['金', 'きん', 'gold'],
