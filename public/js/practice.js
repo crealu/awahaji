@@ -1,3 +1,5 @@
+const title = document.querySelector('.bubble-title');
+const dashboard = document.querySelector('.dash');
 const startBtn = document.querySelector('.start-btn');
 const practiceBtn = document.querySelector('.practice-btn');
 const practiceInput = document.querySelector('.practice-input');
@@ -21,6 +23,35 @@ let streak = 0;
 let factor = 1;
 let count = 0;
 
+function randomInt(max, min) {
+  if (min) {
+    return Math.floor(Math.random() * (max - min) + min);
+  } else {
+    return Math.floor(Math.random() * max);
+  }
+}
+
+console.log(arrN5.length);
+
+function reorder() {
+  let a = [];
+  let b = [];
+  let r = randomInt(0, arrN5.length);
+
+  while (b.length < arrN5.length) {
+    if (!a.includes(r)) {
+      a.push(r);
+      b.push(arrN5[r]);
+      continue;
+    }
+    r = randomInt(0, arrN5.length);
+  }
+
+  return b;
+}
+
+let kanjis = reorder();
+
 /*
   scoring system:
     +10 for correct reading
@@ -40,13 +71,12 @@ let count = 0;
 */
 
 function addAllKanji() {
-  for (let i = 0; i < arrN5.length; i++) {
-    let kanjiText = arrN5[i].kanji;
-    let yomi = arrN5[i].on;
+  for (let i = 0; i < kanjis.length; i++) {
+    let kanjiText = kanjis[i].kanji;
+    let yomi = kanjis[i].on;
     let oneYomi = filterYomi(yomi);
     readings.push([readings.length, oneYomi]);
   }
-  console.log(readings);
 }
 
 function filterYomi(yomi) {
@@ -203,7 +233,10 @@ function handleInput(event) {
         active++;
       }
     }
-    count++;
+
+    if (currentClass == 'modal-kanji') {
+      count++;
+    }
 
     if (addition == 10) {
       streak++;
@@ -216,15 +249,15 @@ function handleInput(event) {
 
 function displayKanji() {
   clear(modalInner);
-  for (let i = 0; i < arrN5.length; i++) {
+  for (let i = 0; i < kanjis.length; i++) {
     let kanjiP = document.createElement('p');
     let readingP = document.createElement('p');
     let romajiP = document.createElement('p');
     readingP.classList.add('modal-reading');
     romajiP.classList.add('modal-romaji');
     kanjiP.classList.add('modal-kanji');
-    kanjiP.innerHTML = arrN5[i].kanji;
-    readingP.innerHTML = filterYomi(arrN5[i].on);
+    kanjiP.innerHTML = kanjis[i].kanji;
+    readingP.innerHTML = filterYomi(kanjis[i].on);
     modalInner.appendChild(kanjiP);
     modalInner.appendChild(readingP);
     modalInner.appendChild(romajiP);
@@ -233,9 +266,18 @@ function displayKanji() {
 }
 
 function startGame() {
-  startBtn.style.display = 'none';
+  startBtn.style.opacity = '0';
+  title.style.opacity = '0';
   modal.style.display = 'block';
-  modal.style.opacity = '1';
+  dashboard.style.display = 'block';
+
+  setInterval(() => {
+    startBtn.style.display = 'none';
+    title.style.display = 'none';
+    modal.style.opacity = '1';
+    dashboard.style.opacity = '1';
+  }, 500);
+
   displayKanji();
 }
 
