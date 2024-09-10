@@ -16,6 +16,10 @@ app.get('/desktop', (req, res) => {
 	res.sendFile('desktop.html', pagesRoot);
 });
 
+app.get('/practice', (req, res) => {
+	res.sendFile('practice.html', pagesRoot);
+});
+
 app.get('/touch', (req, res) => {
 	res.sendFile('touch.html', pagesRoot);
 });
