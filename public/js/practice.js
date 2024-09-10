@@ -1,16 +1,43 @@
 const startBtn = document.querySelector('.start-btn');
 const practiceBtn = document.querySelector('.practice-btn');
 const practiceInput = document.querySelector('.practice-input');
+const theScore = document.querySelector('.score');
+const theKanji = document.querySelector('.kanji');
+const theStreak = document.querySelector('.streak-bar');
+const streakText = document.querySelector('.streak');
 const modal = document.querySelector('.the-modal');
 const modalInner = document.querySelector('.modal-inner');
 
-let kanjis = [];
+// let kanjis = [];
 let readings = [];
 let activeReading;
 let active;
 let currentClass = 'modal-reading';
 let limit = 6;
+let score = 0;
+let hinting = false;
+let addition = 10;
+let streak = 0;
+let factor = 1;
 let count = 0;
+
+/*
+  scoring system:
+    +10 for correct reading
+    -1 for delete press
+    -2 for hover to reveal
+    -10 for hover to reveal while typing
+  
+  streak:
+    - 5 in a row = 2x
+    - 10 in a row = 3x
+    - 15 in a row = 4x
+    - 20 in a row = 5x
+    - delete takes away 1 from addition and clears streak
+
+  bonus:
+    - complete set without delete
+*/
 
 function addAllKanji() {
   for (let i = 0; i < arrN5.length; i++) {
@@ -18,7 +45,17 @@ function addAllKanji() {
     let yomi = arrN5[i].on;
     let oneYomi = filterYomi(yomi);
     readings.push([readings.length, oneYomi]);
-    kanjis.push(new Kanji(0, 0, kanjiText, oneYomi, '#ff7777'));
+  }
+  console.log(readings);
+}
+
+function filterYomi(yomi) {
+  return yomi.includes(',') ? yomi.split(',')[0] : yomi;
+}
+
+function clear(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
   }
 }
 
@@ -44,7 +81,7 @@ function containsSmall(yomi) {
 
 function buildRomaji(reading) {
   let romaji = '';
-  let subRom = ''
+  let subRom = '';
   if (containsSmall(reading)) {
     subRom = reading.slice(0, 2);
     romaji += matchCombination(subRom);
@@ -80,10 +117,13 @@ function practice(n) {
 }
 
 function handleMouseOver(event) {
+  hinting = true;
+  addition -= 3;
   event.target.nextSibling.style.opacity = '1';
 }
 
 function handleMouseLeave(event) {
+  hinting = false;
   event.target.nextSibling.style.opacity = '0';
 }
 
@@ -135,6 +175,11 @@ function handleInput(event) {
   const inp = event.target.value;
   const red = readings[active][2];
 
+  if (inp.includes('q')) {
+    practiceInput.value = inp.replace('q', '');
+    return;
+  }
+
   if (inp == red) {
     if (active == readings.length - 1) {
       console.log('finished');
@@ -158,22 +203,28 @@ function handleInput(event) {
         active++;
       }
     }
+    count++;
 
-    console.log(active);
+    if (addition == 10) {
+      streak++;
+    }
+
+    writeScore();
+    addition = 10;
   }
 }
 
 function displayKanji() {
   clear(modalInner);
-  for (let i = 0; i < kanjis.length; i++) {
+  for (let i = 0; i < arrN5.length; i++) {
     let kanjiP = document.createElement('p');
     let readingP = document.createElement('p');
     let romajiP = document.createElement('p');
     readingP.classList.add('modal-reading');
     romajiP.classList.add('modal-romaji');
     kanjiP.classList.add('modal-kanji');
-    kanjiP.innerHTML = kanjis[i].self;
-    readingP.innerHTML = kanjis[i].yomi;
+    kanjiP.innerHTML = arrN5[i].kanji;
+    readingP.innerHTML = filterYomi(arrN5[i].on);
     modalInner.appendChild(kanjiP);
     modalInner.appendChild(readingP);
     modalInner.appendChild(romajiP);
@@ -188,9 +239,61 @@ function startGame() {
   displayKanji();
 }
 
+function writeScore() {
+  if (streak == 5) {
+    streakText.innerHTML = '2x';
+    factor = 2;
+  } else if (streak == 10) {
+    streakText.innerHTML = '3x';
+    factor = 3;
+  } else if (streak == 15) {
+    streakText.innerHTML = '4x';
+    factor = 4;
+  } else if (streak == 20) {
+    streakText.innerHTML = '5x';
+    factor = 5;
+  } else if (streak == 0) {
+    streakText.innerHTMl = '';
+    facgor = 1;
+  }
+
+  score += addition * factor;
+  theStreak.style.width = (streak * 5) + 'px';
+  theScore.textContent = score;
+  theKanji.textContent = count;
+}
+
+function updateStreak() {
+  theStreak.style.width = '0px';
+  streakText.innerHTML = '';
+  factor = 1;
+}
+
 function quitGame(event) {
   if (event.key == 'q') {
-    window.cancelAnimationFrame(frame);
+    if (currentClass == 'modal-kanji') {
+      streak = 0;
+      if (activeReading.nextSibling.style.opacity == '1') {
+        activeReading.nextSibling.style.opacity = '0';
+        hinting = false;
+        if (addition != 0) {
+          addition -= 5;
+        }
+        writeScore();
+      } else {
+        activeReading.nextSibling.style.opacity = '1';
+        hinting = true;
+      }
+    }
+  }
+
+  if (event.key == 'Backspace') {
+    if (addition != 0) {
+      addition--;
+    }
+
+    streak = 0;
+    updateStreak();  
   }
 }
 
