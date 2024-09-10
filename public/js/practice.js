@@ -46,17 +46,17 @@ function buildRomaji(reading) {
   let romaji = '';
   let subRom = ''
   if (containsSmall(reading)) {
-    subRom = full.slice(0, 2);
+    subRom = reading.slice(0, 2);
     romaji += matchCombination(subRom);
-    if (full[2]) {
+    if (reading[2]) {
       romaji += matchOneKana(reading[2]);
     }
   } else {
-    for (r of reading[1]) {
+    for (r of reading) {
       romaji += matchOneKana(r);
     }
   }
-  return rom;
+  return romaji;
 }
 
 function parseReadings() {
