@@ -9,6 +9,13 @@ const theStreak = document.querySelector('.streak-bar');
 const streakText = document.querySelector('.streak');
 const modal = document.querySelector('.the-modal');
 const modalInner = document.querySelector('.modal-inner');
+const fx1 = document.getElementsByClassName('fx-audio')[0];
+
+function playAudio(time) {
+  fx1.currentTime = time;
+  fx1.play();
+  setTimeout(() => { fx1.pause(); }, 500)
+}
 
 // let kanjis = [];
 let readings = [];
@@ -211,6 +218,8 @@ function handleInput(event) {
   }
 
   if (inp == red) {
+    playAudio(0);
+
     if (active == readings.length - 1) {
       console.log('finished');
       return;
@@ -225,12 +234,14 @@ function handleInput(event) {
         reselectColumn('modal-kanji', active - 6);
         hideReadingAndRomaji();
         active -= 6;
+        playAudio(6);
       } else {
         modalInner.scroll({ top: ((active + 1) * 57), behavior: 'smooth' });
         reselectColumn('modal-reading', active + 1);
         showModalReading();
         limit += 7;
         active++;
+        playAudio(7);
       }
     }
 
@@ -309,6 +320,7 @@ function updateStreak() {
   theStreak.style.width = '0px';
   streakText.innerHTML = '';
   factor = 1;
+  playAudio(1);
 }
 
 function quitGame(event) {
@@ -333,6 +345,8 @@ function quitGame(event) {
     if (addition != 0) {
       addition--;
     }
+
+    playAudio(1);
 
     streak = 0;
     updateStreak();  

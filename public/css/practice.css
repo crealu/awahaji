@@ -44,6 +44,10 @@
   background: green;
 }
 
+.fx-audio {
+  display: none;
+}
+
 .start-btn {
   top: calc(50vh - 55px);
 }
