@@ -188,6 +188,22 @@ function showModalReading() {
   }
 }
 
+function switchClass() {
+  if (currentClass == 'modal-reading') {
+    reselectColumn('modal-kanji', active - 6);
+    hideReadingAndRomaji();
+    active -= 6;
+    playAudio(6);
+  } else {
+    modalInner.scroll({ top: ((active + 1) * 57), behavior: 'smooth' });
+    reselectColumn('modal-reading', active + 1);
+    showModalReading();
+    limit += 7;
+    active++;
+    playAudio(7);
+  }
+}
+
 function handleInput(event) {
   const inp = event.target.value;
   const red = readings[active][2];
@@ -204,25 +220,14 @@ function handleInput(event) {
       console.log('finished');
       return;
     }
+
     resetActive(currentClass);
     if (active % limit != 0 || active == limit - 6) {
       active++;
       activeReading = document.getElementsByClassName(currentClass)[active];
       activeReading.classList.add('active-reading');
     } else {
-      if (currentClass == 'modal-reading') {
-        reselectColumn('modal-kanji', active - 6);
-        hideReadingAndRomaji();
-        active -= 6;
-        playAudio(6);
-      } else {
-        modalInner.scroll({ top: ((active + 1) * 57), behavior: 'smooth' });
-        reselectColumn('modal-reading', active + 1);
-        showModalReading();
-        limit += 7;
-        active++;
-        playAudio(7);
-      }
+      switchClass();
     }
 
     if (currentClass == 'modal-kanji') {
