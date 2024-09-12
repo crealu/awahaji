@@ -11,12 +11,6 @@ const modal = document.querySelector('.the-modal');
 const modalInner = document.querySelector('.modal-inner');
 const fx1 = document.getElementsByClassName('fx-audio')[0];
 
-function playAudio(time) {
-  fx1.currentTime = time;
-  fx1.play();
-  setTimeout(() => { fx1.pause(); }, 500)
-}
-
 // let kanjis = [];
 let readings = [];
 let activeReading;
@@ -38,7 +32,11 @@ function randomInt(max, min) {
   }
 }
 
-console.log(arrN5.length);
+function playAudio(time) {
+  fx1.currentTime = time;
+  fx1.play();
+  setTimeout(() => { fx1.pause(); }, 500)
+}
 
 function reorder() {
   let a = [];
@@ -58,24 +56,6 @@ function reorder() {
 }
 
 let kanjis = reorder();
-
-/*
-  scoring system:
-    +10 for correct reading
-    -1 for delete press
-    -2 for hover to reveal
-    -10 for hover to reveal while typing
-  
-  streak:
-    - 5 in a row = 2x
-    - 10 in a row = 3x
-    - 15 in a row = 4x
-    - 20 in a row = 5x
-    - delete takes away 1 from addition and clears streak
-
-  bonus:
-    - complete set without delete
-*/
 
 function addAllKanji() {
   for (let i = 0; i < kanjis.length; i++) {
