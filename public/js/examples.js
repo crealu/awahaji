@@ -1,10 +1,10 @@
+const title = document.querySelector('.bubble-title');
 const startBtn = document.querySelector('.start-btn');
 const practiceBtn = document.querySelector('.practice-btn');
 const practiceInput = document.querySelector('.practice-input');
 const modal = document.querySelector('.the-modal');
 const modalInner = document.querySelector('.modal-inner');
 
-let kanjis = [];
 let readings = [];
 let activeReading;
 let active;
@@ -13,13 +13,45 @@ let limit = 6;
 let count = 0;
 let round = 0;
 
+function randomInt(max, min) {
+  if (min) {
+    return Math.floor(Math.random() * (max - min) + min);
+  } else {
+    return Math.floor(Math.random() * max);
+  }
+}
+
+function playAudio(time) {
+  fx1.currentTime = time;
+  fx1.play();
+  setTimeout(() => { fx1.pause(); }, 500)
+}
+
+function reorder() {
+  let a = [];
+  let b = [];
+  let r = randomInt(0, arrN5.length);
+
+  while (b.length < arrN5.length) {
+    if (!a.includes(r)) {
+      a.push(r);
+      b.push(arrN5[r]);
+      continue;
+    }
+    r = randomInt(0, arrN5.length);
+  }
+
+  return b;
+}
+
+let kanjis = reorder();
+
 function addAllKanji() {
-  for (let i = 0; i < arrN5.length; i++) {
-    let kanjiText = arrN5[i].kanji;
-    let yomi = arrN5[i].on;
+  for (let i = 0; i < kanjis.length; i++) {
+    let kanjiText = kanjis[i].kanji;
+    let yomi = kanjis[i].on;
     let oneYomi = filterYomi(yomi);
     readings.push([readings.length, oneYomi]);
-    kanjis.push(new Kanji(0, 0, kanjiText, oneYomi, '#ff7777'));
   }
 }
 
@@ -58,6 +90,16 @@ function buildRomaji(reading) {
     }
   }
   return romaji;
+}
+
+function clear(element) {
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
+
+function filterYomi(yomi) {
+  return yomi.includes(',') ? yomi.split(',')[0] : yomi;
 }
 
 function parseReadings() {
@@ -148,25 +190,35 @@ function fillExamples() {
   let modalRomaji = document.getElementsByClassName('modal-romaji');
 
   for (let i = 0; i < 7; i++) {
-    let exs = matchExample(readings[i][1], arrN5[i].examples);
-    let romex = buildRomaji(exs[1]);
-    // modalKanji[i].textContent = exs[0];
-    modalKanji[i].textContent = exs[0];
-    modalReading[i].textContent = exs[1];
-    modalRomaji[i].textContent = exs[2];
     modalKanji[i].style.opacity = '0';
     modalRomaji[i].style.opacity = '0';
-    newReadings.push([i, exs[1], romex]);
   }
 
-  readings = newReadings;
+  setTimeout(() => {
+    for (let i = 0; i < 7; i++) {
+      let exs = matchExample(readings[i][1], kanjis[i].examples);
+      let romex = buildRomaji(exs[1]);
 
-  console.log(newReadings);
+      // modalKanji[i].textContent = exs[0];
+      modalKanji[i].textContent = exs[0];
+      modalReading[i].textContent = exs[1];
+      modalRomaji[i].textContent = exs[2];
+
+      newReadings.push([i, exs[1], romex]);
+    }
+
+    readings = newReadings;
+  }, 500)
 }
 
 function handleInput(event) {
   const inp = event.target.value;
   const red = readings[active][2];
+
+  if (inp.includes('q')) {
+    practiceInput.value = inp.replace('q', '');
+    return;
+  }
 
   if (inp == red) {
     resetActive(currentClass);
@@ -188,9 +240,12 @@ function handleInput(event) {
           console.log('wrap it up');
         }
 
-        showModalReading();
-        reselectColumn('modal-reading', 0);
-        active = 0;
+        setTimeout(() => {
+          showModalReading();
+          reselectColumn('modal-reading', 0);
+          active = 0;
+        }, 500)
+
         round++;
       }
     }
@@ -208,8 +263,8 @@ function displayKanji() {
     readingP.classList.add('modal-reading');
     romajiP.classList.add('modal-romaji');
     kanjiP.classList.add('modal-kanji');
-    kanjiP.innerHTML = kanjis[i].self;
-    readingP.innerHTML = kanjis[i].yomi;
+    kanjiP.innerHTML = kanjis[i].kanji;
+    readingP.innerHTML = filterYomi(kanjis[i].on);
     modalInner.appendChild(kanjiP);
     modalInner.appendChild(readingP);
     modalInner.appendChild(romajiP);
@@ -221,10 +276,15 @@ function startGame() {
   startBtn.style.display = 'none';
   modal.style.display = 'block';
   modal.style.opacity = '1';
+  title.style.display = 'none';
+
   displayKanji();
 }
 
 function quitGame(event) {
+  if (event.key == 'q') {
+
+  }
   if (event.key == 'q') {
     window.cancelAnimationFrame(frame);
   }
