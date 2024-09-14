@@ -12,6 +12,7 @@ let currentClass = 'modal-reading';
 let limit = 6;
 let count = 0;
 let round = 0;
+let newReadings = [];
 
 function randomInt(max, min) {
   if (min) {
@@ -47,7 +48,7 @@ function reorder() {
 let kanjis = reorder();
 
 function addAllKanji() {
-  for (let i = 0; i < kanjis.length; i++) {
+  for (let i = 0; i < 7; i++) {
     let kanjiText = kanjis[i].kanji;
     let yomi = kanjis[i].on;
     let oneYomi = filterYomi(yomi);
@@ -75,10 +76,94 @@ function containsSmall(yomi) {
   return yomi.includes('ゃ') || yomi.includes('ゅ') || yomi.includes('ょ')
 }
 
+function containsSmallTsu(yomi) {
+  return yomi.includes('っ');
+}
+
+function findSmall(yomi) {
+  let ya = yomi.indexOf('ゃ')
+  let yu = yomi.indexOf('ゅ')
+  let yo = yomi.indexOf('ょ')
+
+  return [ya, yu, yo].filter(y => y != -1);
+}
+/*
+
+
+
+
+// にゅうがく
+// じゅうえん
+
+
+// がいしゅつ
+
+
+// こんちゅう
+// こんちゅう
+
+// れっしゃ
+// いっそく
+
+*/
+
+function buildExampleRomaji(reading) {
+  let romaji = '';
+  let yoon = '';
+
+  if (containsSmall(reading)) {
+    // get index of small and kana before it
+    let indexOfSmall = findSmall(reading);
+    let indexOfKana = indexOfSmall - 1;
+
+    // if small is in the beginning
+    if (indexOfKana == 0) {
+      // slice first yoon and add it to romaji
+      yoon = reading.slice(indexOfKana, 2);
+      romaji += matchCombination(yoon);
+      for (r of reading) {
+        romaji += matchOneKana(r);
+      }
+    } else if (indexOfKana == 1) {
+      romaji += matchCombination(reading[0]);
+      yoon = reading.slice(indexOfKana, 2);
+      romaji += matchCombination(yoon);
+      for (r of reading) {
+        romaji += matchOneKana(r);
+      }
+    } else if (indexOfKana == 2) {
+      for (let i = 0; i < indexOfKana; i++) {
+        romaji += matchOneKana(reading[i]);
+      }
+      yoon = reading.slice(indexOfKana, 2);
+      romaji += matchCombination(yoon);
+      for (let i = 0; i < indexOfKana; i++) {
+        romaji += matchOneKana(reading[i]);
+      }
+    } else if (indexOfKana == 3) {
+      for (let i = 0; i < indexOfKana; i++) {
+        romaji += matchOneKana(reading[i]);
+      }
+      yoon = reading.slice(indexOfKana, 2);
+      romaji += matchCombination(yoon);
+      for (let i = 0; i < indexOfKana; i++) {
+        romaji += matchOneKana(reading[i]);
+      }
+    }
+  } else {
+    for (r of reading) {
+      romaji += matchOneKana(r);
+    }
+  }
+
+  return romaji;
+}
+
 function buildRomaji(reading) {
   let romaji = '';
-  let subRom = ''
+  let subRom = '';
   if (containsSmall(reading)) {
+    let loc = reading.indexOf()
     subRom = reading.slice(0, 2);
     romaji += matchCombination(subRom);
     if (reading[2]) {
@@ -182,8 +267,6 @@ function matchExample(reading, examples) {
   }
 }
 
-let newReadings = [];
-
 function fillExamples() {
   let modalReading = document.getElementsByClassName('modal-reading');
   let modalKanji = document.getElementsByClassName('modal-kanji');
@@ -197,7 +280,7 @@ function fillExamples() {
   setTimeout(() => {
     for (let i = 0; i < 7; i++) {
       let exs = matchExample(readings[i][1], kanjis[i].examples);
-      let romex = buildRomaji(exs[1]);
+      let romex = buildExampleRomaji(exs[1]);
 
       // modalKanji[i].textContent = exs[0];
       modalKanji[i].textContent = exs[0];
@@ -208,17 +291,29 @@ function fillExamples() {
     }
 
     readings = newReadings;
+
+    console.log(readings);
   }, 500)
 }
 
 function handleInput(event) {
   const inp = event.target.value;
+
+  // let red;
+  // if (round == 0) {
+  //   red = readings[active][2];
+  // } else {
+  //   red = newReadings[active][2];
+  // }
+
   const red = readings[active][2];
 
   if (inp.includes('q')) {
     practiceInput.value = inp.replace('q', '');
     return;
   }
+
+  console.log(inp, red);
 
   if (inp == red) {
     resetActive(currentClass);
@@ -277,16 +372,13 @@ function startGame() {
   modal.style.display = 'block';
   modal.style.opacity = '1';
   title.style.display = 'none';
-
   displayKanji();
+  fillExamples();
 }
 
 function quitGame(event) {
   if (event.key == 'q') {
 
-  }
-  if (event.key == 'q') {
-    window.cancelAnimationFrame(frame);
   }
 }
 
