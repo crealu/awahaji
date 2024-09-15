@@ -94,14 +94,8 @@ function findSmall(yomi) {
 
 // にゅうがく
 // じゅうえん
-
-
 // がいしゅつ
-
-
 // こんちゅう
-// こんちゅう
-
 // れっしゃ
 // いっそく
 
@@ -112,47 +106,38 @@ function buildExampleRomaji(reading) {
   let yoon = '';
 
   if (containsSmall(reading)) {
-    // get index of small and kana before it
-    let indexOfSmall = findSmall(reading);
-    let indexOfKana = indexOfSmall - 1;
+    let idx = findSmall(reading) - 1;
+    // yoon = reading.slice(idx, idx + 2);
+    // check index
+    if (idx == 0) {
+      yoon = reading.slice(idx, idx + 2);
+      reading = reading.replace(yoon, '');
+      romaji += matchCombination(yoon);
+      for (letter of reading) {
+        romaji += matchOneKana(letter);
+      }
+    } else if (idx + 1 == reading.length - 1) {
+      yoon = reading.slice(idx, idx + 2);
+      reading = reading.replace(yoon, '');
+      for (letter of reading) {
+        romaji += matchOneKana(letter);
+      }
+      romaji += matchCombination(yoon);
+    } else {
+      for (let i = 0; i < idx; i++) {
+        romaji += matchOneKana(reading[i]);
+      }
 
-    // if small is in the beginning
-    if (indexOfKana == 0) {
-      // slice first yoon and add it to romaji
-      yoon = reading.slice(indexOfKana, 2);
+      yoon = reading.slice(idx, idx + 2);
       romaji += matchCombination(yoon);
-      for (r of reading) {
-        romaji += matchOneKana(r);
-      }
-    } else if (indexOfKana == 1) {
-      romaji += matchCombination(reading[0]);
-      yoon = reading.slice(indexOfKana, 2);
-      romaji += matchCombination(yoon);
-      for (r of reading) {
-        romaji += matchOneKana(r);
-      }
-    } else if (indexOfKana == 2) {
-      for (let i = 0; i < indexOfKana; i++) {
-        romaji += matchOneKana(reading[i]);
-      }
-      yoon = reading.slice(indexOfKana, 2);
-      romaji += matchCombination(yoon);
-      for (let i = 0; i < indexOfKana; i++) {
-        romaji += matchOneKana(reading[i]);
-      }
-    } else if (indexOfKana == 3) {
-      for (let i = 0; i < indexOfKana; i++) {
-        romaji += matchOneKana(reading[i]);
-      }
-      yoon = reading.slice(indexOfKana, 2);
-      romaji += matchCombination(yoon);
-      for (let i = 0; i < indexOfKana; i++) {
-        romaji += matchOneKana(reading[i]);
+
+      for (let j = idx + 2; j < reading.length; j++) {
+        romaji += matchOneKana(reading[j]);
       }
     }
   } else {
     for (r of reading) {
-      romaji += matchOneKana(r);
+      romaji += matchCombination(r);
     }
   }
 
@@ -290,6 +275,7 @@ function fillExamples() {
       newReadings.push([i, exs[1], romex]);
     }
 
+    console.log(newReadings);
     readings = newReadings;
 
     console.log(readings);
