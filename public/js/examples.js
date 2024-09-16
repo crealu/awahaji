@@ -87,16 +87,6 @@ function findSmall(yomi) {
 
   return [ya, yu, yo].filter(y => y != -1);
 }
-/*
-
-// にゅうがく
-// じゅうえん
-// がいしゅつ
-// こんちゅう
-// れっしゃ
-// いっそく
-
-*/
 
 function concatRomaji(start, reading, sti, romaji) {
   for (let i = start; i < reading.length; i++) {
@@ -302,16 +292,18 @@ function fillExamples() {
   }, 500)
 }
 
+function checkRound() {
+  if (round == 0) {
+    fillExamples();
+  } else if (round == 1) {
+    fillSentences();
+  } else {
+    console.log('wrap it up');
+  }
+}
+
 function handleInput(event) {
   const inp = event.target.value;
-
-  // let red;
-  // if (round == 0) {
-  //   red = readings[active][2];
-  // } else {
-  //   red = newReadings[active][2];
-  // }
-
   const red = readings[active][2];
 
   if (inp.includes('q')) {
@@ -333,13 +325,14 @@ function handleInput(event) {
         hideReadingAndRomaji();
         active -= 6;
       } else {
-        if (round == 0) {
-          fillExamples();
-        } else if (round == 1) {
-          fillSentences();
-        } else {
-          console.log('wrap it up');
-        }
+        checkRound();
+        // if (round == 0) {
+        //   fillExamples();
+        // } else if (round == 1) {
+        //   fillSentences();
+        // } else {
+        //   console.log('wrap it up');
+        // }
 
         setTimeout(() => {
           showModalReading();
