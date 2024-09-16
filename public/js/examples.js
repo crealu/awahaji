@@ -275,6 +275,7 @@ function fillExamples() {
   setTimeout(() => {
     for (let i = 0; i < 7; i++) {
       let exs = matchExample(readings[i][1], kanjis[i].examples);
+      console.log(exs);
       let romex = buildExampleRomaji(exs[1]);
 
       // modalKanji[i].textContent = exs[0];
@@ -290,16 +291,6 @@ function fillExamples() {
 
     console.log(readings);
   }, 500)
-}
-
-function checkRound() {
-  if (round == 0) {
-    fillExamples();
-  } else if (round == 1) {
-    fillSentences();
-  } else {
-    console.log('wrap it up');
-  }
 }
 
 function handleInput(event) {
@@ -325,7 +316,13 @@ function handleInput(event) {
         hideReadingAndRomaji();
         active -= 6;
       } else {
-        checkRound();
+        if (round == 0) {
+          fillExamples();
+        } else if (round == 1) {
+          fillSentences();
+        } else {
+          console.log('wrap it up');
+        }
 
         setTimeout(() => {
           showModalReading();
