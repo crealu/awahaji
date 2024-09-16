@@ -377,7 +377,7 @@ let n5ex36 = [
   ['火山', 'かざん', 'volcano'],
   ['高山', 'こうざん', 'high mountain']
 ];
-let n5k36 = new KanjiBox('山', 'やま', 'せん', 'mountain', n5ex36);
+let n5k36 = new KanjiBox('山', 'やま', 'さん, せん', 'mountain', n5ex36);
 
 let n5ex37 = [
   ['川', 'かわ', 'river'],
