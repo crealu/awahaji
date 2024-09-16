@@ -326,13 +326,6 @@ function handleInput(event) {
         active -= 6;
       } else {
         checkRound();
-        // if (round == 0) {
-        //   fillExamples();
-        // } else if (round == 1) {
-        //   fillSentences();
-        // } else {
-        //   console.log('wrap it up');
-        // }
 
         setTimeout(() => {
           showModalReading();
