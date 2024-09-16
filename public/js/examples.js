@@ -72,11 +72,11 @@ function matchCombination(yomi) {
   }
 }
 
-function containsSmall(yomi) {
+function hasSmall(yomi) {
   return yomi.includes('ゃ') || yomi.includes('ゅ') || yomi.includes('ょ')
 }
 
-function containsSmallTsu(yomi) {
+function hasSmallTsu(yomi) {
   return yomi.includes('っ');
 }
 
@@ -89,9 +89,6 @@ function findSmall(yomi) {
 }
 /*
 
-
-
-
 // にゅうがく
 // じゅうえん
 // がいしゅつ
@@ -101,44 +98,67 @@ function findSmall(yomi) {
 
 */
 
+function concatRomaji(start, reading, sti, romaji) {
+  for (let i = start; i < reading.length; i++) {
+    let match = matchOneKana(reading[i]);
+
+    if (i == sti) {
+      match = match[0] + match;
+    }
+
+    romaji += match;
+  }
+  return romaji
+}
+
 function buildExampleRomaji(reading) {
   let romaji = '';
   let yoon = '';
+  let smallTsuIndex = null;
 
-  if (containsSmall(reading)) {
+  if (hasSmallTsu(reading)) {
+    smallTsuIndex = reading.indexOf('っ');
+    reading = reading.split('っ').join('');
+  }
+
+  if (hasSmall(reading)) {
     let idx = findSmall(reading) - 1;
-    // yoon = reading.slice(idx, idx + 2);
-    // check index
     if (idx == 0) {
       yoon = reading.slice(idx, idx + 2);
       reading = reading.replace(yoon, '');
+
       romaji += matchCombination(yoon);
-      for (letter of reading) {
-        romaji += matchOneKana(letter);
-      }
+      romaji = concatRomaji(0, reading, smallTsuIndex, romaji);
     } else if (idx + 1 == reading.length - 1) {
       yoon = reading.slice(idx, idx + 2);
       reading = reading.replace(yoon, '');
-      for (letter of reading) {
-        romaji += matchOneKana(letter);
+
+      romaji = concatRomaji(0, reading, smallTsuIndex, romaji);
+      yoon = matchCombination(yoon);
+
+      if (smallTsuIndex == idx) {
+        yoon = yoon[0] + yoon;
       }
-      romaji += matchCombination(yoon);
+
+      romaji += yoon;
     } else {
       for (let i = 0; i < idx; i++) {
-        romaji += matchOneKana(reading[i]);
+        let match = matchOneKana(reading[i]);
+
+        if (i == smallTsuIndex) {
+          match = match[0] + match;
+        }
+
+        romaji += match;
       }
 
       yoon = reading.slice(idx, idx + 2);
       romaji += matchCombination(yoon);
 
-      for (let j = idx + 2; j < reading.length; j++) {
-        romaji += matchOneKana(reading[j]);
-      }
+      romaji = concatRomaji(idx + 2, reading, smallTsuIndex, romaji);
     }
   } else {
-    for (r of reading) {
-      romaji += matchCombination(r);
-    }
+    romaji += concatRomaji(0, reading, smallTsuIndex, romaji);
   }
 
   return romaji;
@@ -147,7 +167,7 @@ function buildExampleRomaji(reading) {
 function buildRomaji(reading) {
   let romaji = '';
   let subRom = '';
-  if (containsSmall(reading)) {
+  if (hasSmall(reading)) {
     let loc = reading.indexOf()
     subRom = reading.slice(0, 2);
     romaji += matchCombination(subRom);
@@ -359,7 +379,7 @@ function startGame() {
   modal.style.opacity = '1';
   title.style.display = 'none';
   displayKanji();
-  fillExamples();
+  // fillExamples();
 }
 
 function quitGame(event) {
