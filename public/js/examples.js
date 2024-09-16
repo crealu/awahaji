@@ -368,14 +368,20 @@ function startGame() {
   // fillExamples();
 }
 
-function quitGame(event) {
+function handleKeyDown(event) {
   if (event.key == 'q') {
-
+    if (currentClass == 'modal-kanji') {
+      if (activeReading.nextSibling.style.opacity == '1') {
+        activeReading.nextSibling.style.opacity = '0';
+      } else {
+        activeReading.nextSibling.style.opacity = '1';
+      }
+    }
   }
 }
 
 startBtn.addEventListener('click', startGame);
 practiceBtn.addEventListener('click', practice);
 practiceInput.addEventListener('input', handleInput);
-window.addEventListener('keydown', quitGame);
+window.addEventListener('keydown', handleKeyDown);
 window.addEventListener('load', addAllKanji);
