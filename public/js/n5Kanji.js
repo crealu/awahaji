@@ -829,7 +829,7 @@ let n5ex80 = [
   ['能力', 'のうりょく', 'ability'],
   ['体力', 'たいりょく', 'physical strength']
 ];
-let n5k80 = new KanjiBox('力', 'ちから', 'りょう, りき', 'strength', n5ex80);
+let n5k80 = new KanjiBox('力', 'ちから', 'りょく, りき', 'strength', n5ex80);
 
 let arrN5 = [
   n5k1,
