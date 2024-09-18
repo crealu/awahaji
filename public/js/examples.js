@@ -211,15 +211,21 @@ function handleMouseLeave(event) {
 }
 
 function resetActive(className) {
-  practiceInput.value = '';
 
   let ar = document.getElementsByClassName('active-reading')[0];
-  ar.classList.remove('active-reading');
+  // ar.style.animationPlayState = 'running';
+  ar.classList.add('flash');
 
   let activeKanji = document.getElementsByClassName('modal-kanji')[active]
   let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
   activeRomaji.style.opacity = '1';
   activeKanji.style.opacity = '1';
+  practiceInput.value = '';
+
+  setTimeout(() => {
+
+    ar.classList.remove('active-reading');
+  }, 500)
 }
 
 function reselectColumn(newCurrent, newActive) {
