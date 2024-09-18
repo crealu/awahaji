@@ -1,3 +1,7 @@
+:root {
+  --cb-1: cubic-bezier(.56,-0.16,.56,1.18);
+}
+
 .bubble-title {
   position: absolute;
   display: block;
@@ -236,13 +240,28 @@ input:focus {
   right: 0;
 }
 
+.flash {
+  background-image: linear-gradient(to right, #000 0%, #000 25%, #000 50%, #000 75%, #000 100%);
+  animation: 2s var(--cb-1) 0s rotainbow 1;
+}
+
 @keyframes rotainbow {
   0% {
+    background-image: linear-gradient(to right, #000 0%, #000 25%, #000 50%, #000 75%, #000 100%);
     filter: hue-rotate(0deg);
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    background-image: linear-gradient(to right, #f00 0%, #ff0 25%, #0ff 50%, #f0f 75%, #fff 100%);
   }
 
   100% {
+    opacity: 0;
+    background-image: linear-gradient(to right, #000 0%, #000 25%, #000 50%, #000 75%, #000 100%);
     filter: hue-rotate(360deg);
+    transform: scale(1.3);
   }
 }
 
