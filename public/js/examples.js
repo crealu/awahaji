@@ -13,6 +13,7 @@ let limit = 6;
 let count = 0;
 let round = 0;
 let newReadings = [];
+let shaders = [];
 
 function randomInt(max, min) {
   if (min) {
@@ -214,7 +215,7 @@ function resetActive(className) {
 
   let ar = document.getElementsByClassName('active-reading')[0];
   // ar.style.animationPlayState = 'running';
-  ar.classList.add('flash');
+  // ar.classList.add('flash');
 
   let activeKanji = document.getElementsByClassName('modal-kanji')[active]
   let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
@@ -223,7 +224,6 @@ function resetActive(className) {
   practiceInput.value = '';
 
   setTimeout(() => {
-
     ar.classList.remove('active-reading');
   }, 500)
 }
@@ -299,6 +299,8 @@ function fillExamples() {
   }, 500)
 }
 
+let triggerAnimation = false;
+
 function handleInput(event) {
   const inp = event.target.value;
   const red = readings[active][2];
@@ -311,6 +313,10 @@ function handleInput(event) {
   console.log(inp, red);
 
   if (inp == red) {
+    if (active != 0) {
+      shaders[active-1].pause();
+    }
+    triggerAnimation = true;
     resetActive(currentClass);
     if (active % limit != 0 || active == limit - 6) {
       active++;
@@ -346,10 +352,12 @@ function handleInput(event) {
 
 function displayKanji() {
   clear(modalInner);
-  for (let i = 0; i < kanjis.length; i++) {
+  for (let i = 0; i < 7; i++) {
     let kanjiP = document.createElement('p');
-    let readingP = document.createElement('p');
+    let readingP = document.createElement('canvas');
     let romajiP = document.createElement('p');
+    let shaderSetup = new ShaderSetup(readingP, vs, fs);
+    shaders.push(shaderSetup);
     readingP.classList.add('modal-reading');
     romajiP.classList.add('modal-romaji');
     kanjiP.classList.add('modal-kanji');
@@ -382,6 +390,26 @@ function handleKeyDown(event) {
     }
   }
 }
+
+let whole;
+let start = 0.0
+let fin = 50
+
+function render() {
+  start += 0.01;
+
+  if (start >= fin) {
+    whole = window.cancelAnimationFrame(render);
+  }
+
+  if (triggerAnimation) {
+    shaders[active-1].render();
+  }
+
+  whole = window.requestAnimationFrame(render);
+}
+
+render();
 
 startBtn.addEventListener('click', startGame);
 practiceBtn.addEventListener('click', practice);
