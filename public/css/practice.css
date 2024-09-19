@@ -114,6 +114,7 @@
 .modal-reading {
   border: 1px solid rgba(255, 255, 255, 0);
   transition: 0.3s ease-in;
+  height: 47px;
 }
 
 .modal-kanji {
