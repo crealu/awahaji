@@ -313,10 +313,10 @@ function handleInput(event) {
   console.log(inp, red);
 
   if (inp == red) {
-    if (active != 0) {
-      shaders[active-1].pause();
-    }
-    triggerAnimation = true;
+    // if (active != 0) {
+    //   shaders[active-1].pause();
+    // }
+    // triggerAnimation = true;
     resetActive(currentClass);
     if (active % limit != 0 || active == limit - 6) {
       active++;
@@ -354,10 +354,11 @@ function displayKanji() {
   clear(modalInner);
   for (let i = 0; i < 7; i++) {
     let kanjiP = document.createElement('p');
-    let readingP = document.createElement('canvas');
+    let readingP = document.createElement('p');
+    // let readingP = document.createElement('canvas');
     let romajiP = document.createElement('p');
-    let shaderSetup = new ShaderSetup(readingP, vs, fs);
-    shaders.push(shaderSetup);
+    // let shaderSetup = new ShaderSetup(readingP, vs, fs);
+    // shaders.push(shaderSetup);
     readingP.classList.add('modal-reading');
     romajiP.classList.add('modal-romaji');
     kanjiP.classList.add('modal-kanji');
