@@ -80,6 +80,18 @@ function hasSmallTsu(yomi) {
   return yomi.includes('っ');
 }
 
+function countOccurrences(str, char) {
+  let count = 0;
+  let indexes = [];
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === char) {
+      indexes.push(i);
+      count++;
+    }
+  }
+  return indexes;
+}
+
 function findSmall(yomi) {
   let ya = yomi.indexOf('ゃ')
   let yu = yomi.indexOf('ゅ')
@@ -113,6 +125,7 @@ function buildExampleRomaji(reading) {
 
   if (hasSmall(reading)) {
     let idx = findSmall(reading) - 1;
+    console.log(idx);
     if (idx == 0) {
       yoon = reading.slice(idx, idx + 2);
       reading = reading.replace(yoon, '');
