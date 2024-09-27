@@ -14,6 +14,34 @@ let count = 0;
 let round = 0;
 let newReadings = [];
 let shaders = [];
+let theKanji = [];
+
+function KanjiBox(ka, k, o, km, ex) {
+  this.kanji = ka;
+  this.kun = k;
+  this.on = o;
+  this.meaning = km;
+  this.examples = ex;
+}
+
+async function fetchKanji() {
+  await fetch('https://kanji-data.herokuapp.com/n5Kanji')
+    .then(res => res.json())
+    .then(data => {
+      data.kanji.n5.forEach(k => {
+        let ka = k.kanji[0]
+        let kun = k.kanji[1]
+        let on = k.kanji[2]
+        let me = k.kanji[3]
+        let ex = k.examples;
+        theKanji.push(new KanjiBox(ka, kun, on, me, ex))
+      });
+
+      console.log(theKanji);
+      kanjis = reorder(theKanji);
+      addAllKanji(kanjis);
+    })
+}
 
 function randomInt(max, min) {
   if (min) {
@@ -29,29 +57,27 @@ function playAudio(time) {
   setTimeout(() => { fx1.pause(); }, 500)
 }
 
-function reorder() {
+function reorder(kan) {
   let a = [];
   let b = [];
-  let r = randomInt(0, arrN5.length);
+  let r = randomInt(0, kan.length);
 
-  while (b.length < arrN5.length) {
+  while (b.length < kan.length) {
     if (!a.includes(r)) {
       a.push(r);
-      b.push(arrN5[r]);
+      b.push(kan[r]);
       continue;
     }
-    r = randomInt(0, arrN5.length);
+    r = randomInt(0, kan.length);
   }
 
   return b;
 }
 
-let kanjis = reorder();
-
-function addAllKanji() {
+function addAllKanji(kan) {
   for (let i = 0; i < 7; i++) {
-    let kanjiText = kanjis[i].kanji;
-    let yomi = kanjis[i].on;
+    let kanjiText = kan[i].kanji;
+    let yomi = kan[i].on;
     let oneYomi = filterYomi(yomi);
     readings.push([readings.length, oneYomi]);
   }
@@ -429,4 +455,4 @@ startBtn.addEventListener('click', startGame);
 practiceBtn.addEventListener('click', practice);
 practiceInput.addEventListener('input', handleInput);
 window.addEventListener('keydown', handleKeyDown);
-window.addEventListener('load', addAllKanji);
+window.addEventListener('load', fetchKanji);
