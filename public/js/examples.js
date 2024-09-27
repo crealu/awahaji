@@ -188,7 +188,9 @@ function buildExampleRomaji(reading) {
       romaji = concatRomaji(idx + 2, reading, smallTsuIndex, romaji);
     }
   } else {
-    romaji += concatRomaji(0, reading, smallTsuIndex, romaji);
+    for (r of reading) {
+      romaji += matchOneKana(r);
+    }
   }
 
   return romaji;
