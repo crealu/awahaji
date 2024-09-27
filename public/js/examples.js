@@ -25,10 +25,11 @@ function KanjiBox(ka, k, o, km, ex) {
 }
 
 async function fetchKanji() {
-  await fetch('https://kanji-data.herokuapp.com/n5Kanji')
+  let level = 'n4';
+  await fetch(`https://kanji-data.herokuapp.com/${level}Kanji`)
     .then(res => res.json())
     .then(data => {
-      data.kanji.n5.forEach(k => {
+      data.kanji[level].forEach(k => {
         let ka = k.kanji[0]
         let kun = k.kanji[1]
         let on = k.kanji[2]
