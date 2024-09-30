@@ -9,12 +9,17 @@ let readings = [];
 let activeReading;
 let active;
 let currentClass = 'modal-reading';
-let limit = 6;
+let limit = 5;
 let count = 0;
 let round = 0;
 let newReadings = [];
 let shaders = [];
 let theKanji = [];
+let theSentences = [];
+let indices = [];
+let currentIndex = 0;
+let exIdcs = []
+let max = 6;
 
 function KanjiBox(ka, k, o, km, ex) {
   this.kanji = ka;
@@ -25,8 +30,9 @@ function KanjiBox(ka, k, o, km, ex) {
 }
 
 async function fetchKanji() {
-  let level = 'n4';
-  await fetch(`https://kanji-data.herokuapp.com/${level}Kanji`)
+  let level = 'n5';
+  // await fetch(`https://kanji-data.herokuapp.com/${level}Kanji`)
+  await fetch('/allKanji')
     .then(res => res.json())
     .then(data => {
       data.kanji[level].forEach(k => {
@@ -38,10 +44,20 @@ async function fetchKanji() {
         theKanji.push(new KanjiBox(ka, kun, on, me, ex))
       });
 
-      console.log(theKanji);
+      // console.log(theKanji);
       kanjis = reorder(theKanji);
       addAllKanji(kanjis);
     })
+}
+
+async function fetchSentences() {
+  await fetch('/n5sent')
+    .then(res => res.json())
+    .then(data => {
+      theSentences = data;
+      // console.log(theSentences);
+    })
+    .catch(err => { console.log(err) })
 }
 
 function randomInt(max, min) {
@@ -67,19 +83,23 @@ function reorder(kan) {
     if (!a.includes(r)) {
       a.push(r);
       b.push(kan[r]);
+      indices.push(r);
       continue;
     }
     r = randomInt(0, kan.length);
   }
 
+  console.log(indices);
+  console.log(b);
+
   return b;
 }
 
 function addAllKanji(kan) {
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < max; i++) {
     let kanjiText = kan[i].kanji;
-    let yomi = kan[i].on;
-    let oneYomi = filterYomi(yomi);
+    // let yomi = kan[i].kun;
+    let oneYomi = filterYomi(kan[i]);
     readings.push([readings.length, oneYomi]);
   }
 }
@@ -189,9 +209,7 @@ function buildExampleRomaji(reading) {
       romaji = concatRomaji(idx + 2, reading, smallTsuIndex, romaji);
     }
   } else {
-    for (r of reading) {
-      romaji += matchOneKana(r);
-    }
+    romaji = concatRomaji(0, reading, smallTsuIndex, romaji);
   }
 
   return romaji;
@@ -221,8 +239,10 @@ function clear(element) {
   }
 }
 
-function filterYomi(yomi) {
-  return yomi.includes(',') ? yomi.split(',')[0] : yomi;
+function filterYomi(kanji) {
+  return kanji.kun == '' 
+       ? kanji.on.includes(',') ? kanji.on.split(',')[0] : kanji.on
+       : kanji.kun.includes(',') ? kanji.kun.split(',')[0] : kanji.kun;
 }
 
 function parseReadings() {
@@ -254,7 +274,6 @@ function handleMouseLeave(event) {
 }
 
 function resetActive(className) {
-
   let ar = document.getElementsByClassName('active-reading')[0];
   // ar.style.animationPlayState = 'running';
   // ar.classList.add('flash');
@@ -303,11 +322,21 @@ function showModalReading() {
 }
 
 function matchExample(reading, examples) {
+  let ex = null;
+
   for (let e = 0; e < examples.length; e++) {
     if (examples[e][1].includes(reading) && examples[e][0].length == 2) {
-      return examples[e];
+      exIdcs.push(e);
+      ex = examples[e]
     }
   }
+
+  if (ex == null) {
+    exIdcs.push(0);
+    ex = examples[0];
+  }
+
+  return ex;
 }
 
 function fillExamples() {
@@ -315,15 +344,14 @@ function fillExamples() {
   let modalKanji = document.getElementsByClassName('modal-kanji');
   let modalRomaji = document.getElementsByClassName('modal-romaji');
 
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < max; i++) {
     modalKanji[i].style.opacity = '0';
     modalRomaji[i].style.opacity = '0';
   }
 
   setTimeout(() => {
-    for (let i = 0; i < 7; i++) {
+    for (let i = 0; i < max; i++) {
       let exs = matchExample(readings[i][1], kanjis[i].examples);
-      console.log(exs);
       let romex = buildExampleRomaji(exs[1]);
 
       // modalKanji[i].textContent = exs[0];
@@ -335,6 +363,47 @@ function fillExamples() {
     }
 
     console.log(newReadings);
+    readings = newReadings;
+
+    console.log(readings);
+  }, 500)
+}
+
+function matchSentence(i) {
+  return theSentences[indices[i]][exIdcs[i]];
+}
+
+function fillSentences() {
+  let modalReading = document.getElementsByClassName('modal-reading');
+  let modalKanji = document.getElementsByClassName('modal-kanji');
+  let modalRomaji = document.getElementsByClassName('modal-romaji');
+
+  modalInner.classList.add('modal-inner-sent');
+  modalInner.classList.remove('modal-inner');
+
+  for (let i = 0; i < max; i++) {
+    modalKanji[i].style.opacity = '0';
+    modalRomaji[i].style.opacity = '0';
+  }
+
+  setTimeout(() => {
+    newReadings = [];
+    for (let i = 0; i < max; i++) {
+      let sent = matchSentence(i);
+      console.log(sent);
+      // console.log(sent, readings[i][0]);
+      // console.log(sent, readings[i][2]);
+      let romex = sent.r.split(' ').join('');
+      let sentex = sent.j.replace('。', '')
+
+      // modalKanji[i].textContent = exs[0];
+      modalKanji[i].textContent = romex;
+      modalReading[i].textContent = sentex;
+      modalRomaji[i].textContent = sent.e;
+
+      newReadings.push([i, sentex, romex]);
+    }
+
     readings = newReadings;
 
     console.log(readings);
@@ -360,15 +429,15 @@ function handleInput(event) {
     // }
     // triggerAnimation = true;
     resetActive(currentClass);
-    if (active % limit != 0 || active == limit - 6) {
+    if (active % limit != 0 || active == limit - 5) {
       active++;
       activeReading = document.getElementsByClassName(currentClass)[active];
       activeReading.classList.add('active-reading');
     } else {
       if (currentClass == 'modal-reading') {
-        reselectColumn('modal-kanji', active - 6);
+        reselectColumn('modal-kanji', active - 5);
         hideReadingAndRomaji();
-        active -= 6;
+        active -= 5;
       } else {
         if (round == 0) {
           fillExamples();
@@ -394,18 +463,18 @@ function handleInput(event) {
 
 function displayKanji() {
   clear(modalInner);
-  for (let i = 0; i < 7; i++) {
+  for (let i = 0; i < max; i++) {
     let kanjiP = document.createElement('p');
     let readingP = document.createElement('p');
-    // let readingP = document.createElement('canvas');
     let romajiP = document.createElement('p');
+    // let readingP = document.createElement('canvas');
     // let shaderSetup = new ShaderSetup(readingP, vs, fs);
     // shaders.push(shaderSetup);
     readingP.classList.add('modal-reading');
     romajiP.classList.add('modal-romaji');
     kanjiP.classList.add('modal-kanji');
     kanjiP.innerHTML = kanjis[i].kanji;
-    readingP.innerHTML = filterYomi(kanjis[i].on);
+    readingP.innerHTML = filterYomi(kanjis[i]);
     modalInner.appendChild(kanjiP);
     modalInner.appendChild(readingP);
     modalInner.appendChild(romajiP);
@@ -452,10 +521,16 @@ function render() {
   whole = window.requestAnimationFrame(render);
 }
 
-render();
+// render();
+
+function loadResources() {
+  fetchKanji();
+  fetchSentences();
+  render();
+}
 
 startBtn.addEventListener('click', startGame);
 practiceBtn.addEventListener('click', practice);
 practiceInput.addEventListener('input', handleInput);
 window.addEventListener('keydown', handleKeyDown);
-window.addEventListener('load', fetchKanji);
+window.addEventListener('load', loadResources);

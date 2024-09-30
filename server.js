@@ -9,7 +9,11 @@ app.use(express.json());
 const pagesRoot = { root: './public/pages' }
 
 app.get('/', (req, res) => {
-	res.sendFile('index.html', pagesRoot);
+	res.sendFile('practice.html', pagesRoot);
+});
+
+app.get('/caro', (req, res) => {
+	res.sendFile('caro.html', pagesRoot);
 });
 
 app.get('/desktop', (req, res) => {
@@ -23,6 +27,18 @@ app.get('/practice', (req, res) => {
 app.get('/touch', (req, res) => {
 	res.sendFile('touch.html', pagesRoot);
 });
+
+app.get('/n5sent', (req, res) => {
+	res.sendFile('./resources/sentex_n5.json', {root: './'});
+});
+
+app.get('/n4sent', (req, res) => {
+	res.sendFile('./resources/sentex_n4.json', {root: './'});
+});
+
+app.get('/allKanji', (req, res) => {
+	res.sendFile('./resources/all.json', {root: './'});
+})
 
 app.post('/testdrop', (req, res) => {
 	console.log(req.body);
