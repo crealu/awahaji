@@ -1,161 +1,2616 @@
 [
-	[{"j": "彼は毎日ジョギングをしています", "e": "He goes jogging every day.", "r": "kare wa mainichi jogingu wo shite imasu"}, {"j": "来週日曜日は友達とピクニックに行く予定です", "e": "I'm planning to go on a picnic with my friends next Sunday.", "r": "raishuu nichiyoubi wa tomodachi to pikunikku ni iku yoteidesu"}, {"j": "毎年の日米野球大会が盛大に行われています", "e": "The Japan-U.S. Baseball Tournament is held every year in a grand manner.", "r": "maitoshi no hi kome yakyuu taikai ga seidai ni gyou warete imasu"}, {"j": "旅行で十日間日本に滞在しました", "e": "I stayed in Japan for ten days on a trip.", "r": "ryokou de toukakan nihon ni taizai shimashita"}, {"j": "今日は忙しい一日でした", "e": "Today was a busy day.", "r": "kyou wa isogashii ichinichi deshita"}, {"j": "来月に夏休みを取る予定です", "e": "I plan to take summer vacation next month.", "r": "raigetsu ni natsuyasumi wo toru yoteidesu"}, {"j": "明日は晴れるといいですね", "e": "I hope it will be sunny tomorrow.", "r": "ashita wa hareru to ii desu ne"}, {"j": "今日は暑い日なので、エアコンをつけています", "e": "It's a hot day today, so I have the air conditioning on.", "r": "kyou wa atsui hi na node, eakon wo tsukete imasu"}]
-,
-	[{"j": "彼女は満月の夜に美しいと言われています。", "e": "She is said to be beautiful on the night of the full moon.", "r": "kanojo wa mangetsu no yoru ni utsukushii to iwarete imasu"}, {"j": "日本では月見が盛んです。", "e": "Moon viewing is popular in Japan.", "r": "nihon de wa tsukimi ga sakan desu"}, {"j": "来週は月曜日から仕事が始まります。", "e": "Work will start from Monday next week.", "r": "raishuu wa getsuyoubi kara shigoto ga hajimarimasu"}, {"j": "今月は忙しい月ですが、頑張ります。", "e": "This month is a busy month, but I will do my best.", "r": "kongetsu wa isogashii tsukidesuga, ganbarimasu"}, {"j": "一月には雪がよく降ります。", "e": "It often snows in January.", "r": "ichigatsu ni wa yuki ga yoku furimasu"}, {"j": "彼は一月から新しい職場で働いています。", "e": "He has been working at a new workplace since January.", "r": "kare wa ichigatsu kara atarashii shokuba de hataraite imasu"}, {"j": "日本では正月にはおせち料理を食べます。", "e": "In Japan, we eat osechi ryori on New Year's Day.", "r": "nihon de wa shougatsu ni wa osechi ryouri wo tabemasu"}]
-,
-	[{"j": "森の中でキャンプファイヤーを楽しんだ", "e": "I enjoyed a campfire in the woods.", "r": "mori no naka de kyanpu faiyā wo tanoshinda"}, {"j": "来週火曜日に会議があります", "e": "We have a meeting next Tuesday.", "r": "raishuu kayoubi ni kaigi ga arimasu"}, {"j": "昨日、アパートで火災がありました", "e": "There was a fire in my apartment yesterday.", "r": "kinou, apāto de kasai ga arimashita"}, {"j": "この国は火力発電を積極的に推進しています", "e": "This country actively promotes thermal power generation.", "r": "kono kuni wa karyoku hatsuden wo sekkyokuteki ni suishin shite imasu"}, {"j": "夏休みに火山観光に行きたいと思っています", "e": "I'm thinking of going on a volcano sightseeing tour during the summer vacation.", "r": "natsuyasumi ni kazan kankou ni ikitai to omotte imasu"}, {"j": "火事が起きたので速やかに消火活動を行った", "e": "We quickly carried out fire extinguishing activities as a fire broke out.", "r": "kaji ga okita node suteteyaka ni shouka katsudou wo itta"}, {"j": "毎年、会社で防火訓練を実施しています", "e": "We conduct fire prevention drills at the company every year.", "r": "maitoshi, kaisha de bouka kunren wo jisshite imasu"}]
-,
-	[{"j": "彼は毎日たくさんの水を飲んでいます。", "e": "He drinks a lot of water every day.", "r": "kare wa mainichi takusan no mizu wo nonde imasu"}, {"j": "彼女は水色のドレスを着ていました。", "e": "She was wearing a light blue dress.", "r": "kanojo wa mizuiro no doresu wo kite imashita"}, {"j": "今日は水曜日です。", "e": "Today is Wednesday.", "r": "kyou wa suiyoubi desu"}, {"j": "この家にはきれいな水道がついています。", "e": "This house has a clean water supply.", "r": "kono ie ni wa kirei na suidou ga tsuite imasu"}, {"j": "彼は水平な道を歩いている。", "e": "He is walking on a level road.", "r": "kare wa suihei na michi wo aruite iru"}, {"j": "洪水のため、水位が上がっています。", "e": "Due to the flood, the water level is rising.", "r": "kouzui no tame, mizui ga agatte imasu"}, {"j": "このバッグは防水素材でできています。", "e": "This bag is made of waterproof material.", "r": "kono baggu wa bousui sozai de dekite imasu"}]
-,
-	[{"j": "彼は美しい木製の家具を作るのが上手です。", "e": "He is good at making beautiful wooden furniture.", "r": "kare wa utsukushī mokusei no kagu wo tsukuru no ga jōzu desu"}, {"j": "居合道では木刀を使って稽古をします。", "e": "In iaido, we practice using a wooden sword.", "r": "iaidō de wa mokutō wo tsukatte keiko wo shimasu"}, {"j": "この家は高品質の木材で建てられている。", "e": "This house is built with high-quality wood.", "r": "kono ie wa kō hinshitsu no mokuzai de taterarete iru"}, {"j": "庭に美しい植木がたくさん植えられています。", "e": "There are many beautiful plants in the garden.", "r": "niwa ni utsukushī ueki ga takusan uerarete imasu"}, {"j": "今日は木曜日です。", "e": "Today is Thursday.", "r": "kyō wa mokuyōbi desu"}, {"j": "森の中で涼しい木陰で休憩した。", "e": "I took a break in the cool shade of the trees in the forest.", "r": "mori no naka de suzushī kage de kyuukei shita"}]
-,
-	[{"j": "彼は金持ちです。", "e": "He is rich.", "r": "kare wa kanemochi desu"}, {"j": "この商品の金額はいくらですか？", "e": "How much is the price of this item?", "r": "kono shouhin no kinglyou wa ikura desu ka?"}, {"j": "今日は金曜日です。", "e": "Today is Friday.", "r": "kyou wa kin'youbi desu"}, {"j": "この家具の取っ手は金具でできています。", "e": "The handle of this furniture is made of metal.", "r": "kono kagu no totte wa kinku de dekite imasu"}, {"j": "お金を払いました。", "e": "I paid the money.", "r": "okane wo haraimashita"}, {"j": "彼女は黄金のイヤリングをしています。", "e": "She is wearing golden earrings.", "r": "kanojo wa ougon no iya ringu wo shite imasu"}, {"j": "入場料は料金に含まれています。", "e": "The entrance fee is included in the price.", "r": "nyuujou ryou wa ryoukin ni fukumarete imasu"}]
-,
-	[{"j": "庭には肥えた土が広がっている。", "e": "In the garden, rich soil is spread out.", "r": "niwa ni wa koe ta tsuchi ga hirogatte iru"}, {"j": "この町は歴史ある土地です。", "e": "This town is a historic area.", "r": "kono machi wa rekishi aru tochi desu"}, {"j": "来週は土曜日に会議があります。", "e": "We have a meeting next Saturday.", "r": "raishuu wa doyoubi ni kaigi ga arimasu"}, {"j": "家の基礎はしっかりとした土台の上に作られています。", "e": "The foundation of the house is built on a solid base.", "r": "ie no kiso wa shikkari toshita dodai no ue ni saku rarete imasu"}, {"j": "子供たちは粘土で遊んで楽しそうだった。", "e": "The children were having fun playing with clay.", "r": "kodomotachi wa nendo de asonde tanoshisō datta"}, {"j": "その地域では赤土が見られることが多い。", "e": "Red soil is often seen in that area.", "r": "sono chiiki de wa akatsuchi ga mirareru koto ga ōi"}]
-,
-	[{"j": "日本語で「1」を表す漢字は「一」です。", "e": "The kanji for '1' in Japanese is written as \"一\".", "r": "nihongo de '1' wo arawasu kanji wa 'ichi' desu"}, {"j": "彼は僕の一番の友達です。", "e": "He is my best friend.", "r": "kare wa boku no ichiban no tomodachi desu"}, {"j": "来月は一月です。", "e": "Next month is January.", "r": "raigetsu wa ichigatsu desu"}, {"j": "このイベントは一回限りの開催です。", "e": "This event is a one-time only happening.", "r": "kono ibento wa ikkai kagiri no kaisai desu"}, {"j": "今日は一人でレストランで食事をしています。", "e": "I'm eating alone at a restaurant today.", "r": "kyou wa hitori de resutoran de shokuji wo shite imasu"}, {"j": "机の上には一つのリンゴがあります。", "e": "There is one apple on the desk.", "r": "tsukue no ue ni wa hitotsu no ringo ga arimasu"}, {"j": "国家の統一は重要です。", "e": "The unity of the nation is important.", "r": "kokka no touitsu wa juuyou desu"}]
-,
-	[{"j": "彼は二個のリンゴを食べました。", "e": "He ate two apples.", "r": "kare wa niko no ringo wo tabemashita"}, {"j": "彼女は大学で二番目の成績を取った。", "e": "She got the second best grade in the university.", "r": "kanojo wa daigaku de nibanme no seiseki wo totta"}, {"j": "来月が二月です。", "e": "Next month is February.", "r": "raigetsu ga nigatsu desu"}, {"j": "テストで問題を二つ間違えてしまった。", "e": "I made two mistakes in the test.", "r": "tesuto de mondai wo futatsu machigaete shimatta"}, {"j": "二人で映画を見に行きました。", "e": "We went to see a movie together.", "r": "futari de eiga wo mi ni ikimashita"}, {"j": "彼は二重のアイロンでシャツをアイロン掛けした。", "e": "He ironed his shirt with a double iron.", "r": "kare wa nijū no airon de shatsu wo airon kakeshita"}, {"j": "そのゲームは面白くて、二次元の世界に没入できる感じです。", "e": "The game is interesting, and it gives you the feeling of being immersed in a two-dimensional world.", "r": "sono gēmu wa omoshirokute, nijigen no sekai ni botsu nyū dekiru kanji desu"}]
-,
-	[{"j": "彼は3つのリンゴを食べました。", "e": "He ate three apples.", "r": "kare wa mittsu no ringo wo tabemashita"}, {"j": "彼女はこの本を三回読んだ。", "e": "She read this book three times.", "r": "kanojo wa kono hon wo sankai yonda"}, {"j": "来月が三月です。", "e": "Next month is March.", "r": "raigetsu ga sangatsu desu"}, {"j": "私の家族は三人です。", "e": "My family consists of three people.", "r": "watashi no kazoku wa sannin desu"}, {"j": "その建物は三角形の形をしています。", "e": "That building is in the shape of a triangle.", "r": "sono tatemono wa sankakkei no katachi wo shite imasu"}, {"j": "この絵は三次元的な表現がされている。", "e": "This painting has a three-dimensional expression.", "r": "kono e wa sanjigen-teki na hyōgen ga sarete iru"}, {"j": "空に美しい三日月が輝いている。", "e": "The beautiful crescent moon is shining in the sky.", "r": "sora ni utsukushii mikadzuki ga kagayaite iru"}, {"j": "机の上には三つの小さな箱があります。", "e": "There are three small boxes on the desk.", "r": "tsukue no ue ni wa mittsu no chiisa na hako ga arimasu"}]
-,
-	[{"j": "この本は四冊あります。", "e": "I have four books.", "r": "kono hon wa yon satsu arimasu."}, {"j": "今日は友達と四人で映画を見に行きます。", "e": "I will go watch a movie today with four friends.", "r": "kyou wa tomodachi to yonin de eiga wo mi ni ikimasu"}, {"j": "四月は桜がとても美しいです。", "e": "Cherry blossoms are very beautiful in April.", "r": "shigatsu wa sakura ga totemo utsukushii desu"}, {"j": "その庭の四角形の花壇がきれいですね。", "e": "The square flower bed in the garden is beautiful.", "r": "sono niwa no shikakkei no kadan ga kirei desu ne"}, {"j": "彼は野球チームで四番を打っています。", "e": "He is batting fourth in the baseball team.", "r": "kare wa yakyuu chiimu de yonban wo utte imasu"}, {"j": "四年間日本語を勉強しています。", "e": "I have been studying Japanese for four years.", "r": "yonnenkan nihongo wo benkyou shite imasu"}, {"j": "車が四輪駆動です。", "e": "The car has four-wheel drive.", "r": "kuruma ga shirin kudou desu"}, {"j": "机の上にはりんごが四つあります。", "e": "There are four apples on the desk.", "r": "tsukue no ue ni ringo ga yottsu arimasu"}]	
-,
-	[{"j": "彼は五本のリンゴを買った。", "e": "He bought five apples.", "r": "kare wa go hon no ringo wo katta"}, {"j": "そのレストランには五人のスタッフがいる。", "e": "There are five staff members at that restaurant.", "r": "ono resutoran ni wa gonin no sutaffu ga iru"}, {"j": "来年の五月に日本に行きます。", "e": "I will go to Japan in May next year.", "r": "rainen no gogatsu ni nihon ni ikimasu"}, {"j": "彼は野球の試合でいつも五番打者です。", "e": "He is always the fifth batter in baseball games.", "r": "kare wa yakyuu no shiai de itsumo go ban da sha desu"}, {"j": "毎四年、世界中で五輪大会が開催されます。", "e": "The Olympic Games are held every four years around the world.", "r": "mai shi nen, sekaijuu de gorin taikai ga kaisai saremasu"}, {"j": "この本は五角形の表紙をしている。", "e": "This book has a pentagonal cover.", "r": "kono hon wa gokakkei no hyoushi wo shite iru"}, {"j": "仕事で五日間ロンドンに滞在しました。", "e": "I stayed in London for five days on a business trip.", "r": "shigoto de itsuka kan rondon ni taizai shimashita"}, {"j": "机の上には五つのペンがあります。", "e": "There are five pens on the desk.", "r": "tsukue no ue ni wa itsutsu no pen ga arimasu"}]
-,
-	[{"j": "彼は六歳です。", "e": "He is six years old.", "r": "kare wa roku sai desu"}, {"j": "テーブルには六人が座っていた。", "e": "There were six people sitting at the table.", "r": "teeburu ni wa rokunin ga suwatte ita"}, {"j": "来月が六月です。", "e": "Next month is June.", "r": "raigatsu ga rokugatsu desu"}, {"j": "その本は六番目の本です。", "e": "That book is the sixth book.", "r": "sono hon wa rokubanme no hon desu"}, {"j": "六日間の旅行に行きます。", "e": "I will go on a six-day trip.", "r": "muikakan no ryokou ni ikimasu"}, {"j": "日本の伝統的なゲームに双六があります。", "e": "Japan has a traditional game called sugoroku.", "r": "nihon no dentouteki na geemu ni sugoroku ga arimasu"}, {"j": "この部屋は六角形です。", "e": "This room is hexagonal in shape.", "r": "kono heya wa rokkakkei desu"}, {"j": "りんごを六つ買いました。", "e": "I bought six apples.", "r": "ringo wo muttsu kaimashita"}]
-,
-	[{"j": "彼は七回も勝利を収めた。", "e": "He won seven times.", "r": "kare wa shichikai mo shōri wo osameta"}, {"j": "昨日、友達と七人でピクニックに行った。", "e": "Yesterday, I went on a picnic with seven friends.", "r": "kinō, tomodachi to shichinin de pikunikku ni itta"}, {"j": "来月は七月です。", "e": "Next month is July.", "r": "raigetsu wa shichigatsu desu"}, {"j": "その店はこの街で七番目に古いです。", "e": "That store is the seventh oldest in this town.", "r": "sono mise wa kono machi de shichibanme ni furui desu"}, {"j": "ハワイで七日間のバカンスを過ごしました。", "e": "I spent seven days on vacation in Hawaii.", "r": "hawai de nanokakan no bakan su wo sugoshimashita"}, {"j": "感謝祭の夕食には七面鳥を作ります。", "e": "We make a turkey for the Thanksgiving dinner.", "r": "kanshasai no yuushoku ni wa shichimenchou wo tsukurimasu"}, {"j": "北斗七星は夜空に輝いています。", "e": "The Big Dipper is shining in the night sky.", "r": "hokuto shichisei wa yozora ni kagayaite imasu"}, {"j": "七つの海を越えて行こう", "e": "Let's go beyond the seven seas", "r": "nanatsuno umi wo koete ikou"}]
-,
-	[{"j": "彼は八歳です。", "e": "He is eight years old.", "r": "kare wa hassai desu"}, {"j": "八人のメンバーがいるチームです。", "e": "It's a team with eight members.", "r": "hachi-nin no menbā ga iru chīmu desu"}, {"j": "来月は八月です。", "e": "Next month is August.", "r": "raigetsu wa hachigatsu desu"}, {"j": "その映画は八番目に面白かった。", "e": "That movie was the eighth most interesting.", "r": "sono eiga wa hachiban me ni omoshirokatta"}, {"j": "八日間の休暇を楽しんだ。", "e": "I enjoyed an eight-day vacation.", "r": "yōkakan no kyūka wo tanoshinda"}, {"j": "この図形は八角形です。", "e": "This figure is an octagon.", "r": "kono zugata wa hachikakkei desu"}, {"j": "町の角に古い八百屋があります。", "e": "There is an old grocery store at the corner of the street.", "r": "machi no kado ni furui yaoya ga arimasu"}, {"j": "卵を八つ買ってきてください。", "e": "Please buy eight eggs.", "r": "tamago wo yattsu katte kite kudasai"}]
-,
-	[{"j": "彼は9時に来ると約束しました", "e": "He promised to come at 9 o'clock.", "r": "kare wa ku-ji ni kuru to yakusoku shimashita"}, {"j": "今日は九人で会議を行います", "e": "We will have a meeting with nine people today.", "r": "kyou wa ku nin de kaigi wo okonai shimasu"}, {"j": "来月が九月です", "e": "Next month is September.", "r": "raigetsu ga kugatsu desu"}, {"j": "この店は九番目の建物です", "e": "This store is the ninth building.", "r": "kono mise wa kyuu ban me no tatemono desu"}, {"j": "九日間の旅行に行きました", "e": "I went on a trip for nine days.", "r": "kokonokakan no ryokou ni ikimashita"}, {"j": "九州は美しい場所です", "e": "Kyushu is a beautiful place.", "r": "kyuushuu wa utsukushii basho desu"}, {"j": "ケーキを食べるために九つのキャンドルを並べました", "e": "I lined up nine candles to eat cake", "r": "kēki wo taberu tame ni kokonotsu no kyandoru wo narabemashita"}]
-,
-	[{"j": "彼は十歳の誕生日を迎えた。", "e": "He celebrated his tenth birthday.", "r": "kare wa jussai no tanjōbi wo mukaeta"}, {"j": "十人の乗客がバスに乗っていた。", "e": "There were ten passengers on the bus.", "r": "juunin no jōkyaku ga basu ni notte ita"}, {"j": "来年は十月に結婚する予定です。", "e": "I'm planning to get married in October next year.", "r": "rainen wa jugatsu ni kekkon suru yoteidesu"}, {"j": "この本はとても面白くて、十分に満足しています。", "e": "This book is very interesting, I am fully satisfied.", "r": "kono hon wa totemo omoshirokute, jūbun ni manzoku shite imasu"}, {"j": "旅行で十日間日本に滞在しました。", "e": "I stayed in Japan for ten days on my trip.", "r": "ryokō de tōkakan nihon ni taizai shimashta"}, {"j": "このお店では十円玉でアイスが買えます。", "e": "You can buy ice cream with a ten-yen coin at this store.", "r": "kono wo mise de wa jūen-dama de aisu ga kaemasu"}, {"j": "毎年十五夜にはお月見を楽しんでいます。", "e": "I enjoy moon viewing on the night of the fifteenth every year.", "r": "maitoshi juugoya ni wa otsukimi wo tanoshinde imasu"}]
-,
-	[{"j": "彼は百点満点の成績を取った。", "e": "He scored a perfect 100 points.", "r": "kare wa hyakuten manten no seiseki wo totta"}, {"j": "そのお店では百円玉を使って買い物ができます。", "e": "You can shop using 100 yen coins at that store.", "r": "sono wo mise de wa hyakuendama wo tsukatte kaimono ga dekimasu"}, {"j": "日本にはたくさんの百円ショップがあります。", "e": "There are many 100 yen shops in Japan.", "r": "nihon ni wa takusan no hyaku en shoppu ga arimasu"}, {"j": "インターネットで調べ物するときに百科事典が役立ちます。", "e": "Encyclopedias are helpful when researching on the internet.", "r": "intaanetto de shirabemono suru toki ni hyakka jiten ga yakudachimasu"}, {"j": "大きな百貨店でお買い物を楽しんだ。", "e": "I enjoyed shopping at a large department store.", "r": "ooki na hyakkaten de wo kaimono wo tanoshinda"}, {"j": "彼は身長二百センチメートルある。", "e": "He is two hundred centimeters tall.", "r": "kare wa shinchou ni hyaku senchimētoru aru"}]
-,
-	[{"j": "彼は毎日ランニングで5キロを走る", "e": "He runs 5 kilometers every day.", "r": "kare wa mainichi ranningu de 5 kiro wo hashiru"}, {"j": "この本は千ページもある", "e": "This book has a thousand pages.", "r": "kono hon wa sen peeji mo aru"}, {"j": "昔の日本では千と百の武士が戦ったことがある", "e": "In old Japan, there was a battle where a thousand samurai fought against a hundred."}]
-,
-	[{"j": "彼は大きな手を持っている。", "e": "He has big hands.", "r": "kare wa ooki na te wo motte iru"}, {"j": "毎朝手紙を書いています。", "e": "I write a letter every morning.", "r": "mai asa tegami wo kaite imasu"}, {"j": "寒い日は手袋をよく使います。", "e": "I often use gloves on cold days.", "r": "samui hi wa tebukuro wo yoku shi imasu"}, {"j": "馬の手綱を握って、優しく誘導してください。", "e": "Please hold the reins of the horse and lead it gently.", "r": "uma no tagai wo nigitte, yasashiku yuudou shite kudasai"}, {"j": "手術は成功裏に終わりました。", "e": "The surgery was successful.", "r": "shujutsu wa seikou-ri ni owarimashita"}, {"j": "この問題を解決するための手段を考えなければならない。", "e": "We need to think of a way to solve this problem.", "r": "kono mondai wo kaiketsu suru tame no shudan wo kangaenakereba naranai"}, {"j": "ビジネスでの成功を祈って、握手を交わしました。", "e": "We shook hands, wishing for success in business.", "r": "bijinesu de no seikou wo inotte, akushu wo majiwashimashita"}]
-,
-	[{"j": "彼は速い足で走っている", "e": "He is running fast.", "r": "kare wa hayai ashi de hashitte iru"}, {"j": "この箱は重くて足がつりそう", "e": "This box is heavy, my legs might cramp.", "r": "kono hako wa omokute ashi ga tsurisou"}, {"j": "転んで足首を痛めてしまった", "e": "I sprained my ankle when I fell.", "r": "koronde ashikubi wo itamete shimatta"}, {"j": "新しいビルが建設中で足場が組まれている", "e": "The new building is under construction, and scaffolding is being set up.", "r": "atarashii biru ga kensetsuchuu de ashisaba ga kumarete iru"}, {"j": "彼の意見を足して考える", "e": "Let's consider his opinion as well.", "r": "kare no iken wo tashite kangaeru"}, {"j": "足し算は得意ではありません", "e": "I'm not good at addition.", "r": "tashizan wa tokui de wa arimasen"}, {"j": "今度の旅行には革靴を一足買おうと思っている", "e": "I'm thinking of buying a pair of leather shoes for the next trip.", "r": "kondo no ryokou ni wa kutsu wo isshu kaou to omotte iru"}, {"j": "補足の質問がありますか？", "e": "Do you have any additional questions?", "r": "hosoku no shitsumon ga arimasu ka?"}, {"j": "このサービスには満足しています", "e": "I am satisfied with this service.", "r": "kono saabisu ni wa manzoku shite imasu"}]
-,
-	[{"j": "彼は青い目をしている。", "e": "He has blue eyes.", "r": "kare wa aoi me wo shite iru"}, {"j": "目がかゆいので目薬をさしました。", "e": "My eyes were itchy so I put in some eye drops.", "r": "me ga kayui node megusuri wo sashimashita"}, {"j": "彼の目的は成功することです。", "e": "His objective is to succeed.", "r": "kare no mokuteki wa seikou suru koto desu"}, {"j": "彼女は毎日新しい目標を立てています。", "e": "She sets new goals every day.", "r": "kanojo wa mainichi atarashii mokuhyou wo tatete imasu"}, {"j": "その演技の役目を果たすことができました。", "e": "She was able to fulfill her role in the play.", "r": "sono engi no yakume wo hatasu koto ga dekimashita"}, {"j": "数学は彼の得意科目です。", "e": "Math is his best subject.", "r": "suugaku wa kare no tokui kamoku desu"}]
-,
-	[{"j": "彼女は美しい耳をしている。", "e": "She has beautiful ears.", "r": "kanojo wa utsukushii mimi wo shite iru"}, {"j": "耳元でささやかれた言葉が心地よかった。", "e": "The words whispered in my ear were soothing.", "r": "mimimoto de sasayakareta kotoba ga kokochi yokatta"}, {"j": "耳栓をつけて音楽を聴いています。", "e": "I'm listening to music with earplugs in.", "r": "jizen wo tsukete ongaku wo kiite imasu"}, {"j": "右耳が少し痛いです。", "e": "My right ear is a little sore.", "r": "migi mimi ga sukoshi itai desu"}, {"j": "彼は中耳炎で学校を休んでいます。", "e": "He is absent from school due to middle ear infection.", "r": "kare wa chuinen de gakkou wo yasunde imasu"}]
-,
-	[{"j": "彼はおいしい料理を食べると大満足そうな顔をしている。", "e": "He has a very satisfied expression on his face when he eats delicious food.", "r": "kare wa oishii ryouri wo taberu to da manzoku souna kao wo shite iru"}, {"j": "彼女の口調はとても丁寧です。", "e": "She has a very polite tone of voice.", "r": "kanojo no kuchou wa totemo teinei desu"}, {"j": "赤い口紅を付けてパーティーに行きました。", "e": "She wore red lipstick and went to the party.", "r": "akai kuchibeni wo tsukete paatii ni ikimashita"}, {"j": "友達と口論になってしまった。", "e": "I ended up having an argument with my friend.", "r": "tomodachi to kouron ni natte shimatta"}, {"j": "この国の人口は約1億人です。", "e": "The population of this country is about 100 million people.", "r": "kono kuni no jinkou wa yaku ichi oku nin desu"}, {"j": "非常口は火災の際に使用してください。", "e": "Please use the emergency exit in case of fire.", "r": "hijouguchi wa kasai no sai ni shiyou shite kudasai"}]
-,
-	[{"j": "林がたくさんある公園で散歩しています。", "e": "I'm taking a walk in a park with many trees.", "r": "hayashi ga takusan aru kōen de sanpo shite imasu"}, {"j": "この林道は自然が豊かで気持ちがいいです。", "e": "This forest road is surrounded by rich nature and feels good.", "r": "kono hayashimichi wa shizen ga yutaka de kimochi ga ii desu"}, {"j": "山の斜面に植林が行われています。", "e": "Afforestation is being carried out on the slope of the mountain.", "r": "yama no hasamn ni shokurin ga gyou warete imasu"}, {"j": "杉林の中で鳥のさえずりが聞こえてきます。", "e": "I can hear the chirping of birds in the cedar forest.", "r": "sugibayashi no naka de tori no saezuri ga kikoete kimasu"}, {"j": "日本には素敵な林間学校がたくさんあります。", "e": "There are many wonderful outdoor schools in Japan.", "r": "nihon ni wa sutekina rinkan gakkō ga takusan arimasu"}]
-,
-	[{"j": "森の中を散歩するのが好きです。", "e": "I like walking in the forest.", "r": "mori no naka wo sanpo suru no ga suki desu."}, {"j": "この国には美しい森林がたくさんあります。", "e": "This country has many beautiful forests.", "r": "kono kuni ni wa utsukushii shinrin ga takusan arimasu."}, {"j": "青森市は青森県の中心に位置しています。", "e": "Aomori City is located in the center of Aomori Prefecture.", "r": "aomorishi wa aomoriken no chūshin ni ichi shite imasu"}]
-,
-	[{"j": "彼は晴れた日に青い空を見上げながら、天に手を振っていた。", "e": "He was looking up at the blue sky on a clear day, waving his hand towards the heavens.", "r": "kare wa hareta hi ni aoi sora wo miagenagara, ten ni te wo futte ita"}, {"j": "明日の天気は雨だそうです。", "e": "It seems like tomorrow's weather will be rain.", "r": "ashita no tenki wa ame da soudesu"}, {"j": "彼女は優しい笑顔で天使のようだ。", "e": "She looks like an angel with her gentle smile.", "r": "kanojo wa yasashii egao de tenshi no you da"}, {"j": "彼は音楽の天才として知られています。", "e": "He is known as a musical genius.", "r": "kare wa ongaku no tensai toshite shirarete imasu"}, {"j": "部屋の天井には青い星が描かれている。", "e": "There are blue stars painted on the ceiling of the room.", "r": "heya no tenjou ni wa aoi hoshi ga egakarete iru"}, {"j": "夜空には美しい天の川が広がっている。", "e": "The beautiful Milky Way is spreading across the night sky.", "r": "yozora ni wa utsukushii amanogawa ga hirogatte iru"}]
-,
-	[{"j": "彼女は明るい気持ちで笑っていた。", "e": "She was smiling with a bright mood.", "r": "kanojo wa akarui kimochi de waratteita"}, {"j": "今日は気温が高いですね。", "e": "The temperature is high today.", "r": "kyou wa kion ga takai desu ne"}, {"j": "彼の機嫌が悪い気分なのかもしれません。", "e": "He might be in a bad mood.", "r": "kare no kigen ga warui kibun na no kamoshiremasen"}, {"j": "森の中にいると、不気味な気配を感じることがあります。", "e": "When you're in the forest, you sometimes feel a strange presence.", "r": "mori no naka ni iru to, bukimi na kehai wo kanjiru koto ga arimasu"}, {"j": "新鮮な空気を吸ってリフレッシュしたいです。", "e": "I want to breathe in fresh air and refresh myself.", "r": "shinsen na kuuki wo sutte rifuresshu shitai desu"}]
-,
-	[{"j": "彼女は青い空を見上げていた。", "e": "She was looking up at the blue sky.", "r": "kanojo wa aoi sora wo miagete ita"}, {"j": "お腹が空いた", "e": "I'm hungry", "r": "onaka ga suita"}, {"j": "空港に着いた時、友達が待っていてくれました。", "e": "When I arrived at the airport, my friend was waiting for me.", "r": "kūkō ni tsuita toki, tomodachi ga matteite kuremashita"}, {"j": "夜空にはたくさんの星が輝いている。", "e": "Many stars are shining in the night sky.", "r": "yozora ni wa takusan no hoshi ga kagayaite iru"}, {"j": "子供の頃、空手を習っていた。", "e": "I used to practice karate when I was a child.", "r": "kodomo no koro, karate wo naratte ita"}, {"j": "この町にはたくさんの空き家がある。", "e": "There are many vacant houses in this town.", "r": "kono machi ni wa takusan no akiya ga aru"}]
-,
-	[{"j": "明日は夕べ友達とディナーを楽しみます。", "e": "I am looking forward to having dinner with my friends tomorrow evening.", "r": "ashita wa yuube tomodachi to dinā wo tanoshimimasu."}, {"j": "夕方には雨が降ってきました。", "e": "It started raining in the evening.", "r": "yuugata ni wa ame ga futte kimashita"}, {"j": "今日は美味しい夕食が食べたいです。", "e": "I want to have a delicious dinner tonight.", "r": "kyou wa oishii yuushoku ga tabetai desu"}, {"j": "海岸で美しい夕日を見ることができました。", "e": "I was able to see a beautiful sunset at the beach.", "r": "kaigan de utsukushii yuuhi wo miru koto ga dekimashita"}, {"j": "彼は一朝一夕で変わることはない。", "e": "He won't change overnight.", "r": "kare wa hitoasa hitoyu wa de kawaru koto wa nai"}]
-,
-	[{"j": "川岸に大きな石が並んでいた。", "e": "There were large stones lined up along the river bank.", "r": "kawagishi ni ooki na ishi ga narandeita"}, {"j": "古い町並みは石畳の道で有名だ。", "e": "The old town is famous for its stone-paved streets.", "r": "furui machinami wa ishidatami no michi de yuumei da"}, {"j": "石油はさまざまな製品の原料として使われています。", "e": "Oil is used as a raw material for various products.", "r": "sekiyu wa samazama na seihin no genryou toshite tsukawarete imasu"}, {"j": "彼女は美しい宝石を身に着けていた。", "e": "She was wearing beautiful jewels.", "r": "kanojo wa utsukushii houseki wo mi ni kette ita"}, {"j": "磁石を使って科学の実験をしている学生がいました。", "e": "There was a student using a magnet for a science experiment.", "r": "jishaku wo tsukatte kagaku no jikken wo shite iru gakusei ga imashita"}]
-,
-	[{"j": "彼は美しい貝を海岸で拾っていました", "e": "He was picking up beautiful shells on the beach.", "r": "kare wa utsukushii kai wo kaigan de hirotte imashita"}, {"j": "子供たちは貝殻を集めるのが好きです", "e": "Children like to collect seashells.", "r": "kodomotachi wa kaigara wo atsumeru no ga suki desu"}, {"j": "レストランでおいしい帆立貝を食べた", "e": "I ate delicious scallops at the restaurant.", "r": "resutoran de oishii hotategai wo tabeta"}, {"j": "この料理には新鮮な二枚貝が使われています", "e": "Fresh bivalves are used in this dish.", "r": "kono ryouri ni wa shinsen na nimai-gai ga tsukawarete imasu"}]
-,
-	[{"j": "彼は草地でサッカーをしている。", "e": "He is playing soccer on the grass field.", "r": "kare wa kusachi de sakkaa wo shite iru"}, {"j": "この草原は広大で美しいです。", "e": "This grassland is vast and beautiful.", "r": "kono kusahara wa koudai de utsukushii desu"}, {"j": "春には野草がたくさん咲きます。", "e": "Many wildflowers bloom in spring.", "r": "haru ni wa yasou ga takusan sakimasu"}, {"j": "海草を使った和え物がおいしいですね。", "e": "Seaweed salad is delicious.", "r": "kaisou wo tsukatta wae mono ga oishii desu ne"}, {"j": "牧草地で牛がのんびり草を食べています。", "e": "Cows are leisurely eating grass in the pasture.", "r": "bokusouchi de ushi ga nonbiri kusa wo tabete imasu"}]
-,
-	[{"j": "彼女はきれいな花を持ってきた。", "e": "She brought beautiful flowers.", "r": "kanojo wa kirei na hana wo motte kita"}, {"j": "庭に素敵な花壇があります。", "e": "There is a lovely flower bed in the garden.", "r": "niwa ni sutekina hanada ga arimasu"}, {"j": "彼に花束をプレゼントしました。", "e": "I gave him a bouquet of flowers as a present.", "r": "kare ni hanataba wo purezento shimashita"}, {"j": "夏祭りできれいな花火を見た。", "e": "I saw beautiful fireworks at the summer festival.", "r": "natsu matsuri de kirei na hanabi wo mita"}, {"j": "花嫁のドレスがとても美しかった。", "e": "The bride's dress was very beautiful.", "r": "hanayome no doresu ga totemo utsukushikatta"}]
-,
-	[{"j": "庭に竹を植えました。", "e": "I planted a bamboo in the garden.", "r": "niwa ni take wo uemashita"}, {"j": "竹林を散歩するのが好きです。", "e": "I like taking a walk in a bamboo forest.", "r": "chikurin wo sanpo suru no ga suki desu"}, {"j": "子供の頃、竹馬で遊んだことがあります。", "e": "I used to play with a bamboo horse when I was a child.", "r": "kodomo no koro, takeuma de asonda koto ga arimasu"}, {"j": "庭に素敵な竹垣を作りたいです。", "e": "I want to make a beautiful bamboo fence in my garden.", "r": "niwa ni suteki na takegaki wo tsukuritai desu"}, {"j": "竹の子は春の山菜の代表的な食材です。", "e": "Bamboo shoots are a typical ingredient for spring mountain vegetables.", "r": "take no ko wa haru no sansai no daitenshoku na shokuzai desu"}]
-,
-	[{"j": "彼は山を愛しています。", "e": "He loves mountains.", "r": "kare wa yama wo aishite imasu"}, {"j": "昨日、山火事が起きました。", "e": "There was a mountain fire yesterday.", "r": "kinou, yamakaji ga okimashita"}, {"j": "来年、友達と一緒に登山に行く予定です。", "e": "I'm planning to go mountain climbing with my friends next year.", "r": "rainen, tomodachi to issho ni tozan ni iku yoteidesu"}, {"j": "この島には美しい火山があります。", "e": "This island has a beautiful volcano.", "r": "kono shima ni wa utsukushii kazan ga arimasu"}, {"j": "冬には高山でスキーを楽しめます。", "e": "You can enjoy skiing in the high mountains in winter.", "r": "fuyu ni wa takayama de suki wo tanoshimemasu"}, {"j": "日本で一番有名な山のひとつは富士山です。", "e": "Mount Fuji is one of the most famous mountains in Japan.", "r": "nihon de ichiban yuumei na yama no hitotsu wa fuji-san desu"}]
-,
-	[{"j": "彼は川で釣りをしている。", "e": "He is fishing in the river.", "r": "kare wa kawa de tsuri wo shite iru"}, {"j": "ピクニックを楽しむために川辺に行きました。", "e": "We went to the riverside to enjoy a picnic.", "r": "pikunikku wo tanoshimu tame ni...川上には美しい滝があります。", "e": "There is a beautiful waterfall upstream.", "r": "kawakami ni wa utsukushii taki ga arimasu"}, {"j": "川岸に沢山の花が咲いていた。", "e": "Many flowers were blooming on the riverbank.", "r": "kawagishi ni sawayaka no hana ga saite ita"}, {"j": "この町は綺麗な河川が流れています。", "e": "A beautiful river flows through this town.", "r": "kono machi wa kirei na kasen ga nagarete imasu"}, {"j": "森の中を小川が流れている。", "e": "A stream is flowing through the forest.", "r": "mori no naka wo kogawa ga nagarete iru"}]
-,
-	[{"j": "今日は雨が降っています。", "e": "It's raining today.", "r": "kyou wa ame ga futte imasu"}, {"j": "雨が降るときは雨水が流れてきます。", "e": "When it rains, rainwater flows down.", "r": "ame ga furu toki wa usui ga nagarete kimasu"}, {"j": "雨が降ってきそうだから、雨具を持って行こう。", "e": "It looks like it's going to rain, so let's bring rain gear.", "r": "ame ga futte kisou da kara, amagu wo motte ikou"}, {"j": "今日の雨量は十分多いですね。", "e": "We have received quite a lot of rain today.", "r": "kyou no ame ryou wa juubun ooi desu ne"}, {"j": "雷雨の中を歩くのは怖いですね。", "e": "It's scary to walk in a thunderstorm.", "r": "raiu no naka wo aruku no wa kowai desu ne"}, {"j": "最近、長雨が続いています。", "e": "We have been having a long period of rain lately.", "r": "saikin, nagame ga tsuzuite imasu"}, {"j": "昨日は豪雨で道路が冠水しました。", "e": "There was heavy rain yesterday and the road was flooded.", "r": "kinou wa gouu de douro ga kansui shimashita"}]
-,
-	[{"j": "田んぼには美しい金色の稲が広がっている。", "e": "In the rice field, beautiful golden rice plants are spreading out.", "r": "tanboniwa utsukushii kin'iro no ine ga hirogatte iru"}, {"j": "田畑には野菜がたくさん育てられています。", "e": "Many vegetables are grown in the fields.", "r": "tabataka ni wa yasai ga takusan sodaterarete imasu"}, {"j": "田植えの時期になると、農家の皆さんが一生懸命働いています。", "e": "During the rice planting season, farmers are working hard.", "r": "taue no jiki ni naru to, nouka no minasan ga isshou kenmei hataraite imasu"}, {"j": "田園風景を眺めながら散歩するのが好きです。", "e": "I like taking a walk while looking at the rural landscape.", "r": "den'en fuukei wo nagamenagara sanpo suru no ga suki desu"}, {"j": "この地域は美しい水田で知られています。", "e": "This area is known for its beautiful rice fields.", "r": "kono chiiki wa utsukushii tanen de shirarete imasu"}, {"j": "石油の採掘が盛んな油田が国内に点在しています。", "e": "There are oil fields scattered throughout the country where oil extraction is active.", "r": "sekiyu no saikutsu ga sakan na yuuden ga kokunai ni teneigakushite imasu"}]
-,
-	[{"j": "庭にはたくさんの虫がいる。", "e": "There are many bugs in the garden.", "r": "niwa ni wa takusan no mushi ga iru"}, {"j": "子供の頃、虫歯になったことがあります。", "e": "I had a cavity when I was a child.", "r": "kodomo no koro, mushiba ni natta koto ga arimasu"}, {"j": "森で毛虫を見つけた。", "e": "I found a caterpillar in the forest.", "r": "mori de kemushi wo mitsuketa"}, {"j": "彼は弱虫だが、優しい人だ。", "e": "He is a coward, but he is a kind person.", "r": "kare wa yowamushi da ga, yasashii hito da"}, {"j": "夏になると昆虫がたくさん出てくる。", "e": "Many insects come out in the summer.", "r": "natsu ni naru to konchuu ga takusan dete kuru"}, {"j": "この殺虫剤は効果が抜群だ。", "e": "This insecticide is extremely effective.", "r": "kono satsuchuuzai wa kouka ga batsugun da"}]
-,
-	[{"j": "彼女はかわいい犬を飼っています。", "e": "She has a cute dog.", "r": "kanojo wa kawaii inu wo kaotte imasu"}, {"j": "庭に犬小屋を建てた。", "e": "I built a doghouse in the garden.", "r": "niwa ni inugoya wo tateta"}, {"j": "愛犬と散歩するのが日課です。", "e": "Taking a walk with my beloved dog is part of my daily routine.", "r": "aiken to sanpo suru no ga nikai desu"}, {"j": "その家の番犬が吠え始めた。", "e": "The watchdog of the house started barking.", "r": "sono ie no banken ga hoe hajimeta"}, {"j": "猟犬は森の中でとても活動的です。", "e": "Hunting dogs are very active in the forest.", "r": "ryōken wa mori no naka de totemo katsudō-tekidesu"}, {"j": "野良犬を見つけたら保護してあげてください。", "e": "If you find a stray dog, please rescue it.", "r": "norainu wo mitsuketara hogo shite agete kudasai"}]
-,
-	[{"j": "彼女の声はとても美しい音を奏でる。", "e": "Her voice produces a very beautiful sound.", "r": "kanojo no koe wa totemo utsukushii oto wo kanaderu"}, {"j": "毎日音楽を聴くことが好きです。", "e": "I like listening to music every day.", "r": "mainichi ongaku wo kiku koto ga suki desu"}, {"j": "ピアノの音色が心地よい。", "e": "The tone of the piano is pleasant.", "r": "piano no neiro ga kokochi yoi"}, {"j": "騒音がうるさいと集中できません。", "e": "I can't concentrate when it's noisy.", "r": "souon ga urusai to shuuchuu dekimasen"}, {"j": "廊下を歩くときは足音が静かになるように気をつけます。", "e": "I make sure to walk quietly in the hallway to minimize my footstep noise.", "r": "rouka wo aruku toki wa ashioto ga shizuka ni naru you ni ki wo tsukemasu"}, {"j": "日本語の単語には母音と子音があります。", "e": "In Japanese words, there are vowels and consonants.", "r": "nihongo no tango ni wa oon kag oto"}]
-,
-	[{"j": "彼は面白い本を読んでいます", "e": "He is reading an interesting book.", "r": "kare wa omoshiroi hon wo yonde imasu"}, {"j": "この町にはたくさんの本屋があります", "e": "There are many bookstores in this town.", "r": "kono machi ni wa takusan no hon'ya ga arimasu"}, {"j": "彼女に本音を話した", "e": "I told her my true feelings.", "r": "kanojo ni honne wo hanashita"}, {"j": "基本的なルールを守ってください", "e": "Please follow the basic rules.", "r": "kihonteki na ruuru wo mamotte kudasai"}, {"j": "その会社は多くの資本を持っている", "e": "That company has a lot of capital.", "r": "sono kaisha wa ooku no shihon wo motte iru"}, {"j": "熊本市は自然が豊かな美しい街です", "e": "Kumamoto City is a beautiful city abundant with nature.", "r": "kumamoto-shi wa shizen ga yutaka na utsukushii machi desu"}]
-,
-	[{"j": "彼はイケメンな男性です。", "e": "He is a good-looking man.", "r": "kare wa ikemen na dansei desu"}, {"j": "彼は本当に男前だね。", "e": "He's really cool.", "r": "kare wa hontou ni otokomae da ne"}, {"j": "男性の方が多い職場です。", "e": "There are more men than women in this workplace.", "r": "dansei no hou ga ooi shokuba desu"}, {"j": "男女平等を目指す", "e": "Striving for gender equality", "r": "danjo byoudou wo mezasu"}, {"j": "彼は家族の長男です。", "e": "He is the eldest son in the family.", "r": "kare wa kazoku no chounan desu"}]
-,
-	[{"j": "彼の母はとても優しい女性です。", "e": "His mother is a very kind woman.", "r": "kare no haha wa totemo yasashii josei desu."}, {"j": "日本では女性に対する尊重が大切です。", "e": "Respecting women is important in Japan.", "r": "nihon de wa josei ni tai suru sonchou ga taisetsu desu."}, {"j": "その国の女王は美しいと評判です。", "e": "The queen of that country is known to be beautiful.", "r": "sono kuni no joou wa utsukushii to hyouban desu."}, {"j": "彼女はまるで女神のように美しかった。", "e": "She was as beautiful as a goddess.", "r": "kanojo wa marude megami no you ni utsukushikatta."}, {"j": "彼は乙女の心を持っている。", "e": "He has a maiden's heart.", "r": "kare wa otome no kokoro wo motte iru"}, {"j": "その少女は大きな夢を持っています。", "e": "That young girl has big dreams.", "r": "sono shoujo wa ooki na yume wo motte imasu"}]
-,
-	[{"j": "彼は優秀な学生です。", "e": "He is an excellent student.", "r": "kare wa yuushuu na gakusei desu"}, {"j": "毎日勉強することは大切な学習です。", "e": "Studying every day is an important learning process.", "r": "mainichi benkyou suru koto wa taisetsu na gakushuu desu"}, {"j": "日本に留学して日本語を勉強しています。", "e": "I am studying Japanese by studying abroad in Japan.", "r": "nihon ni ryuugaku shite nihongo wo benkyou shite imasu"}]
-,
-	[{"j": "彼は毎日学校へ通っています", "e": "He goes to school every day.", "r": "kare wa mainichi gakkou e kayotte imasu"}, {"j": "学校の校庭にはたくさんの花が植えられています。", "e": "There are many flowers planted in the schoolyard.", "r": "gakkou no koutei ni wa takusan no hana ga ue rarete imasu"}, {"j": "新しい校舎が建設されました。", "e": "A new school building has been constructed.", "r": "atarashii kousha ga kensetsu saremashita"}, {"j": "私たちの校長先生はとても優しいです。", "e": "Our principal is very kind.", "r": "watashitachi no kouchou sensei wa totemo yasashii desu"}, {"j": "原稿を校正する必要があります。", "e": "I need to proofread the manuscript.", "r": "genkou wo kousei suru hitsuyou ga arimasu"}, {"j": "毎年学園祭で校歌を歌います。", "e": "We sing the school song at the school festival every year.", "r": "maitoshi gakuensai de kouka wo utaimasu"}]
-,
-	[{"j": "彼はいつも私より先に会議室に入る。", "e": "He always enters the meeting room before me.", "r": "kare wa itsumo watashi yori saki ni kaigishitsu ni hairu"}, {"j": "先程、お店で友達に偶然会いました。", "e": "I ran into my friend by chance at the store a little while ago.", "r": "sakihodo, wo mise de tomodachi ni guuzen aimashita"}, {"j": "私の先生はとても優しいです。", "e": "My teacher is very kind.", "r": "watashi no sensei wa totemo yasashii desu"}, {"j": "先輩にはいろいろと教えてもらっています。", "e": "I am learning a lot from my senior colleagues.", "r": "senpai ni wa iroiro to oshiete moratte imasu"}, {"j": "列車の先頭に座ると景色がよく見えます。", "e": "You can see the scenery better if you sit at the front of the train.", "r": "ressha no sentou ni suwaru to keshiki ga yoku miemasu"}, {"j": "先月は忙しい月でしたが、楽しい思い出もたくさんあります。", "e": "Last month was a busy month, but I have many wonderful memories as well.", "r": "sengetsu wa isogashii tsukideshita ga, tanoshii omoide mo takusan arimasu"}]
-,
-	[{"j": "魚の刺身を食べるのが好きで、生で食べることもあります。", "e": "I like eating sashimi of fish, and I sometimes eat it raw.", "r": "sakana no sashimi wo taberu no ga suki de, nama de taberu koto mo arimasu"}, {"j": "地球上の生命を守るためには、環境保護が重要です。", "e": "Protecting life on Earth is important, and so is environmental conservation.", "r": "chikyū-jō no seimei wo mamoru tame ni wa, kankyō hogo ga jūyō desu"}, {"j": "彼は優秀な生徒で、いつも真面目に勉強しています。", "e": "He is a excellent student and always studies diligently.", "r": "kare wa yūshū na seito de, itsumo majime ni benkyō shite imasu"}, {"j": "森の中でさまざまな生き物を見ることができます。", "e": "You can see various living creatures in the forest.", "r": "mori no naka de samazama na ikimono wo miru koto ga dekimasu"}, {"j": "一生に一度の経験をしたいと思っています。", "e": "I want to have an experience of a lifetime once.", "r": "isshou ni ichido no keiken wo shitai to omotte imasu"}]
-,
-	[{"j": "日本語の勉強を始めたばかりの子供がいます。", "e": "I have a child who has just started studying Japanese.", "r": "nihongo no benkyou wo hajimeta bakari no kodomo ga imasu"}, {"j": "夏には日差しを遮るために帽子をかぶります。", "e": "I wear a hat to block the sun in summer.", "r": "natsu ni wa hizashi wo saegiru tame ni boushi wo kaburimasu"}, {"j": "この椅子はとても快適です。", "e": "This chair is very comfortable.", "r": "kono isu wa totemo kaiteki desu"}, {"j": "最近、体の調子が良くないです。", "e": "Lately, I haven't been feeling well.", "r": "saikin, karada no choushi ga yokunai desu"}, {"j": "彼はバスケットボールの試合で活躍している男子です。", "e": "He is a boy who is active in basketball games.", "r": "kare wa basukettobooru no shia de katsuyaku shite iru danshi desu"}]
-,
-	[{"j": "彼は部屋に入ると、すぐに靴を脱いだ。", "e": "He took off his shoes as soon as he entered the room.", "r": "kare wa heya ni hairu to, sugu ni kutsu wo nuida"}, {"j": "この建物の入口は大きなガラスドアです。", "e": "The entrance of this building is a large glass door.", "r": "kono tatemono no iriguchi wa ooki na garasu doa desu"}, {"j": "彼は来年大学に入学する予定です。", "e": "He is planning to enter university next year.", "r": "kare wa rainen daigaku ni nyuugaku suru yotei desu"}, {"j": "パスポートを見せて、入国審査を受ける必要があります。", "e": "You need to show your passport and go through immigration when entering the country.", "r": "pasupooto wo misete, nyuukoku shinsa wo ukeru hitsuyou ga arimasu"}, {"j": "無断で他人の家に侵入するのは法律違反です。", "e": "Entering someone else's house without permission is a violation of the law.", "r": "mudan de tanin no ie ni shinnyuu suru no wa houritsu ihang desu"}, {"j": "この店は新鮮な魚介類を輸入しています。", "e": "This store imports fresh seafood.", "r": "kono mise wa shinsen na gyokairui wo yunyuu shite imasu"}]
-,
-	[{"j": "彼は漢字をよく書けます。", "e": "He is good at writing kanji.", "r": "kare wa kanji wo yoku kakemasu."}, {"j": "この文章の字数は２００字です。", "e": "This essay has 200 characters.", "r": "kono bunshou no jisuu wa nihyaku ji desu"}, {"j": "映画を見るときは字幕を使います。", "e": "I use subtitles when watching movies.", "r": "eiga wo miru toki wa jimaku wo shiyou masu"}, {"j": "日本語の文字はきれいですね。", "e": "Japanese characters are beautiful.", "r": "nihongo no moji wa kirei desu ne"}, {"j": "電話番号は数字でお願いします。", "e": "Please give me your phone number in digits.", "r": "denwa bangou wa suuji de onegai shimasu"}, {"j": "タイトルはすべて大文字で書いてください。", "e": "Please write the title in all capital letters.", "r": "taitoru wa subete daimono de kaite kudasai"}]
-,
-	[{"j": "彼はとても親切な人です。", "e": "He is a very kind person.", "r": "kare wa totemo shinsetsu na hito desu"}, {"j": "人生は楽しい冒険です。", "e": "Life is a fun adventure.", "r": "jinsei wa tanoshii bouken desu"}, {"j": "人間は自然と調和して生きるべきです。", "e": "Human beings should live in harmony with nature.", "r": "ningen wa shizen to chouwa shite ikiru beki desu"}, {"j": "彼女の人柄に惹かれる人が多い。", "e": "Many people are attracted to her personality.", "r": "kanojo no hitogara ni hikareru hito ga ooi"}, {"j": "彼は親友の友人です。", "e": "He is a friend of my close friend.", "r": "kare wa shinyuu no yuujin desu"}, {"j": "私は個人での努力が大切だと思います。", "e": "I believe that individual effort is important.", "r": "watashi wa kojin de no doryoku ga taisetsu da to omoimasu"}]
-,
-	[{"j": "彼は毎朝早く出勤しています。", "e": "He leaves for work early every morning.", "r": "kare wa maiasa hayaku shukkin shite imasu"}, {"j": "窓から猫が出て行きました。", "e": "A cat went out through the window.", "r": "mado kara neko ga dete ikimashita"}, {"j": "地下鉄の駅には多くの出口があります。", "e": "There are many exits in the subway station.", "r": "chikatetsu no eki ni wa ooku no deguchi ga arimasu"}, {"j": "ごみを出しに行ってきます。", "e": "I'm going out to take out the trash.", "r": "gomi wo dashi ni itte kimasu"}, {"j": "出納係は会計の管理をしています。", "e": "The account manager is in charge of managing the accounts.", "r": "denougakari wa kaikei no kanri wo shite imasu"}, {"j": "明日、出国する予定です。", "e": "I'm planning to leave the country tomorrow.", "r": "ashita, shukoku suru yoteidesu"}, {"j": "突然、美しい虹が出現した。", "e": "Suddenly, a beautiful rainbow appeared.", "r": "totsuzen, utsukushii niji ga shutsugen shita"}, {"j": "外出する前に天気予報をチェックしました。", "e": "I checked the weather forecast before going out.", "r": "gaishutsu suru mae ni tenki yohou wo chekku shimashita"}, {"j": "データを入力して、結果を算出しました。", "e": "I input the data and calculated the results.", "r": "deeta wo nyuuryoku shite, kekka wo sanshutsu shima"}]
-,
-	[{"j": "彼は右利きです。", "e": "He is right-handed.", "r": "kare wa migi kiki desu"}, {"j": "次の角を右折してください。", "e": "Please turn right at the next corner.", "r": "tsugi no kado wo migi setsu shite kudasai"}, {"j": "川の右岸に美しい花が咲いている。", "e": "Beautiful flowers are blooming on the right bank of the river.", "r": "kawa no migi kishi ni utsukushii hana ga saite iru"}]
-,
-	[{"j": "彼は左利きです。", "e": "He is left-handed.", "r": "kare wa hidarikiki desu"}, {"j": "次の角を左折してください。", "e": "Please make a left turn at the next corner.", "r": "tsugi no kado wo hidarishite kudasai"}, {"j": "川の左岸に美しい桜が咲いている。", "e": "Beautiful cherry blossoms are blooming on the left bank of the river.", "r": "kawa no hidarigishi ni utsukushii sakura ga saite iru"}, {"j": "左手には赤いバッグを持っています。", "e": "She is holding a red bag in her left hand.", "r": "hidarite ni wa akai baggu wo motte imasu"}, {"j": "机の左側にペンがあります。", "e": "There is a pen on the left side of the desk.", "r": "tsukue no hidarigawa ni pen ga arimasu"}, {"j": "彼女は左利きのテニスプレイヤーです。", "e": "She is a left-handed tennis player.", "r": "kanojo wa hidarikiki no tenisu pureiyaa desu"}]
-,
-	[{"j": "彼は山の上に立っていた。", "e": "He was standing on top of the mountain.", "r": "kare wa yama no ue ni tatte ita"}, {"j": "プレゼントを上げます。", "e": "I will give you a present.", "r": "purezento wo agemasu"}, {"j": "太陽が上がるのを見るのが好きです。", "e": "I like watching the sun rise.", "r": "taiyou ga agaru no wo miru no ga suki desu"}, {"j": "階段を上ると公園に着きます。", "e": "If you go up the stairs, you'll arrive at the park.", "r": "kaidan wo noboru to kouen ni tsukimasu"}, {"j": "株価の上昇が続いている。", "e": "The stock prices continue to rise.", "r": "kabuka no joushou ga tsuzuite iru"}, {"j": "上着を着て外出しました。", "e": "I went out wearing a jacket.", "r": "uwagi wo kite gaishutsu shimashita"}, {"j": "上野は東京の有名な観光地です。", "e": "Ueno is a famous sightseeing spot in Tokyo.", "r": "ueno wa toukyou no yuumei na kankouchi desu"}, {"j": "上半期の売り上げが好調です。", "e": "The sales in the first half of the year are doing well.", "r": "jouhanki no uriage ga kouchou desu"}, {"j": "ホテルの屋上から夜景を楽しんだ。", "e": "I enjoyed the night view from the rooftop of the hotel.", "r": "hoteru no okujou kara yakei wo tanoshinda"}, {"j": "彼女は僕より年上だ。", "e": "She is older than me.", "r": "kanojo wa boku yori toshiue da"}, {"j": "日々の努力で向上していきたいと思っています。", "e": "I want to keep improving through daily efforts.", "r": "hibi no doryoku de koujou shite ikitai to omotte imasu"}]
-,
-	[{"j": "彼女は白いシャツに青いスカートを着ていて、下には黒い靴を履いていた。", "e": "She was wearing a white shirt with a blue skirt, and black shoes below.", "r": "kanojo wa shiroi shatsu ni aoi sukāto wo kite ite, shita ni wa kuroi kutsu wo haite ita"}, {"j": "誕生日プレゼントを下げると、彼女はとても喜んでくれました。", "e": "When I handed her the birthday present, she was very happy.", "r": "tanjoubi purezento wo sageru to, kanojo wa totemo yorokonde kuremashita"}, {"j": "空の青い鳥が下がってきた。", "e": "A blue bird from the sky came down.", "r": "sora no aoi tori ga sagatte kita"}, {"j": "山を下ると、美しい湖が広がっていた。", "e": "When I descended the mountain, a beautiful lake spread out before me.", "r": "yama wo kudaru to, utsukushii mizu ga hirogatte ita"}, {"j": "次の駅で下車します。", "e": "I will get off at the next station.", "r": "tsugi no eki de geshasuru shimasu"}, {"j": "会社は今、下半期の準備に取り組んでいます。", "e": "The company is currently working on preparations for the second half of the year.", "r": "kaisha wa ima, kouhanki no junbi ni torikunde imasu"}, {"j": "急な下り坂で、車を注意深く運転する必要があります。", "e": "You need to drive carefully on steep downhill slopes.", "r": "kuyana korogesaka de, kuruma wo chuui bukaku unten suru hitsuyou ga arimasu"}, {"j": "明日は寒い日が続くので、暖かい下着を着ていこう。", "e": "Since it will be cold tomorrow, let's wear warm underwear.", "r": "ashita wa samui hi ga tsuzuku node, atatakai shitagi wo kite ikou"}, {"j": "この建物は上下2階建てです。", "e": "This building is a two-story building.", "r": "kono tatemono wa jouge nikai datte desu"}, {"j": "地下鉄に乗って市内を移動するのが便利です。", "e": "It's convenient to travel around the city by subway.", "r": "chikatetsu ni notte shinai wo idou suru no ga benri desu"}]
-,
-	[{"j": "彼はとても大きい犬を飼っています。", "e": "He has a very big dog.", "r": "kare wa totemo ookii inu wo kaotte imasu"}, {"j": "このテレビは大型で迫力がある。", "e": "This TV is large and impressive.", "r": "kono terebi wa ookyoudo hakuryoku ga aru"}, {"j": "私は大学で日本語を勉強しています。", "e": "I am studying Japanese at university.", "r": "watashi wa daigaku de nihongo wo benkyou shite imasu"}, {"j": "家族は私にとってとても大切です。", "e": "My family is very important to me.", "r": "kazoku wa watashi ni totte totemo taisetsu desu"}, {"j": "この仕事はとても大事なプロジェクトです。", "e": "This project is very important for my company.", "r": "kono shigoto wa totemo daijina purojekuto desu"}, {"j": "写真を拡大すると、細部までよく見える。", "e": "When you enlarge the picture, you can see the details clearly.", "r": "shashin wo kakudai suru to, saibu made yoku mieru"}]
-,
-	[{"j": "彼は部屋の中で本を読んでいた。", "e": "He was reading a book in the room.", "r": "kare wa heya no naka de hon wo yonde ita."}, {"j": "その町は中央に美しい公園がある。", "e": "There is a beautiful park in the center of the town.", "r": "sono machi wa chūō ni utsukushii kōen ga aru"}, {"j": "雨がひどくなったため、試合が中止になりました。", "e": "The game was cancelled due to heavy rain.", "r": "ame ga hodokunatta tame, shiai ga chūshi ni narimashita."}, {"j": "日本では中学校は３年生までです。", "e": "In Japan, junior high school goes up to 9th grade.", "r": "nihon de wa chūgakkō wa 3-nensei made desu"}, {"j": "彼女の背中には美しい羽が生えていた。", "e": "Beautiful wings were growing on her back.", "r": "kanojo no senaka ni wa utsukushii hane ga haete ita"}, {"j": "彼は世界中を旅しています。", "e": "He is traveling all around the world.", "r": "kare wa sekaijū wo tabi shite imasu"}]
-,
-	[{"j": "彼はとても小さい犬を飼っています。", "e": "He has a very small dog.", "r": "kare wa totemo chiisai inu wo kaotte imasu"}, {"j": "今日は小雨が降っています。", "e": "It's drizzling today.", "r": "kyou wa kosame ga futte imasu"}, {"j": "山に小川が流れている。", "e": "A small stream is flowing in the mountains.", "r": "yama ni kogawa ga nagarete iru"}, {"j": "庭に小鳥が集まっています。", "e": "There are small birds gathering in the garden.", "r": "niwa ni kotori ga atsumatte imasu"}, {"j": "この小説はとても面白いです。", "e": "This novel is very interesting.", "r": "kono shousetsu wa totemo omoshiroi desu"}, {"j": "日本にはたくさんの小学校があります。", "e": "There are many elementary schools in Japan.", "r": "nihon ni wa takusan no shougakkou ga arimasu"}]
-,
-	[{"j": "彼女は青いドレスを着ていた。", "e": "She was wearing a blue dress.", "r": "kanojo wa aoi doresu wo kite ita"}, {"j": "彼はまだ青年だが、将来有望な才能を持っている。", "e": "He is still a young man, but he has promising talent for the future.", "r": "kare wa mada seinen da ga, shourai yuubou na sainou wo motte iru"}, {"j": "今日は空に青空が広がっている。", "e": "Today, the blue sky is spreading out above us.", "r": "kyou wa sora ni aozora ga hirogatte iru"}, {"j": "青春時代にはたくさんの夢と冒険があった。", "e": "I had many dreams and adventures in my youth.", "r": "seishun jidai ni wa takusan no yume to bouken ga atta"}, {"j": "彼女は群青色のドレスを着ていた。", "e": "She was wearing a deep blue dress.", "r": "kanojo wa gunjouiro no doresu wo kite ita"}, {"j": "青信号が出たので、横断歩道を渡った。", "e": "The traffic light turned green, so I crossed the street.", "r": "ao shingou ga deta node, oodan hodou wo watatta"}]
-,
-	[{"j": "りんごは赤いです。", "e": "Apples are red.", "r": "ringo wa akai desu"}, {"j": "恥ずかしくて顔が赤らんでしまった。", "e": "I got so embarrassed that my face turned red.", "r": "hazukashikute kao ga akarande shimatta"}, {"j": "今年も赤潮が発生しています。", "e": "Red tide is occurring again this year.", "r": "kotoshi mo akashio ga hassei shite imasu"}, {"j": "会社は赤字になってしまった。", "e": "The company ended up in the red.", "r": "kaisha wa akaji ni natte shimatta"}, {"j": "赤道の近くに行きたいです。", "e": "I want to go near the equator.", "r": "sekidou no chikaku ni ikitai desu"}, {"j": "彼女は赤面していた。", "e": "She was blushing.", "r": "kanojo wa sekimen shite ita"}, {"j": "このカメラは赤外線を検知できます。", "e": "This camera can detect infrared rays.", "r": "kono kamera wa akagaisen wo kenchi dekimasu"}]
-,
-	[{"j": "彼は白いシャツを着ている。", "e": "He is wearing a white shirt.", "r": "kare wa shiroi shatsu wo kite iru"}, {"j": "北海道に行くと白熊が見られる。", "e": "You can see polar bears in Hokkaido.", "r": "hokkaidou ni iku to shirokuma ga mirareru"}, {"j": "彼の話は常に白黒はっきりしている。", "e": "His words are always black and white.", "r": "kare no hanashi wa tsune ni shirokuro hakkiri shite iru"}, {"j": "祖母は白髪の優しい女性です。", "e": "My grandmother is a kind woman with white hair.", "r": "sobo wa shiragami no yasashii josei desu"}, {"j": "医者は白衣を着て患者を診察している。", "e": "The doctor is wearing a white coat and examining the patient.", "r": "isha wa hakui wo kite kanja wo shinsatsu shite iru"}, {"j": "昨日、彼女に気持ちを告白した。", "e": "I confessed my feelings to her yesterday.", "r": "kinou, kanojo ni kimochi wo kokuhaku shita"}]
-,
-	[{"j": "彼は手旗を立てた。", "e": "He raised a signal flag.", "r": "kare wa te hata wo tateta"}, {"j": "駅のホームで待っている人々が立っています。", "e": "The people waiting on the train platform are standing.", "r": "eki no hoomu de matte iru hitobito ga tatte imasu"}, {"j": "彼女はとても立派な人です。", "e": "She is a very splendid person.", "r": "kanojo wa totemo rippa na hito desu"}, {"j": "その美術館は立体的な建物です。", "e": "The art museum is a three-dimensional building.", "r": "sono bijutsukan wa rittaiteki na tatemono desu"}, {"j": "東京国立博物館はとても有名です。", "e": "The Tokyo National Museum is very famous.", "r": "toukyou kokuritsu hakubutsukan wa totemo yuumei desu"}, {"j": "この記念碑は100年前に建立されました。", "e": "This monument was built a hundred years ago.", "r": "kono kinenhi wa hyakunen mae ni kenritsu saremashita"}]
-,
-	[{"j": "彼は窓の外を見ていた。", "e": "He was looking out the window.", "r": "kare wa mado no soto wo mite ita"}, {"j": "遠くに富士山が見える。", "e": "You can see Mount Fuji in the distance.", "r": "tōku ni fuji-san ga mieru"}, {"j": "新しい服を見せてください。", "e": "Please show me your new clothes.", "r": "atarashī fuku wo misete kudasai"}, {"j": "京都では美しい紅葉を見ることができます。", "e": "You can see beautiful autumn leaves in Kyoto.", "r": "kyōdo de wa utsukushī momiji wo miru koto ga dekimasu"}, {"j": "博物館で見学をしてきめ細かい作品を見た。", "e": "I visited a museum and saw detailed works of art.", "r": "hakubutsukan de kengaku wo shite kimehosoi sakuhin wo mita"}, {"j": "この意見には賛成です。", "e": "I agree with this opinion.", "r": "kono iken ni wa sansei desu"}, {"j": "春になると桜を見に花見に行きます。", "e": "In spring, we go to see cherry blossoms for flower viewing.", "r": "haru ni naru to sakura wo mi ni hanami ni ikimasu"}, {"j": "新しい惑星の発見が発表された。", "e": "The discovery of a new planet was announced.", "r": "atarashī wakusei no hakken ga happyō sa reta"}]
-,
-	[{"j": "昨日は忙しかったので、今日はゆっくり休みたいです。", "e": "I was busy yesterday, so I want to take a rest today.", "r": "kinou wa isogashikatta node, kyou wa yukkuri yasumitai desu"}, {"j": "子供の頃はよく公園で休まることをしていました。", "e": "When I was a child, I used to often rest in the park.", "r": "kodomo no koro wa yoku kouen de yasumaru koto wo shite imashita"}, {"j": "明日は休める予定なので、楽しみです。", "e": "I have plans to be able to rest tomorrow, so I'm looking forward to it.", "r": "ashita wa yasumeru yote nanode, tanoshimidesu"}, {"j": "来月の休暇はハワイに行く予定です。", "e": "I'm planning to go to Hawaii for my vacation next month.", "r": "raigetsu no kyuuka wa hawai ni iku yote desu"}, {"j": "来週は連休なので、旅行に行く予定です。", "e": "I have a consecutive holiday next week, so I'm planning to go on a trip.", "r": "raishuu wa renkyuu na node, ryokou ni iku yote desu"}, {"j": "夏休みには海外旅行に行きたいと思っています。", "e": "I'm thinking of going on a trip abroad during summer vacation.", "r": "natsuyasumi ni wa kaigai ryokou ni ikitai to omotte imasu"}, {"j": "毎週火曜日が当店の定休日です。", "e": "Every Tuesday is our regular holiday for this shop.", "r": "maishuu kayoubi ga tou ten no teikyuu bi desu"}]
-,
-	[{"j": "彼はいつも早起きをしています。", "e": "He always wakes up early.", "r": "kare wa itsumo hayaoki wo shite imasu"}, {"j": "もう少し早く来てもいいですか？", "e": "Is it okay if I come a bit earlier?", "r": "mou sukoshi hayaku kite mo ii desu ka"}, {"j": "納期が早まったので、急いで仕上げました。", "e": "The deadline was moved up, so I rushed to finish it.", "r": "nouki ga hayamatta node, isoide shiagemashita"}, {"j": "大事なプレゼンの準備を早めなければなりません。", "e": "I need to start preparing for the important presentation earlier.", "r": "daijina purezen no junbi wo hayamenakereba narimasen"}, {"j": "今朝は早朝ジョギングをして気持ちがいいです。", "e": "I went for a jog early this morning and it feels great.", "r": "kesa wa souchou jogingu wo shite kimochi ga ii desu"}, {"j": "早速レポートを提出します。", "e": "I will submit the report promptly.", "r": "sassoku repooto wo teishutsu shimasu"}, {"j": "彼女は早口で話すので、聞き取りやすいです。", "e": "She speaks quickly, so it's easy to understand her.", "r": "kanojo wa hayakuchi de hanasu node, kikitari yasui desu"}, {"j": "子供の頃から早期教育を受けていました。", "e": "I received early education since I was a child.", "r": "kodomo no koro kara kaki kyouiku wo ukete imashita"}]
-,
-	[{"j": "彼はいつも正しいことを言います。", "e": "He always speaks the truth.", "r": "kare wa itsumo tadashii koto wo iimasu"}, {"j": "間違いを正すのは大切です。", "e": "It's important to correct mistakes.", "r": "machigai wo tadasu no wa taisetsu desu"}, {"j": "彼の情報は正確です。", "e": "His information is accurate.", "r": "kare no jōhō wa seikaku desu"}, {"j": "日本では正月にはおせち料理を食べます。", "e": "In Japan, we eat osechi ryori on New Year's Day.", "r": "nihon de wa shougatsu ni wa ose chi ryōri wo tabemasu"}, {"j": "正解は3番です。", "e": "The correct answer is number 3.", "r": "seikai wa 3-ban desu"}, {"j": "文章には誤りがありますので、訂正します。", "e": "There is a mistake in the text, so I will make a correction.", "r": "bunshou ni wa ayamari ga arimasu node, teisei shimasu"}]
-,
-	[{"j": "日本には村という小さな集落がたくさんあります。", "e": "In Japan, there are many small villages called 'mura'.", "r": "nihon ni wa mura to iu chiisana shūraku ga takusan arimasu"}, {"j": "祖母の家は静かな村里にあります。", "e": "My grandmother's house is located in a quiet village in the countryside.", "r": "oba no ie wa shizukana murazato ni arimasu"}, {"j": "村人たちはとても親切です。", "e": "The villagers are very kind.", "r": "murabito tachi wa totemo shinsetsu desu"}, {"j": "農村での生活は豊かな自然に囲まれていて、のんびりしているようです。", "e": "Life in the rural farming village is surrounded by rich nature and seems to be relaxing.", "r": "nōson de no seikatsu wa yutakana shizen ni kakomarete ite, nonbiri shite iru yōdesu"}, {"j": "この漁村では毎朝新鮮な魚が水揚げされます。", "e": "In this fishing village, fresh fish are landed every morning.", "r": "kono gyoson de wa maiasa shinsen na sakana ga minato age sa remasu"}, {"j": "日本では市町村という行政単位があります。", "e": "In Japan, there are municipalities called 'shi-cho-son'.", "r": "nihon de wa shichōson to iu gyōsei tan'i ga arimasu"}]
-,
-	[{"j": "彼女は町のイベントに参加している。", "e": "She is participating in the town's event.", "r": "kanojo wa machi no ibento ni sanka shite iru"}, {"j": "町長は地元の人々に親しまれています。", "e": "The town mayor is well-liked by the local people.", "r": "machi...涼しい風が吹いていた。", "e": "I visited a coastal town where a refreshing breeze was blowing.", "r": "minato machi ni wo yobi, suzushii kaze ga fuite ita"}, {"j": "日本には金町という町があります。", "e": "There is a town called Kanamachi in Japan.", "r": "nihon ni wa kanamachi to iu machi ga arimasu"}]
-,
-	[{"j": "彼女は去年日本に来ました。", "e": "She came to Japan last year.", "r": "kanojo wa kyonen nihon ni kimashita"}, {"j": "彼は年をとっても元気です。", "e": "He is old, but still energetic.", "r": "kare wa toshi wo totte mo genki desu"}, {"j": "彼は年収100万円です。", "e": "His annual income is 1 million yen.", "r": "kare wa nenshuu 100 man en desu"}, {"j": "私は３年生です。", "e": "I am a third year student.", "r": "watashi wa san-nensei desu"}, {"j": "今年は暑い夏です。", "e": "It's a hot summer this year.", "r": "kotoshi wa atsui natsu desu"}, {"j": "彼は1年間世界を旅しています。", "e": "He is traveling around the world for a year.", "r": "kare wa ichinenkan sekai wo tabi shite imasu"}]
-,
-	[{"j": "彼は短い文をたくさん書いた。", "e": "He wrote many short sentences.", "r": "kare wa mijikai bun wo takusan kaita"}, {"j": "日本の文化はとても興味深いです。", "e": "Japanese culture is very fascinating.", "r": "nihon no bunka wa totemo kyoumibukai desu"}, {"j": "新しい文房具を買いたいです。", "e": "I want to buy new stationery.", "r": "atarashii bunbougu wo kaitai desu"}, {"j": "注文をお願いします。", "e": "I would like to place an order.", "r": "chuumon wo onegaishimasu"}, {"j": "彼からの恋文を読んだとき、とても嬉しかったです。", "e": "I was very happy when I read the love letter from him.", "r": "kare kara no koibumi wo yonda toki, totemo ureshikatta desu"}, {"j": "彼の論文は非常に専門的で素晴らしいものだった。", "e": "His thesis was very professional and excellent.", "r": "kare no ronbun wa hijou ni senmon-teki de subarashii mono datta"}]
-,
-	[{"j": "彼女は有名な歌手です。", "e": "She is a famous singer.", "r": "kanojo wa yuumei na kashu desu"}, {"j": "その店の名前は日本食レストランです。", "e": "The name of that store is Japanese Food Restaurant.", "r": "sono mise no namae wa nihon shoku resutoran desu"}, {"j": "彼は名言を残しました。", "e": "He left behind a famous saying.", "r": "kare wa meigen wo nokoshimashita"}, {"j": "田中さんという名前を覚えていますか？", "e": "Do you remember the name Tanaka-san?", "r": "tanaka-san to iu namae wo oboete imasuka?"}, {"j": "この書類には氏名と住所を記入してください。", "e": "Please write your full name and address on this document.", "r": "kono shorui ni wa shimei to juusho wo kinyuu shite kudasai"}]
-,
-	[{"j": "彼は1万円札を出して支払いをした。", "e": "He paid using a 10,000 yen bill.", "r": "kare wa ichiman en satsu wo dashite shiharai wo shita"}, {"j": "彼女との関係はとても円満です。", "e": "I have a very harmonious relationship with her.", "r": "kanojo to no kankei wa totemo enman desu"}, {"j": "公園には美しい円形の池があります。", "e": "There is a beautiful circular pond in the park.", "r": "kouen ni wa utsukushii enkei no ike ga arimasu"}, {"j": "お寿司を食べるときには、円いお皿が使われます。", "e": "When eating sushi, round plates are used.", "r": "osushi wo taberu toki ni wa, marui osara ga tsukawaremasu"}, {"j": "この本はたったの十円で手に入れた。", "e": "I bought this book for only ten yen.", "r": "kono hon wa tatta no juu en de te ni ireta"}]
-,
-	[{"j": "彼は美しい王冠をかぶっていた", "e": "He was wearing a beautiful crown.", "r": "kare wa utsukushii ōkan wo kabutte ita"}, {"j": "その町には歴史ある王宮があります", "e": "There is a historic royal palace in that town.", "r": "sono machi ni wa rekishi aru ōkyū ga arimasu"}, {"j": "その国は現在も国王制度を続けている", "e": "The country still maintains a monarchy system.", "r": "sono kuni wa genzai mo kokuō seido wo tsuzukete iru"}, {"j": "彼女は優雅な女王のようだ", "e": "She looks like an elegant queen.", "r": "kanojo wa yūga na joō no yō da"}]
-,
-	[{"j": "彼女は美しい玉を持っていた。", "e": "She had a beautiful jewel.", "r": "kanojo wa utsukushii tama wo motte ita"}, {"j": "サラダには玉葱をたっぷりと入れます。", "e": "I put plenty of onions in the salad.", "r": "sarada ni wa tamanegi wo tappuri to iremasu"}, {"j": "この本には珠玉の詩がたくさん載っています。", "e": "This book contains many excellent poems.", "r": "kono hon ni wa shugyoku no shi ga takusan notte imasu"}, {"j": "今日は目玉商品がたくさんセールしています。", "e": "There are many special sale items today.", "r": "kyou wa medama shouhin ga takusan seeru shite imasu"}, {"j": "自動販売機で百円玉を使って飲み物を買いました。", "e": "I used a 100-yen coin to buy a drink from the vending machine.", "r": "jidou hanbaiki de hyakuendama wo tsukatte nomimono wo kaimashita"}]
-,
-	[{"j": "彼女は美しい緑色の着物を着ていて、細い糸で髪を結んでいた。", "e": "She was wearing a beautiful green kimono and had her hair tied up with a thin thread.", "r": "kanojo wa utsukushii midoriiro no kigoto wo kite ite, hosoi ito de kami wo musunde ita"}, {"j": "問題の解決策は見つかりましたが、その糸口を探しているところです。", "e": "We have found a solution to the problem, but we are still looking for the starting point.", "r": "mondai no kaiketsusaku wa mitsukarimashita ga, sono itoguchi wo sagashite iru tokorodesu"}, {"j": "寒い日には毛糸のセーターが暖かくて助かります。", "e": "On cold days, a wool sweater is warm and very helpful.", "r": "samui hi ni wa keito no seetaa ga atatakakute tasukarimasu"}, {"j": "この町は養蚕で有名で、高品質な生糸が生産されています。", "e": "This town is famous for sericulture, and high-quality raw silk is produced here.", "r": "kono machi wa yousan de yuumei de, kouhinshitsu na namie ga seisan sarete imasu"}, {"j": "この工場では高度な技術を使って製糸が行われています。", "e": "This factory uses advanced technology to produce silk threads.", "r": "kono koujou de wa koudo na gijutsu wo tsukatte seisugi ga okonawarete imasu"}, {"j": "手術後、数日後に抜糸をしてもらう予定です。", "e": "I am scheduled to have my stitches removed a few days after the surgery.", "r": "shujutsu go, suujitsu go ni batsushi wo shite morau yoteidesu"}]
-,
-	[{"j": "彼は新しい車を買った", "e": "He bought a new car.", "r": "kare wa atarashii kuruma wo katta"}, {"j": "駅に急行列車が到着しました", "e": "The express train has arrived at the station.", "r": "eki ni kyuukou ressha ga touchaku shimashita"}, {"j": "子供たちは肩車をして遊んでいた", "e": "The children were playing piggyback.", "r": "kodomotachi wa kataguruma wo shite asonde ita"}, {"j": "スーツケースを台車に載せて運びます", "e": "I will put the suitcase on the hand truck and carry it.", "r": "suutsukeesu wo daisha ni nosete hakobimasu"}, {"j": "駐車場に車を止めてください", "e": "Please park your car in the parking lot.", "r": "chuurinsha jou ni kuruma wo tomete kudasai"}, {"j": "日本では自動車がよく使われています", "e": "Cars are commonly used in Japan.", "r": "nihon de wa jidousha ga yoku tsukawarete imasu"}]
-,
-	[{"j": "彼はとても力強いパンチを放った。", "e": "He threw a very powerful punch.", "r": "kare wa totemo chikara-zuyoi panchi wo hanatta"}, {"j": "彼は会社でもトップの力持ちだ。", "e": "He is the strongest man in the company.", "r": "kare wa kaisha de mo toppu no chikara mochi da"}, {"j": "努力すれば夢は叶うと信じています。", "e": "I believe that dreams come true with effort.", "r": "doryoku sureba yume wa kanau to shinjite imasu"}, {"j": "彼女は優れた能力を持っています。", "e": "She has excellent abilities.", "r": "kanojo wa sugureta nōryoku wo motte imasu"}, {"j": "マラソンを走るためには体力が必要だ。", "e": "You need physical strength to run a marathon.", "r": "marason wo hashiru tame ni wa tairyoku ga hitsuyō da"}, {"j": "人力車に乗って観光を楽しみました。", "e": "I enjoyed sightseeing by riding in a rickshaw.", "r": "jinrikisha ni notte kankou wo tanoshimimashita"}]
+  [
+    {
+      "j": "彼は毎日ジョギングをしています",
+      "e": "He goes jogging every day.",
+      "r": "kare wa mainichi jogingu wo shite imasu"
+    },
+    {
+      "j": "来週日曜日は友達とピクニックに行く予定です",
+      "e": "I'm planning to go on a picnic with my friends next Sunday.",
+      "r": "raishuu nichiyoubi wa tomodachi to pikunikku ni iku yoteidesu"
+    },
+    {
+      "j": "毎年の日米野球大会が盛大に行われています",
+      "e": "The Japan-U.S. Baseball Tournament is held every year in a grand manner.",
+      "r": "maitoshi no hi kome yakyuu taikai ga seidai ni gyou warete imasu"
+    },
+    {
+      "j": "旅行で十日間日本に滞在しました",
+      "e": "I stayed in Japan for ten days on a trip.",
+      "r": "ryokou de toukakan nihon ni taizai shimashita"
+    },
+    {
+      "j": "今日は忙しい一日でした",
+      "e": "Today was a busy day.",
+      "r": "kyou wa isogashii ichinichi deshita"
+    },
+    {
+      "j": "来月に夏休みを取る予定です",
+      "e": "I plan to take summer vacation next month.",
+      "r": "raigetsu ni natsuyasumi wo toru yoteidesu"
+    },
+    {
+      "j": "明日は晴れるといいですね",
+      "e": "I hope it will be sunny tomorrow.",
+      "r": "ashita wa hareru to ii desu ne"
+    },
+    {
+      "j": "今日は暑い日なので、エアコンをつけています",
+      "e": "It's a hot day today, so I have the air conditioning on.",
+      "r": "kyou wa atsui hi na node, eakon wo tsukete imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼女は満月の夜に美しいと言われています。",
+      "e": "She is said to be beautiful on the night of the full moon.",
+      "r": "kanojo wa mangetsu no yoru ni utsukushii to iwarete imasu"
+    },
+    {
+      "j": "日本では月見が盛んです。",
+      "e": "Moon viewing is popular in Japan.",
+      "r": "nihon de wa tsukimi ga sakan desu"
+    },
+    {
+      "j": "来週は月曜日から仕事が始まります。",
+      "e": "Work will start from Monday next week.",
+      "r": "raishuu wa getsuyoubi kara shigoto ga hajimarimasu"
+    },
+    {
+      "j": "今月は忙しい月ですが、頑張ります。",
+      "e": "This month is a busy month, but I will do my best.",
+      "r": "kongetsu wa isogashii tsukidesuga, ganbarimasu"
+    },
+    {
+      "j": "一月には雪がよく降ります。",
+      "e": "It often snows in January.",
+      "r": "ichigatsu ni wa yuki ga yoku furimasu"
+    },
+    {
+      "j": "彼は一月から新しい職場で働いています。",
+      "e": "He has been working at a new workplace since January.",
+      "r": "kare wa ichigatsu kara atarashii shokuba de hataraite imasu"
+    },
+    {
+      "j": "日本では正月にはおせち料理を食べます。",
+      "e": "In Japan, we eat osechi ryori on New Year's Day.",
+      "r": "nihon de wa shougatsu ni wa osechi ryouri wo tabemasu"
+    }
+  ],
+  [
+    {
+      "j": "森の中でキャンプファイヤーを楽しんだ",
+      "e": "I enjoyed a campfire in the woods.",
+      "r": "mori no naka de kyanpu faiyā wo tanoshinda"
+    },
+    {
+      "j": "来週火曜日に会議があります",
+      "e": "We have a meeting next Tuesday.",
+      "r": "raishuu kayoubi ni kaigi ga arimasu"
+    },
+    {
+      "j": "昨日、アパートで火災がありました",
+      "e": "There was a fire in my apartment yesterday.",
+      "r": "kinou, apāto de kasai ga arimashita"
+    },
+    {
+      "j": "この国は火力発電を積極的に推進しています",
+      "e": "This country actively promotes thermal power generation.",
+      "r": "kono kuni wa karyoku hatsuden wo sekkyokuteki ni suishin shite imasu"
+    },
+    {
+      "j": "夏休みに火山観光に行きたいと思っています",
+      "e": "I'm thinking of going on a volcano sightseeing tour during the summer vacation.",
+      "r": "natsuyasumi ni kazan kankou ni ikitai to omotte imasu"
+    },
+    {
+      "j": "火事が起きたので速やかに消火活動を行った",
+      "e": "We quickly carried out fire extinguishing activities as a fire broke out.",
+      "r": "kaji ga okita node suteteyaka ni shouka katsudou wo itta"
+    },
+    {
+      "j": "毎年、会社で防火訓練を実施しています",
+      "e": "We conduct fire prevention drills at the company every year.",
+      "r": "maitoshi, kaisha de bouka kunren wo jisshite imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は毎日たくさんの水を飲んでいます。",
+      "e": "He drinks a lot of water every day.",
+      "r": "kare wa mainichi takusan no mizu wo nonde imasu"
+    },
+    {
+      "j": "彼女は水色のドレスを着ていました。",
+      "e": "She was wearing a light blue dress.",
+      "r": "kanojo wa mizuiro no doresu wo kite imashita"
+    },
+    {
+      "j": "今日は水曜日です。",
+      "e": "Today is Wednesday.",
+      "r": "kyou wa suiyoubi desu"
+    },
+    {
+      "j": "この家にはきれいな水道がついています。",
+      "e": "This house has a clean water supply.",
+      "r": "kono ie ni wa kirei na suidou ga tsuite imasu"
+    },
+    {
+      "j": "彼は水平な道を歩いている。",
+      "e": "He is walking on a level road.",
+      "r": "kare wa suihei na michi wo aruite iru"
+    },
+    {
+      "j": "洪水のため、水位が上がっています。",
+      "e": "Due to the flood, the water level is rising.",
+      "r": "kouzui no tame, mizui ga agatte imasu"
+    },
+    {
+      "j": "このバッグは防水素材でできています。",
+      "e": "This bag is made of waterproof material.",
+      "r": "kono baggu wa bousui sozai de dekite imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は美しい木製の家具を作るのが上手です。",
+      "e": "He is good at making beautiful wooden furniture.",
+      "r": "kare wa utsukushī mokusei no kagu wo tsukuru no ga jōzu desu"
+    },
+    {
+      "j": "居合道では木刀を使って稽古をします。",
+      "e": "In iaido, we practice using a wooden sword.",
+      "r": "iaidō de wa mokutō wo tsukatte keiko wo shimasu"
+    },
+    {
+      "j": "この家は高品質の木材で建てられている。",
+      "e": "This house is built with high-quality wood.",
+      "r": "kono ie wa kō hinshitsu no mokuzai de taterarete iru"
+    },
+    {
+      "j": "庭に美しい植木がたくさん植えられています。",
+      "e": "There are many beautiful plants in the garden.",
+      "r": "niwa ni utsukushī ueki ga takusan uerarete imasu"
+    },
+    {
+      "j": "今日は木曜日です。",
+      "e": "Today is Thursday.",
+      "r": "kyō wa mokuyōbi desu"
+    },
+    {
+      "j": "森の中で涼しい木陰で休憩した。",
+      "e": "I took a break in the cool shade of the trees in the forest.",
+      "r": "mori no naka de suzushī kage de kyuukei shita"
+    }
+  ],
+  [
+    {
+      "j": "彼は金持ちです。",
+      "e": "He is rich.",
+      "r": "kare wa kanemochi desu"
+    },
+    {
+      "j": "この商品の金額はいくらですか？",
+      "e": "How much is the price of this item?",
+      "r": "kono shouhin no kinglyou wa ikura desu ka?"
+    },
+    {
+      "j": "今日は金曜日です。",
+      "e": "Today is Friday.",
+      "r": "kyou wa kin'youbi desu"
+    },
+    {
+      "j": "この家具の取っ手は金具でできています。",
+      "e": "The handle of this furniture is made of metal.",
+      "r": "kono kagu no totte wa kinku de dekite imasu"
+    },
+    {
+      "j": "お金を払いました。",
+      "e": "I paid the money.",
+      "r": "okane wo haraimashita"
+    },
+    {
+      "j": "彼女は黄金のイヤリングをしています。",
+      "e": "She is wearing golden earrings.",
+      "r": "kanojo wa ougon no iya ringu wo shite imasu"
+    },
+    {
+      "j": "入場料は料金に含まれています。",
+      "e": "The entrance fee is included in the price.",
+      "r": "nyuujou ryou wa ryoukin ni fukumarete imasu"
+    }
+  ],
+  [
+    {
+      "j": "庭には肥えた土が広がっている。",
+      "e": "In the garden, rich soil is spread out.",
+      "r": "niwa ni wa koe ta tsuchi ga hirogatte iru"
+    },
+    {
+      "j": "この町は歴史ある土地です。",
+      "e": "This town is a historic area.",
+      "r": "kono machi wa rekishi aru tochi desu"
+    },
+    {
+      "j": "来週は土曜日に会議があります。",
+      "e": "We have a meeting next Saturday.",
+      "r": "raishuu wa doyoubi ni kaigi ga arimasu"
+    },
+    {
+      "j": "家の基礎はしっかりとした土台の上に作られています。",
+      "e": "The foundation of the house is built on a solid base.",
+      "r": "ie no kiso wa shikkari toshita dodai no ue ni saku rarete imasu"
+    },
+    {
+      "j": "子供たちは粘土で遊んで楽しそうだった。",
+      "e": "The children were having fun playing with clay.",
+      "r": "kodomotachi wa nendo de asonde tanoshisō datta"
+    },
+    {
+      "j": "その地域では赤土が見られることが多い。",
+      "e": "Red soil is often seen in that area.",
+      "r": "sono chiiki de wa akatsuchi ga mirareru koto ga ōi"
+    }
+  ],
+  [
+    {
+      "j": "日本語で「1」を表す漢字は「一」です。",
+      "e": "The kanji for '1' in Japanese is written as \"一\".",
+      "r": "nihongo de '1' wo arawasu kanji wa 'ichi' desu"
+    },
+    {
+      "j": "彼は僕の一番の友達です。",
+      "e": "He is my best friend.",
+      "r": "kare wa boku no ichiban no tomodachi desu"
+    },
+    {
+      "j": "来月は一月です。",
+      "e": "Next month is January.",
+      "r": "raigetsu wa ichigatsu desu"
+    },
+    {
+      "j": "このイベントは一回限りの開催です。",
+      "e": "This event is a one-time only happening.",
+      "r": "kono ibento wa ikkai kagiri no kaisai desu"
+    },
+    {
+      "j": "今日は一人でレストランで食事をしています。",
+      "e": "I'm eating alone at a restaurant today.",
+      "r": "kyou wa hitori de resutoran de shokuji wo shite imasu"
+    },
+    {
+      "j": "机の上には一つのリンゴがあります。",
+      "e": "There is one apple on the desk.",
+      "r": "tsukue no ue ni wa hitotsu no ringo ga arimasu"
+    },
+    {
+      "j": "国家の統一は重要です。",
+      "e": "The unity of the nation is important.",
+      "r": "kokka no touitsu wa juuyou desu"
+    }
+  ],
+  [
+    {
+      "j": "彼は二個のリンゴを食べました。",
+      "e": "He ate two apples.",
+      "r": "kare wa niko no ringo wo tabemashita"
+    },
+    {
+      "j": "彼女は大学で二番目の成績を取った。",
+      "e": "She got the second best grade in the university.",
+      "r": "kanojo wa daigaku de nibanme no seiseki wo totta"
+    },
+    {
+      "j": "来月が二月です。",
+      "e": "Next month is February.",
+      "r": "raigetsu ga nigatsu desu"
+    },
+    {
+      "j": "テストで問題を二つ間違えてしまった。",
+      "e": "I made two mistakes in the test.",
+      "r": "tesuto de mondai wo futatsu machigaete shimatta"
+    },
+    {
+      "j": "二人で映画を見に行きました。",
+      "e": "We went to see a movie together.",
+      "r": "futari de eiga wo mi ni ikimashita"
+    },
+    {
+      "j": "彼は二重のアイロンでシャツをアイロン掛けした。",
+      "e": "He ironed his shirt with a double iron.",
+      "r": "kare wa nijū no airon de shatsu wo airon kakeshita"
+    },
+    {
+      "j": "そのゲームは面白くて、二次元の世界に没入できる感じです。",
+      "e": "The game is interesting, and it gives you the feeling of being immersed in a two-dimensional world.",
+      "r": "sono gēmu wa omoshirokute, nijigen no sekai ni botsu nyū dekiru kanji desu"
+    }
+  ],
+  [
+    {
+      "j": "彼は3つのリンゴを食べました。",
+      "e": "He ate three apples.",
+      "r": "kare wa mittsu no ringo wo tabemashita"
+    },
+    {
+      "j": "彼女はこの本を三回読んだ。",
+      "e": "She read this book three times.",
+      "r": "kanojo wa kono hon wo sankai yonda"
+    },
+    {
+      "j": "来月が三月です。",
+      "e": "Next month is March.",
+      "r": "raigetsu ga sangatsu desu"
+    },
+    {
+      "j": "私の家族は三人です。",
+      "e": "My family consists of three people.",
+      "r": "watashi no kazoku wa sannin desu"
+    },
+    {
+      "j": "その建物は三角形の形をしています。",
+      "e": "That building is in the shape of a triangle.",
+      "r": "sono tatemono wa sankakkei no katachi wo shite imasu"
+    },
+    {
+      "j": "この絵は三次元的な表現がされている。",
+      "e": "This painting has a three-dimensional expression.",
+      "r": "kono e wa sanjigen-teki na hyōgen ga sarete iru"
+    },
+    {
+      "j": "空に美しい三日月が輝いている。",
+      "e": "The beautiful crescent moon is shining in the sky.",
+      "r": "sora ni utsukushii mikadzuki ga kagayaite iru"
+    },
+    {
+      "j": "机の上には三つの小さな箱があります。",
+      "e": "There are three small boxes on the desk.",
+      "r": "tsukue no ue ni wa mittsu no chiisa na hako ga arimasu"
+    }
+  ],
+  [
+    {
+      "j": "この本は四冊あります。",
+      "e": "I have four books.",
+      "r": "kono hon wa yon satsu arimasu."
+    },
+    {
+      "j": "今日は友達と四人で映画を見に行きます。",
+      "e": "I will go watch a movie today with four friends.",
+      "r": "kyou wa tomodachi to yonin de eiga wo mi ni ikimasu"
+    },
+    {
+      "j": "四月は桜がとても美しいです。",
+      "e": "Cherry blossoms are very beautiful in April.",
+      "r": "shigatsu wa sakura ga totemo utsukushii desu"
+    },
+    {
+      "j": "その庭の四角形の花壇がきれいですね。",
+      "e": "The square flower bed in the garden is beautiful.",
+      "r": "sono niwa no shikakkei no kadan ga kirei desu ne"
+    },
+    {
+      "j": "彼は野球チームで四番を打っています。",
+      "e": "He is batting fourth in the baseball team.",
+      "r": "kare wa yakyuu chiimu de yonban wo utte imasu"
+    },
+    {
+      "j": "四年間日本語を勉強しています。",
+      "e": "I have been studying Japanese for four years.",
+      "r": "yonnenkan nihongo wo benkyou shite imasu"
+    },
+    {
+      "j": "車が四輪駆動です。",
+      "e": "The car has four-wheel drive.",
+      "r": "kuruma ga shirin kudou desu"
+    },
+    {
+      "j": "机の上にはりんごが四つあります。",
+      "e": "There are four apples on the desk.",
+      "r": "tsukue no ue ni ringo ga yottsu arimasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は五本のリンゴを買った。",
+      "e": "He bought five apples.",
+      "r": "kare wa go hon no ringo wo katta"
+    },
+    {
+      "j": "そのレストランには五人のスタッフがいる。",
+      "e": "There are five staff members at that restaurant.",
+      "r": "ono resutoran ni wa gonin no sutaffu ga iru"
+    },
+    {
+      "j": "来年の五月に日本に行きます。",
+      "e": "I will go to Japan in May next year.",
+      "r": "rainen no gogatsu ni nihon ni ikimasu"
+    },
+    {
+      "j": "彼は野球の試合でいつも五番打者です。",
+      "e": "He is always the fifth batter in baseball games.",
+      "r": "kare wa yakyuu no shiai de itsumo go ban da sha desu"
+    },
+    {
+      "j": "毎四年、世界中で五輪大会が開催されます。",
+      "e": "The Olympic Games are held every four years around the world.",
+      "r": "mai shi nen, sekaijuu de gorin taikai ga kaisai saremasu"
+    },
+    {
+      "j": "この本は五角形の表紙をしている。",
+      "e": "This book has a pentagonal cover.",
+      "r": "kono hon wa gokakkei no hyoushi wo shite iru"
+    },
+    {
+      "j": "仕事で五日間ロンドンに滞在しました。",
+      "e": "I stayed in London for five days on a business trip.",
+      "r": "shigoto de itsuka kan rondon ni taizai shimashita"
+    },
+    {
+      "j": "机の上には五つのペンがあります。",
+      "e": "There are five pens on the desk.",
+      "r": "tsukue no ue ni wa itsutsu no pen ga arimasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は六歳です。",
+      "e": "He is six years old.",
+      "r": "kare wa roku sai desu"
+    },
+    {
+      "j": "テーブルには六人が座っていた。",
+      "e": "There were six people sitting at the table.",
+      "r": "teeburu ni wa rokunin ga suwatte ita"
+    },
+    {
+      "j": "来月が六月です。",
+      "e": "Next month is June.",
+      "r": "raigatsu ga rokugatsu desu"
+    },
+    {
+      "j": "その本は六番目の本です。",
+      "e": "That book is the sixth book.",
+      "r": "sono hon wa rokubanme no hon desu"
+    },
+    {
+      "j": "六日間の旅行に行きます。",
+      "e": "I will go on a six-day trip.",
+      "r": "muikakan no ryokou ni ikimasu"
+    },
+    {
+      "j": "日本の伝統的なゲームに双六があります。",
+      "e": "Japan has a traditional game called sugoroku.",
+      "r": "nihon no dentouteki na geemu ni sugoroku ga arimasu"
+    },
+    {
+      "j": "この部屋は六角形です。",
+      "e": "This room is hexagonal in shape.",
+      "r": "kono heya wa rokkakkei desu"
+    },
+    {
+      "j": "りんごを六つ買いました。",
+      "e": "I bought six apples.",
+      "r": "ringo wo muttsu kaimashita"
+    }
+  ],
+  [
+    {
+      "j": "彼は七回も勝利を収めた。",
+      "e": "He won seven times.",
+      "r": "kare wa shichikai mo shōri wo osameta"
+    },
+    {
+      "j": "昨日、友達と七人でピクニックに行った。",
+      "e": "Yesterday, I went on a picnic with seven friends.",
+      "r": "kinō, tomodachi to shichinin de pikunikku ni itta"
+    },
+    {
+      "j": "来月は七月です。",
+      "e": "Next month is July.",
+      "r": "raigetsu wa shichigatsu desu"
+    },
+    {
+      "j": "その店はこの街で七番目に古いです。",
+      "e": "That store is the seventh oldest in this town.",
+      "r": "sono mise wa kono machi de shichibanme ni furui desu"
+    },
+    {
+      "j": "ハワイで七日間のバカンスを過ごしました。",
+      "e": "I spent seven days on vacation in Hawaii.",
+      "r": "hawai de nanokakan no bakan su wo sugoshimashita"
+    },
+    {
+      "j": "感謝祭の夕食には七面鳥を作ります。",
+      "e": "We make a turkey for the Thanksgiving dinner.",
+      "r": "kanshasai no yuushoku ni wa shichimenchou wo tsukurimasu"
+    },
+    {
+      "j": "北斗七星は夜空に輝いています。",
+      "e": "The Big Dipper is shining in the night sky.",
+      "r": "hokuto shichisei wa yozora ni kagayaite imasu"
+    },
+    {
+      "j": "七つの海を越えて行こう",
+      "e": "Let's go beyond the seven seas",
+      "r": "nanatsuno umi wo koete ikou"
+    }
+  ],
+  [
+    {
+      "j": "彼は八歳です。",
+      "e": "He is eight years old.",
+      "r": "kare wa hassai desu"
+    },
+    {
+      "j": "八人のメンバーがいるチームです。",
+      "e": "It's a team with eight members.",
+      "r": "hachi-nin no menbā ga iru chīmu desu"
+    },
+    {
+      "j": "来月は八月です。",
+      "e": "Next month is August.",
+      "r": "raigetsu wa hachigatsu desu"
+    },
+    {
+      "j": "その映画は八番目に面白かった。",
+      "e": "That movie was the eighth most interesting.",
+      "r": "sono eiga wa hachiban me ni omoshirokatta"
+    },
+    {
+      "j": "八日間の休暇を楽しんだ。",
+      "e": "I enjoyed an eight-day vacation.",
+      "r": "yōkakan no kyūka wo tanoshinda"
+    },
+    {
+      "j": "この図形は八角形です。",
+      "e": "This figure is an octagon.",
+      "r": "kono zugata wa hachikakkei desu"
+    },
+    {
+      "j": "町の角に古い八百屋があります。",
+      "e": "There is an old grocery store at the corner of the street.",
+      "r": "machi no kado ni furui yaoya ga arimasu"
+    },
+    {
+      "j": "卵を八つ買ってきてください。",
+      "e": "Please buy eight eggs.",
+      "r": "tamago wo yattsu katte kite kudasai"
+    }
+  ],
+  [
+    {
+      "j": "彼は9時に来ると約束しました",
+      "e": "He promised to come at 9 o'clock.",
+      "r": "kare wa ku-ji ni kuru to yakusoku shimashita"
+    },
+    {
+      "j": "今日は九人で会議を行います",
+      "e": "We will have a meeting with nine people today.",
+      "r": "kyou wa ku nin de kaigi wo okonai shimasu"
+    },
+    {
+      "j": "来月が九月です",
+      "e": "Next month is September.",
+      "r": "raigetsu ga kugatsu desu"
+    },
+    {
+      "j": "この店は九番目の建物です",
+      "e": "This store is the ninth building.",
+      "r": "kono mise wa kyuu ban me no tatemono desu"
+    },
+    {
+      "j": "九日間の旅行に行きました",
+      "e": "I went on a trip for nine days.",
+      "r": "kokonokakan no ryokou ni ikimashita"
+    },
+    {
+      "j": "九州は美しい場所です",
+      "e": "Kyushu is a beautiful place.",
+      "r": "kyuushuu wa utsukushii basho desu"
+    },
+    {
+      "j": "ケーキを食べるために九つのキャンドルを並べました",
+      "e": "I lined up nine candles to eat cake",
+      "r": "kēki wo taberu tame ni kokonotsu no kyandoru wo narabemashita"
+    }
+  ],
+  [
+    {
+      "j": "彼は十歳の誕生日を迎えた。",
+      "e": "He celebrated his tenth birthday.",
+      "r": "kare wa jussai no tanjōbi wo mukaeta"
+    },
+    {
+      "j": "十人の乗客がバスに乗っていた。",
+      "e": "There were ten passengers on the bus.",
+      "r": "juunin no jōkyaku ga basu ni notte ita"
+    },
+    {
+      "j": "来年は十月に結婚する予定です。",
+      "e": "I'm planning to get married in October next year.",
+      "r": "rainen wa jugatsu ni kekkon suru yoteidesu"
+    },
+    {
+      "j": "この本はとても面白くて、十分に満足しています。",
+      "e": "This book is very interesting, I am fully satisfied.",
+      "r": "kono hon wa totemo omoshirokute, jūbun ni manzoku shite imasu"
+    },
+    {
+      "j": "旅行で十日間日本に滞在しました。",
+      "e": "I stayed in Japan for ten days on my trip.",
+      "r": "ryokō de tōkakan nihon ni taizai shimashta"
+    },
+    {
+      "j": "このお店では十円玉でアイスが買えます。",
+      "e": "You can buy ice cream with a ten-yen coin at this store.",
+      "r": "kono wo mise de wa jūen-dama de aisu ga kaemasu"
+    },
+    {
+      "j": "毎年十五夜にはお月見を楽しんでいます。",
+      "e": "I enjoy moon viewing on the night of the fifteenth every year.",
+      "r": "maitoshi juugoya ni wa otsukimi wo tanoshinde imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は百点満点の成績を取った。",
+      "e": "He scored a perfect 100 points.",
+      "r": "kare wa hyakuten manten no seiseki wo totta"
+    },
+    {
+      "j": "そのお店では百円玉を使って買い物ができます。",
+      "e": "You can shop using 100 yen coins at that store.",
+      "r": "sono wo mise de wa hyakuendama wo tsukatte kaimono ga dekimasu"
+    },
+    {
+      "j": "日本にはたくさんの百円ショップがあります。",
+      "e": "There are many 100 yen shops in Japan.",
+      "r": "nihon ni wa takusan no hyaku en shoppu ga arimasu"
+    },
+    {
+      "j": "インターネットで調べ物するときに百科事典が役立ちます。",
+      "e": "Encyclopedias are helpful when researching on the internet.",
+      "r": "intaanetto de shirabemono suru toki ni hyakka jiten ga yakudachimasu"
+    },
+    {
+      "j": "大きな百貨店でお買い物を楽しんだ。",
+      "e": "I enjoyed shopping at a large department store.",
+      "r": "ooki na hyakkaten de wo kaimono wo tanoshinda"
+    },
+    {
+      "j": "彼は身長二百センチメートルある。",
+      "e": "He is two hundred centimeters tall.",
+      "r": "kare wa shinchou ni hyaku senchimētoru aru"
+    }
+  ],
+  [
+    {
+      "j": "彼は毎日ランニングで5キロを走る",
+      "e": "He runs 5 kilometers every day.",
+      "r": "kare wa mainichi ranningu de 5 kiro wo hashiru"
+    },
+    {
+      "j": "この本は千ページもある",
+      "e": "This book has a thousand pages.",
+      "r": "kono hon wa sen peeji mo aru"
+    },
+    {
+      "j": "昔の日本では千と百の武士が戦ったことがある",
+      "e": "In old Japan, there was a battle where a thousand samurai fought against a hundred."
+    }
+  ],
+  [
+    {
+      "j": "彼は大きな手を持っている。",
+      "e": "He has big hands.",
+      "r": "kare wa ooki na te wo motte iru"
+    },
+    {
+      "j": "毎朝手紙を書いています。",
+      "e": "I write a letter every morning.",
+      "r": "mai asa tegami wo kaite imasu"
+    },
+    {
+      "j": "寒い日は手袋をよく使います。",
+      "e": "I often use gloves on cold days.",
+      "r": "samui hi wa tebukuro wo yoku shi imasu"
+    },
+    {
+      "j": "馬の手綱を握って、優しく誘導してください。",
+      "e": "Please hold the reins of the horse and lead it gently.",
+      "r": "uma no tagai wo nigitte, yasashiku yuudou shite kudasai"
+    },
+    {
+      "j": "手術は成功裏に終わりました。",
+      "e": "The surgery was successful.",
+      "r": "shujutsu wa seikou-ri ni owarimashita"
+    },
+    {
+      "j": "この問題を解決するための手段を考えなければならない。",
+      "e": "We need to think of a way to solve this problem.",
+      "r": "kono mondai wo kaiketsu suru tame no shudan wo kangaenakereba naranai"
+    },
+    {
+      "j": "ビジネスでの成功を祈って、握手を交わしました。",
+      "e": "We shook hands, wishing for success in business.",
+      "r": "bijinesu de no seikou wo inotte, akushu wo majiwashimashita"
+    }
+  ],
+  [
+    {
+      "j": "彼は速い足で走っている",
+      "e": "He is running fast.",
+      "r": "kare wa hayai ashi de hashitte iru"
+    },
+    {
+      "j": "この箱は重くて足がつりそう",
+      "e": "This box is heavy, my legs might cramp.",
+      "r": "kono hako wa omokute ashi ga tsurisou"
+    },
+    {
+      "j": "転んで足首を痛めてしまった",
+      "e": "I sprained my ankle when I fell.",
+      "r": "koronde ashikubi wo itamete shimatta"
+    },
+    {
+      "j": "新しいビルが建設中で足場が組まれている",
+      "e": "The new building is under construction, and scaffolding is being set up.",
+      "r": "atarashii biru ga kensetsuchuu de ashisaba ga kumarete iru"
+    },
+    {
+      "j": "彼の意見を足して考える",
+      "e": "Let's consider his opinion as well.",
+      "r": "kare no iken wo tashite kangaeru"
+    },
+    {
+      "j": "足し算は得意ではありません",
+      "e": "I'm not good at addition.",
+      "r": "tashizan wa tokui de wa arimasen"
+    },
+    {
+      "j": "今度の旅行には革靴を一足買おうと思っている",
+      "e": "I'm thinking of buying a pair of leather shoes for the next trip.",
+      "r": "kondo no ryokou ni wa kutsu wo isshu kaou to omotte iru"
+    },
+    {
+      "j": "補足の質問がありますか？",
+      "e": "Do you have any additional questions?",
+      "r": "hosoku no shitsumon ga arimasu ka?"
+    },
+    {
+      "j": "このサービスには満足しています",
+      "e": "I am satisfied with this service.",
+      "r": "kono saabisu ni wa manzoku shite imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は青い目をしている。",
+      "e": "He has blue eyes.",
+      "r": "kare wa aoi me wo shite iru"
+    },
+    {
+      "j": "目がかゆいので目薬をさしました。",
+      "e": "My eyes were itchy so I put in some eye drops.",
+      "r": "me ga kayui node megusuri wo sashimashita"
+    },
+    {
+      "j": "彼の目的は成功することです。",
+      "e": "His objective is to succeed.",
+      "r": "kare no mokuteki wa seikou suru koto desu"
+    },
+    {
+      "j": "彼女は毎日新しい目標を立てています。",
+      "e": "She sets new goals every day.",
+      "r": "kanojo wa mainichi atarashii mokuhyou wo tatete imasu"
+    },
+    {
+      "j": "その演技の役目を果たすことができました。",
+      "e": "She was able to fulfill her role in the play.",
+      "r": "sono engi no yakume wo hatasu koto ga dekimashita"
+    },
+    {
+      "j": "数学は彼の得意科目です。",
+      "e": "Math is his best subject.",
+      "r": "suugaku wa kare no tokui kamoku desu"
+    }
+  ],
+  [
+    {
+      "j": "彼女は美しい耳をしている。",
+      "e": "She has beautiful ears.",
+      "r": "kanojo wa utsukushii mimi wo shite iru"
+    },
+    {
+      "j": "耳元でささやかれた言葉が心地よかった。",
+      "e": "The words whispered in my ear were soothing.",
+      "r": "mimimoto de sasayakareta kotoba ga kokochi yokatta"
+    },
+    {
+      "j": "耳栓をつけて音楽を聴いています。",
+      "e": "I'm listening to music with earplugs in.",
+      "r": "jizen wo tsukete ongaku wo kiite imasu"
+    },
+    {
+      "j": "右耳が少し痛いです。",
+      "e": "My right ear is a little sore.",
+      "r": "migi mimi ga sukoshi itai desu"
+    },
+    {
+      "j": "彼は中耳炎で学校を休んでいます。",
+      "e": "He is absent from school due to middle ear infection.",
+      "r": "kare wa chuinen de gakkou wo yasunde imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼はおいしい料理を食べると大満足そうな顔をしている。",
+      "e": "He has a very satisfied expression on his face when he eats delicious food.",
+      "r": "kare wa oishii ryouri wo taberu to da manzoku souna kao wo shite iru"
+    },
+    {
+      "j": "彼女の口調はとても丁寧です。",
+      "e": "She has a very polite tone of voice.",
+      "r": "kanojo no kuchou wa totemo teinei desu"
+    },
+    {
+      "j": "赤い口紅を付けてパーティーに行きました。",
+      "e": "She wore red lipstick and went to the party.",
+      "r": "akai kuchibeni wo tsukete paatii ni ikimashita"
+    },
+    {
+      "j": "友達と口論になってしまった。",
+      "e": "I ended up having an argument with my friend.",
+      "r": "tomodachi to kouron ni natte shimatta"
+    },
+    {
+      "j": "この国の人口は約1億人です。",
+      "e": "The population of this country is about 100 million people.",
+      "r": "kono kuni no jinkou wa yaku ichi oku nin desu"
+    },
+    {
+      "j": "非常口は火災の際に使用してください。",
+      "e": "Please use the emergency exit in case of fire.",
+      "r": "hijouguchi wa kasai no sai ni shiyou shite kudasai"
+    }
+  ],
+  [
+    {
+      "j": "林がたくさんある公園で散歩しています。",
+      "e": "I'm taking a walk in a park with many trees.",
+      "r": "hayashi ga takusan aru kōen de sanpo shite imasu"
+    },
+    {
+      "j": "この林道は自然が豊かで気持ちがいいです。",
+      "e": "This forest road is surrounded by rich nature and feels good.",
+      "r": "kono hayashimichi wa shizen ga yutaka de kimochi ga ii desu"
+    },
+    {
+      "j": "山の斜面に植林が行われています。",
+      "e": "Afforestation is being carried out on the slope of the mountain.",
+      "r": "yama no hasamn ni shokurin ga gyou warete imasu"
+    },
+    {
+      "j": "杉林の中で鳥のさえずりが聞こえてきます。",
+      "e": "I can hear the chirping of birds in the cedar forest.",
+      "r": "sugibayashi no naka de tori no saezuri ga kikoete kimasu"
+    },
+    {
+      "j": "日本には素敵な林間学校がたくさんあります。",
+      "e": "There are many wonderful outdoor schools in Japan.",
+      "r": "nihon ni wa sutekina rinkan gakkō ga takusan arimasu"
+    }
+  ],
+  [
+    {
+      "j": "森の中を散歩するのが好きです。",
+      "e": "I like walking in the forest.",
+      "r": "mori no naka wo sanpo suru no ga suki desu."
+    },
+    {
+      "j": "この国には美しい森林がたくさんあります。",
+      "e": "This country has many beautiful forests.",
+      "r": "kono kuni ni wa utsukushii shinrin ga takusan arimasu."
+    },
+    {
+      "j": "青森市は青森県の中心に位置しています。",
+      "e": "Aomori City is located in the center of Aomori Prefecture.",
+      "r": "aomorishi wa aomoriken no chūshin ni ichi shite imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は晴れた日に青い空を見上げながら、天に手を振っていた。",
+      "e": "He was looking up at the blue sky on a clear day, waving his hand towards the heavens.",
+      "r": "kare wa hareta hi ni aoi sora wo miagenagara, ten ni te wo futte ita"
+    },
+    {
+      "j": "明日の天気は雨だそうです。",
+      "e": "It seems like tomorrow's weather will be rain.",
+      "r": "ashita no tenki wa ame da soudesu"
+    },
+    {
+      "j": "彼女は優しい笑顔で天使のようだ。",
+      "e": "She looks like an angel with her gentle smile.",
+      "r": "kanojo wa yasashii egao de tenshi no you da"
+    },
+    {
+      "j": "彼は音楽の天才として知られています。",
+      "e": "He is known as a musical genius.",
+      "r": "kare wa ongaku no tensai toshite shirarete imasu"
+    },
+    {
+      "j": "部屋の天井には青い星が描かれている。",
+      "e": "There are blue stars painted on the ceiling of the room.",
+      "r": "heya no tenjou ni wa aoi hoshi ga egakarete iru"
+    },
+    {
+      "j": "夜空には美しい天の川が広がっている。",
+      "e": "The beautiful Milky Way is spreading across the night sky.",
+      "r": "yozora ni wa utsukushii amanogawa ga hirogatte iru"
+    }
+  ],
+  [
+    {
+      "j": "彼女は明るい気持ちで笑っていた。",
+      "e": "She was smiling with a bright mood.",
+      "r": "kanojo wa akarui kimochi de waratteita"
+    },
+    {
+      "j": "今日は気温が高いですね。",
+      "e": "The temperature is high today.",
+      "r": "kyou wa kion ga takai desu ne"
+    },
+    {
+      "j": "彼の機嫌が悪い気分なのかもしれません。",
+      "e": "He might be in a bad mood.",
+      "r": "kare no kigen ga warui kibun na no kamoshiremasen"
+    },
+    {
+      "j": "森の中にいると、不気味な気配を感じることがあります。",
+      "e": "When you're in the forest, you sometimes feel a strange presence.",
+      "r": "mori no naka ni iru to, bukimi na kehai wo kanjiru koto ga arimasu"
+    },
+    {
+      "j": "新鮮な空気を吸ってリフレッシュしたいです。",
+      "e": "I want to breathe in fresh air and refresh myself.",
+      "r": "shinsen na kuuki wo sutte rifuresshu shitai desu"
+    }
+  ],
+  [
+    {
+      "j": "彼女は青い空を見上げていた。",
+      "e": "She was looking up at the blue sky.",
+      "r": "kanojo wa aoi sora wo miagete ita"
+    },
+    {
+      "j": "お腹が空いた",
+      "e": "I'm hungry",
+      "r": "onaka ga suita"
+    },
+    {
+      "j": "空港に着いた時、友達が待っていてくれました。",
+      "e": "When I arrived at the airport, my friend was waiting for me.",
+      "r": "kūkō ni tsuita toki, tomodachi ga matteite kuremashita"
+    },
+    {
+      "j": "夜空にはたくさんの星が輝いている。",
+      "e": "Many stars are shining in the night sky.",
+      "r": "yozora ni wa takusan no hoshi ga kagayaite iru"
+    },
+    {
+      "j": "子供の頃、空手を習っていた。",
+      "e": "I used to practice karate when I was a child.",
+      "r": "kodomo no koro, karate wo naratte ita"
+    },
+    {
+      "j": "この町にはたくさんの空き家がある。",
+      "e": "There are many vacant houses in this town.",
+      "r": "kono machi ni wa takusan no akiya ga aru"
+    }
+  ],
+  [
+    {
+      "j": "明日は夕べ友達とディナーを楽しみます。",
+      "e": "I am looking forward to having dinner with my friends tomorrow evening.",
+      "r": "ashita wa yuube tomodachi to dinā wo tanoshimimasu."
+    },
+    {
+      "j": "夕方には雨が降ってきました。",
+      "e": "It started raining in the evening.",
+      "r": "yuugata ni wa ame ga futte kimashita"
+    },
+    {
+      "j": "今日は美味しい夕食が食べたいです。",
+      "e": "I want to have a delicious dinner tonight.",
+      "r": "kyou wa oishii yuushoku ga tabetai desu"
+    },
+    {
+      "j": "海岸で美しい夕日を見ることができました。",
+      "e": "I was able to see a beautiful sunset at the beach.",
+      "r": "kaigan de utsukushii yuuhi wo miru koto ga dekimashita"
+    },
+    {
+      "j": "彼は一朝一夕で変わることはない。",
+      "e": "He won't change overnight.",
+      "r": "kare wa hitoasa hitoyu wa de kawaru koto wa nai"
+    }
+  ],
+  [
+    {
+      "j": "川岸に大きな石が並んでいた。",
+      "e": "There were large stones lined up along the river bank.",
+      "r": "kawagishi ni ooki na ishi ga narandeita"
+    },
+    {
+      "j": "古い町並みは石畳の道で有名だ。",
+      "e": "The old town is famous for its stone-paved streets.",
+      "r": "furui machinami wa ishidatami no michi de yuumei da"
+    },
+    {
+      "j": "石油はさまざまな製品の原料として使われています。",
+      "e": "Oil is used as a raw material for various products.",
+      "r": "sekiyu wa samazama na seihin no genryou toshite tsukawarete imasu"
+    },
+    {
+      "j": "彼女は美しい宝石を身に着けていた。",
+      "e": "She was wearing beautiful jewels.",
+      "r": "kanojo wa utsukushii houseki wo mi ni kette ita"
+    },
+    {
+      "j": "磁石を使って科学の実験をしている学生がいました。",
+      "e": "There was a student using a magnet for a science experiment.",
+      "r": "jishaku wo tsukatte kagaku no jikken wo shite iru gakusei ga imashita"
+    }
+  ],
+  [
+    {
+      "j": "彼は美しい貝を海岸で拾っていました",
+      "e": "He was picking up beautiful shells on the beach.",
+      "r": "kare wa utsukushii kai wo kaigan de hirotte imashita"
+    },
+    {
+      "j": "子供たちは貝殻を集めるのが好きです",
+      "e": "Children like to collect seashells.",
+      "r": "kodomotachi wa kaigara wo atsumeru no ga suki desu"
+    },
+    {
+      "j": "レストランでおいしい帆立貝を食べた",
+      "e": "I ate delicious scallops at the restaurant.",
+      "r": "resutoran de oishii hotategai wo tabeta"
+    },
+    {
+      "j": "この料理には新鮮な二枚貝が使われています",
+      "e": "Fresh bivalves are used in this dish.",
+      "r": "kono ryouri ni wa shinsen na nimai-gai ga tsukawarete imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は草地でサッカーをしている。",
+      "e": "He is playing soccer on the grass field.",
+      "r": "kare wa kusachi de sakkaa wo shite iru"
+    },
+    {
+      "j": "この草原は広大で美しいです。",
+      "e": "This grassland is vast and beautiful.",
+      "r": "kono kusahara wa koudai de utsukushii desu"
+    },
+    {
+      "j": "春には野草がたくさん咲きます。",
+      "e": "Many wildflowers bloom in spring.",
+      "r": "haru ni wa yasou ga takusan sakimasu"
+    },
+    {
+      "j": "海草を使った和え物がおいしいですね。",
+      "e": "Seaweed salad is delicious.",
+      "r": "kaisou wo tsukatta wae mono ga oishii desu ne"
+    },
+    {
+      "j": "牧草地で牛がのんびり草を食べています。",
+      "e": "Cows are leisurely eating grass in the pasture.",
+      "r": "bokusouchi de ushi ga nonbiri kusa wo tabete imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼女はきれいな花を持ってきた。",
+      "e": "She brought beautiful flowers.",
+      "r": "kanojo wa kirei na hana wo motte kita"
+    },
+    {
+      "j": "庭に素敵な花壇があります。",
+      "e": "There is a lovely flower bed in the garden.",
+      "r": "niwa ni sutekina hanada ga arimasu"
+    },
+    {
+      "j": "彼に花束をプレゼントしました。",
+      "e": "I gave him a bouquet of flowers as a present.",
+      "r": "kare ni hanataba wo purezento shimashita"
+    },
+    {
+      "j": "夏祭りできれいな花火を見た。",
+      "e": "I saw beautiful fireworks at the summer festival.",
+      "r": "natsu matsuri de kirei na hanabi wo mita"
+    },
+    {
+      "j": "花嫁のドレスがとても美しかった。",
+      "e": "The bride's dress was very beautiful.",
+      "r": "hanayome no doresu ga totemo utsukushikatta"
+    }
+  ],
+  [
+    {
+      "j": "庭に竹を植えました。",
+      "e": "I planted a bamboo in the garden.",
+      "r": "niwa ni take wo uemashita"
+    },
+    {
+      "j": "竹林を散歩するのが好きです。",
+      "e": "I like taking a walk in a bamboo forest.",
+      "r": "chikurin wo sanpo suru no ga suki desu"
+    },
+    {
+      "j": "子供の頃、竹馬で遊んだことがあります。",
+      "e": "I used to play with a bamboo horse when I was a child.",
+      "r": "kodomo no koro, takeuma de asonda koto ga arimasu"
+    },
+    {
+      "j": "庭に素敵な竹垣を作りたいです。",
+      "e": "I want to make a beautiful bamboo fence in my garden.",
+      "r": "niwa ni suteki na takegaki wo tsukuritai desu"
+    },
+    {
+      "j": "竹の子は春の山菜の代表的な食材です。",
+      "e": "Bamboo shoots are a typical ingredient for spring mountain vegetables.",
+      "r": "take no ko wa haru no sansai no daitenshoku na shokuzai desu"
+    }
+  ],
+  [
+    {
+      "j": "彼は山を愛しています。",
+      "e": "He loves mountains.",
+      "r": "kare wa yama wo aishite imasu"
+    },
+    {
+      "j": "昨日、山火事が起きました。",
+      "e": "There was a mountain fire yesterday.",
+      "r": "kinou, yamakaji ga okimashita"
+    },
+    {
+      "j": "来年、友達と一緒に登山に行く予定です。",
+      "e": "I'm planning to go mountain climbing with my friends next year.",
+      "r": "rainen, tomodachi to issho ni tozan ni iku yoteidesu"
+    },
+    {
+      "j": "この島には美しい火山があります。",
+      "e": "This island has a beautiful volcano.",
+      "r": "kono shima ni wa utsukushii kazan ga arimasu"
+    },
+    {
+      "j": "冬には高山でスキーを楽しめます。",
+      "e": "You can enjoy skiing in the high mountains in winter.",
+      "r": "fuyu ni wa takayama de suki wo tanoshimemasu"
+    },
+    {
+      "j": "日本で一番有名な山のひとつは富士山です。",
+      "e": "Mount Fuji is one of the most famous mountains in Japan.",
+      "r": "nihon de ichiban yuumei na yama no hitotsu wa fuji-san desu"
+    }
+  ],
+  [
+    {
+      "j": "彼は川で釣りをしている。",
+      "e": "He is fishing in the river.",
+      "r": "kare wa kawa de tsuri wo shite iru"
+    },
+    {
+      "j": "ピクニックを楽しむために川辺に行きました。",
+      "e": "There is a beautiful waterfall upstream.",
+      "r": "kawakami ni wa utsukushii taki ga arimasu"
+    },
+    {
+      "j": "川岸に沢山の花が咲いていた。",
+      "e": "Many flowers were blooming on the riverbank.",
+      "r": "kawagishi ni sawayaka no hana ga saite ita"
+    },
+    {
+      "j": "この町は綺麗な河川が流れています。",
+      "e": "A beautiful river flows through this town.",
+      "r": "kono machi wa kirei na kasen ga nagarete imasu"
+    },
+    {
+      "j": "森の中を小川が流れている。",
+      "e": "A stream is flowing through the forest.",
+      "r": "mori no naka wo kogawa ga nagarete iru"
+    }
+  ],
+  [
+    {
+      "j": "今日は雨が降っています。",
+      "e": "It's raining today.",
+      "r": "kyou wa ame ga futte imasu"
+    },
+    {
+      "j": "雨が降るときは雨水が流れてきます。",
+      "e": "When it rains, rainwater flows down.",
+      "r": "ame ga furu toki wa usui ga nagarete kimasu"
+    },
+    {
+      "j": "雨が降ってきそうだから、雨具を持って行こう。",
+      "e": "It looks like it's going to rain, so let's bring rain gear.",
+      "r": "ame ga futte kisou da kara, amagu wo motte ikou"
+    },
+    {
+      "j": "今日の雨量は十分多いですね。",
+      "e": "We have received quite a lot of rain today.",
+      "r": "kyou no ame ryou wa juubun ooi desu ne"
+    },
+    {
+      "j": "雷雨の中を歩くのは怖いですね。",
+      "e": "It's scary to walk in a thunderstorm.",
+      "r": "raiu no naka wo aruku no wa kowai desu ne"
+    },
+    {
+      "j": "最近、長雨が続いています。",
+      "e": "We have been having a long period of rain lately.",
+      "r": "saikin, nagame ga tsuzuite imasu"
+    },
+    {
+      "j": "昨日は豪雨で道路が冠水しました。",
+      "e": "There was heavy rain yesterday and the road was flooded.",
+      "r": "kinou wa gouu de douro ga kansui shimashita"
+    }
+  ],
+  [
+    {
+      "j": "田んぼには美しい金色の稲が広がっている。",
+      "e": "In the rice field, beautiful golden rice plants are spreading out.",
+      "r": "tanboniwa utsukushii kin'iro no ine ga hirogatte iru"
+    },
+    {
+      "j": "田畑には野菜がたくさん育てられています。",
+      "e": "Many vegetables are grown in the fields.",
+      "r": "tabataka ni wa yasai ga takusan sodaterarete imasu"
+    },
+    {
+      "j": "田植えの時期になると、農家の皆さんが一生懸命働いています。",
+      "e": "During the rice planting season, farmers are working hard.",
+      "r": "taue no jiki ni naru to, nouka no minasan ga isshou kenmei hataraite imasu"
+    },
+    {
+      "j": "田園風景を眺めながら散歩するのが好きです。",
+      "e": "I like taking a walk while looking at the rural landscape.",
+      "r": "den'en fuukei wo nagamenagara sanpo suru no ga suki desu"
+    },
+    {
+      "j": "この地域は美しい水田で知られています。",
+      "e": "This area is known for its beautiful rice fields.",
+      "r": "kono chiiki wa utsukushii tanen de shirarete imasu"
+    },
+    {
+      "j": "石油の採掘が盛んな油田が国内に点在しています。",
+      "e": "There are oil fields scattered throughout the country where oil extraction is active.",
+      "r": "sekiyu no saikutsu ga sakan na yuuden ga kokunai ni teneigakushite imasu"
+    }
+  ],
+  [
+    {
+      "j": "庭にはたくさんの虫がいる。",
+      "e": "There are many bugs in the garden.",
+      "r": "niwa ni wa takusan no mushi ga iru"
+    },
+    {
+      "j": "子供の頃、虫歯になったことがあります。",
+      "e": "I had a cavity when I was a child.",
+      "r": "kodomo no koro, mushiba ni natta koto ga arimasu"
+    },
+    {
+      "j": "森で毛虫を見つけた。",
+      "e": "I found a caterpillar in the forest.",
+      "r": "mori de kemushi wo mitsuketa"
+    },
+    {
+      "j": "彼は弱虫だが、優しい人だ。",
+      "e": "He is a coward, but he is a kind person.",
+      "r": "kare wa yowamushi da ga, yasashii hito da"
+    },
+    {
+      "j": "夏になると昆虫がたくさん出てくる。",
+      "e": "Many insects come out in the summer.",
+      "r": "natsu ni naru to konchuu ga takusan dete kuru"
+    },
+    {
+      "j": "この殺虫剤は効果が抜群だ。",
+      "e": "This insecticide is extremely effective.",
+      "r": "kono satsuchuuzai wa kouka ga batsugun da"
+    }
+  ],
+  [
+    {
+      "j": "彼女はかわいい犬を飼っています。",
+      "e": "She has a cute dog.",
+      "r": "kanojo wa kawaii inu wo kaotte imasu"
+    },
+    {
+      "j": "庭に犬小屋を建てた。",
+      "e": "I built a doghouse in the garden.",
+      "r": "niwa ni inugoya wo tateta"
+    },
+    {
+      "j": "愛犬と散歩するのが日課です。",
+      "e": "Taking a walk with my beloved dog is part of my daily routine.",
+      "r": "aiken to sanpo suru no ga nikai desu"
+    },
+    {
+      "j": "その家の番犬が吠え始めた。",
+      "e": "The watchdog of the house started barking.",
+      "r": "sono ie no banken ga hoe hajimeta"
+    },
+    {
+      "j": "猟犬は森の中でとても活動的です。",
+      "e": "Hunting dogs are very active in the forest.",
+      "r": "ryōken wa mori no naka de totemo katsudō-tekidesu"
+    },
+    {
+      "j": "野良犬を見つけたら保護してあげてください。",
+      "e": "If you find a stray dog, please rescue it.",
+      "r": "norainu wo mitsuketara hogo shite agete kudasai"
+    }
+  ],
+  [
+    {
+      "j": "彼女の声はとても美しい音を奏でる。",
+      "e": "Her voice produces a very beautiful sound.",
+      "r": "kanojo no koe wa totemo utsukushii oto wo kanaderu"
+    },
+    {
+      "j": "毎日音楽を聴くことが好きです。",
+      "e": "I like listening to music every day.",
+      "r": "mainichi ongaku wo kiku koto ga suki desu"
+    },
+    {
+      "j": "ピアノの音色が心地よい。",
+      "e": "The tone of the piano is pleasant.",
+      "r": "piano no neiro ga kokochi yoi"
+    },
+    {
+      "j": "騒音がうるさいと集中できません。",
+      "e": "I can't concentrate when it's noisy.",
+      "r": "souon ga urusai to shuuchuu dekimasen"
+    },
+    {
+      "j": "廊下を歩くときは足音が静かになるように気をつけます。",
+      "e": "I make sure to walk quietly in the hallway to minimize my footstep noise.",
+      "r": "rouka wo aruku toki wa ashioto ga shizuka ni naru you ni ki wo tsukemasu"
+    },
+    {
+      "j": "日本語の単語には母音と子音があります。",
+      "e": "In Japanese words, there are vowels and consonants.",
+      "r": "nihongo no tango ni wa oon kag oto"
+    }
+  ],
+  [
+    {
+      "j": "彼は面白い本を読んでいます",
+      "e": "He is reading an interesting book.",
+      "r": "kare wa omoshiroi hon wo yonde imasu"
+    },
+    {
+      "j": "この町にはたくさんの本屋があります",
+      "e": "There are many bookstores in this town.",
+      "r": "kono machi ni wa takusan no hon'ya ga arimasu"
+    },
+    {
+      "j": "彼女に本音を話した",
+      "e": "I told her my true feelings.",
+      "r": "kanojo ni honne wo hanashita"
+    },
+    {
+      "j": "基本的なルールを守ってください",
+      "e": "Please follow the basic rules.",
+      "r": "kihonteki na ruuru wo mamotte kudasai"
+    },
+    {
+      "j": "その会社は多くの資本を持っている",
+      "e": "That company has a lot of capital.",
+      "r": "sono kaisha wa ooku no shihon wo motte iru"
+    },
+    {
+      "j": "熊本市は自然が豊かな美しい街です",
+      "e": "Kumamoto City is a beautiful city abundant with nature.",
+      "r": "kumamoto-shi wa shizen ga yutaka na utsukushii machi desu"
+    }
+  ],
+  [
+    {
+      "j": "彼はイケメンな男性です。",
+      "e": "He is a good-looking man.",
+      "r": "kare wa ikemen na dansei desu"
+    },
+    {
+      "j": "彼は本当に男前だね。",
+      "e": "He's really cool.",
+      "r": "kare wa hontou ni otokomae da ne"
+    },
+    {
+      "j": "男性の方が多い職場です。",
+      "e": "There are more men than women in this workplace.",
+      "r": "dansei no hou ga ooi shokuba desu"
+    },
+    {
+      "j": "男女平等を目指す",
+      "e": "Striving for gender equality",
+      "r": "danjo byoudou wo mezasu"
+    },
+    {
+      "j": "彼は家族の長男です。",
+      "e": "He is the eldest son in the family.",
+      "r": "kare wa kazoku no chounan desu"
+    }
+  ],
+  [
+    {
+      "j": "彼の母はとても優しい女性です。",
+      "e": "His mother is a very kind woman.",
+      "r": "kare no haha wa totemo yasashii josei desu."
+    },
+    {
+      "j": "日本では女性に対する尊重が大切です。",
+      "e": "Respecting women is important in Japan.",
+      "r": "nihon de wa josei ni tai suru sonchou ga taisetsu desu."
+    },
+    {
+      "j": "その国の女王は美しいと評判です。",
+      "e": "The queen of that country is known to be beautiful.",
+      "r": "sono kuni no joou wa utsukushii to hyouban desu."
+    },
+    {
+      "j": "彼女はまるで女神のように美しかった。",
+      "e": "She was as beautiful as a goddess.",
+      "r": "kanojo wa marude megami no you ni utsukushikatta."
+    },
+    {
+      "j": "彼は乙女の心を持っている。",
+      "e": "He has a maiden's heart.",
+      "r": "kare wa otome no kokoro wo motte iru"
+    },
+    {
+      "j": "その少女は大きな夢を持っています。",
+      "e": "That young girl has big dreams.",
+      "r": "sono shoujo wa ooki na yume wo motte imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は優秀な学生です。",
+      "e": "He is an excellent student.",
+      "r": "kare wa yuushuu na gakusei desu"
+    },
+    {
+      "j": "毎日勉強することは大切な学習です。",
+      "e": "Studying every day is an important learning process.",
+      "r": "mainichi benkyou suru koto wa taisetsu na gakushuu desu"
+    },
+    {
+      "j": "日本に留学して日本語を勉強しています。",
+      "e": "I am studying Japanese by studying abroad in Japan.",
+      "r": "nihon ni ryuugaku shite nihongo wo benkyou shite imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は毎日学校へ通っています",
+      "e": "He goes to school every day.",
+      "r": "kare wa mainichi gakkou e kayotte imasu"
+    },
+    {
+      "j": "学校の校庭にはたくさんの花が植えられています。",
+      "e": "There are many flowers planted in the schoolyard.",
+      "r": "gakkou no koutei ni wa takusan no hana ga ue rarete imasu"
+    },
+    {
+      "j": "新しい校舎が建設されました。",
+      "e": "A new school building has been constructed.",
+      "r": "atarashii kousha ga kensetsu saremashita"
+    },
+    {
+      "j": "私たちの校長先生はとても優しいです。",
+      "e": "Our principal is very kind.",
+      "r": "watashitachi no kouchou sensei wa totemo yasashii desu"
+    },
+    {
+      "j": "原稿を校正する必要があります。",
+      "e": "I need to proofread the manuscript.",
+      "r": "genkou wo kousei suru hitsuyou ga arimasu"
+    },
+    {
+      "j": "毎年学園祭で校歌を歌います。",
+      "e": "We sing the school song at the school festival every year.",
+      "r": "maitoshi gakuensai de kouka wo utaimasu"
+    }
+  ],
+  [
+    {
+      "j": "彼はいつも私より先に会議室に入る。",
+      "e": "He always enters the meeting room before me.",
+      "r": "kare wa itsumo watashi yori saki ni kaigishitsu ni hairu"
+    },
+    {
+      "j": "先程、お店で友達に偶然会いました。",
+      "e": "I ran into my friend by chance at the store a little while ago.",
+      "r": "sakihodo, omise de tomodachi ni guuzen aimashita"
+    },
+    {
+      "j": "私の先生はとても優しいです。",
+      "e": "My teacher is very kind.",
+      "r": "watashi no sensei wa totemo yasashii desu"
+    },
+    {
+      "j": "先輩にはいろいろと教えてもらっています。",
+      "e": "I am learning a lot from my senior colleagues.",
+      "r": "senpai ni wa iroiro to oshiete moratte imasu"
+    },
+    {
+      "j": "列車の先頭に座ると景色がよく見えます。",
+      "e": "You can see the scenery better if you sit at the front of the train.",
+      "r": "ressha no sentou ni suwaru to keshiki ga yoku miemasu"
+    },
+    {
+      "j": "先月は忙しい月でしたが、楽しい思い出もたくさんあります。",
+      "e": "Last month was a busy month, but I have many wonderful memories as well.",
+      "r": "sengetsu wa isogashii tsukideshita ga, tanoshii omoide mo takusan arimasu"
+    }
+  ],
+  [
+    {
+      "j": "魚の刺身を食べるのが好きで、生で食べることもあります。",
+      "e": "I like eating sashimi of fish, and I sometimes eat it raw.",
+      "r": "sakana no sashimi wo taberu no ga suki de, nama de taberu koto mo arimasu"
+    },
+    {
+      "j": "地球上の生命を守るためには、環境保護が重要です。",
+      "e": "Protecting life on Earth is important, and so is environmental conservation.",
+      "r": "chikyū-jō no seimei wo mamoru tame ni wa, kankyō hogo ga jūyō desu"
+    },
+    {
+      "j": "彼は優秀な生徒で、いつも真面目に勉強しています。",
+      "e": "He is a excellent student and always studies diligently.",
+      "r": "kare wa yūshū na seito de, itsumo majime ni benkyō shite imasu"
+    },
+    {
+      "j": "森の中でさまざまな生き物を見ることができます。",
+      "e": "You can see various living creatures in the forest.",
+      "r": "mori no naka de samazama na ikimono wo miru koto ga dekimasu"
+    },
+    {
+      "j": "一生に一度の経験をしたいと思っています。",
+      "e": "I want to have an experience of a lifetime once.",
+      "r": "isshou ni ichido no keiken wo shitai to omotte imasu"
+    }
+  ],
+  [
+    {
+      "j": "日本語の勉強を始めたばかりの子供がいます。",
+      "e": "I have a child who has just started studying Japanese.",
+      "r": "nihongo no benkyou wo hajimeta bakari no kodomo ga imasu"
+    },
+    {
+      "j": "夏には日差しを遮るために帽子をかぶります。",
+      "e": "I wear a hat to block the sun in summer.",
+      "r": "natsu ni wa hizashi wo saegiru tame ni boushi wo kaburimasu"
+    },
+    {
+      "j": "この椅子はとても快適です。",
+      "e": "This chair is very comfortable.",
+      "r": "kono isu wa totemo kaiteki desu"
+    },
+    {
+      "j": "最近、体の調子が良くないです。",
+      "e": "Lately, I haven't been feeling well.",
+      "r": "saikin, karada no choushi ga yokunai desu"
+    },
+    {
+      "j": "彼はバスケットボールの試合で活躍している男子です。",
+      "e": "He is a boy who is active in basketball games.",
+      "r": "kare wa basukettobooru no shia de katsuyaku shite iru danshi desu"
+    }
+  ],
+  [
+    {
+      "j": "彼は部屋に入ると、すぐに靴を脱いだ。",
+      "e": "He took off his shoes as soon as he entered the room.",
+      "r": "kare wa heya ni hairu to, sugu ni kutsu wo nuida"
+    },
+    {
+      "j": "この建物の入口は大きなガラスドアです。",
+      "e": "The entrance of this building is a large glass door.",
+      "r": "kono tatemono no iriguchi wa ooki na garasu doa desu"
+    },
+    {
+      "j": "彼は来年大学に入学する予定です。",
+      "e": "He is planning to enter university next year.",
+      "r": "kare wa rainen daigaku ni nyuugaku suru yotei desu"
+    },
+    {
+      "j": "パスポートを見せて、入国審査を受ける必要があります。",
+      "e": "You need to show your passport and go through immigration when entering the country.",
+      "r": "pasupooto wo misete, nyuukoku shinsa wo ukeru hitsuyou ga arimasu"
+    },
+    {
+      "j": "無断で他人の家に侵入するのは法律違反です。",
+      "e": "Entering someone else's house without permission is a violation of the law.",
+      "r": "mudan de tanin no ie ni shinnyuu suru no wa houritsu ihang desu"
+    },
+    {
+      "j": "この店は新鮮な魚介類を輸入しています。",
+      "e": "This store imports fresh seafood.",
+      "r": "kono mise wa shinsen na gyokairui wo yunyuu shite imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は漢字をよく書けます。",
+      "e": "He is good at writing kanji.",
+      "r": "kare wa kanji wo yoku kakemasu."
+    },
+    {
+      "j": "この文章の字数は２００字です。",
+      "e": "This essay has 200 characters.",
+      "r": "kono bunshou no jisuu wa nihyaku ji desu"
+    },
+    {
+      "j": "映画を見るときは字幕を使います。",
+      "e": "I use subtitles when watching movies.",
+      "r": "eiga wo miru toki wa jimaku wo shiyou masu"
+    },
+    {
+      "j": "日本語の文字はきれいですね。",
+      "e": "Japanese characters are beautiful.",
+      "r": "nihongo no moji wa kirei desu ne"
+    },
+    {
+      "j": "電話番号は数字でお願いします。",
+      "e": "Please give me your phone number in digits.",
+      "r": "denwa bangou wa suuji de onegai shimasu"
+    },
+    {
+      "j": "タイトルはすべて大文字で書いてください。",
+      "e": "Please write the title in all capital letters.",
+      "r": "taitoru wa subete daimono de kaite kudasai"
+    }
+  ],
+  [
+    {
+      "j": "彼はとても親切な人です。",
+      "e": "He is a very kind person.",
+      "r": "kare wa totemo shinsetsu na hito desu"
+    },
+    {
+      "j": "人生は楽しい冒険です。",
+      "e": "Life is a fun adventure.",
+      "r": "jinsei wa tanoshii bouken desu"
+    },
+    {
+      "j": "人間は自然と調和して生きるべきです。",
+      "e": "Human beings should live in harmony with nature.",
+      "r": "ningen wa shizen to chouwa shite ikiru beki desu"
+    },
+    {
+      "j": "彼女の人柄に惹かれる人が多い。",
+      "e": "Many people are attracted to her personality.",
+      "r": "kanojo no hitogara ni hikareru hito ga ooi"
+    },
+    {
+      "j": "彼は親友の友人です。",
+      "e": "He is a friend of my close friend.",
+      "r": "kare wa shinyuu no yuujin desu"
+    },
+    {
+      "j": "私は個人での努力が大切だと思います。",
+      "e": "I believe that individual effort is important.",
+      "r": "watashi wa kojin de no doryoku ga taisetsu da to omoimasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は毎朝早く出勤しています。",
+      "e": "He leaves for work early every morning.",
+      "r": "kare wa maiasa hayaku shukkin shite imasu"
+    },
+    {
+      "j": "窓から猫が出て行きました。",
+      "e": "A cat went out through the window.",
+      "r": "mado kara neko ga dete ikimashita"
+    },
+    {
+      "j": "地下鉄の駅には多くの出口があります。",
+      "e": "There are many exits in the subway station.",
+      "r": "chikatetsu no eki ni wa ooku no deguchi ga arimasu"
+    },
+    {
+      "j": "ごみを出しに行ってきます。",
+      "e": "I'm going out to take out the trash.",
+      "r": "gomi wo dashi ni itte kimasu"
+    },
+    {
+      "j": "出納係は会計の管理をしています。",
+      "e": "The account manager is in charge of managing the accounts.",
+      "r": "denougakari wa kaikei no kanri wo shite imasu"
+    },
+    {
+      "j": "明日、出国する予定です。",
+      "e": "I'm planning to leave the country tomorrow.",
+      "r": "ashita, shukoku suru yoteidesu"
+    },
+    {
+      "j": "突然、美しい虹が出現した。",
+      "e": "Suddenly, a beautiful rainbow appeared.",
+      "r": "totsuzen, utsukushii niji ga shutsugen shita"
+    },
+    {
+      "j": "外出する前に天気予報をチェックしました。",
+      "e": "I checked the weather forecast before going out.",
+      "r": "gaishutsu suru mae ni tenki yohou wo chekku shimashita"
+    },
+    {
+      "j": "データを入力して、結果を算出しました。",
+      "e": "I input the data and calculated the results.",
+      "r": "deeta wo nyuuryoku shite, kekka wo sanshutsu shima"
+    }
+  ],
+  [
+    {
+      "j": "彼は右利きです。",
+      "e": "He is right-handed.",
+      "r": "kare wa migi kiki desu"
+    },
+    {
+      "j": "次の角を右折してください。",
+      "e": "Please turn right at the next corner.",
+      "r": "tsugi no kado wo migi setsu shite kudasai"
+    },
+    {
+      "j": "川の右岸に美しい花が咲いている。",
+      "e": "Beautiful flowers are blooming on the right bank of the river.",
+      "r": "kawa no migi kishi ni utsukushii hana ga saite iru"
+    }
+  ],
+  [
+    {
+      "j": "彼は左利きです。",
+      "e": "He is left-handed.",
+      "r": "kare wa hidarikiki desu"
+    },
+    {
+      "j": "次の角を左折してください。",
+      "e": "Please make a left turn at the next corner.",
+      "r": "tsugi no kado wo hidarishite kudasai"
+    },
+    {
+      "j": "川の左岸に美しい桜が咲いている。",
+      "e": "Beautiful cherry blossoms are blooming on the left bank of the river.",
+      "r": "kawa no hidarigishi ni utsukushii sakura ga saite iru"
+    },
+    {
+      "j": "左手には赤いバッグを持っています。",
+      "e": "She is holding a red bag in her left hand.",
+      "r": "hidarite ni wa akai baggu wo motte imasu"
+    },
+    {
+      "j": "机の左側にペンがあります。",
+      "e": "There is a pen on the left side of the desk.",
+      "r": "tsukue no hidarigawa ni pen ga arimasu"
+    },
+    {
+      "j": "彼女は左利きのテニスプレイヤーです。",
+      "e": "She is a left-handed tennis player.",
+      "r": "kanojo wa hidarikiki no tenisu pureiyaa desu"
+    }
+  ],
+  [
+    {
+      "j": "彼は山の上に立っていた。",
+      "e": "He was standing on top of the mountain.",
+      "r": "kare wa yama no ue ni tatte ita"
+    },
+    {
+      "j": "プレゼントを上げます。",
+      "e": "I will give you a present.",
+      "r": "purezento wo agemasu"
+    },
+    {
+      "j": "太陽が上がるのを見るのが好きです。",
+      "e": "I like watching the sun rise.",
+      "r": "taiyou ga agaru no wo miru no ga suki desu"
+    },
+    {
+      "j": "階段を上ると公園に着きます。",
+      "e": "If you go up the stairs, you'll arrive at the park.",
+      "r": "kaidan wo noboru to kouen ni tsukimasu"
+    },
+    {
+      "j": "株価の上昇が続いている。",
+      "e": "The stock prices continue to rise.",
+      "r": "kabuka no joushou ga tsuzuite iru"
+    },
+    {
+      "j": "上着を着て外出しました。",
+      "e": "I went out wearing a jacket.",
+      "r": "uwagi wo kite gaishutsu shimashita"
+    },
+    {
+      "j": "上野は東京の有名な観光地です。",
+      "e": "Ueno is a famous sightseeing spot in Tokyo.",
+      "r": "ueno wa toukyou no yuumei na kankouchi desu"
+    },
+    {
+      "j": "上半期の売り上げが好調です。",
+      "e": "The sales in the first half of the year are doing well.",
+      "r": "jouhanki no uriage ga kouchou desu"
+    },
+    {
+      "j": "ホテルの屋上から夜景を楽しんだ。",
+      "e": "I enjoyed the night view from the rooftop of the hotel.",
+      "r": "hoteru no okujou kara yakei wo tanoshinda"
+    },
+    {
+      "j": "彼女は僕より年上だ。",
+      "e": "She is older than me.",
+      "r": "kanojo wa boku yori toshiue da"
+    },
+    {
+      "j": "日々の努力で向上していきたいと思っています。",
+      "e": "I want to keep improving through daily efforts.",
+      "r": "hibi no doryoku de koujou shite ikitai to omotte imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼女は白いシャツに青いスカートを着ていて、下には黒い靴を履いていた。",
+      "e": "She was wearing a white shirt with a blue skirt, and black shoes below.",
+      "r": "kanojo wa shiroi shatsu ni aoi sukāto wo kite ite, shita ni wa kuroi kutsu wo haite ita"
+    },
+    {
+      "j": "誕生日プレゼントを下げると、彼女はとても喜んでくれました。",
+      "e": "When I handed her the birthday present, she was very happy.",
+      "r": "tanjoubi purezento wo sageru to, kanojo wa totemo yorokonde kuremashita"
+    },
+    {
+      "j": "空の青い鳥が下がってきた。",
+      "e": "A blue bird from the sky came down.",
+      "r": "sora no aoi tori ga sagatte kita"
+    },
+    {
+      "j": "山を下ると、美しい湖が広がっていた。",
+      "e": "When I descended the mountain, a beautiful lake spread out before me.",
+      "r": "yama wo kudaru to, utsukushii mizu ga hirogatte ita"
+    },
+    {
+      "j": "次の駅で下車します。",
+      "e": "I will get off at the next station.",
+      "r": "tsugi no eki de geshasuru shimasu"
+    },
+    {
+      "j": "会社は今、下半期の準備に取り組んでいます。",
+      "e": "The company is currently working on preparations for the second half of the year.",
+      "r": "kaisha wa ima, kouhanki no junbi ni torikunde imasu"
+    },
+    {
+      "j": "急な下り坂で、車を注意深く運転する必要があります。",
+      "e": "You need to drive carefully on steep downhill slopes.",
+      "r": "kuyana korogesaka de, kuruma wo chuui bukaku unten suru hitsuyou ga arimasu"
+    },
+    {
+      "j": "明日は寒い日が続くので、暖かい下着を着ていこう。",
+      "e": "Since it will be cold tomorrow, let's wear warm underwear.",
+      "r": "ashita wa samui hi ga tsuzuku node, atatakai shitagi wo kite ikou"
+    },
+    {
+      "j": "この建物は上下2階建てです。",
+      "e": "This building is a two-story building.",
+      "r": "kono tatemono wa jouge nikai datte desu"
+    },
+    {
+      "j": "地下鉄に乗って市内を移動するのが便利です。",
+      "e": "It's convenient to travel around the city by subway.",
+      "r": "chikatetsu ni notte shinai wo idou suru no ga benri desu"
+    }
+  ],
+  [
+    {
+      "j": "彼はとても大きい犬を飼っています。",
+      "e": "He has a very big dog.",
+      "r": "kare wa totemo ookii inu wo kaotte imasu"
+    },
+    {
+      "j": "このテレビは大型で迫力がある。",
+      "e": "This TV is large and impressive.",
+      "r": "kono terebi wa ookyoudo hakuryoku ga aru"
+    },
+    {
+      "j": "私は大学で日本語を勉強しています。",
+      "e": "I am studying Japanese at university.",
+      "r": "watashi wa daigaku de nihongo wo benkyou shite imasu"
+    },
+    {
+      "j": "家族は私にとってとても大切です。",
+      "e": "My family is very important to me.",
+      "r": "kazoku wa watashi ni totte totemo taisetsu desu"
+    },
+    {
+      "j": "この仕事はとても大事なプロジェクトです。",
+      "e": "This project is very important for my company.",
+      "r": "kono shigoto wa totemo daijina purojekuto desu"
+    },
+    {
+      "j": "写真を拡大すると、細部までよく見える。",
+      "e": "When you enlarge the picture, you can see the details clearly.",
+      "r": "shashin wo kakudai suru to, saibu made yoku mieru"
+    }
+  ],
+  [
+    {
+      "j": "彼は部屋の中で本を読んでいた。",
+      "e": "He was reading a book in the room.",
+      "r": "kare wa heya no naka de hon wo yonde ita."
+    },
+    {
+      "j": "その町は中央に美しい公園がある。",
+      "e": "There is a beautiful park in the center of the town.",
+      "r": "sono machi wa chūō ni utsukushii kōen ga aru"
+    },
+    {
+      "j": "雨がひどくなったため、試合が中止になりました。",
+      "e": "The game was cancelled due to heavy rain.",
+      "r": "ame ga hodokunatta tame, shiai ga chūshi ni narimashita."
+    },
+    {
+      "j": "日本では中学校は３年生までです。",
+      "e": "In Japan, junior high school goes up to 9th grade.",
+      "r": "nihon de wa chūgakkō wa 3-nensei made desu"
+    },
+    {
+      "j": "彼女の背中には美しい羽が生えていた。",
+      "e": "Beautiful wings were growing on her back.",
+      "r": "kanojo no senaka ni wa utsukushii hane ga haete ita"
+    },
+    {
+      "j": "彼は世界中を旅しています。",
+      "e": "He is traveling all around the world.",
+      "r": "kare wa sekaijū wo tabi shite imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼はとても小さい犬を飼っています。",
+      "e": "He has a very small dog.",
+      "r": "kare wa totemo chiisai inu wo kaotte imasu"
+    },
+    {
+      "j": "今日は小雨が降っています。",
+      "e": "It's drizzling today.",
+      "r": "kyou wa kosame ga futte imasu"
+    },
+    {
+      "j": "山に小川が流れている。",
+      "e": "A small stream is flowing in the mountains.",
+      "r": "yama ni kogawa ga nagarete iru"
+    },
+    {
+      "j": "庭に小鳥が集まっています。",
+      "e": "There are small birds gathering in the garden.",
+      "r": "niwa ni kotori ga atsumatte imasu"
+    },
+    {
+      "j": "この小説はとても面白いです。",
+      "e": "This novel is very interesting.",
+      "r": "kono shousetsu wa totemo omoshiroi desu"
+    },
+    {
+      "j": "日本にはたくさんの小学校があります。",
+      "e": "There are many elementary schools in Japan.",
+      "r": "nihon ni wa takusan no shougakkou ga arimasu"
+    }
+  ],
+  [
+    {
+      "j": "彼女は青いドレスを着ていた。",
+      "e": "She was wearing a blue dress.",
+      "r": "kanojo wa aoi doresu wo kite ita"
+    },
+    {
+      "j": "彼はまだ青年だが、将来有望な才能を持っている。",
+      "e": "He is still a young man, but he has promising talent for the future.",
+      "r": "kare wa mada seinen da ga, shourai yuubou na sainou wo motte iru"
+    },
+    {
+      "j": "今日は空に青空が広がっている。",
+      "e": "Today, the blue sky is spreading out above us.",
+      "r": "kyou wa sora ni aozora ga hirogatte iru"
+    },
+    {
+      "j": "青春時代にはたくさんの夢と冒険があった。",
+      "e": "I had many dreams and adventures in my youth.",
+      "r": "seishun jidai ni wa takusan no yume to bouken ga atta"
+    },
+    {
+      "j": "彼女は群青色のドレスを着ていた。",
+      "e": "She was wearing a deep blue dress.",
+      "r": "kanojo wa gunjouiro no doresu wo kite ita"
+    },
+    {
+      "j": "青信号が出たので、横断歩道を渡った。",
+      "e": "The traffic light turned green, so I crossed the street.",
+      "r": "ao shingou ga deta node, oodan hodou wo watatta"
+    }
+  ],
+  [
+    {
+      "j": "りんごは赤いです。",
+      "e": "Apples are red.",
+      "r": "ringo wa akai desu"
+    },
+    {
+      "j": "恥ずかしくて顔が赤らんでしまった。",
+      "e": "I got so embarrassed that my face turned red.",
+      "r": "hazukashikute kao ga akarande shimatta"
+    },
+    {
+      "j": "今年も赤潮が発生しています。",
+      "e": "Red tide is occurring again this year.",
+      "r": "kotoshi mo akashio ga hassei shite imasu"
+    },
+    {
+      "j": "会社は赤字になってしまった。",
+      "e": "The company ended up in the red.",
+      "r": "kaisha wa akaji ni natte shimatta"
+    },
+    {
+      "j": "赤道の近くに行きたいです。",
+      "e": "I want to go near the equator.",
+      "r": "sekidou no chikaku ni ikitai desu"
+    },
+    {
+      "j": "彼女は赤面していた。",
+      "e": "She was blushing.",
+      "r": "kanojo wa sekimen shite ita"
+    },
+    {
+      "j": "このカメラは赤外線を検知できます。",
+      "e": "This camera can detect infrared rays.",
+      "r": "kono kamera wa akagaisen wo kenchi dekimasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は白いシャツを着ている。",
+      "e": "He is wearing a white shirt.",
+      "r": "kare wa shiroi shatsu wo kite iru"
+    },
+    {
+      "j": "北海道に行くと白熊が見られる。",
+      "e": "You can see polar bears in Hokkaido.",
+      "r": "hokkaidou ni iku to shirokuma ga mirareru"
+    },
+    {
+      "j": "彼の話は常に白黒はっきりしている。",
+      "e": "His words are always black and white.",
+      "r": "kare no hanashi wa tsune ni shirokuro hakkiri shite iru"
+    },
+    {
+      "j": "祖母は白髪の優しい女性です。",
+      "e": "My grandmother is a kind woman with white hair.",
+      "r": "sobo wa shiragami no yasashii josei desu"
+    },
+    {
+      "j": "医者は白衣を着て患者を診察している。",
+      "e": "The doctor is wearing a white coat and examining the patient.",
+      "r": "isha wa hakui wo kite kanja wo shinsatsu shite iru"
+    },
+    {
+      "j": "昨日、彼女に気持ちを告白した。",
+      "e": "I confessed my feelings to her yesterday.",
+      "r": "kinou, kanojo ni kimochi wo kokuhaku shita"
+    }
+  ],
+  [
+    {
+      "j": "彼は手旗を立てた。",
+      "e": "He raised a signal flag.",
+      "r": "kare wa te hata wo tateta"
+    },
+    {
+      "j": "駅のホームで待っている人々が立っています。",
+      "e": "The people waiting on the train platform are standing.",
+      "r": "eki no hoomu de matte iru hitobito ga tatte imasu"
+    },
+    {
+      "j": "彼女はとても立派な人です。",
+      "e": "She is a very splendid person.",
+      "r": "kanojo wa totemo rippa na hito desu"
+    },
+    {
+      "j": "その美術館は立体的な建物です。",
+      "e": "The art museum is a three-dimensional building.",
+      "r": "sono bijutsukan wa rittaiteki na tatemono desu"
+    },
+    {
+      "j": "東京国立博物館はとても有名です。",
+      "e": "The Tokyo National Museum is very famous.",
+      "r": "toukyou kokuritsu hakubutsukan wa totemo yuumei desu"
+    },
+    {
+      "j": "この記念碑は100年前に建立されました。",
+      "e": "This monument was built a hundred years ago.",
+      "r": "kono kinenhi wa hyakunen mae ni kenritsu saremashita"
+    }
+  ],
+  [
+    {
+      "j": "彼は窓の外を見ていた。",
+      "e": "He was looking out the window.",
+      "r": "kare wa mado no soto wo mite ita"
+    },
+    {
+      "j": "遠くに富士山が見える。",
+      "e": "You can see Mount Fuji in the distance.",
+      "r": "tōku ni fuji-san ga mieru"
+    },
+    {
+      "j": "新しい服を見せてください。",
+      "e": "Please show me your new clothes.",
+      "r": "atarashī fuku wo misete kudasai"
+    },
+    {
+      "j": "京都では美しい紅葉を見ることができます。",
+      "e": "You can see beautiful autumn leaves in Kyoto.",
+      "r": "kyōdo de wa utsukushī momiji wo miru koto ga dekimasu"
+    },
+    {
+      "j": "博物館で見学をしてきめ細かい作品を見た。",
+      "e": "I visited a museum and saw detailed works of art.",
+      "r": "hakubutsukan de kengaku wo shite kimehosoi sakuhin wo mita"
+    },
+    {
+      "j": "この意見には賛成です。",
+      "e": "I agree with this opinion.",
+      "r": "kono iken ni wa sansei desu"
+    },
+    {
+      "j": "春になると桜を見に花見に行きます。",
+      "e": "In spring, we go to see cherry blossoms for flower viewing.",
+      "r": "haru ni naru to sakura wo mi ni hanami ni ikimasu"
+    },
+    {
+      "j": "新しい惑星の発見が発表された。",
+      "e": "The discovery of a new planet was announced.",
+      "r": "atarashī wakusei no hakken ga happyō sa reta"
+    }
+  ],
+  [
+    {
+      "j": "昨日は忙しかったので、今日はゆっくり休みたいです。",
+      "e": "I was busy yesterday, so I want to take a rest today.",
+      "r": "kinou wa isogashikatta node, kyou wa yukkuri yasumitai desu"
+    },
+    {
+      "j": "子供の頃はよく公園で休まることをしていました。",
+      "e": "When I was a child, I used to often rest in the park.",
+      "r": "kodomo no koro wa yoku kouen de yasumaru koto wo shite imashita"
+    },
+    {
+      "j": "明日は休める予定なので、楽しみです。",
+      "e": "I have plans to be able to rest tomorrow, so I'm looking forward to it.",
+      "r": "ashita wa yasumeru yote nanode, tanoshimidesu"
+    },
+    {
+      "j": "来月の休暇はハワイに行く予定です。",
+      "e": "I'm planning to go to Hawaii for my vacation next month.",
+      "r": "raigetsu no kyuuka wa hawai ni iku yote desu"
+    },
+    {
+      "j": "来週は連休なので、旅行に行く予定です。",
+      "e": "I have a consecutive holiday next week, so I'm planning to go on a trip.",
+      "r": "raishuu wa renkyuu na node, ryokou ni iku yote desu"
+    },
+    {
+      "j": "夏休みには海外旅行に行きたいと思っています。",
+      "e": "I'm thinking of going on a trip abroad during summer vacation.",
+      "r": "natsuyasumi ni wa kaigai ryokou ni ikitai to omotte imasu"
+    },
+    {
+      "j": "毎週火曜日が当店の定休日です。",
+      "e": "Every Tuesday is our regular holiday for this shop.",
+      "r": "maishuu kayoubi ga tou ten no teikyuu bi desu"
+    }
+  ],
+  [
+    {
+      "j": "彼はいつも早起きをしています。",
+      "e": "He always wakes up early.",
+      "r": "kare wa itsumo hayaoki wo shite imasu"
+    },
+    {
+      "j": "もう少し早く来てもいいですか？",
+      "e": "Is it okay if I come a bit earlier?",
+      "r": "mou sukoshi hayaku kite mo ii desu ka"
+    },
+    {
+      "j": "納期が早まったので、急いで仕上げました。",
+      "e": "The deadline was moved up, so I rushed to finish it.",
+      "r": "nouki ga hayamatta node, isoide shiagemashita"
+    },
+    {
+      "j": "大事なプレゼンの準備を早めなければなりません。",
+      "e": "I need to start preparing for the important presentation earlier.",
+      "r": "daijina purezen no junbi wo hayamenakereba narimasen"
+    },
+    {
+      "j": "今朝は早朝ジョギングをして気持ちがいいです。",
+      "e": "I went for a jog early this morning and it feels great.",
+      "r": "kesa wa souchou jogingu wo shite kimochi ga ii desu"
+    },
+    {
+      "j": "早速レポートを提出します。",
+      "e": "I will submit the report promptly.",
+      "r": "sassoku repooto wo teishutsu shimasu"
+    },
+    {
+      "j": "彼女は早口で話すので、聞き取りやすいです。",
+      "e": "She speaks quickly, so it's easy to understand her.",
+      "r": "kanojo wa hayakuchi de hanasu node, kikitari yasui desu"
+    },
+    {
+      "j": "子供の頃から早期教育を受けていました。",
+      "e": "I received early education since I was a child.",
+      "r": "kodomo no koro kara kaki kyouiku wo ukete imashita"
+    }
+  ],
+  [
+    {
+      "j": "彼はいつも正しいことを言います。",
+      "e": "He always speaks the truth.",
+      "r": "kare wa itsumo tadashii koto wo iimasu"
+    },
+    {
+      "j": "間違いを正すのは大切です。",
+      "e": "It's important to correct mistakes.",
+      "r": "machigai wo tadasu no wa taisetsu desu"
+    },
+    {
+      "j": "彼の情報は正確です。",
+      "e": "His information is accurate.",
+      "r": "kare no jōhō wa seikaku desu"
+    },
+    {
+      "j": "日本では正月にはおせち料理を食べます。",
+      "e": "In Japan, we eat osechi ryori on New Year's Day.",
+      "r": "nihon de wa shougatsu ni wa ose chi ryōri wo tabemasu"
+    },
+    {
+      "j": "正解は3番です。",
+      "e": "The correct answer is number 3.",
+      "r": "seikai wa 3-ban desu"
+    },
+    {
+      "j": "文章には誤りがありますので、訂正します。",
+      "e": "There is a mistake in the text, so I will make a correction.",
+      "r": "bunshou ni wa ayamari ga arimasu node, teisei shimasu"
+    }
+  ],
+  [
+    {
+      "j": "日本には村という小さな集落がたくさんあります。",
+      "e": "In Japan, there are many small villages called 'mura'.",
+      "r": "nihon ni wa mura to iu chiisana shūraku ga takusan arimasu"
+    },
+    {
+      "j": "祖母の家は静かな村里にあります。",
+      "e": "My grandmother's house is located in a quiet village in the countryside.",
+      "r": "oba no ie wa shizukana murazato ni arimasu"
+    },
+    {
+      "j": "村人たちはとても親切です。",
+      "e": "The villagers are very kind.",
+      "r": "murabito tachi wa totemo shinsetsu desu"
+    },
+    {
+      "j": "農村での生活は豊かな自然に囲まれていて、のんびりしているようです。",
+      "e": "Life in the rural farming village is surrounded by rich nature and seems to be relaxing.",
+      "r": "nōson de no seikatsu wa yutakana shizen ni kakomarete ite, nonbiri shite iru yōdesu"
+    },
+    {
+      "j": "この漁村では毎朝新鮮な魚が水揚げされます。",
+      "e": "In this fishing village, fresh fish are landed every morning.",
+      "r": "kono gyoson de wa maiasa shinsen na sakana ga minato age sa remasu"
+    },
+    {
+      "j": "日本では市町村という行政単位があります。",
+      "e": "In Japan, there are municipalities called 'shi-cho-son'.",
+      "r": "nihon de wa shichōson to iu gyōsei tan'i ga arimasu"
+    }
+  ],
+  [
+    {
+      "j": "彼女は町のイベントに参加している。",
+      "e": "She is participating in the town's event.",
+      "r": "kanojo wa machi no ibento ni sanka shite iru"
+    },
+    {
+      "j": "町長は地元の人々に親しまれています。",
+      "e": "I visited a coastal town where a refreshing breeze was blowing.",
+      "r": "minato machi ni wo yobi, suzushii kaze ga fuite ita"
+    },
+    {
+      "j": "日本には金町という町があります。",
+      "e": "There is a town called Kanamachi in Japan.",
+      "r": "nihon ni wa kanamachi to iu machi ga arimasu"
+    }
+  ],
+  [
+    {
+      "j": "彼女は去年日本に来ました。",
+      "e": "She came to Japan last year.",
+      "r": "kanojo wa kyonen nihon ni kimashita"
+    },
+    {
+      "j": "彼は年をとっても元気です。",
+      "e": "He is old, but still energetic.",
+      "r": "kare wa toshi wo totte mo genki desu"
+    },
+    {
+      "j": "彼は年収100万円です。",
+      "e": "His annual income is 1 million yen.",
+      "r": "kare wa nenshuu 100 man en desu"
+    },
+    {
+      "j": "私は３年生です。",
+      "e": "I am a third year student.",
+      "r": "watashi wa san-nensei desu"
+    },
+    {
+      "j": "今年は暑い夏です。",
+      "e": "It's a hot summer this year.",
+      "r": "kotoshi wa atsui natsu desu"
+    },
+    {
+      "j": "彼は1年間世界を旅しています。",
+      "e": "He is traveling around the world for a year.",
+      "r": "kare wa ichinenkan sekai wo tabi shite imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼は短い文をたくさん書いた。",
+      "e": "He wrote many short sentences.",
+      "r": "kare wa mijikai bun wo takusan kaita"
+    },
+    {
+      "j": "日本の文化はとても興味深いです。",
+      "e": "Japanese culture is very fascinating.",
+      "r": "nihon no bunka wa totemo kyoumibukai desu"
+    },
+    {
+      "j": "新しい文房具を買いたいです。",
+      "e": "I want to buy new stationery.",
+      "r": "atarashii bunbougu wo kaitai desu"
+    },
+    {
+      "j": "注文をお願いします。",
+      "e": "I would like to place an order.",
+      "r": "chuumon wo onegaishimasu"
+    },
+    {
+      "j": "彼からの恋文を読んだとき、とても嬉しかったです。",
+      "e": "I was very happy when I read the love letter from him.",
+      "r": "kare kara no koibumi wo yonda toki, totemo ureshikatta desu"
+    },
+    {
+      "j": "彼の論文は非常に専門的で素晴らしいものだった。",
+      "e": "His thesis was very professional and excellent.",
+      "r": "kare no ronbun wa hijou ni senmon-teki de subarashii mono datta"
+    }
+  ],
+  [
+    {
+      "j": "彼女は有名な歌手です。",
+      "e": "She is a famous singer.",
+      "r": "kanojo wa yuumei na kashu desu"
+    },
+    {
+      "j": "その店の名前は日本食レストランです。",
+      "e": "The name of that store is Japanese Food Restaurant.",
+      "r": "sono mise no namae wa nihon shoku resutoran desu"
+    },
+    {
+      "j": "彼は名言を残しました。",
+      "e": "He left behind a famous saying.",
+      "r": "kare wa meigen wo nokoshimashita"
+    },
+    {
+      "j": "田中さんという名前を覚えていますか？",
+      "e": "Do you remember the name Tanaka-san?",
+      "r": "tanaka-san to iu namae wo oboete imasuka?"
+    },
+    {
+      "j": "この書類には氏名と住所を記入してください。",
+      "e": "Please write your full name and address on this document.",
+      "r": "kono shorui ni wa shimei to juusho wo kinyuu shite kudasai"
+    }
+  ],
+  [
+    {
+      "j": "彼は1万円札を出して支払いをした。",
+      "e": "He paid using a 10,000 yen bill.",
+      "r": "kare wa ichiman en satsu wo dashite shiharai wo shita"
+    },
+    {
+      "j": "彼女との関係はとても円満です。",
+      "e": "I have a very harmonious relationship with her.",
+      "r": "kanojo to no kankei wa totemo enman desu"
+    },
+    {
+      "j": "公園には美しい円形の池があります。",
+      "e": "There is a beautiful circular pond in the park.",
+      "r": "kouen ni wa utsukushii enkei no ike ga arimasu"
+    },
+    {
+      "j": "お寿司を食べるときには、円いお皿が使われます。",
+      "e": "When eating sushi, round plates are used.",
+      "r": "osushi wo taberu toki ni wa, marui osara ga tsukawaremasu"
+    },
+    {
+      "j": "この本はたったの十円で手に入れた。",
+      "e": "I bought this book for only ten yen.",
+      "r": "kono hon wa tatta no juu en de te ni ireta"
+    }
+  ],
+  [
+    {
+      "j": "彼は美しい王冠をかぶっていた",
+      "e": "He was wearing a beautiful crown.",
+      "r": "kare wa utsukushii ōkan wo kabutte ita"
+    },
+    {
+      "j": "その町には歴史ある王宮があります",
+      "e": "There is a historic royal palace in that town.",
+      "r": "sono machi ni wa rekishi aru ōkyū ga arimasu"
+    },
+    {
+      "j": "その国は現在も国王制度を続けている",
+      "e": "The country still maintains a monarchy system.",
+      "r": "sono kuni wa genzai mo kokuō seido wo tsuzukete iru"
+    },
+    {
+      "j": "彼女は優雅な女王のようだ",
+      "e": "She looks like an elegant queen.",
+      "r": "kanojo wa yūga na joō no yō da"
+    }
+  ],
+  [
+    {
+      "j": "彼女は美しい玉を持っていた。",
+      "e": "She had a beautiful jewel.",
+      "r": "kanojo wa utsukushii tama wo motte ita"
+    },
+    {
+      "j": "サラダには玉葱をたっぷりと入れます。",
+      "e": "I put plenty of onions in the salad.",
+      "r": "sarada ni wa tamanegi wo tappuri to iremasu"
+    },
+    {
+      "j": "この本には珠玉の詩がたくさん載っています。",
+      "e": "This book contains many excellent poems.",
+      "r": "kono hon ni wa shugyoku no shi ga takusan notte imasu"
+    },
+    {
+      "j": "今日は目玉商品がたくさんセールしています。",
+      "e": "There are many special sale items today.",
+      "r": "kyou wa medama shouhin ga takusan seeru shite imasu"
+    },
+    {
+      "j": "自動販売機で百円玉を使って飲み物を買いました。",
+      "e": "I used a 100-yen coin to buy a drink from the vending machine.",
+      "r": "jidou hanbaiki de hyakuendama wo tsukatte nomimono wo kaimashita"
+    }
+  ],
+  [
+    {
+      "j": "彼女は美しい緑色の着物を着ていて、細い糸で髪を結んでいた。",
+      "e": "She was wearing a beautiful green kimono and had her hair tied up with a thin thread.",
+      "r": "kanojo wa utsukushii midoriiro no kigoto wo kite ite, hosoi ito de kami wo musunde ita"
+    },
+    {
+      "j": "問題の解決策は見つかりましたが、その糸口を探しているところです。",
+      "e": "We have found a solution to the problem, but we are still looking for the starting point.",
+      "r": "mondai no kaiketsusaku wa mitsukarimashita ga, sono itoguchi wo sagashite iru tokorodesu"
+    },
+    {
+      "j": "寒い日には毛糸のセーターが暖かくて助かります。",
+      "e": "On cold days, a wool sweater is warm and very helpful.",
+      "r": "samui hi ni wa keito no seetaa ga atatakakute tasukarimasu"
+    },
+    {
+      "j": "この町は養蚕で有名で、高品質な生糸が生産されています。",
+      "e": "This town is famous for sericulture, and high-quality raw silk is produced here.",
+      "r": "kono machi wa yousan de yuumei de, kouhinshitsu na namie ga seisan sarete imasu"
+    },
+    {
+      "j": "この工場では高度な技術を使って製糸が行われています。",
+      "e": "This factory uses advanced technology to produce silk threads.",
+      "r": "kono koujou de wa koudo na gijutsu wo tsukatte seisugi ga okonawarete imasu"
+    },
+    {
+      "j": "手術後、数日後に抜糸をしてもらう予定です。",
+      "e": "I am scheduled to have my stitches removed a few days after the surgery.",
+      "r": "shujutsu go, suujitsu go ni batsushi wo shite morau yoteidesu"
+    }
+  ],
+  [
+    {
+      "j": "彼は新しい車を買った",
+      "e": "He bought a new car.",
+      "r": "kare wa atarashii kuruma wo katta"
+    },
+    {
+      "j": "駅に急行列車が到着しました",
+      "e": "The express train has arrived at the station.",
+      "r": "eki ni kyuukou ressha ga touchaku shimashita"
+    },
+    {
+      "j": "子供たちは肩車をして遊んでいた",
+      "e": "The children were playing piggyback.",
+      "r": "kodomotachi wa kataguruma wo shite asonde ita"
+    },
+    {
+      "j": "スーツケースを台車に載せて運びます",
+      "e": "I will put the suitcase on the hand truck and carry it.",
+      "r": "suutsukeesu wo daisha ni nosete hakobimasu"
+    },
+    {
+      "j": "駐車場に車を止めてください",
+      "e": "Please park your car in the parking lot.",
+      "r": "chuurinsha jou ni kuruma wo tomete kudasai"
+    },
+    {
+      "j": "日本では自動車がよく使われています",
+      "e": "Cars are commonly used in Japan.",
+      "r": "nihon de wa jidousha ga yoku tsukawarete imasu"
+    }
+  ],
+  [
+    {
+      "j": "彼はとても力強いパンチを放った。",
+      "e": "He threw a very powerful punch.",
+      "r": "kare wa totemo chikara-zuyoi panchi wo hanatta"
+    },
+    {
+      "j": "彼は会社でもトップの力持ちだ。",
+      "e": "He is the strongest man in the company.",
+      "r": "kare wa kaisha de mo toppu no chikara mochi da"
+    },
+    {
+      "j": "努力すれば夢は叶うと信じています。",
+      "e": "I believe that dreams come true with effort.",
+      "r": "doryoku sureba yume wa kanau to shinjite imasu"
+    },
+    {
+      "j": "彼女は優れた能力を持っています。",
+      "e": "She has excellent abilities.",
+      "r": "kanojo wa sugureta nōryoku wo motte imasu"
+    },
+    {
+      "j": "マラソンを走るためには体力が必要だ。",
+      "e": "You need physical strength to run a marathon.",
+      "r": "marason wo hashiru tame ni wa tairyoku ga hitsuyō da"
+    },
+    {
+      "j": "人力車に乗って観光を楽しみました。",
+      "e": "I enjoyed sightseeing by riding in a rickshaw.",
+      "r": "jinrikisha ni notte kankou wo tanoshimimashita"
+    }
+  ]
 ]
