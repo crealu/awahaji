@@ -1,0 +1,329 @@
+:root {
+  --cb-1: cubic-bezier(.56,-0.16,.56,1.18);
+}
+
+.bubble-title {
+  position: absolute;
+  display: block;
+  left: 0px;
+  right: 0px;
+  top: 20vh;
+  text-shadow: 0px 0px 10px white;
+  font-size: 50px;
+  color: black;
+  text-align: center;
+/*  animation: 10s rotainbow 0s forwards; */
+  z-index: 100;
+  transition: 0.3s ease;
+  opacity: 1;
+}
+
+.dash {
+  position: relative;
+  display: none;
+  margin: 0 auto;
+  top: 50px;
+  width: 400px;
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+.upper-dash {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.upper-dash p {
+  text-align: center;
+}
+
+.upper-dash p span {
+  font-size: 30px;
+}
+
+.streak-bar {
+  transition: 0.3s ease;
+  width: 0px;
+  height: 5px;
+  background: green;
+}
+
+.fx-audio {
+  display: none;
+}
+
+.start-btn {
+  top: calc(50vh - 55px);
+}
+
+.game-btn {
+  position: relative;
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 2px solid rgba(255, 255, 255, 0);
+  box-shadow: rgb(144, 144, 144) 0px 10px 12px 0px inset;
+  background: black;
+  color: white;
+  font-family: var(--main-font);
+  font-size: 24px;
+  font-weight: 100;
+  transition: 0.25s ease;
+  cursor: pointer;
+}
+
+.game-btn:hover {
+  border: 2px solid rgba(255, 255, 255, 1);
+}
+
+.the-modal {
+  position: absolute;
+  display: none;
+  margin: 0 auto;
+  top: 25vh;
+  left: 0%;
+  right: 0%;
+  width: 75vw;
+  padding: 10px;
+  color: white;
+  opacity: 0;
+  transition: 0.5s ease;
+  background: black;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal-inner {
+  position: relative;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  width: 80%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.modal-inner p {
+  font-size: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.modal-inner-sent {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(1, 100%);
+  width: 100%;
+  height: 800px;
+  overflow: hidden;
+}
+
+.modal-inner-sent p {
+  font-size: 30px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.modal-reading {
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: 0.3s ease-in;
+  height: 47px;
+}
+
+.modal-kanji {
+  border: 1px solid rgba(255, 255, 255, 0);
+  transition: 0.3s ease-in;
+  opacity: 0;
+}
+
+.active-reading {
+/*  border: 1px solid rgba(255, 255, 255, 1);*/
+  text-shadow: #fff 0px 0px 0px;
+  animation: 1.5s ease-in-out 0s glow infinite;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: #fff 0px 0px 0px;
+  }
+
+  40% {
+    text-shadow: #fff 0px 0px 10px;
+  }
+
+  100% {
+    text-shadow: #fff 0px 0px 0px;
+  }
+}
+
+.modal-romaji {
+  transition: 0.25s ease-in-out;
+  opacity: 0;
+}
+
+.modal-reading:hover + .modal-kanji {
+  opacity: 1;
+  cursor: default;
+}
+
+.practice-input {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+  left: 0px;
+  right: 0px;
+  bottom: 10px;
+  padding-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: none;
+  font-size: 20px;
+  color: white;
+  opacity: 0;
+  transition: 0.3s ease-in;
+  z-index: 100;
+}
+
+.input-wrapper {
+  height: 100px;
+}
+
+input:focus {
+  outline: none;
+}
+
+.buttons-wrapper {
+  display: flex;
+  width: 100%;
+}
+
+
+.regenerate-btn {
+  top: 20px;
+  display: none;
+}
+
+.begin-btn { 
+  display: none;
+}
+
+#the-canvas {
+  position: absolute;
+  display: none;
+  top: 0px;
+  width: 1200px;
+  height: 600px;
+}
+
+.the-input {
+  position: absolute;
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+  z-index: 100;
+  left: 0px;
+  right: 0px;
+  bottom: 10px;
+  padding-bottom: 8px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-bottom: 1px solid white;
+  background: none;
+  font-size: 20px;
+  color: white;
+  opacity: 0;
+  transition: 0.3s ease-in;
+}
+
+.star {
+  display: none;
+}
+
+.the-sling {
+  border: 1px solid white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: absolute;
+  bottom: 150px;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: none;
+}
+
+.the-bubble {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: white;
+  text-align: center;
+  z-index: 100;
+}
+
+.out-of-sling {
+  top: 80vh;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.in-sling {
+  position: relative;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+.flash {
+  background-image: linear-gradient(to right, #000 0%, #000 25%, #000 50%, #000 75%, #000 100%);
+  animation: 2s var(--cb-1) 0s rotainbow 1;
+}
+
+@keyframes rotainbow {
+  0% {
+    background-image: linear-gradient(to right, #000 0%, #000 25%, #000 50%, #000 75%, #000 100%);
+    filter: hue-rotate(0deg);
+    transform: scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    background-image: linear-gradient(to right, #f00 0%, #ff0 25%, #0ff 50%, #f0f 75%, #fff 100%);
+  }
+
+  100% {
+    opacity: 0;
+    background-image: linear-gradient(to right, #000 0%, #000 25%, #000 50%, #000 75%, #000 100%);
+    filter: hue-rotate(360deg);
+    transform: scale(1.3);
+  }
+}
+
+@media (max-width: 800px) and (min-width: 200px) {
+  .bubble-title {
+    top: 5vh;
+  }
+
+  .modal-inner {
+    width: 100%;
+  }
+
+  .modal-inner p {
+
+  }
+
+  .start-btn {
+    top: 40vh;
+  }
+}
