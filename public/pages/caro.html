@@ -9,34 +9,27 @@
 </head>
 
 <body>
-	<h1 class="bubble-title">泡恥</h1>
+	<!-- <h1 class="bubble-title">泡恥</h1> -->
 
 	<button class="start-btn game-btn">Start</button>
 	
-	<div class="dash">
-		<div class="upper-dash">
-			<p class="score-text">Score<br> <span class="score">0</span></p>
-			<p class="kanji-text">Kanji<br> <span class="kanji">0</span></p>
-		</div>
-		<div class="streak-bar"></div>
-		<span class="streak"></span>
-	</div>
-
 	<div class="the-modal">
-		<div class="modal-inner"></div>
-		<div class="buttons-wrapper">
-			<button class="begin-btn game-btn">Begin</button>
-			<button class="regenerate-btn game-btn">Regenerate</button>
-			<button class="practice-btn game-btn">Practice</button>
+		<div class="progress">
+			<div class="bar active-bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
+			<div class="bar"></div>
 		</div>
-	</div>
 
-	<div class="caro-modal">
-		<div class="slide">
-			<div class="slide-sentence"></div>
-			<div class="slide-romaji"></div>
-			<div class="slide-english"></div>
+		<div class="modal-inner">
+			<div class="slide">
+				<div class="slide-answer"></div>
+				<div class="slide-question"></div>
+			</div>
 		</div>
+		<button class="practice-btn game-btn">Practice</button>
 	</div>
 	
 	<input class="practice-input">

@@ -2,6 +2,108 @@
   --cb-1: cubic-bezier(.56,-0.16,.56,1.18);
 }
 
+.progress {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: space-between;
+  width: 100%;
+}
+
+.bar {
+  display: flex;
+  margin: 0px 4px;
+  width: 50px;
+  height: 10px;
+  border: 1px solid white;
+  background: none;
+}
+
+.active-bar {
+  background: linear-gradient(-90deg, yellow, green);
+}
+
+.completed-bar {
+  background: green;
+}
+
+.the-modal {
+  position: absolute;
+  display: none;
+  margin: 0 auto;
+  top: 25vh;
+  left: 0%;
+  right: 0%;
+  width: 75vw;
+  padding: 10px;
+  color: white;
+  opacity: 0;
+  transition: 0.5s ease;
+  background: black;
+  text-align: center;
+  overflow: hidden;
+}
+
+.modal-inner {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+/*  grid-template-columns: repeat(3, 33%);*/
+  width: 80%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.slide {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.active-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.slide-answer {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.slide-question {
+  opacity: 1;
+}
+
+@keyframes nsar {
+  0% {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+/* psah = previous slide animation hide */
+@keyframes psah {
+  0% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
 .bubble-title {
   position: absolute;
   display: block;
@@ -78,32 +180,6 @@
   border: 2px solid rgba(255, 255, 255, 1);
 }
 
-.the-modal {
-  position: absolute;
-  display: none;
-  margin: 0 auto;
-  top: 25vh;
-  left: 0%;
-  right: 0%;
-  width: 75vw;
-  padding: 10px;
-  color: white;
-  opacity: 0;
-  transition: 0.5s ease;
-  background: black;
-  text-align: center;
-  overflow: hidden;
-}
-
-.modal-inner {
-  position: relative;
-  margin: 0 auto;
-  display: grid;
-  grid-template-columns: repeat(3, 33%);
-  width: 80%;
-  height: 400px;
-  overflow: hidden;
-}
 
 .modal-inner p {
   font-size: 30px;

@@ -3,8 +3,13 @@ const startBtn = document.querySelector('.start-btn');
 const practiceBtn = document.querySelector('.practice-btn');
 const practiceInput = document.querySelector('.practice-input');
 const modal = document.querySelector('.the-modal');
-const caroModal = document.querySelector('.caro-modal');
 const modalInner = document.querySelector('.modal-inner');
+const activeSlide = document.querySelector('.active-slide');
+
+const bars = document.getElementsByClassName('bar');
+const activeBar = document.querySelector('.active-bar');
+
+let activeSlideNumber = 0;
 
 let readings = [];
 let activeReading;
@@ -251,19 +256,22 @@ function parseReadings() {
   for (reading of readings) {
     let romaji = buildRomaji(reading[1])
     reading.push(romaji);
-    let romajiP = document.getElementsByClassName('modal-romaji')[i];
-    romajiP.textContent = romaji;
+    // let romajiP = document.getElementsByClassName('slide-question')[i];
+    // romajiP.textContent = romaji;
     i++;
   }
 }
 
 function practice(n) {
+  // activeSlide.classList.remove('active-slide');
+  // activeSlideNumber++;
+  // document.getElementsByClassName('slide')[activeSlideNumber].classList.add('active-slide');
   practiceInput.style.opacity = '1';
   practiceInput.focus();
   parseReadings();
   active = 0;
   activeReading = document.getElementsByClassName(currentClass)[active];
-  activeReading.classList.add('active-reading');
+  // activeReading.classList.add('active-reading');
   practiceBtn.style.display = 'none';
 }
 
@@ -273,22 +281,6 @@ function handleMouseOver(event) {
 
 function handleMouseLeave(event) {
   event.target.nextSibling.style.opacity = '0';
-}
-
-function resetActive(className) {
-  let ar = document.getElementsByClassName('active-reading')[0];
-  // ar.style.animationPlayState = 'running';
-  // ar.classList.add('flash');
-
-  let activeKanji = document.getElementsByClassName('modal-kanji')[active]
-  let activeRomaji = document.getElementsByClassName('modal-romaji')[active]
-  activeRomaji.style.opacity = '1';
-  activeKanji.style.opacity = '1';
-  practiceInput.value = '';
-
-  setTimeout(() => {
-    ar.classList.remove('active-reading');
-  }, 500)
 }
 
 function reselectColumn(newCurrent, newActive) {
@@ -376,20 +368,7 @@ function matchSentence(i) {
 }
 
 function fillSentences() {
-  // let modalReading = document.getElementsByClassName('modal-reading');
-  // let modalKanji = document.getElementsByClassName('modal-kanji');
-  // let modalRomaji = document.getElementsByClassName('modal-romaji');
-
-  // modalInner.classList.add('modal-inner-sent');
-  // modalInner.classList.remove('modal-inner');
-
   modal.style.display = 'none';
-
-
-  // for (let i = 0; i < max; i++) {
-  //   modalKanji[i].style.opacity = '0';
-  //   modalRomaji[i].style.opacity = '0';
-  // }
 
   let slides = document.getElementsByClassName('slide');
   newReadings = [];
@@ -422,6 +401,29 @@ function fillSentences() {
 
 let triggerAnimation = false;
 
+function resetActive(className) {
+  let activeSlide = document.getElementsByClassName('active-slide')[0];
+  let slideAnswer = document.getElementsByClassName('slide-answer')[active];
+  slideAnswer.style.opacity = '1';
+
+  if (active != limit - 1) {
+    let nextSlide = document.getElementsByClassName('slide')[active + 1];
+    setTimeout(() => {
+      activeSlide.style.animation = 'psah 0.5s ease 0s forwards';
+      setTimeout(() => {
+        activeSlide.style.display = 'none';
+        nextSlide.style.display = 'flex';
+        nextSlide.style.animation = 'nsar 0.5s ease 0s forwards';
+        nextSlide.classList.add('active-slide');
+        activeSlide.classList.remove('active-slide');
+      }, 500)
+    }, 500)
+  }
+
+  practiceInput.value = '';
+}
+
+
 function handleInput(event) {
   const inp = event.target.value;
   const red = readings[active][2];
@@ -441,8 +443,6 @@ function handleInput(event) {
     resetActive(currentClass);
     if (active % limit != 0 || active == limit - 5) {
       active++;
-      activeReading = document.getElementsByClassName(currentClass)[active];
-      activeReading.classList.add('active-reading');
     } else {
       if (currentClass == 'modal-reading') {
         reselectColumn('modal-kanji', active - 5);
@@ -467,7 +467,6 @@ function handleInput(event) {
         round++;
       }
     }
-
     console.log(active);
   }
 }
@@ -476,41 +475,21 @@ function createSlides() {
   let slide = document.getElementsByClassName('slide')[0];
   for (let i = 0; i < max; i++) {
     let clone = slide.cloneNode(true);
-    caroModal.appendChild(clone);
-    // clone.querySelector('slide-sentence').textContent = readings[i];
+    clone.children[0].textContent = kanjis[i].kanji;
+    clone.children[1].textContent = filterYomi(kanjis[i]);
+    if (i == 0) {
+      clone.classList.add('active-slide');
+    }
+    modalInner.appendChild(clone);
   }
-  // return slide.cloneNode(true);
-}
-
-function displayKanji() {
-  clear(modalInner);
-  for (let i = 0; i < max; i++) {
-    let kanjiP = document.createElement('p');
-    let readingP = document.createElement('p');
-    // let readingP = document.createElement('canvas');
-    let romajiP = document.createElement('p');
-    // let shaderSetup = new ShaderSetup(readingP, vs, fs);
-    // shaders.push(shaderSetup);
-    readingP.classList.add('modal-reading');
-    romajiP.classList.add('modal-romaji');
-    kanjiP.classList.add('modal-kanji');
-    kanjiP.innerHTML = kanjis[i].kanji;
-    readingP.innerHTML = filterYomi(kanjis[i]);
-    modalInner.appendChild(kanjiP);
-    modalInner.appendChild(readingP);
-    modalInner.appendChild(romajiP);
-  }
-
-  modal.style.display = 'block';
+  modalInner.removeChild(slide);
 }
 
 function startGame() {
   startBtn.style.display = 'none';
   modal.style.display = 'block';
   modal.style.opacity = '1';
-  title.style.display = 'none';
-  displayKanji();
-  // fillExamples();
+  createSlides();
 }
 
 function handleKeyDown(event) {
@@ -560,7 +539,6 @@ function render() {
 }
 
 render();
-
 
 function loadResources() {
   fetchKanji();
