@@ -15,7 +15,7 @@ let readings = [];
 let activeReading;
 let active;
 let currentClass = 'modal-reading';
-let limit = 5;
+let limit = 6;
 let count = 0;
 let round = 0;
 let newReadings = [];
@@ -423,6 +423,17 @@ function resetActive(className) {
   practiceInput.value = '';
 }
 
+function restyleBars(a) {
+  for (let i = 0; i < bars.length; i++) {
+    if (i <= a) {
+      bars[i].classList.add('completed-bar');
+    }
+  }
+
+  if (a + 1 != bars.length) {
+    bars[a + 1].classList.add('active-bar');
+  }
+}
 
 function handleInput(event) {
   const inp = event.target.value;
@@ -441,11 +452,13 @@ function handleInput(event) {
     // }
     // triggerAnimation = true;
     resetActive(currentClass);
-    if (active % limit != 0 || active == limit - 5) {
+    let a0 = active;
+
+    setTimeout(() => { restyleBars(a0); }, 500)
+    if (active % limit != 0 || active == limit - 6) {
       active++;
     } else {
       if (currentClass == 'modal-reading') {
-        reselectColumn('modal-kanji', active - 5);
         hideReadingAndRomaji();
         active -= 5;
       } else {
