@@ -334,14 +334,17 @@ function matchExample(reading, examples) {
 }
 
 function fillExamples() {
-  let modalReading = document.getElementsByClassName('modal-reading');
-  let modalKanji = document.getElementsByClassName('modal-kanji');
-  let modalRomaji = document.getElementsByClassName('modal-romaji');
+  // let modalReading = document.getElementsByClassName('modal-reading');
+  // let modalKanji = document.getElementsByClassName('modal-kanji');
+  // let modalRomaji = document.getElementsByClassName('modal-romaji');
 
-  for (let i = 0; i < max; i++) {
-    modalKanji[i].style.opacity = '0';
-    modalRomaji[i].style.opacity = '0';
-  }
+  // for (let i = 0; i < max; i++) {
+  //   modalKanji[i].style.opacity = '0';
+  //   modalRomaji[i].style.opacity = '0';
+  // }
+
+  let answers = document.getElementsByClassName('slide-answer');
+  let questions = document.getElementsByClassName('slide-question');
 
   setTimeout(() => {
     for (let i = 0; i < max; i++) {
@@ -349,17 +352,14 @@ function fillExamples() {
       let romex = buildExampleRomaji(exs[1]);
 
       // modalKanji[i].textContent = exs[0];
-      modalKanji[i].textContent = exs[0];
-      modalReading[i].textContent = exs[1];
-      modalRomaji[i].textContent = exs[2];
+      answers[i].textContent = exs[0];
+      questions[i].textContent = exs[1];
+      // modalRomaji[i].textContent = exs[2];
 
       newReadings.push([i, exs[1], romex]);
     }
 
-    console.log(newReadings);
     readings = newReadings;
-
-    console.log(readings);
   }, 500)
 }
 
@@ -401,7 +401,7 @@ function fillSentences() {
 
 let triggerAnimation = false;
 
-function resetActive(className) {
+function resetActive() {
   let activeSlide = document.getElementsByClassName('active-slide')[0];
   let slideAnswer = document.getElementsByClassName('slide-answer')[active];
   slideAnswer.style.opacity = '1';
@@ -418,8 +418,31 @@ function resetActive(className) {
         activeSlide.classList.remove('active-slide');
       }, 500)
     }, 500)
+  } else {
+    setTimeout(() => {
+      activeSlide.style.animation = 'psah 0.5s ease 0s forwards';
+    }, 500);
   }
 
+  practiceInput.value = '';
+}
+
+function resetSlides() {
+  let activeSlide = document.getElementsByClassName('active-slide')[0];
+  let slides = document.getElementsByClassName('slide');
+  activeSlide.classList.remove('active-slide');
+
+  for (let s = 0; s < slides.length; s++) {
+    slides[s].style.opacity = '0';
+    slides[s].style.animation = null;
+  }
+
+  slides[5].style.display = 'none';
+  slides[0].classList.add('active-slide');
+  slides[0].style.display = 'flex';
+  setTimeout(() => {
+    slides[0].style.opacity = '1';
+  }, 500);
   practiceInput.value = '';
 }
 
@@ -432,6 +455,27 @@ function restyleBars(a) {
 
   if (a + 1 != bars.length) {
     bars[a + 1].classList.add('active-bar');
+  }
+}
+
+function refreshBars() {
+  for (let i = 0; i < bars.length; i++) {
+    bars[i].classList.remove('completed-bar')
+    bars[i].classList.remove('active-bar')
+  }
+
+  bars[0].classList.add('active-bar');
+}
+
+function swapContent() {
+  let answers = document.getElementsByClassName('slide-answer');
+  let questions = document.getElementsByClassName('slide-question');
+
+  for (let i = 0; i < questions.length; i++) {
+    let temp = questions[i].textContent;
+    questions[i].textContent = answers[i].textContent;
+    answers[i].textContent = temp;
+    answers[i].style.opacity = '0';
   }
 }
 
@@ -451,36 +495,32 @@ function handleInput(event) {
     //   shaders[active-1].pause();
     // }
     // triggerAnimation = true;
-    resetActive(currentClass);
+
+    // process success
+    resetActive();
     let a0 = active;
 
-    setTimeout(() => { restyleBars(a0); }, 500)
-    if (active % limit != 0 || active == limit - 6) {
-      active++;
-    } else {
-      if (currentClass == 'modal-reading') {
-        hideReadingAndRomaji();
-        active -= 5;
-      } else {
-        if (round == 0) {
-          fillExamples();
-        } else if (round == 1) {
-          createSlides();
-          fillSentences();
-        } else {
-          console.log('wrap it up');
-        }
 
-        setTimeout(() => {
-          showModalReading();
-          reselectColumn('modal-reading', 0);
-          active = 0;
-        }, 500)
+    // update active
+    active++;
 
-        round++;
-      }
+    if (active < limit) {
+      setTimeout(() => { restyleBars(a0); }, 500)
     }
-    console.log(active);
+
+    // adjust for new active
+    if (active == limit) {
+      setTimeout(() => { 
+        restyleBars(a0);
+        setTimeout(() => {
+          resetSlides();
+          swapContent();
+          refreshBars(0);
+          console.log(active);
+        }, 500)
+       }, 500)
+      active = 0;
+    } 
   }
 }
 
