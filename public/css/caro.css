@@ -17,14 +17,17 @@
   height: 10px;
   border: 1px solid white;
   background: none;
+  transition: 0.25s ease;
 }
 
 .active-bar {
-  background: linear-gradient(-90deg, yellow, green);
+/*  background: linear-gradient(-90deg, yellow, green);*/
+  background: none;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 1) inset;
 }
 
 .completed-bar {
-  background: green;
+  background: white;
 }
 
 .the-modal {

@@ -256,22 +256,16 @@ function parseReadings() {
   for (reading of readings) {
     let romaji = buildRomaji(reading[1])
     reading.push(romaji);
-    // let romajiP = document.getElementsByClassName('slide-question')[i];
-    // romajiP.textContent = romaji;
     i++;
   }
 }
 
 function practice(n) {
-  // activeSlide.classList.remove('active-slide');
-  // activeSlideNumber++;
-  // document.getElementsByClassName('slide')[activeSlideNumber].classList.add('active-slide');
   practiceInput.style.opacity = '1';
   practiceInput.focus();
   parseReadings();
   active = 0;
   activeReading = document.getElementsByClassName(currentClass)[active];
-  // activeReading.classList.add('active-reading');
   practiceBtn.style.display = 'none';
 }
 
@@ -336,16 +330,16 @@ function matchExample(reading, examples) {
 function fillExamples() {
   let answers = document.getElementsByClassName('slide-answer');
   let questions = document.getElementsByClassName('slide-question');
+  let meanings = document.getElementsByClassName('slide-meaning');
 
   setTimeout(() => {
     for (let i = 0; i < max; i++) {
       let exs = matchExample(readings[i][1], kanjis[i].examples);
       let romex = buildExampleRomaji(exs[1]);
 
-      // modalKanji[i].textContent = exs[0];
       answers[i].textContent = exs[0];
       questions[i].textContent = exs[1];
-      // modalRomaji[i].textContent = exs[2];
+      // meanings[i].textContent = exs[2];
 
       newReadings.push([i, exs[1], romex]);
     }
@@ -361,6 +355,7 @@ function matchSentence(i) {
 function fillSentences() {
   let answers = document.getElementsByClassName('slide-answer');
   let questions = document.getElementsByClassName('slide-question');
+  let meanings = document.getElementsByClassName('slide-meaning');
   newReadings = [];
 
   setTimeout(() => {
@@ -380,7 +375,7 @@ function fillSentences() {
 
       answers[i].textContent = romex;
       questions[i].textContent = sentex;
-      // slides[i].querySelector('slide-answer').textContent = engex;
+      // meanings[i].textContent = engex;
 
       newReadings.push([i, sentex, romex]);
     }
@@ -395,8 +390,12 @@ let triggerAnimation = false;
 
 function resetActive() {
   let activeSlide = document.getElementsByClassName('active-slide')[0];
-  let slideAnswer = document.getElementsByClassName('slide-answer')[active];
-  slideAnswer.style.opacity = '1';
+  let answer = document.getElementsByClassName('slide-answer')[active];
+  let meaning = document.getElementsByClassName('slide-meaning')[active];
+
+  answer.style.opacity = '1';
+  answer.style.transform = 'translate(0px, -20px)';
+  // meaning.style.opacity = '1';
 
   if (active != limit - 1) {
     let nextSlide = document.getElementsByClassName('slide')[active + 1];
@@ -423,17 +422,21 @@ function resetSlides() {
   let activeSlide = document.getElementsByClassName('active-slide')[0];
   let slides = document.getElementsByClassName('slide');
   let answers = document.getElementsByClassName('slide-answer');
+  let meanings = document.getElementsByClassName('slide-meaning');
+
   activeSlide.classList.remove('active-slide');
 
   for (let s = 0; s < slides.length; s++) {
     slides[s].style.opacity = '0';
     slides[s].style.animation = null;
     answers[s].style.opacity = '0';
+    // meanings[s].style.opacity = '0';
   }
 
   slides[5].style.display = 'none';
   slides[0].classList.add('active-slide');
   slides[0].style.display = 'flex';
+
   setTimeout(() => {
     slides[0].style.opacity = '1';
   }, 500);
@@ -492,7 +495,6 @@ function handleInput(event) {
     // process success
     resetActive();
     let a0 = active;
-
 
     // update active
     active++;
