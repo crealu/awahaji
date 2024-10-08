@@ -76,7 +76,8 @@
 
 .slide-answer {
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transform: translate(0px, 0px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
 }
 
 .slide-question {

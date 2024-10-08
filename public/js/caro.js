@@ -252,62 +252,30 @@ function filterYomi(kanji) {
 }
 
 function parseReadings() {
-  let i = 0;
+  // let i = 0;
   for (reading of readings) {
     let romaji = buildRomaji(reading[1])
     reading.push(romaji);
-    i++;
+    // i++;
   }
 }
 
 function practice(n) {
+  active = 0;
   practiceInput.style.opacity = '1';
   practiceInput.focus();
-  parseReadings();
-  active = 0;
-  activeReading = document.getElementsByClassName(currentClass)[active];
   practiceBtn.style.display = 'none';
+  parseReadings();
+  // activeReading = document.getElementsByClassName(currentClass)[active];
 }
 
-function handleMouseOver(event) {
-  event.target.nextSibling.style.opacity = '1';
-}
+// function handleMouseOver(event) {
+//   event.target.nextSibling.style.opacity = '1';
+// }
 
-function handleMouseLeave(event) {
-  event.target.nextSibling.style.opacity = '0';
-}
-
-function reselectColumn(newCurrent, newActive) {
-  currentClass = newCurrent;
-  activeReading = document.getElementsByClassName(currentClass)[newActive];
-  activeReading.classList.add('active-reading');
-}
-
-function hideReadingAndRomaji() {
-  let modalReading = document.getElementsByClassName('modal-reading');
-  let modalRomaji = document.getElementsByClassName('modal-romaji');
-  let modalKanji = document.getElementsByClassName('modal-kanji');
-
-  for (let m = 0; m < modalRomaji.length; m++) {
-    modalRomaji[m].style.opacity = '0';
-    modalReading[m].style.opacity = '0';
-    modalKanji[m].addEventListener('mouseover', handleMouseOver)
-    modalKanji[m].addEventListener('mouseleave', handleMouseLeave)
-  }
-}
-
-function showModalReading() {
-  let modalReading = document.getElementsByClassName('modal-reading');
-  let modalRomaji = document.getElementsByClassName('modal-romaji');
-  let modalKanji = document.getElementsByClassName('modal-kanji');
-
-  for (let m = 0; m < modalRomaji.length; m++) {
-    modalRomaji[m].style.opacity = '0';
-    modalReading[m].style.opacity = '1';
-    modalKanji[m].removeEventListener('mouseover', handleMouseOver)
-    modalKanji[m].removeEventListener('mouseleave', handleMouseLeave)
-  }
-}
+// function handleMouseLeave(event) {
+//   event.target.nextSibling.style.opacity = '0';
+// }
 
 function matchExample(reading, examples) {
   let ex = null;
@@ -430,6 +398,7 @@ function resetSlides() {
     slides[s].style.opacity = '0';
     slides[s].style.animation = null;
     answers[s].style.opacity = '0';
+    answers[s].style.transform = 'translate(0px, 0px)';
     // meanings[s].style.opacity = '0';
   }
 
@@ -549,12 +518,12 @@ function startGame() {
 
 function handleKeyDown(event) {
   if (event.key == 'q') {
-    if (currentClass == 'modal-kanji') {
-      if (activeReading.nextSibling.style.opacity == '1') {
-        activeReading.nextSibling.style.opacity = '0';
-      } else {
-        activeReading.nextSibling.style.opacity = '1';
-      }
+    if (round == 1 || round == 3) {
+      const activeAnswer = document.getElementsByClassName('slide-answer')[active];
+      activeAnswer.style.opacity = '1';
+      setTimeout(() => {
+        activeAnswer.style.opacity = '0';
+      }, 250)
     }
   }
 }
