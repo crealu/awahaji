@@ -334,15 +334,6 @@ function matchExample(reading, examples) {
 }
 
 function fillExamples() {
-  // let modalReading = document.getElementsByClassName('modal-reading');
-  // let modalKanji = document.getElementsByClassName('modal-kanji');
-  // let modalRomaji = document.getElementsByClassName('modal-romaji');
-
-  // for (let i = 0; i < max; i++) {
-  //   modalKanji[i].style.opacity = '0';
-  //   modalRomaji[i].style.opacity = '0';
-  // }
-
   let answers = document.getElementsByClassName('slide-answer');
   let questions = document.getElementsByClassName('slide-question');
 
@@ -368,9 +359,8 @@ function matchSentence(i) {
 }
 
 function fillSentences() {
-  modal.style.display = 'none';
-
-  let slides = document.getElementsByClassName('slide');
+  let answers = document.getElementsByClassName('slide-answer');
+  let questions = document.getElementsByClassName('slide-question');
   newReadings = [];
 
   setTimeout(() => {
@@ -386,9 +376,11 @@ function fillSentences() {
         engex = sent.e;
       }
 
-      slides[i].querySelector('slide-sentence').textContent = sentex;
-      slides[i].querySelector('slide-romaji').textContent = romex;
-      slides[i].querySelector('slide-english').textContent = engex;
+      console.log(romex, sentex, engex);
+
+      answers[i].textContent = romex;
+      questions[i].textContent = sentex;
+      // slides[i].querySelector('slide-answer').textContent = engex;
 
       newReadings.push([i, sentex, romex]);
     }
@@ -430,11 +422,13 @@ function resetActive() {
 function resetSlides() {
   let activeSlide = document.getElementsByClassName('active-slide')[0];
   let slides = document.getElementsByClassName('slide');
+  let answers = document.getElementsByClassName('slide-answer');
   activeSlide.classList.remove('active-slide');
 
   for (let s = 0; s < slides.length; s++) {
     slides[s].style.opacity = '0';
     slides[s].style.animation = null;
+    answers[s].style.opacity = '0';
   }
 
   slides[5].style.display = 'none';
@@ -475,7 +469,6 @@ function swapContent() {
     let temp = questions[i].textContent;
     questions[i].textContent = answers[i].textContent;
     answers[i].textContent = temp;
-    answers[i].style.opacity = '0';
   }
 }
 
@@ -510,11 +503,18 @@ function handleInput(event) {
 
     // adjust for new active
     if (active == limit) {
+      round++;
       setTimeout(() => { 
         restyleBars(a0);
         setTimeout(() => {
           resetSlides();
-          swapContent();
+          if (round == 2) {
+            fillExamples()
+          } else if (round == 4) {
+            fillSentences();
+          } else {
+            swapContent();
+          }
           refreshBars(0);
           console.log(active);
         }, 500)
