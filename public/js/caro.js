@@ -36,7 +36,7 @@ function KanjiBox(ka, k, o, km, ex) {
 }
 
 async function fetchKanji() {
-  let level = 'n5';
+  let level = 'n3';
   // await fetch(`https://kanji-data.herokuapp.com/${level}Kanji`)
   await fetch('/allKanji')
     .then(res => res.json())
@@ -252,11 +252,9 @@ function filterYomi(kanji) {
 }
 
 function parseReadings() {
-  // let i = 0;
   for (reading of readings) {
     let romaji = buildRomaji(reading[1])
     reading.push(romaji);
-    // i++;
   }
 }
 
@@ -266,16 +264,7 @@ function practice(n) {
   practiceInput.focus();
   practiceBtn.style.display = 'none';
   parseReadings();
-  // activeReading = document.getElementsByClassName(currentClass)[active];
 }
-
-// function handleMouseOver(event) {
-//   event.target.nextSibling.style.opacity = '1';
-// }
-
-// function handleMouseLeave(event) {
-//   event.target.nextSibling.style.opacity = '0';
-// }
 
 function matchExample(reading, examples) {
   let ex = null;
@@ -307,7 +296,7 @@ function fillExamples() {
 
       answers[i].textContent = exs[0];
       questions[i].textContent = exs[1];
-      // meanings[i].textContent = exs[2];
+      meanings[i].textContent = exs[2];
 
       newReadings.push([i, exs[1], romex]);
     }
@@ -364,6 +353,13 @@ function resetActive() {
   answer.style.opacity = '1';
   answer.style.transform = 'translate(0px, -20px)';
   // meaning.style.opacity = '1';
+  // let delay = round == 2 ? 750 : 500;
+  let delay = 500;
+
+  // if (delay == 750) {
+  //   meaning.style.opacity = '1';
+  //   meaning.style.transform = 'translate(0px, 20px)';
+  // }
 
   if (active != limit - 1) {
     let nextSlide = document.getElementsByClassName('slide')[active + 1];
@@ -375,12 +371,12 @@ function resetActive() {
         nextSlide.style.animation = 'nsar 0.5s ease 0s forwards';
         nextSlide.classList.add('active-slide');
         activeSlide.classList.remove('active-slide');
-      }, 500)
-    }, 500)
+      }, delay)
+    }, delay)
   } else {
     setTimeout(() => {
       activeSlide.style.animation = 'psah 0.5s ease 0s forwards';
-    }, 500);
+    }, delay);
   }
 
   practiceInput.value = '';
@@ -394,12 +390,14 @@ function resetSlides() {
 
   activeSlide.classList.remove('active-slide');
 
+  let meaningOpacity = round == 3 ? '1' : '0';
+
   for (let s = 0; s < slides.length; s++) {
     slides[s].style.opacity = '0';
     slides[s].style.animation = null;
     answers[s].style.opacity = '0';
     answers[s].style.transform = 'translate(0px, 0px)';
-    // meanings[s].style.opacity = '0';
+    meanings[s].style.opacity = meaningOpacity;
   }
 
   slides[5].style.display = 'none';
@@ -459,7 +457,7 @@ function handleInput(event) {
     // if (active != 0) {
     //   shaders[active-1].pause();
     // }
-    // triggerAnimation = true;
+    triggerAnimation = true;
 
     // process success
     resetActive();
