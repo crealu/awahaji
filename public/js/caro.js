@@ -7,6 +7,7 @@ const modalInner = document.querySelector('.modal-inner');
 const activeSlide = document.querySelector('.active-slide');
 
 const bars = document.getElementsByClassName('bar');
+const barKanji = document.getElementsByClassName('bar-kanji');
 const activeBar = document.querySelector('.active-bar');
 
 let activeSlideNumber = 0;
@@ -426,6 +427,7 @@ function refreshBars() {
   for (let i = 0; i < bars.length; i++) {
     bars[i].classList.remove('completed-bar')
     bars[i].classList.remove('active-bar')
+    barKanji[i].style.opacity = '0';
   }
 
   bars[0].classList.add('active-bar');
@@ -458,6 +460,8 @@ function handleInput(event) {
     //   shaders[active-1].pause();
     // }
     triggerAnimation = true;
+
+    barKanji[active].style.opacity = '1';
 
     // process success
     resetActive();
@@ -497,6 +501,7 @@ function createSlides() {
   let slide = document.getElementsByClassName('slide')[0];
   for (let i = 0; i < max; i++) {
     let clone = slide.cloneNode(true);
+    barKanji[i].textContent = kanjis[i].kanji;
     clone.children[0].textContent = kanjis[i].kanji;
     clone.children[1].textContent = filterYomi(kanjis[i]);
     if (i == 0) {
@@ -524,22 +529,6 @@ function handleKeyDown(event) {
       }, 250)
     }
   }
-}
-
-function slideCaroNew() {
-  let slides = document.getElementsByClassName('slide');
-  let slideCount = slides.length - 1;
-  let theSlide = document.getElementsByClassName('slide-number')[0];
-  let slideNumber = theSlide.dataset.slidenum;
-
-  let currentSlide = slides[slideNumber];
-  nextNumber = parseInt(slideNumber) + 1;
-  let nextSlide = slides[nextNumber];
-
-  currentSlide.style.animation = 'psah 0.5s ease 0s forwards';
-  switchDisplay(currentSlide, nextSlide);
-  nextSlide.style.animation = 'nsar 0.5s ease 0s forwards';
-  theSlide.dataset.slidenum = nextNumber;
 }
 
 let whole;
