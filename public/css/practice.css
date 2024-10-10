@@ -20,12 +20,12 @@
 
 .dash {
   position: relative;
-  display: none;
+  display: block;
   margin: 0 auto;
   top: 50px;
   width: 400px;
   transition: 0.3s ease;
-  opacity: 0;
+  opacity: 1;
 }
 
 .upper-dash {

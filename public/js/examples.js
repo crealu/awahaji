@@ -4,7 +4,13 @@ const practiceBtn = document.querySelector('.practice-btn');
 const practiceInput = document.querySelector('.practice-input');
 const modal = document.querySelector('.the-modal');
 const modalInner = document.querySelector('.modal-inner');
+const theScore = document.querySelector('.score');
+const theKanjiEl = document.querySelector('.kanji');
+const theStreak = document.querySelector('.streak-bar');
+const streakText = document.querySelector('.streak');
+const fx1 = document.getElementsByClassName('fx-audio')[0];
 
+let theKanji = [];
 let readings = [];
 let activeReading;
 let active;
@@ -14,12 +20,17 @@ let count = 0;
 let round = 0;
 let newReadings = [];
 let shaders = [];
-let theKanji = [];
 let theSentences = [];
 let indices = [];
 let currentIndex = 0;
 let exIdcs = []
 let max = 6;
+
+let score = 0;
+let hinting = false;
+let addition = 10;
+let streak = 0;
+let factor = 1;
 
 function KanjiBox(ka, k, o, km, ex) {
   this.kanji = ka;
@@ -266,10 +277,13 @@ function practice(n) {
 }
 
 function handleMouseOver(event) {
+  hiting = true;
+  addition -= 3;
   event.target.nextSibling.style.opacity = '1';
 }
 
 function handleMouseLeave(event) {
+  hinting = false;
   event.target.nextSibling.style.opacity = '0';
 }
 
@@ -424,6 +438,7 @@ function handleInput(event) {
   console.log(inp, red);
 
   if (inp == red) {
+    playAudio(8);
     // if (active != 0) {
     //   shaders[active-1].pause();
     // }
@@ -456,6 +471,13 @@ function handleInput(event) {
         round++;
       }
     }
+
+    if (addition == 10) {
+      streak++;
+    }
+
+    writeScore();
+    addition = 10;
 
     console.log(active);
   }
@@ -491,6 +513,38 @@ function startGame() {
   // fillExamples();
 }
 
+function writeScore() {
+  console.log(score);
+  if (streak == 5) {
+    streakText.innerHTML = '2x';
+    factor = 2;
+  } else if (streak == 10) {
+    streakText.innerHTML = '3x';
+    factor = 3;
+  } else if (streak == 15) {
+    streakText.innerHTML = '4x';
+    factor = 4;
+  } else if (streak == 20) {
+    streakText.innerHTML = '5x';
+    factor = 5;
+  } else if (streak == 0) {
+    streakText.innerHTMl = '';
+    factor = 1;
+  }
+
+  score += addition * factor;
+  theStreak.style.width = (streak * 5) + 'px';
+  theScore.textContent = score;
+  theKanjiEl.textContent = count;
+}
+
+function updateStreak() {
+  theStreak.style.width = '0px';
+  streakText.innerHTML = '';
+  factor = 1;
+  playAudio(1);
+}
+
 function handleKeyDown(event) {
   if (event.key == 'q') {
     if (currentClass == 'modal-kanji') {
@@ -500,6 +554,17 @@ function handleKeyDown(event) {
         activeReading.nextSibling.style.opacity = '1';
       }
     }
+  }
+
+  if (event.key == 'Backspace') {
+    if (addition != 0) {
+      addition--;
+    }
+
+    playAudio(1);
+
+    streak = 0;
+    updateStreak();
   }
 }
 

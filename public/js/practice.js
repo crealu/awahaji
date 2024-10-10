@@ -4,7 +4,7 @@ const startBtn = document.querySelector('.start-btn');
 const practiceBtn = document.querySelector('.practice-btn');
 const practiceInput = document.querySelector('.practice-input');
 const theScore = document.querySelector('.score');
-const theKanji = document.querySelector('.kanji');
+const theKanjiEl = document.querySelector('.kanji');
 const theStreak = document.querySelector('.streak-bar');
 const streakText = document.querySelector('.streak');
 const modal = document.querySelector('.the-modal');
@@ -12,6 +12,8 @@ const modalInner = document.querySelector('.modal-inner');
 const fx1 = document.getElementsByClassName('fx-audio')[0];
 
 // let kanjis = [];
+let theKanji = [];
+let kanjis = [];
 let readings = [];
 let activeReading;
 let active;
@@ -23,6 +25,28 @@ let addition = 10;
 let streak = 0;
 let factor = 1;
 let count = 0;
+
+async function fetchKanji() {
+  let level = 'n5';
+  // await fetch(`https://kanji-data.herokuapp.com/${level}Kanji`)
+  await fetch('/allKanji')
+    .then(res => res.json())
+    .then(data => {
+      data.kanji[level].forEach(k => {
+        let ka = k.kanji[0]
+        let kun = k.kanji[1]
+        let on = k.kanji[2]
+        let me = k.kanji[3]
+        let ex = k.examples;
+
+        theKanji.push(new KanjiBox(ka, kun, on, me, ex))
+      });
+
+      // console.log(theKanji);
+      kanjis = reorder(theKanji);
+      addAllKanji(kanjis);
+    })
+}
 
 function randomInt(max, min) {
   if (min) {
@@ -238,6 +262,8 @@ function handleInput(event) {
       streak++;
     }
 
+    console.log('update streak');
+
     writeScore();
     addition = 10;
   }
@@ -278,6 +304,7 @@ function startGame() {
 }
 
 function writeScore() {
+  console.log(score);
   if (streak == 5) {
     streakText.innerHTML = '2x';
     factor = 2;
@@ -292,13 +319,13 @@ function writeScore() {
     factor = 5;
   } else if (streak == 0) {
     streakText.innerHTMl = '';
-    facgor = 1;
+    factor = 1;
   }
 
   score += addition * factor;
   theStreak.style.width = (streak * 5) + 'px';
   theScore.textContent = score;
-  theKanji.textContent = count;
+  theKanjiEl.textContent = count;
 }
 
 function updateStreak() {
