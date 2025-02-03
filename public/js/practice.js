@@ -358,7 +358,7 @@ function quitGame(event) {
       addition--;
     }
 
-    playAudio(1);
+    // playAudio(1);
 
     streak = 0;
     updateStreak();  
