@@ -1,2 +1,2 @@
 # Awahaji
-Japanese kanji typing game that test kanji reading and Japanese typing ability.
+Japanese language typing game that tests kanji reading and writing ability.

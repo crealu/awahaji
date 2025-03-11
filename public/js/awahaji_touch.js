@@ -23,6 +23,23 @@ class Awahaji {
     this.updateActiveScope = this.updateActiveScope.bind(this);
   }
 
+  setKanji() {
+    let randomNumber = randomInt(80);
+    let kanjiText = this.arrN5[randomNumber].kanji;
+    let onYomi = this.arrN5[randomNumber].on;
+    let theYomi = filterYomi(onYomi);
+
+    while (this.readings.includes(theYomi)) {
+      randomNumber = randomInt(80);
+      kanjiText = this.arrN5[randomNumber].kanji;
+      onYomi = this.arrN5[randomNumber].on;
+      theYomi = filterYomi(onYomi);
+    }
+    
+    this.kanjis.push(kanjiText);
+    this.readings.push(theYomi);
+  }
+
   touchstartHandler(event) {
     event.preventDefault();
     this.activeBubble = parseInt(event.target.dataset['bubble-number']);
@@ -512,6 +529,7 @@ class Awahaji {
 // }
 
 let awahaji = new Awahaji();
+
 function initGame() {
   awahaji.createBubbles();
   awahaji.createScopes();
