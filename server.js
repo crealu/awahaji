@@ -9,8 +9,12 @@ app.use(express.json());
 const pagesRoot = { root: './public/pages' }
 
 app.get('/', (req, res) => {
-	res.sendFile('practice.html', pagesRoot);
+	res.sendFile('index.html', pagesRoot);
 });
+
+app.get('/train', (req, res) => {
+	res.sendFile('train.html', pagesRoot);
+})
 
 app.get('/caro', (req, res) => {
 	res.sendFile('caro.html', pagesRoot);
