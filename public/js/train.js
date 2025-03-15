@@ -163,7 +163,8 @@ const fuse = svg.querySelector('.fuse');
 // Create an object that gsap can animate
 const val = { distance: 0 };
 // Create a tween
-gsap.to(val, {
+function startTween() {
+  gsap.to(val, {
   // Animate from distance 0 to the total distance
   distance: fuse.getTotalLength(),
   // Loop the animation
@@ -178,7 +179,11 @@ gsap.to(val, {
     const point = fuse.getPointAtLength(val.distance);
     createParticle(point);
   }
-});
+  });
+
+}
+
+let colors = ['#7FC342', '#a6c888', '#5a6550', '#4b8516', '#7fff0a'];
 
 function createParticle(point) {
   // Create a new circle element
@@ -189,20 +194,20 @@ function createParticle(point) {
   circle.setAttribute('cx', point.x);
   circle.setAttribute('cy', point.y);
   // Define a random radius for each circle
-  circle.setAttribute('r', (Math.random() * 2) + 0.2);
+  circle.setAttribute('r', (Math.random() * 10) + 0.2);
   // Define a random color
-  circle.setAttribute('fill', gsap.utils.random(['#ff0000', '#ff5a00', '#ff9a00', '#ffce00', '#ffe808']));
+  circle.setAttribute('fill', gsap.utils.random(colors));
   
   // Animate the circle
   gsap.to(circle, {
     // Random cx based on its current position
-    cx: '+=random(-20,20)',
+    cx: '+=random(-30,30)',
     // Random cy based on its current position
-    cy: '+=random(-20,20)',
+    cy: '+=random(-30,30)',
     // Fade out
     opacity: 0,
     // Random duration for each circle
-    duration: 'random(1, 2)',
+    duration: 'random(1, 3)',
     // Prevent gsap from rounding the cx & cy values
     autoRound: false,
     // Once the animation is complete
@@ -221,7 +226,7 @@ function toFuse() {
   gsap.to(fuse, {
     strokeDashoffset: fuse.getTotalLength(),
     duration: 5,
-    repeat: 0,
+    repeat: -1,
     // Wait 1sec before repeating
     repeatDelay: 0
   });
@@ -237,6 +242,7 @@ function animatePath() {
 
 window.addEventListener('keydown', (event) => {
   if (event.key == 't') {
+    startTween();
     toFuse();
   }
 })
