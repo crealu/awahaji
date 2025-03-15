@@ -157,7 +157,7 @@ function expandCircles() {
 }
 
 // Query DOM Elements
-const svg = document.querySelector('svg3');
+const svg = document.querySelector('.yamanote-line');
 const fuse = svg.querySelector('.fuse');
 
 // Create an object that gsap can animate
@@ -216,13 +216,16 @@ function createParticle(point) {
 /* Animate the fuse to reduce it */
 fuse.setAttribute('stroke-dasharray', fuse.getTotalLength());
 fuse.setAttribute('stroke-dashoffset', fuse.getTotalLength() * 2);
-gsap.to(fuse, {
-  strokeDashoffset: fuse.getTotalLength(),
-  duration: 5,
-  repeat: 0,
-  // Wait 1sec before repeating
-  repeatDelay: 0
-});
+
+function toFuse() {
+  gsap.to(fuse, {
+    strokeDashoffset: fuse.getTotalLength(),
+    duration: 5,
+    repeat: 0,
+    // Wait 1sec before repeating
+    repeatDelay: 0
+  });
+}
 
 function animatePath() {
   gsap.to("#the-line", {
@@ -231,5 +234,11 @@ function animatePath() {
     ease: "power2.out"
   });
 }
+
+window.addEventListener('keydown', (event) => {
+  if (event.key == 't') {
+    toFuse();
+  }
+})
 
 // animatePath();
