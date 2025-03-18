@@ -146,7 +146,9 @@ let stations = [
   }
 ]
 
+const rollBtn = document.getElementsByClassName('game-btn')[0];
 let circles = document.getElementsByTagName('circle');
+let colors = ['#7FC342', '#a6c888', '#5a6550', '#4b8516', '#7fff0a'];
 
 function expandCircles() {
   for (let c = 0; c < circles.length; c++) {
@@ -180,10 +182,7 @@ function startTween() {
     createParticle(point);
   }
   });
-
 }
-
-let colors = ['#7FC342', '#a6c888', '#5a6550', '#4b8516', '#7fff0a'];
 
 function createParticle(point) {
   // Create a new circle element
@@ -239,6 +238,11 @@ function animatePath() {
     ease: "power2.out"
   });
 }
+
+rollBtn.addEventListener('click', (event) => {
+  startTween();
+  toFuse();
+})
 
 window.addEventListener('keydown', (event) => {
   if (event.key == 't') {
