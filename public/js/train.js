@@ -290,32 +290,18 @@ let stationNames = [
   }
 ]
 
-// stationNames.reverse();
-
-
-const rollBtn = document.getElementsByClassName('game-btn')[0];
-let circles = document.getElementsByTagName('circle');
-let colors = ['#7FC342', '#a6c888', '#5a6550', '#4b8516', '#7fff0a'];
-
-function randomIntFromRange(min, max) {
-  return Math.floor(Math.random() * (max - min * 1) + min);
-}
-
-let ran = randomIntFromRange(0, stationNames.length);
-
-function expandCircles() {
-  for (let c = 0; c < circles.length; c++) {
-    setTimeout(() => {
-      circles[c].setAttribute('r', '10');
-    }, 100 * c);
-  }
-}
-
-// Query DOM Elements
 const svg = document.querySelector('.yamanote-line');
 const fuse = svg.querySelector('.fuse');
 const stations = document.querySelector('.yamanote-stations');
 const title = document.querySelector('.station-title');
+const rollBtn = document.getElementsByClassName('game-btn')[0];
+const colors = ['#7FC342', '#a6c888', '#5a6550', '#4b8516', '#7fff0a'];
+
+let ran = randomIntFromRange(0, stationNames.length);
+
+function randomIntFromRange(min, max) {
+  return Math.floor(Math.random() * (max - min * 1) + min);
+}
 
 for (let c = 0; c < stations.children.length; c++) {
   stations.children[c].addEventListener('click', (event) => {
@@ -323,13 +309,6 @@ for (let c = 0; c < stations.children.length; c++) {
     console.log(event.target);
   })
 }
-
-// gsap animatable object
-const val = { distance: 0 };
-const val1 = { distance: 100 };
-const positions = [
-  {distance: 0}
-]
 
 console.log(fuse.getTotalLength());
 console.dir(fuse);
@@ -347,15 +326,10 @@ function startTween() {
   }
 
   let start = {
-    // Animate from distance 0 to the total distance
     distance: stations.children[0].getTotalLength() * ran,
-    // Loop the animation
     repeat: 0,
-    // Wait 1sec before repeating
     repeatDelay: 1,
-    // Make the animation lasts 5 seconds
-    duration: 2,
-    // Function call on each frame of the animation
+    duration: 2 * ran,
     onUpdate: () => {
       // Query a point at the new distance value
       const point = fuse.getPointAtLength(finished.distance);
@@ -408,19 +382,14 @@ function toFuse() {
     strokeDashoffset: fuse.getTotalLength(),
     duration: 5,
     repeat: 0,
-    // Wait 1sec before repeating
-    // repeatDelay: 0
-
   });
 }
 
 function toStation() {
   gsap.to(stations.children[ran], {
     strokeDashoffset: stations.children[ran].getTotalLength(),
-    duration: 2,
+    duration: ran * 2,
     repeat: 0,
-    // Wait 1sec before repeating
-    // repeatDelay: 0
     onComplete: () => {
       stations.children[ran].setAttribute('r', 50);
       console.log('done');
@@ -440,7 +409,7 @@ function animatePath() {
 rollBtn.addEventListener('click', (event) => {
   startTween();
   toStation();
-})
+});
 
 window.addEventListener('keydown', (event) => {
   if (event.key == 't') {
@@ -448,5 +417,3 @@ window.addEventListener('keydown', (event) => {
     toFuse();
   }
 })
-
-// animatePath();
