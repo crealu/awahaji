@@ -304,6 +304,7 @@ function randomIntFromRange(min, max) {
 }
 
 for (let c = 0; c < stations.children.length; c++) {
+  stationNames[c]['dist'] = stations.children[0].getTotalLength() * c;
   stations.children[c].addEventListener('click', (event) => {
     title.textContent = stationNames[c]['駅名']
     console.log(event.target);
@@ -320,19 +321,29 @@ repeat: -1 is to loop
 // Create a tween
 function startTween() {
   ran = randomIntFromRange(0, stationNames.length);
+  let dist = stations.children[0].getTotalLength() * ran;
+  let n = 0;
 
   const finished = {
     distance: 0
   }
 
   let start = {
-    distance: stations.children[0].getTotalLength() * ran,
+    distance: dist,
     repeat: 0,
     repeatDelay: 1,
     duration: 2 * ran,
     onUpdate: () => {
-      // Query a point at the new distance value
+ 
       const point = fuse.getPointAtLength(finished.distance);
+      console.log(finished.distance, stationNames[n]['dist']);
+      // if (finished.distance >= stationNames[n]['dist']) {
+      //   title.textCotent = stationNames[n]['駅名'];
+      // } else {
+      //   n++;
+
+      // }
+      // console.log(finished.distance)
       createParticle(point);
     }
   }
