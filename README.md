@@ -1,7 +1,7 @@
 # Awahaji
 Japanese language typing game that tests kanji reading and writing ability.
 
-<a href="https://shcon-902b612ebe5d.herokuapp.com/random">Live</a>
+<a href="https://awahaji-af69f1c039e0.herokuapp.com/practice">Live</a>
 
 &nbsp;
 ## Prerequisites
