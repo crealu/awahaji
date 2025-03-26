@@ -17,3 +17,7 @@ Node.js (v18.16.0 or greater) installed on local machine.
 &nbsp;
 ## Featues
 Cyclical typing practice to reinforce understanding of kanji readings.
+Animated SVG of Yamanote Line
+
+<img src="./public/img/screenshot1.png" width="300">
+<img src="./public/img/screenshot2.png" width="300">
