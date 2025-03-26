@@ -295,6 +295,7 @@ const fuse = svg.querySelector('.fuse');
 const stations = document.querySelector('.yamanote-stations');
 const title = document.querySelector('.station-title');
 const rollBtn = document.getElementsByClassName('game-btn')[0];
+const sound = document.querySelector('.sound');
 const colors = ['#7FC342', '#a6c888', '#5a6550', '#4b8516', '#7fff0a'];
 
 let ran = randomIntFromRange(0, stationNames.length);
@@ -314,6 +315,15 @@ for (let c = 0; c < stations.children.length; c++) {
 console.log(fuse.getTotalLength());
 console.dir(fuse);
 
+// let aud = new AudioContext();
+// aud.src = './audio/ovs effects.mp3'
+
+function playAudio(time) {
+  sound.currentTime = time;
+  sound.play();
+  setTimeout(() => { sound.pause(); }, 1000)
+}
+
 /*
 repeat: -1 is to loop
 */
@@ -332,7 +342,7 @@ function startTween() {
     distance: dist,
     repeat: 0,
     repeatDelay: 1,
-    duration: 2 * ran,
+    duration: 2,
     onUpdate: () => {
  
       const point = fuse.getPointAtLength(finished.distance);
@@ -397,13 +407,14 @@ function toFuse() {
 }
 
 function toStation() {
+  playAudio(7)
   gsap.to(stations.children[ran], {
     strokeDashoffset: stations.children[ran].getTotalLength(),
-    duration: ran * 2,
+    duration: 2,
     repeat: 0,
     onComplete: () => {
       stations.children[ran].setAttribute('r', 50);
-      console.log('done');
+      playAudio(2);
       title.textContent = stationNames[ran]['駅名']
     }
   });
