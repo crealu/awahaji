@@ -312,23 +312,12 @@ for (let c = 0; c < stations.children.length; c++) {
   })
 }
 
-console.log(fuse.getTotalLength());
-console.dir(fuse);
-
-// let aud = new AudioContext();
-// aud.src = './audio/ovs effects.mp3'
-
 function playAudio(time) {
   sound.currentTime = time;
   sound.play();
   setTimeout(() => { sound.pause(); }, 1000)
 }
 
-/*
-repeat: -1 is to loop
-*/
-
-// Create a tween
 function startTween() {
   ran = randomIntFromRange(0, stationNames.length);
   let dist = stations.children[0].getTotalLength() * ran;
@@ -347,13 +336,6 @@ function startTween() {
  
       const point = fuse.getPointAtLength(finished.distance);
       console.log(finished.distance, stationNames[n]['dist']);
-      // if (finished.distance >= stationNames[n]['dist']) {
-      //   title.textCotent = stationNames[n]['駅名'];
-      // } else {
-      //   n++;
-
-      // }
-      // console.log(finished.distance)
       createParticle(point);
     }
   }
