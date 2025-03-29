@@ -305,7 +305,7 @@ function randomIntFromRange(min, max) {
 }
 
 for (let c = 0; c < stations.children.length; c++) {
-  stationNames[c]['dist'] = stations.children[0].getTotalLength() * c;
+  // stationNames[c]['dist'] = stations.children[0].getTotalLength() * c;
   stations.children[c].addEventListener('click', (event) => {
     title.textContent = stationNames[c]['駅名']
     console.log(event.target);
@@ -333,9 +333,7 @@ function startTween() {
     repeatDelay: 1,
     duration: 2,
     onUpdate: () => {
- 
       const point = fuse.getPointAtLength(finished.distance);
-      console.log(finished.distance, stationNames[n]['dist']);
       createParticle(point);
     }
   }
@@ -395,9 +393,9 @@ function toStation() {
     duration: 2,
     repeat: 0,
     onComplete: () => {
-      stations.children[ran].setAttribute('r', 50);
+      // stations.children[ran].style.transform = 'scale(2)';
       playAudio(2);
-      title.textContent = stationNames[ran]['駅名']
+      title.textContent = stationNames[ran]['駅名'];
     }
   });
 }
