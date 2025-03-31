@@ -350,7 +350,7 @@ function createParticle(point) {
   circle.setAttribute('cx', point.x);
   circle.setAttribute('cy', point.y);
   // // Define a random radius for each circle
-  circle.setAttribute('r', (Math.random() * 5) + 0.2);
+  circle.setAttribute('r', (Math.random() * 20) + 0.2);
   // // Define a random color
   circle.setAttribute('fill', gsap.utils.random(colors));
   
@@ -381,20 +381,22 @@ fuse.setAttribute('stroke-dashoffset', fuse.getTotalLength() * 2);
 function toFuse() {
   gsap.to(fuse, {
     strokeDashoffset: fuse.getTotalLength(),
-    duration: 5,
+    duration: 3,
     repeat: 0,
   });
 }
 
+
 function toStation() {
-  playAudio(7)
   gsap.to(stations.children[ran], {
-    strokeDashoffset: stations.children[ran].getTotalLength(),
-    duration: 2,
+    strokeDashoffset: fuse.getTotalLength(),
+    duration: 3,
     repeat: 0,
     onComplete: () => {
-      // stations.children[ran].style.transform = 'scale(2)';
-      playAudio(2);
+      stationNames = stationNames.reverse();
+      console.log(stations.children[ran]);
+      console.log(stationNames[stations.children.length - ran]['駅名'])
+      stations.children[ran].setAttribute('r', '10');
       title.textContent = stationNames[ran]['駅名'];
     }
   });
