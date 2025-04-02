@@ -309,24 +309,19 @@ let len = stations.children.length - 1;
 function resetActive(target) {
   const active = document.getElementsByClassName('selected-station')[0];
   if (active) {
-    console.log(active);
     active.classList.remove('selected-station');
-    target.classList.add('selected-station');
-  } else {
-    target.classList.add('selected-station');
   }
+  
+  target.classList.add('selected-station');
 }
 
 for (let c = 0; c <= len; c++) {
   // stationNames[c]['dist'] = stations.children[0].getTotalLength() * c;
   stations.children[c].addEventListener('click', (event) => {
-    const adj = len - c;
-    const name = stationNames[adj]['駅名'];
+    const name = stationNames[c]['駅名'];
     console.log(c, name);
     title.textContent = name;
-    // event.target.classList.add('selected-station');
     resetActive(event.target);
-    // console.log(event.target, adj);
   })
 }
 

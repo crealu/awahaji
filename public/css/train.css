@@ -52,4 +52,5 @@
 
 .selected-station {
   r: 10;
+  stroke-width: 4;
 }
