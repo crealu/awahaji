@@ -304,7 +304,7 @@ function randomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min * 1) + min);
 }
 
-let len = stations.children.length;
+let len = stations.children.length - 1;
 
 function resetActive(target) {
   const active = document.getElementsByClassName('selected-station')[0];
@@ -317,7 +317,7 @@ function resetActive(target) {
   }
 }
 
-for (let c = len; c >= 0; c--) {
+for (let c = 0; c <= len; c++) {
   // stationNames[c]['dist'] = stations.children[0].getTotalLength() * c;
   stations.children[c].addEventListener('click', (event) => {
     const adj = len - c;
@@ -338,7 +338,10 @@ function playAudio(time) {
 
 function startTween() {
   ran = randomIntFromRange(0, stationNames.length);
+
   let dist = stations.children[0].getTotalLength() * ran;
+  dist = fuse.getTotalLength();
+
   let n = 0;
 
   const finished = {
@@ -349,7 +352,7 @@ function startTween() {
     distance: dist,
     repeat: 0,
     repeatDelay: 1,
-    duration: 2,
+    duration: 3,
     onUpdate: () => {
       const point = fuse.getPointAtLength(finished.distance);
       createParticle(point);
@@ -417,14 +420,6 @@ function toStation() {
       stations.children[ran].setAttribute('r', '10');
       title.textContent = stationNames[ran]['駅名'];
     }
-  });
-}
-
-function animatePath() {
-  gsap.to("#the-line", {
-    duration: 2,
-    attr: { d: "M315 292l-6 19-12 13-7 15 v5l1 15" },
-    ease: "power2.out"
   });
 }
 
