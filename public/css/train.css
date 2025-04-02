@@ -21,6 +21,11 @@
   z-index: 12;
 }
 
+.yamanote-stations circle {
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
 .station-title {
   position: relative;
   top: 150px;
