@@ -304,10 +304,12 @@ function randomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min * 1) + min);
 }
 
-for (let c = 0; c < stations.children.length; c++) {
+let len = stations.children.length;
+
+for (let c = len - 1; c >= 0; c--) {
   // stationNames[c]['dist'] = stations.children[0].getTotalLength() * c;
   stations.children[c].addEventListener('click', (event) => {
-    title.textContent = stationNames[c]['駅名']
+    title.textContent = stationNames[len - c]['駅名']
     console.log(event.target);
   })
 }
