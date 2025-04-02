@@ -294,7 +294,7 @@ const svg = document.querySelector('.yamanote-line');
 const fuse = svg.querySelector('.fuse');
 const stations = document.querySelector('.yamanote-stations');
 const title = document.querySelector('.station-title');
-const rollBtn = document.getElementsByClassName('game-btn')[0];
+const rollBtn = document.getElementsByClassName('train-btn')[0];
 const sound = document.querySelector('.sound');
 const colors = ['#7FC342', '#a6c888', '#5a6550', '#4b8516', '#7fff0a'];
 
@@ -306,11 +306,27 @@ function randomIntFromRange(min, max) {
 
 let len = stations.children.length;
 
-for (let c = len - 1; c >= 0; c--) {
+function resetActive(target) {
+  const active = document.getElementsByClassName('selected-station')[0];
+  if (active) {
+    console.log(active);
+    active.classList.remove('selected-station');
+    target.classList.add('selected-station');
+  } else {
+    target.classList.add('selected-station');
+  }
+}
+
+for (let c = len; c >= 0; c--) {
   // stationNames[c]['dist'] = stations.children[0].getTotalLength() * c;
   stations.children[c].addEventListener('click', (event) => {
-    title.textContent = stationNames[len - c]['駅名']
-    console.log(event.target);
+    const adj = len - c;
+    const name = stationNames[adj]['駅名'];
+    console.log(c, name);
+    title.textContent = name;
+    // event.target.classList.add('selected-station');
+    resetActive(event.target);
+    // console.log(event.target, adj);
   })
 }
 
