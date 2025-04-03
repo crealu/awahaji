@@ -335,8 +335,6 @@ function startTween() {
   ran = randomIntFromRange(0, stationNames.length);
 
   let dist = stations.children[0].getTotalLength() * ran;
-  dist = fuse.getTotalLength();
-
   let n = 0;
 
   const finished = {
@@ -409,10 +407,9 @@ function toStation() {
     duration: 3,
     repeat: 0,
     onComplete: () => {
-      stationNames = stationNames.reverse();
       console.log(stations.children[ran]);
       console.log(stationNames[stations.children.length - ran]['駅名'])
-      stations.children[ran].setAttribute('r', '10');
+      resetActive(stations.children[ran]);
       title.textContent = stationNames[ran]['駅名'];
     }
   });
