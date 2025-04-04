@@ -291,6 +291,7 @@ let stationNames = [
 ]
 
 const svg = document.querySelector('.yamanote-line');
+const names = document.getElementsByClassName('station-name');
 const fuse = svg.querySelector('.fuse');
 const stations = document.querySelector('.yamanote-stations');
 const title = document.querySelector('.station-title');
@@ -299,29 +300,38 @@ const sound = document.querySelector('.sound');
 const colors = ['#7FC342', '#a6c888', '#5a6550', '#4b8516', '#7fff0a'];
 
 let ran = randomIntFromRange(0, stationNames.length);
+let len = stations.children.length - 1;
+
+/* Animate the fuse to reduce it */
+fuse.setAttribute('stroke-dasharray', fuse.getTotalLength());
+fuse.setAttribute('stroke-dashoffset', fuse.getTotalLength() * 2);
 
 function randomIntFromRange(min, max) {
   return Math.floor(Math.random() * (max - min * 1) + min);
 }
 
-let len = stations.children.length - 1;
-
-function resetActive(target) {
+function resetActive(target, targetName) {
   const active = document.getElementsByClassName('selected-station')[0];
+  const activeName = document.getElementsByClassName('selected-name')[0];
+
   if (active) {
     active.classList.remove('selected-station');
   }
+
+  if (activeName) {
+    activeName.classList.remove('selected-name');
+  }
   
   target.classList.add('selected-station');
+  targetName.classList.add('selected-name');
 }
 
 for (let c = 0; c <= len; c++) {
   // stationNames[c]['dist'] = stations.children[0].getTotalLength() * c;
   stations.children[c].addEventListener('click', (event) => {
     const name = stationNames[c]['駅名'];
-    console.log(c, name);
-    title.textContent = name;
-    resetActive(event.target);
+    // title.textContent = name;
+    resetActive(event.target, names[c]);
   })
 }
 
@@ -331,7 +341,7 @@ function playAudio(time) {
   setTimeout(() => { sound.pause(); }, 1000)
 }
 
-function startTween() {
+function startStation() {
   ran = randomIntFromRange(0, stationNames.length);
 
   let dist = stations.children[0].getTotalLength() * ran;
@@ -353,6 +363,50 @@ function startTween() {
   }
 
   gsap.to(finished, start);
+}
+
+function startFuse() {
+  const start = {
+    distance: 0
+  }
+
+  let finished = {
+    distance: fuse.getTotalLength(),
+    repeat: 0,
+    repeatDelay: 1,
+    duration: 3,
+    onUpdate: () => {
+      const point = fuse.getPointAtLength(start.distance);
+      createParticle(point);
+      // createTrain(point);
+    }
+  }
+
+  gsap.to(start, finished);
+}
+
+function createTrain(point) {
+  const train = document.getElementsByClassName('train-btn')[0];
+  let dup = train.cloneNode(true);
+
+  svg.prepend(dup);
+
+  dup.setAttribute('cx', point.x);
+  dup.setAttribute('cy', point.y);
+  dup.setAttribute('r', (Math.random() * 15) + 0.2);
+
+  const dupEnd = {
+    cx: '+= random(-20, 20)',
+    cy: '+= random(-20, 20)',
+    opacity: 0,
+    duration: 'random(1, 3)',
+    autoRound: false,
+    onComplete: () => {
+      svg.removeChild(dup);
+    }
+  }
+
+  gsap.to(dup, dupEnd);
 }
 
 function createParticle(point) {
@@ -388,10 +442,6 @@ function createParticle(point) {
   });
 }
 
-/* Animate the fuse to reduce it */
-fuse.setAttribute('stroke-dasharray', fuse.getTotalLength());
-fuse.setAttribute('stroke-dashoffset', fuse.getTotalLength() * 2);
-
 function toFuse() {
   gsap.to(fuse, {
     strokeDashoffset: fuse.getTotalLength(),
@@ -399,7 +449,6 @@ function toFuse() {
     repeat: 0,
   });
 }
-
 
 function toStation() {
   gsap.to(stations.children[ran], {
@@ -416,13 +465,13 @@ function toStation() {
 }
 
 rollBtn.addEventListener('click', (event) => {
-  startTween();
+  startStation();
   toStation();
 });
 
 window.addEventListener('keydown', (event) => {
   if (event.key == 't') {
-    startTween();
+    startFuse();
     toFuse();
   }
 })
