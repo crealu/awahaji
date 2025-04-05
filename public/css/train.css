@@ -31,6 +31,14 @@
   opacity: 0;
   transition: 0.25s ease;
   transform: translateY(-10px);
+  cursor: pointer;
+  z-index: 21;
+}
+
+.station-name:hover {
+  transform: scale(1.1);
+  border: 1px solid white;
+  fill: yellow;
 }
 
 @keyframes compress {
