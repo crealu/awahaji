@@ -509,3 +509,15 @@ window.addEventListener('keydown', (event) => {
     toEmpty();
   }
 })
+
+function attachListeners() {
+  for (let i = 0; i < names.length; i++) {
+    names[i].addEventListener('click', (event) => {
+      console.log(event.target.textContent);
+    })
+  }
+
+  console.log('attached')
+}
+
+window.addEventListener('load', attachListeners);
