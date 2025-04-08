@@ -291,7 +291,7 @@ let stationNames = [
 ]
 
 const svg = document.querySelector('.yamanote-line');
-const stations = document.querySelector('.station-circles');
+const stations = document.querySelector('.yamanote-stations');
 const names = document.getElementsByClassName('station-name');
 const fuse = svg.querySelector('.fuse');
 const title = document.querySelector('.station-title');

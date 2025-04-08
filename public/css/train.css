@@ -9,7 +9,7 @@
   margin-top: 100px;
 }
 
-.station-circles {
+.yamanote-stations {
   position: absolute;
   display: block;
   margin: 0 auto;
@@ -21,7 +21,7 @@
   z-index: 12;
 }
 
-.station-circles circle {
+.yamanote-stations circle {
   cursor: pointer;
   transition: 0.25s ease;
 }
