@@ -53,6 +53,12 @@
   height: 400px;
   left: 0px;
   right: 0px;
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.displayed-modal {
+  display: block;
+  opacity: 1;
 }
 
 @keyframes compress {
@@ -151,7 +157,7 @@
 
 @media (max-width: 800px) and (min-width: 200px) {
   .station-modal {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
   }
 }
