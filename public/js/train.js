@@ -294,6 +294,7 @@ const svg = document.querySelector('.yamanote-line');
 const stations = document.querySelector('.yamanote-stations');
 const names = document.getElementsByClassName('station-name');
 const modal = document.getElementsByClassName('station-modal')[0];
+const modalInner = document.getElementsByClassName('modal-inner')[0];
 const fuse = svg.querySelector('.fuse');
 const title = document.querySelector('.station-title');
 const rollBtn = document.getElementsByClassName('train-btn')[0];
@@ -521,9 +522,9 @@ function hideModal() {
 
 function openStation(target, i) {
   displayModal();
-  modal.children[0].textContent = target.textContent;
-  modal.children[1].textContent = stationNames[i]['よみがな'];
-  modal.children[1].innerHTML += `<br>${stationNames[i]['意味']}`;
+  modalInner.children[0].textContent = target.textContent;
+  modalInner.children[1].textContent = stationNames[i]['よみがな'];
+  modalInner.children[1].innerHTML += `<br>${stationNames[i]['意味']}`;
 }
 
 function attachListeners() {

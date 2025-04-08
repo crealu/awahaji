@@ -45,6 +45,11 @@
   transform: translateY(0px);
 }
 
+.selected-station {
+  r: 10;
+  stroke-width: 4;
+}
+
 .station-modal {
   position: absolute;
   display: none;
@@ -59,6 +64,23 @@
 .displayed-modal {
   display: block;
   opacity: 1;
+}
+
+.modal-inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.modal-name {
+  text-align: center;
+  font-size: 40px;
+}
+
+.modal-description {
+  text-align: center;
 }
 
 @keyframes compress {
@@ -91,7 +113,7 @@
 
 .train-btn {
   position: absolute;
-  display: block;
+  display: none;
   margin: 0 auto;
   left: 0px;
   right: 0px;
@@ -109,6 +131,19 @@
 
 .train-btn:hover + .train-outline {
   animation: 1s ease 0s 1 fadeout;
+}
+
+.train-outline {
+  position: absolute;
+  display: none;
+  margin: 0 auto;
+  left: 0px;
+  right: 0px;
+  top: calc(50vh - 45px);
+  z-index: 10;
+  transition: 0.25s ease;
+  cursor: pointer;
+  opacity: 1;
 }
 
 @keyframes quickstroke {
@@ -135,24 +170,6 @@
     opacity: 0;
     transform: scale(1.5);
   }
-}
-
-.train-outline {
-  position: absolute;
-  display: block;
-  margin: 0 auto;
-  left: 0px;
-  right: 0px;
-  top: calc(50vh - 45px);
-  z-index: 10;
-  transition: 0.25s ease;
-  cursor: pointer;
-  opacity: 1;
-}
-
-.selected-station {
-  r: 10;
-  stroke-width: 4;
 }
 
 @media (max-width: 800px) and (min-width: 200px) {
