@@ -291,9 +291,9 @@ let stationNames = [
 ]
 
 const svg = document.querySelector('.yamanote-line');
+const stations = document.querySelector('.station-circles');
 const names = document.getElementsByClassName('station-name');
 const fuse = svg.querySelector('.fuse');
-const stations = document.querySelector('.yamanote-stations');
 const title = document.querySelector('.station-title');
 const rollBtn = document.getElementsByClassName('train-btn')[0];
 const sound = document.querySelector('.sound');
@@ -326,7 +326,7 @@ function resetActive(target, targetName) {
   targetName.classList.add('selected-name');
 }
 
-for (let c = 0; c <= len; c++) {
+for (let c = 0; c < len / 2; c++) {
   // stationNames[c]['dist'] = stations.children[0].getTotalLength() * c;
   stations.children[c].addEventListener('click', (event) => {
     const name = stationNames[c]['駅名'];
