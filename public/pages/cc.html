@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Letter Crush 🍭</title>
+  <style>
+    body {
+      background: #111;
+      color: white;
+      text-align: center;
+      font-family: sans-serif;
+    }
+    canvas {
+      display: block;
+      margin: 30px auto;
+      border: 3px solid white;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h2>Letter Crush 🍭</h2>
+  <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+  <script>
+    const canvas = document.getElementById("gameCanvas");
+    const ctx = canvas.getContext("2d");
+
+    const size = 50;
+    const rows = 8;
+    const cols = 8;
+    // const letters = ["A", "B", "C", "D", "E", "F"];
+    // const letters = ["あ", "い", "う", "え", "お"];
+    const letters = ["四", "五", "六", "七", "八"];
+    let board = [];
+    let animations = [];
+    let animating = false;
+
+    let selected = null;
+
+    const createTile = (x, y, letter) => ({
+      x,
+      y,
+      targetX: x,
+      targetY: y,
+      drawX: x,
+      drawY: y,
+      letter,
+      opacity: 1
+    });
+
+    function initBoard() {
+      board = [];
+      for (let y = 0; y < rows; y++) {
+        const row = [];
+        for (let x = 0; x < cols; x++) {
+          row.push(createTile(x, y, randomLetter()));
+        }
+        board.push(row);
+      }
+    }
+
+    function randomLetter() {
+      return letters[Math.floor(Math.random() * letters.length)];
+    }
+
+    function drawBoard() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+      for (let y = 0; y < rows; y++) {
+        for (let x = 0; x < cols; x++) {
+          const tile = board[y][x];
+          if (tile) {
+            ctx.globalAlpha = tile.opacity;
+            ctx.fillStyle = "#333";
+            ctx.fillRect(tile.drawX * size, tile.drawY * size, size, size);
+            ctx.fillStyle = "white";
+            ctx.font = "30px sans-serif";
+            ctx.textAlign = "center";
+            ctx.textBaseline = "middle";
+            ctx.fillText(tile.letter, tile.drawX * size + size / 2, tile.drawY * size + size / 2);
+            ctx.globalAlpha = 1;
+          }
+        }
+      }
+    }
+
+    function findMatches() {
+      const matches = [];
+
+      // Horizontal
+      for (let y = 0; y < rows; y++) {
+        let match = [board[y][0]];
+        for (let x = 1; x < cols; x++) {
+          if (board[y][x] && board[y][x].letter === match[0].letter) {
+            match.push(board[y][x]);
+          } else {
+            if (match.length >= 3) matches.push([...match]);
+            match = [board[y][x]];
+          }
+        }
+        if (match.length >= 3) matches.push([...match]);
+      }
+
+      // Vertical
+      for (let x = 0; x < cols; x++) {
+        let match = [board[0][x]];
+        for (let y = 1; y < rows; y++) {
+          if (board[y][x] && board[y][x].letter === match[0].letter) {
+            match.push(board[y][x]);
+          } else {
+            if (match.length >= 3) matches.push([...match]);
+            match = [board[y][x]];
+          }
+        }
+        if (match.length >= 3) matches.push([...match]);
+      }
+
+      return matches;
+    }
+
+    function animateMatches(matches) {
+      animating = true;
+      matches.forEach(group => {
+        group.forEach(tile => {
+          animations.push({
+            tile,
+            type: "fadeOut",
+            progress: 0
+          });
+        });
+      });
+    }
+
+    function animateFall() {
+      for (let x = 0; x < cols; x++) {
+        for (let y = rows - 1; y >= 0; y--) {
+          if (!board[y][x]) {
+            for (let k = y - 1; k >= 0; k--) {
+              if (board[k][x]) {
+                const falling = board[k][x];
+                board[y][x] = falling;
+                board[k][x] = null;
+                falling.drawY = k;
+                falling.y = y;
+                animations.push({ tile: falling, type: "fall", progress: 0 });
+                break;
+              }
+            }
+            if (!board[y][x]) {
+              const newTile = createTile(x, y, randomLetter());
+              newTile.drawY = -1;
+              animations.push({ tile: newTile, type: "fall", progress: 0 });
+              board[y][x] = newTile;
+            }
+          }
+        }
+      }
+    }
+
+    function animateSwap(tile1, tile2) {
+      animations.push({
+        type: "swap",
+        tile1,
+        tile2,
+        startX1: tile1.x,
+        startY1: tile1.y,
+        startX2: tile2.x,
+        startY2: tile2.y,
+        progress: 0
+      });
+    }
+
+    function updateAnimations() {
+      if (!animations.length) return;
+
+      animations.forEach(anim => {
+        anim.progress += 0.1;
+        if (anim.type === "fadeOut") {
+          anim.tile.opacity = 1 - anim.progress;
+        } else if (anim.type === "fall") {
+          anim.tile.drawY = (1 - anim.progress) * anim.tile.drawY + anim.tile.y * anim.progress;
+        } else if (anim.type === "swap") {
+          const p = anim.progress;
+          anim.tile1.drawX = anim.startX1 * (1 - p) + anim.startX2 * p;
+          anim.tile1.drawY = anim.startY1 * (1 - p) + anim.startY2 * p;
+          anim.tile2.drawX = anim.startX2 * (1 - p) + anim.startX1 * p;
+          anim.tile2.drawY = anim.startY2 * (1 - p) + anim.startY1 * p;
+        }
+      });
+
+      animations = animations.filter(anim => anim.progress < 1);
+
+      if (!animations.length) {
+        // Clean up
+        for (let y = 0; y < rows; y++) {
+          for (let x = 0; x < cols; x++) {
+            const tile = board[y][x];
+            if (tile && tile.opacity <= 0) board[y][x] = null;
+            if (tile) {
+              tile.drawX = tile.x;
+              tile.drawY = tile.y;
+              tile.opacity = 1;
+            }
+          }
+        }
+        animateFall();
+      }
+    }
+
+    function gameLoop() {
+      updateAnimations();
+      drawBoard();
+
+      if (!animations.length && !animating) {
+        const matches = findMatches();
+        if (matches.length > 0) {
+          animateMatches(matches);
+        }
+      }
+
+      requestAnimationFrame(gameLoop);
+    }
+
+    function swapTiles(tile1, tile2) {
+      const t1 = board[tile1.y][tile1.x];
+      const t2 = board[tile2.y][tile2.x];
+
+      // Swap positions in grid
+      board[tile1.y][tile1.x] = t2;
+      board[tile2.y][tile2.x] = t1;
+
+      // Swap actual tile positions
+      [t1.x, t2.x] = [t2.x, t1.x];
+      [t1.y, t2.y] = [t2.y, t1.y];
+
+      animateSwap(t1, t2);
+
+      setTimeout(() => {
+        const matches = findMatches();
+        if (matches.length) {
+          animateMatches(matches);
+        } else {
+          // Revert swap if no match
+          revertSwap(t1, t2);
+        }
+      }, 300);
+    }
+
+    function revertSwap(t1, t2) {
+      // Swap back in grid
+      [board[t1.y][t1.x], board[t2.y][t2.x]] = [t2, t1];
+      [t1.x, t2.x] = [t2.x, t1.x];
+      [t1.y, t2.y] = [t2.y, t1.y];
+
+      animateSwap(t1, t2);
+    }
+
+    canvas.addEventListener("click", (e) => {
+      // if (animating || animations.length > 0) return;
+
+      const rect = canvas.getBoundingClientRect();
+      const mouseX = e.clientX - rect.left;
+      const mouseY = e.clientY - rect.top;
+
+      const x = Math.floor(mouseX / size);
+      const y = Math.floor(mouseY / size);
+
+      if (x < 0 || x >= cols || y < 0 || y >= rows) return;
+
+      if (!selected) {
+        selected = { x, y };
+      } else {
+        const dx = Math.abs(selected.x - x);
+        const dy = Math.abs(selected.y - y);
+        if ((dx === 1 && dy === 0) || (dx === 0 && dy === 1)) {
+          swapTiles(selected, { x, y });
+        }
+        selected = null;
+      }
+    });
+
+    initBoard();
+    gameLoop();
+  </script>
+</body>
+</html>
