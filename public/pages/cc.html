@@ -35,6 +35,13 @@
     let board = [];
     let animations = [];
     let animating = false;
+    let viewingPuff = false;
+    let character = '';
+    let puff = {
+      x: 100,
+      y: 100,
+      radius: 25
+    };
 
     let selected = null;
 
@@ -66,6 +73,7 @@
 
     function drawBoard() {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
+
       for (let y = 0; y < rows; y++) {
         for (let x = 0; x < cols; x++) {
           const tile = board[y][x];
@@ -84,6 +92,44 @@
       }
     }
 
+    function createPuffCloud(x, y, letter) {      
+      const puff = {
+        x: x * size + size / 2,
+        y: y * size + size / 2,
+        text: letter,
+        alpha: 1,
+        radius: 0,
+        done: false
+      };
+
+      animations.push({
+        type: "puff",
+        duration: 500,
+
+        update: (progress) => {
+          puff.radius = 10 + 30 * progress;
+          puff.alpha = 1 - progress;
+        },
+
+        draw: () => {
+          console.log('drawing puff')
+          ctx.save();
+          ctx.globalAlpha = puff.alpha;
+          ctx.fillStyle = "#ffffff";
+          ctx.beginPath();
+          ctx.arc(puff.x, puff.y, puff.radius, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = "#000";
+          ctx.font = "bold 20px sans-serif";
+          ctx.textAlign = "center";
+          ctx.textBaseline = "middle";
+          ctx.fillText(puff.text, puff.x, puff.y);
+          ctx.restore();
+        }
+      });
+    }
+
+
     function findMatches() {
       const matches = [];
 
@@ -98,6 +144,7 @@
             match = [board[y][x]];
           }
         }
+
         if (match.length >= 3) matches.push([...match]);
       }
 
@@ -118,7 +165,7 @@
       return matches;
     }
 
-    function animateMatches(matches) {
+    function removeMatches(matches) {
       animating = true;
       matches.forEach(group => {
         group.forEach(tile => {
@@ -130,6 +177,27 @@
         });
       });
     }
+
+    function drawPuff(letter) {
+      ctx.save();
+      ctx.beginPath();
+      ctx.arc(puff.x, puff.y, puff.radius, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.fillStyle = "#000";
+      ctx.font = "bold 20px sans-serif";
+      ctx.textAlign = "center";
+      ctx.textBaseline = "middle";
+      ctx.fillText(letter, puff.x, puff.y);
+      ctx.restore();
+    }
+
+    function animateMatches(matches) {
+      setTimeout(() => {
+        removeMatches(matches);
+        animateFall();
+      }, 500); // Match animation duration
+    }
+
 
     function animateFall() {
       for (let x = 0; x < cols; x++) {
@@ -185,6 +253,8 @@
           anim.tile1.drawY = anim.startY1 * (1 - p) + anim.startY2 * p;
           anim.tile2.drawX = anim.startX2 * (1 - p) + anim.startX1 * p;
           anim.tile2.drawY = anim.startY2 * (1 - p) + anim.startY1 * p;
+        } else if (anim.type === "puff") {
+          anim.draw();
         }
       });
 
@@ -210,6 +280,13 @@
     function gameLoop() {
       updateAnimations();
       drawBoard();
+
+      if (viewingPuff) {
+        drawPuff(character);
+        setTimeout(() => {
+          viewingPuff = false;
+        }, 300);
+      }
 
       if (!animations.length && !animating) {
         const matches = findMatches();
@@ -237,8 +314,15 @@
 
       setTimeout(() => {
         const matches = findMatches();
+
         if (matches.length) {
+          console.log(matches);
+          character = matches[0][0].letter;
+          viewingPuff = true;
+          puff.x = t1.x * size;
+          puff.y = t1.y * size;
           animateMatches(matches);
+          // drawPuff(matches[0][0].letter);
         } else {
           // Revert swap if no match
           revertSwap(t1, t2);
