@@ -351,8 +351,10 @@
           character = kanas[idx];
           console.log(character);
           viewingPuff = true;
-          puff.x = t1.x * size + (size/2);
-          puff.y = t1.y * size + (size/2);
+          // puff.x = t1.x * size + (size/2);
+          // puff.y = t1.y * size + (size/2);          
+          puff.x = matches[0][1].x * size + (size/2);
+          puff.y = matches[0][1].y * size + (size/2);
           animateMatches(matches);
           // drawPuff(matches[0][0].letter);
         } else {
