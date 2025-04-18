@@ -185,7 +185,7 @@
       matches.forEach(group => {
         group.forEach(tile => {
           animations.push({
-            group,
+            tile,
             type: "fadeOut",
             progress: 0
           });
@@ -331,7 +331,7 @@
 
         if (matches.length) {
           console.log(matches);
-          character = matches[0].letter;
+          character = matches[0][0].letter;
           viewingPuff = true;
           puff.x = t1.x * size + (size/2);
           puff.y = t1.y * size + (size/2);
