@@ -26,12 +26,26 @@
     const canvas = document.getElementById("gameCanvas");
     const ctx = canvas.getContext("2d");
 
+    class Letter {
+      constructor(k, r) {
+        this.kanji = k;
+        this.reading = r;
+      }
+    }
+
     const size = 50;
     const rows = 8;
     const cols = 8;
     // const letters = ["A", "B", "C", "D", "E", "F"];
     // const letters = ["あ", "い", "う", "え", "お"];
-    const letters = ["四", "五", "六", "七", "八"];
+    const kanjis = ["四", "五", "六", "七", "八"];
+    const kanas = ["よん", "ご", "ろく", "なな", "はち"];
+    let letters = []
+    for (k in kanjis) {
+      let newLet = new Letter(kanjis[k], kanas[k]);
+      letters.push(newLet);
+    }
+    console.log(letters);
     let board = [];
     let animations = [];
     let animating = false;
@@ -68,7 +82,8 @@
     }
 
     function randomLetter() {
-      return letters[Math.floor(Math.random() * letters.length)];
+      let one = letters[Math.floor(Math.random() * letters.length)]
+      return one.kanji;
     }
 
     function drawBoard() {
@@ -330,8 +345,11 @@
         const matches = findMatches();
 
         if (matches.length) {
-          console.log(matches);
-          character = matches[0][0].letter;
+          // console.log(matches);
+          // character = matches[0][0].letter;
+          let idx = kanjis.indexOf(matches[0][0].letter)
+          character = kanas[idx];
+          console.log(character);
           viewingPuff = true;
           puff.x = t1.x * size + (size/2);
           puff.y = t1.y * size + (size/2);
