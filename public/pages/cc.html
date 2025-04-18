@@ -165,12 +165,65 @@
       return matches;
     }
 
+    function findMatchesAround() {
+      const matches = [];
+      const seen = new Set();
+
+      function checkLine(startX, startY, dx, dy) {
+        let line = [];
+        let lastLetter = null;
+
+        for (let i = -2; i <= 2; i++) {
+          const x = startX + i * dx;
+          const y = startY + i * dy;
+          if (x < 0 || y < 0 || x >= cols || y >= rows) continue;
+
+          const tile = board[y][x];
+          if (!tile) continue;
+
+          if (tile.letter === lastLetter) {
+            line.push(tile);
+          } else {
+            if (line.length >= 3) {
+              line.forEach(t => {
+                const key = `${t.x},${t.y}`;
+                if (!seen.has(key)) {
+                  matches.push(t);
+                  seen.add(key);
+                }
+              });
+            }
+            line = [tile];
+            lastLetter = tile.letter;
+          }
+        }
+
+        // Final check
+        if (line.length >= 3) {
+          line.forEach(t => {
+            const key = `${t.x},${t.y}`;
+            if (!seen.has(key)) {
+              matches.push(t);
+              seen.add(key);
+            }
+          });
+        }
+      }
+
+      lastSwappedTiles.forEach(tile => {
+        checkLine(tile.x, tile.y, 1, 0); // Row
+        checkLine(tile.x, tile.y, 0, 1); // Column
+      });
+
+      return matches;
+    }
+
     function removeMatches(matches) {
       animating = true;
       matches.forEach(group => {
         group.forEach(tile => {
           animations.push({
-            tile,
+            group,
             type: "fadeOut",
             progress: 0
           });
@@ -197,7 +250,6 @@
         animateFall();
       }, 500); // Match animation duration
     }
-
 
     function animateFall() {
       for (let x = 0; x < cols; x++) {
@@ -313,14 +365,14 @@
       animateSwap(t1, t2);
 
       setTimeout(() => {
-        const matches = findMatches();
+        const matches = findMatchesAround();
 
         if (matches.length) {
           console.log(matches);
-          character = matches[0][0].letter;
+          character = matches[0].letter;
           viewingPuff = true;
-          puff.x = t1.x * size;
-          puff.y = t1.y * size;
+          puff.x = t1.x * size + (size/2);
+          puff.y = t1.y * size + (size/2);
           animateMatches(matches);
           // drawPuff(matches[0][0].letter);
         } else {
