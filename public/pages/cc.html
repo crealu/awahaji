@@ -92,44 +92,6 @@
       }
     }
 
-    function createPuffCloud(x, y, letter) {      
-      const puff = {
-        x: x * size + size / 2,
-        y: y * size + size / 2,
-        text: letter,
-        alpha: 1,
-        radius: 0,
-        done: false
-      };
-
-      animations.push({
-        type: "puff",
-        duration: 500,
-
-        update: (progress) => {
-          puff.radius = 10 + 30 * progress;
-          puff.alpha = 1 - progress;
-        },
-
-        draw: () => {
-          console.log('drawing puff')
-          ctx.save();
-          ctx.globalAlpha = puff.alpha;
-          ctx.fillStyle = "#ffffff";
-          ctx.beginPath();
-          ctx.arc(puff.x, puff.y, puff.radius, 0, Math.PI * 2);
-          ctx.fill();
-          ctx.fillStyle = "#000";
-          ctx.font = "bold 20px sans-serif";
-          ctx.textAlign = "center";
-          ctx.textBaseline = "middle";
-          ctx.fillText(puff.text, puff.x, puff.y);
-          ctx.restore();
-        }
-      });
-    }
-
-
     function findMatches() {
       const matches = [];
 
@@ -365,7 +327,7 @@
       animateSwap(t1, t2);
 
       setTimeout(() => {
-        const matches = findMatchesAround();
+        const matches = findMatches();
 
         if (matches.length) {
           console.log(matches);
