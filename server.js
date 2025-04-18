@@ -12,6 +12,10 @@ app.get('/', (req, res) => {
 	res.sendFile('index.html', pagesRoot);
 });
 
+app.get('/cc', (req, res) => {
+	res.sendFile('cc.html', pagesRoot);
+});
+
 app.get('/train', (req, res) => {
 	res.sendFile('train.html', pagesRoot);
 })
