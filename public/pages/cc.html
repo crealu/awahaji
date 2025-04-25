@@ -50,6 +50,11 @@
     let animations = [];
     let animating = false;
     let viewingPuff = false;
+    let outline = {
+      x: 0,
+      y: 0,
+      drawing: false
+    }
     let character = '';
     let puff = {
       x: 100,
@@ -221,6 +226,13 @@
       ctx.restore();
     }
 
+    function drawOutline() {
+      ctx.beginPath();
+      ctx.arc(outline.x * size + size/2, outline.y * size + size/2, size/2, 0, 2 * Math.PI);
+      ctx.stroke();
+      ctx.strokeStyle = "#fff";
+    }
+
     function animateMatches(matches) {
       setTimeout(() => {
         removeMatches(matches);
@@ -324,6 +336,10 @@
         }
       }
 
+      if (outline.drawing) {
+        drawOutline();
+      }
+
       requestAnimationFrame(gameLoop);
     }
 
@@ -387,6 +403,10 @@
 
       if (!selected) {
         selected = { x, y };
+        outline.drawing = true;
+        outline.x = x;
+        outline.y = y;
+        console.log(outline);
       } else {
         const dx = Math.abs(selected.x - x);
         const dy = Math.abs(selected.y - y);
@@ -394,6 +414,7 @@
           swapTiles(selected, { x, y });
         }
         selected = null;
+        outline.drawing = false;
       }
     });
 
