@@ -241,9 +241,12 @@
     }
 
     function animateFall() {
+      let tilesToAnimate = [];
+
       for (let x = 0; x < cols; x++) {
         for (let y = rows - 1; y >= 0; y--) {
           if (!board[y][x]) {
+            // Look for tile above to fall
             for (let k = y - 1; k >= 0; k--) {
               if (board[k][x]) {
                 const falling = board[k][x];
@@ -251,20 +254,38 @@
                 board[k][x] = null;
                 falling.drawY = k;
                 falling.y = y;
-                animations.push({ tile: falling, type: "fall", progress: 0 });
+                tilesToAnimate.push(falling);
                 break;
               }
             }
+
+            // If still empty, spawn new tile
             if (!board[y][x]) {
               const newTile = createTile(x, y, randomLetter());
               newTile.drawY = -1;
-              animations.push({ tile: newTile, type: "fall", progress: 0 });
               board[y][x] = newTile;
+              tilesToAnimate.push(newTile);
             }
           }
         }
       }
+
+      // Queue fall animations
+      for (const tile of tilesToAnimate) {
+        animations.push({ tile, type: "fall", progress: 0 });
+      }
+
+      // After all fall animations complete, check for matches
+      if (tilesToAnimate.length > 0) {
+        setTimeout(() => {
+          const matches = findMatches(); // uses your existing full-board match finder
+          if (matches.length > 0) {
+            animateMatches(matches);
+          }
+        }, 300); // Adjust delay based on fall duration
+      }
     }
+
 
     function animateSwap(tile1, tile2) {
       animations.push({
