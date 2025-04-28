@@ -156,6 +156,8 @@ const fuse = svg.querySelector('.fuse');
 const title = document.querySelector('.station-title');
 const rollBtn = document.getElementsByClassName('train-btn')[0];
 const sound = document.querySelector('.sound');
+const close = document.querySelector('.close-modal');
+
 const colors = ['#7FC342', '#a6c888', '#5a6550', '#4b8516', '#7fff0a'];
 
 let ran = randomIntFromRange(0, stationNames.length);
@@ -391,6 +393,10 @@ function attachListeners() {
       // console.log(event.target.textContent);
     })
   }
+
+  close.addEventListener('click', (event) => {
+    hideModal();
+  });
 
   console.log('attached')
 }
