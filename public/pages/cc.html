@@ -16,13 +16,18 @@
       border: 3px solid white;
       cursor: pointer;
     }
+    .sound {
+      display: none;
+    }
   </style>
 </head>
 <body>
   <h2>Letter Crush 🍭</h2>
   <canvas id="gameCanvas" width="400" height="400"></canvas>
+  <audio class="sound" src=""></audio>
 
   <script>
+    const sound = document.querySelector('.sound');
     const canvas = document.getElementById("gameCanvas");
     const ctx = canvas.getContext("2d");
 
@@ -63,6 +68,19 @@
     };
 
     let selected = null;
+
+    let audio = [
+      'https://d1vjc5dkcd3yh2.cloudfront.net/audio/4cc0665cb581f90d336ba2213e515342.mp3',
+      'https://d1vjc5dkcd3yh2.cloudfront.net/audio/89d12b47960a752b62d9a49f84604cdf.mp3',
+      'https://d1vjc5dkcd3yh2.cloudfront.net/audio/1cc88efba25606e5db102ae8e6274b04.mp3',
+      'https://d1vjc5dkcd3yh2.cloudfront.net/audio/9ae99cac70d7a3317de31a488d85c595.mp3',
+      'https://d1vjc5dkcd3yh2.cloudfront.net/audio/9ceffd52a0e58a67000f0fca9ee20656.mp3'
+    ];
+
+    function playAudio(n) {
+      sound.src = audio[n];
+      sound.play()
+    }
 
     const createTile = (x, y, letter) => ({
       x,
@@ -388,6 +406,7 @@
           character = kanas[idx];
           console.log(character);
           viewingPuff = true;
+          playAudio(idx);
           // puff.x = t1.x * size + (size/2);
           // puff.y = t1.y * size + (size/2);          
           puff.x = matches[0][1].x * size + (size/2);
